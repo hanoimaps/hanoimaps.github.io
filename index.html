@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/ol@v8.2.0/ol.css"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/ol@v8.2.0/dist/ol.js"></script>
+    <title>Bản Đồ Hà Nội Xưa & Nay (Allmaps)</title>
+
+    <style>
+      /* Đảm bảo bản đồ chiếm toàn bộ viewport */
+      #map {
+        height: 100vh;
+        width: 100%;
+        position: relative; /* Quan trọng cho việc đặt thanh trượt */
+      }
+      /* Định vị thanh trượt ở góc dưới bên phải, nổi trên bản đồ */
+      #opacity-slider {
+        position: absolute;
+        z-index: 1000; /* Đảm bảo nó nằm trên lớp bản đồ */
+        bottom: 20px;
+        right: 20px;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <input
+      type="range"
+      id="opacity-slider"
+      min="0"
+      max="1"
+      step="0.01"
+      value="0.7"
+      aria-label="Điều chỉnh độ mờ bản đồ cũ"
+    />
+
+    <script>
+      // Dùng cú pháp ES Module Import để code rõ ràng hơn (OpenLayers hỗ trợ)
+      const { Map, View } = ol;
+      const { Tile: TileLayer } = ol.layer;
+      const { OSM, XYZ } = ol.source;
+      const { fromLonLat } = ol.proj;
+
+      // URL của bản đồ đã được georeference từ Allmaps
+      const ALLMAPS_TILE_URL =
+        "https://allmaps.xyz/images/e96b97a4f6272246/{z}/{x}/{y}.png";
+      const INITIAL_OPACITY = 0.7;
+
+      // 1. Khởi tạo Lớp Bản đồ Cũ (Vintage Layer)
+      const vintageLayer = new TileLayer({
+        title: "Bản Đồ Hà Nội 1936",
+        source: new XYZ({
+          url: ALLMAPS_TILE_URL,
+          wrapX: false, // Ngăn bản đồ bị lặp lại theo chiều ngang
+        }),
+        opacity: INITIAL_OPACITY,
+      });
+
+      // 2. Khởi tạo Bản đồ OpenLayers
+      const map = new Map({
+        target: "map",
+        layers: [
+          // Lớp 1: Bản đồ Nền hiện tại (OSM)
+          new TileLayer({
+            source: new OSM(),
+          }),
+          // Lớp 2: Bản đồ Vintage (Overlay)
+          vintageLayer,
+        ],
+        // Cài đặt View: Tập trung vào khu vực Hà Nội
+        view: new View({
+          center: fromLonLat([105.84, 21.02]),
+          zoom: 13,
+        }),
+      });
+
+      // 3. Logic điều khiển Thanh Trượt Độ Mờ
+      const opacitySlider = document.getElementById("opacity-slider");
+
+      // Đặt giá trị ban đầu cho thanh trượt
+      opacitySlider.value = INITIAL_OPACITY;
+
+      // Gắn sự kiện thay đổi
+      opacitySlider.addEventListener("input", (e) => {
+        // Chuyển đổi giá trị sang số thập phân và áp dụng cho lớp bản đồ cũ
+        vintageLayer.setOpacity(parseFloat(e.target.value));
+      });
+    </script>
+  </body>
+</html>
