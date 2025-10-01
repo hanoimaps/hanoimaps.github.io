@@ -3,21 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- MapLibre GL JS CSS -->
     <link
+      href="https://unpkg.com/maplibre-gl@3.6.1/dist/maplibre-gl.css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/ol@v8.2.0/ol.css"
-      type="text/css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/ol@v8.2.0/dist/ol.js"></script>
     <title>Hanoi 1936</title>
-
     <style>
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
-      /* Đảm bảo bản đồ chiếm toàn bộ viewport */
       #map {
         height: 100vh;
         width: 100%;
@@ -29,6 +26,36 @@
         bottom: 20px;
         right: 20px;
         width: 200px;
+      }
+      #info-popup {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        z-index: 2000;
+        background: white;
+        border: 1px solid #ccc;
+        padding: 16px;
+        border-radius: 8px;
+        min-width: 200px;
+      }
+      #info-popup-close {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      .map-info-button {
+        background: #fff;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+        padding: 8px;
+        border-radius: 4px;
+      }
+      .map-info-i {
+        font-style: italic;
       }
     </style>
   </head>
@@ -43,53 +70,115 @@
       value="0.7"
       aria-label="opacity"
     />
-
+    <div id="info-popup">
+      <span id="info-popup-close">×</span>
+      <div>Thông tin bản đồ</div>
+    </div>
+    <!-- MapLibre GL JS -->
+    <script src="https://unpkg.com/maplibre-gl@3.6.1/dist/maplibre-gl.js"></script>
     <script>
-      const { Map, View } = ol;
-      const { Tile: TileLayer } = ol.layer;
-      const { OSM, XYZ } = ol.source;
-      const { fromLonLat } = ol.proj;
+      // MapLibre base map
+      const apiKey = "AsFIKon2Agmjo0n3TkrH";
+      const map = new maplibregl.Map({
+        container: "map",
+        style: `https://api.maptiler.com/maps/streets/style.json?key=${apiKey}`,
+        center: [105.8542, 21.0285],
+        zoom: 13,
+        pitch: 0,
+      });
 
-      const ALLMAPS_TILE_URL =
+      // Add controls
+      map.addControl(
+        new maplibregl.NavigationControl({ showCompass: false }),
+        "top-right"
+      );
+      map.addControl(
+        new maplibregl.GeolocateControl({
+          positionOptions: { enableHighAccuracy: true },
+          trackUserLocation: true,
+          showUserHeading: true,
+        }),
+        "top-right"
+      );
+
+      // Info control
+      const infoControl = {
+        onAdd: function (map) {
+          this._map = map;
+          this._container = document.createElement("div");
+          this._container.className = "maplibregl-ctrl maplibregl-ctrl-group";
+          this._container.style.position = "relative";
+          const button = document.createElement("button");
+          button.className = "map-info-button";
+          button.type = "button";
+          button.innerHTML = '<span class="map-info-i">i</span>';
+          button.onclick = () => {
+            document.getElementById("info-popup").style.display = "block";
+          };
+          this._container.appendChild(button);
+          return this._container;
+        },
+        onRemove: function () {
+          this._container.parentNode.removeChild(this._container);
+          this._map = undefined;
+        },
+      };
+      map.addControl(infoControl, "top-right");
+      document.getElementById("info-popup-close").onclick = () => {
+        document.getElementById("info-popup").style.display = "none";
+      };
+
+      // Add vintage raster layer when map loads
+      const VINTAGE_TILE_URL =
         "https://allmaps.xyz/images/e96b97a4f6272246/{z}/{x}/{y}.png";
       const INITIAL_OPACITY = 0.7;
+      map.on("load", () => {
+        // Add raster source
+        map.addSource("vintage", {
+          type: "raster",
+          tiles: [VINTAGE_TILE_URL],
+          tileSize: 256,
+        });
+        // Add raster layer
+        map.addLayer({
+          id: "vintage-layer",
+          type: "raster",
+          source: "vintage",
+          paint: { "raster-opacity": INITIAL_OPACITY },
+        });
 
-      // 1. Khởi tạo Lớp Bản đồ Cũ (Vintage Layer)
-      const vintageLayer = new ol.layer.Tile({
-        source: new XYZ({
-          url: ALLMAPS_TILE_URL,
-          wrapX: false, // Ngăn bản đồ bị lặp lại theo chiều ngang
-        }),
-        opacity: INITIAL_OPACITY,
+        // Example: Hide 3D buildings, tweak style (optional)
+        map.getStyle().layers.forEach((layer) => {
+          if (layer.type === "fill-extrusion") {
+            map.setLayoutProperty(layer.id, "visibility", "none");
+          }
+        });
+        map.setLayoutProperty("building", "visibility", "none");
+        map.on("zoom", () => {
+          const visible = map.getZoom() >= 16;
+          map.setLayoutProperty(
+            "building",
+            "visibility",
+            visible ? "visible" : "none"
+          );
+          if (visible)
+            map.setPaintProperty("building", "fill-color", "#ede3d0");
+        });
+        // ...other style tweaks as needed...
       });
 
-      // 2. Khởi tạo Bản đồ OpenLayers
-      const map = new Map({
-        target: "map",
-        layers: [
-          // Lớp 1: Bản đồ Nền hiện tại (OSM)
-          new ol.layer.Tile({
-            source: new OSM(),
-          }),
-          // Lớp 2: Bản đồ Vintage (Overlay)
-          vintageLayer,
-        ],
-        // Cài đặt View: Tập trung vào khu vực Hà Nội
-        view: new View({
-          center: fromLonLat([105.84, 21.02]),
-          zoom: 13,
-        }),
-      });
-
-      // 3. Logic điều khiển Thanh Trượt Độ Mờ
+      // Opacity slider logic
       const opacitySlider = document.getElementById("opacity-slider");
       opacitySlider.value = INITIAL_OPACITY;
       opacitySlider.addEventListener("input", (e) => {
-        vintageLayer.setOpacity(parseFloat(e.target.value));
+        const value = parseFloat(e.target.value);
+        if (map.getLayer("vintage-layer")) {
+          map.setPaintProperty("vintage-layer", "raster-opacity", value);
+        }
       });
     </script>
-
     <script>
+      // Service worker logic (unchanged)
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
           navigator.serviceWorker
