@@ -3,64 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- MapLibre GL JS CSS -->
+    <title>Lịch sử</title>
     <link
-      href="https://unpkg.com/maplibre-gl@3.6.1/dist/maplibre-gl.css"
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/ol@v9.1.0/ol.css"
     />
-    <title>Hanoi 1936</title>
+    <script src="https://cdn.jsdelivr.net/npm/ol@v9.1.0/dist/ol.js"></script>
     <style>
-      * {
+      html,
+      body,
+      #map {
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
-      }
-      #map {
-        height: 100vh;
         width: 100%;
-        position: relative;
+        height: 100%;
+      }
+      .layer-switcher {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: white;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        z-index: 1000;
       }
       #opacity-slider {
         position: absolute;
-        z-index: 1000;
+        z-index: 1001;
         bottom: 20px;
         right: 20px;
         width: 200px;
-      }
-      #info-popup {
-        display: none;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        z-index: 2000;
-        background: white;
-        border: 1px solid #ccc;
-        padding: 16px;
-        border-radius: 8px;
-        min-width: 200px;
-      }
-      #info-popup-close {
-        position: absolute;
-        top: 8px;
-        right: 8px;
-        cursor: pointer;
-        font-weight: bold;
-      }
-      .map-info-button {
-        background: #fff;
-        border: none;
-        font-size: 18px;
-        cursor: pointer;
-        padding: 8px;
-        border-radius: 4px;
-      }
-      .map-info-i {
-        font-style: italic;
       }
     </style>
   </head>
   <body>
     <div id="map"></div>
+    <div class="layer-switcher">
+      <select id="historic-layer-select"></select>
+    </div>
     <input
       type="range"
       id="opacity-slider"
@@ -70,112 +51,166 @@
       value="0.7"
       aria-label="opacity"
     />
-    <div id="info-popup">
-      <span id="info-popup-close">×</span>
-      <div>Thông tin bản đồ</div>
-    </div>
-    <!-- MapLibre GL JS -->
-    <script src="https://unpkg.com/maplibre-gl@3.6.1/dist/maplibre-gl.js"></script>
+
     <script>
-      // MapLibre base map
-      const apiKey = "AsFIKon2Agmjo0n3TkrH";
-      const map = new maplibregl.Map({
-        container: "map",
-        style: `https://api.maptiler.com/maps/streets/style.json?key=${apiKey}`,
-        center: [105.8542, 21.0285],
-        zoom: 13,
-        pitch: 0,
+      // Danh sách các  lịch sử
+      const mapData = [
+        {
+          year: "1873",
+          title: " 1873",
+          extent: [
+            11777086.610951, 2390683.807687, 11787371.00678, 2400366.725511,
+          ],
+        },
+        {
+          year: "1891b",
+          title: " 1891",
+          extent: [
+            11778560.336252, 2392587.212477, 11784755.133579, 2397546.240792,
+          ],
+        },
+        {
+          year: "1894",
+          title: " 1894",
+          extent: [
+            11779981.310497, 2391348.205003, 11785722.827001, 2398582.38102,
+          ],
+        },
+        {
+          year: "1902",
+          title: " 1902",
+          extent: [
+            11780929.770107, 2392565.605933, 11785210.668408, 2397108.957126,
+          ],
+        },
+        {
+          year: "1926",
+          title: " 1926",
+          extent: [
+            11781193.523914, 2394570.994076, 11784797.946318, 2397374.208348,
+          ],
+        },
+        {
+          year: "1928",
+          title: " 1928",
+          extent: [
+            11780273.832504, 2391782.534119, 11785154.944323, 2398620.242014,
+          ],
+        },
+        {
+          year: "1929",
+          title: " 1929",
+          extent: [
+            11776835.274703, 2391277.184008, 11786703.296099, 2398630.593322,
+          ],
+        },
+        {
+          year: "1932",
+          title: " 1932",
+          extent: [
+            11779787.67009, 2391236.908184, 11786395.079343, 2398500.538078,
+          ],
+        },
+        {
+          year: "1936",
+          title: " 1936",
+          extent: [
+            11776858.924226, 2391312.26788, 11786737.484083, 2398666.551752,
+          ],
+        },
+        {
+          year: "1942a",
+          title: " 1942",
+          extent: [
+            11778407.93035, 2391208.420221, 11786963.948359, 2398505.336837,
+          ],
+        },
+        {
+          year: "1952",
+          title: " 1952",
+          extent: [
+            11780196.139688, 2392283.311738, 11785605.082601, 2399324.539199,
+          ],
+        },
+      ];
+
+      const minZoomLevel = 12;
+      const maxZoomLevel = 18;
+
+      // Tạo các lớp
+      const osmLayer = new ol.layer.Tile({ source: new ol.source.OSM() });
+
+      const historicLayers = {};
+      mapData.forEach((data) => {
+        historicLayers[data.year] = new ol.layer.Tile({
+          source: new ol.source.XYZ({
+            url: `https://tomeytran.com/maps-tiles/${data.year}/{z}/{x}/{-y}.png`,
+            minZoom: minZoomLevel,
+            maxZoom: maxZoomLevel,
+          }),
+          extent: data.extent,
+          visible: false,
+          opacity: 0.7,
+        });
       });
 
-      // Add controls
-      map.addControl(
-        new maplibregl.NavigationControl({ showCompass: false }),
-        "top-right"
-      );
-      map.addControl(
-        new maplibregl.GeolocateControl({
-          positionOptions: { enableHighAccuracy: true },
-          trackUserLocation: true,
-          showUserHeading: true,
-        }),
-        "top-right"
-      );
-
-      // Info control
-      const infoControl = {
-        onAdd: function (map) {
-          this._map = map;
-          this._container = document.createElement("div");
-          this._container.className = "maplibregl-ctrl maplibregl-ctrl-group";
-          this._container.style.position = "relative";
-          const button = document.createElement("button");
-          button.className = "map-info-button";
-          button.type = "button";
-          button.innerHTML = '<span class="map-info-i">i</span>';
-          button.onclick = () => {
-            document.getElementById("info-popup").style.display = "block";
-          };
-          this._container.appendChild(button);
-          return this._container;
-        },
-        onRemove: function () {
-          this._container.parentNode.removeChild(this._container);
-          this._map = undefined;
-        },
-      };
-      map.addControl(infoControl, "top-right");
-      document.getElementById("info-popup-close").onclick = () => {
-        document.getElementById("info-popup").style.display = "none";
-      };
-
-      // Add vintage raster layer when map loads
-      const VINTAGE_TILE_URL =
-        "https://allmaps.xyz/images/e96b97a4f6272246/{z}/{x}/{y}.png";
-      const INITIAL_OPACITY = 0.7;
-      map.on("load", () => {
-        // Add raster source
-        map.addSource("vintage", {
-          type: "raster",
-          tiles: [VINTAGE_TILE_URL],
-          tileSize: 256,
-        });
-        // Add raster layer
-        map.addLayer({
-          id: "vintage-layer",
-          type: "raster",
-          source: "vintage",
-          paint: { "raster-opacity": INITIAL_OPACITY },
-        });
-
-        // Example: Hide 3D buildings, tweak style (optional)
-        map.getStyle().layers.forEach((layer) => {
-          if (layer.type === "fill-extrusion") {
-            map.setLayoutProperty(layer.id, "visibility", "none");
-          }
-        });
-        map.setLayoutProperty("building", "visibility", "none");
-        map.on("zoom", () => {
-          const visible = map.getZoom() >= 16;
-          map.setLayoutProperty(
-            "building",
-            "visibility",
-            visible ? "visible" : "none"
-          );
-          if (visible)
-            map.setPaintProperty("building", "fill-color", "#ede3d0");
-        });
-        // ...other style tweaks as needed...
+      const mapView = new ol.View({
+        zoom: minZoomLevel,
+        maxZoom: maxZoomLevel,
       });
 
-      // Opacity slider logic
+      const map = new ol.Map({
+        target: "map",
+        layers: [osmLayer, ...Object.values(historicLayers)],
+        view: mapView,
+      });
+
+      // Tạo dropdown
+      const layerSelect = document.getElementById("historic-layer-select");
+      mapData.forEach((data) => {
+        const option = document.createElement("option");
+        option.value = data.year;
+        option.textContent = data.title;
+        layerSelect.appendChild(option);
+      });
+
+      // Hàm cập nhật  khi chọn layer
+      function updateMap() {
+        const selectedValue = layerSelect.value;
+        const selectedMap = mapData.find((data) => data.year === selectedValue);
+
+        for (const key in historicLayers) {
+          historicLayers[key].setVisible(false);
+        }
+
+        if (selectedMap) {
+          historicLayers[selectedValue].setVisible(true);
+          mapView.fit(selectedMap.extent, {
+            duration: 500,
+            padding: [50, 50, 50, 50],
+          });
+        }
+      }
+
+      // Sự kiện chọn layer
+      layerSelect.addEventListener("change", updateMap);
+
+      // Hiển thị  mặc định
+      if (mapData.length > 0) {
+        layerSelect.value = mapData[0].year;
+        updateMap();
+      }
+
+      // Slider opacity logic
       const opacitySlider = document.getElementById("opacity-slider");
-      opacitySlider.value = INITIAL_OPACITY;
-      opacitySlider.addEventListener("input", (e) => {
+      opacitySlider.addEventListener("input", function (e) {
         const value = parseFloat(e.target.value);
-        if (map.getLayer("vintage-layer")) {
-          map.setPaintProperty("vintage-layer", "raster-opacity", value);
+        for (const key in historicLayers) {
+          historicLayers[key].setOpacity(value);
         }
       });
+      // Set initial opacity
+      opacitySlider.value = 0.7;
     </script>
     <script>
       // Service worker logic (unchanged)
