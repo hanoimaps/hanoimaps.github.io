@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lịch sử</title>
+    <title>Plan de Vietnam | Hanoi version</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/ol@v9.1.0/ol.css"
     />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <script src="https://cdn.jsdelivr.net/npm/ol@v9.1.0/dist/ol.js"></script>
     <style>
       html,
@@ -155,7 +156,13 @@
       const maxZoomLevel = 18;
 
       // Tạo các lớp
-      const osmLayer = new ol.layer.Tile({ source: new ol.source.OSM() });
+      const osmLayer = new ol.layer.Tile({
+        source: new ol.source.OSM({
+          attributions: [
+            '©OpenStreetMap contributors | <a href="https://threads.com/@tomeyinhanoi">By Tomey</a>',
+          ],
+        }),
+      });
 
       const historicLayers = {};
       mapData.forEach((data) => {
@@ -236,10 +243,7 @@
           navigator.serviceWorker
             .register("/service-worker.js")
             .then((registration) => {
-              console.log(
-                "Service Worker registered with scope:",
-                registration.scope
-              );
+              console.log("Service Worker registered for caching.");
             })
             .catch((error) => {
               console.error("Service Worker registration failed:", error);
