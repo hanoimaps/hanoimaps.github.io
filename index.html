@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Plan de Vietnam | Hanoi version</title>
+    <title>Hanoi Maps</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/ol@v9.1.0/ol.css"
@@ -73,13 +73,6 @@
     <script>
       // Danh sách các  lịch sử
       const mapData = [
-        // {
-        //   year: "1873",
-        //   title: " 1873",
-        //   extent: [
-        //     11777086.610951, 2390683.807687, 11787371.00678, 2400366.725511,
-        //   ],
-        // },
         {
           year: "1891b",
           title: " 1891",
@@ -94,13 +87,6 @@
             11779981.310497, 2391348.205003, 11785722.827001, 2398582.38102,
           ],
         },
-        // {
-        //   year: "1902",
-        //   title: " 1902",
-        //   extent: [
-        //     11780929.770107, 2392565.605933, 11785210.668408, 2397108.957126,
-        //   ],
-        // },
         {
           year: "1926",
           title: " 1926",
@@ -129,13 +115,6 @@
             11779787.67009, 2391236.908184, 11786395.079343, 2398500.538078,
           ],
         },
-        // {
-        //   year: "1936",
-        //   title: " 1936",
-        //   extent: [
-        //     11776858.924226, 2391312.26788, 11786737.484083, 2398666.551752,
-        //   ],
-        // },
         {
           year: "1942a",
           title: " 1942",
@@ -152,8 +131,8 @@
         },
       ];
 
-      const minZoomLevel = 11;
-      const maxZoomLevel = 20;
+      const minZoomLevel = 12;
+      const maxZoomLevel = 18;
 
       // Tạo các lớp
       const osmLayer = new ol.layer.Tile({
@@ -177,14 +156,10 @@
           opacity: 0.7,
         });
       });
-      const hanoiExtent = [
-        11777086.610951, 2390683.807687, 11787371.00678, 2400366.725511,
-      ];
 
       const mapView = new ol.View({
         zoom: minZoomLevel,
         maxZoom: maxZoomLevel,
-        extent: hanoiExtent,
       });
 
       const map = new ol.Map({
