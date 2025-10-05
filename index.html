@@ -155,7 +155,13 @@
       const maxZoomLevel = 18;
 
       // Tạo các lớp
-      const osmLayer = new ol.layer.Tile({ source: new ol.source.OSM() });
+      const osmLayer = new ol.layer.Tile({
+        source: new ol.source.OSM({
+          attributions: [
+            '©OpenStreetMap | <a href="https://threads.com/@tomeyinhanoi">By Tomey</a>',
+          ],
+        }),
+      });
 
       const historicLayers = {};
       mapData.forEach((data) => {
