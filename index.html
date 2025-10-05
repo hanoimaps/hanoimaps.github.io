@@ -23,17 +23,32 @@
         top: 10px;
         right: 10px;
         background: white;
-        padding: 10px;
-        border-radius: 5px;
+        padding: 6px;
+        border-radius: 8px;
         border: 1px solid #ccc;
         z-index: 1000;
+      }
+      .layer-switcher select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: none;
+        background: none;
+        font-size: 16px;
+        outline: none;
+        cursor: pointer;
+        color: #000;
       }
       #opacity-slider {
         position: absolute;
         z-index: 1001;
-        bottom: 20px;
-        right: 20px;
-        width: 200px;
+        right: -40px;
+        top: 50%;
+        width: 140px;
+        height: 48px;
+        background: transparent;
+        transform: translateY(-50%) rotate(-90deg);
+        transform-origin: center;
       }
     </style>
   </head>
@@ -42,26 +57,28 @@
     <div class="layer-switcher">
       <select id="historic-layer-select"></select>
     </div>
-    <input
-      type="range"
-      id="opacity-slider"
-      min="0"
-      max="1"
-      step="0.01"
-      value="0.7"
-      aria-label="opacity"
-    />
+    <div id="opacity-slider-wrapper">
+      <input
+        type="range"
+        id="opacity-slider"
+        min="0"
+        max="1"
+        step="0.01"
+        value="0.7"
+        aria-label="opacity"
+      />
+    </div>
 
     <script>
       // Danh sách các  lịch sử
       const mapData = [
-        {
-          year: "1873",
-          title: " 1873",
-          extent: [
-            11777086.610951, 2390683.807687, 11787371.00678, 2400366.725511,
-          ],
-        },
+        // {
+        //   year: "1873",
+        //   title: " 1873",
+        //   extent: [
+        //     11777086.610951, 2390683.807687, 11787371.00678, 2400366.725511,
+        //   ],
+        // },
         {
           year: "1891b",
           title: " 1891",
@@ -76,13 +93,13 @@
             11779981.310497, 2391348.205003, 11785722.827001, 2398582.38102,
           ],
         },
-        {
-          year: "1902",
-          title: " 1902",
-          extent: [
-            11780929.770107, 2392565.605933, 11785210.668408, 2397108.957126,
-          ],
-        },
+        // {
+        //   year: "1902",
+        //   title: " 1902",
+        //   extent: [
+        //     11780929.770107, 2392565.605933, 11785210.668408, 2397108.957126,
+        //   ],
+        // },
         {
           year: "1926",
           title: " 1926",
@@ -111,13 +128,13 @@
             11779787.67009, 2391236.908184, 11786395.079343, 2398500.538078,
           ],
         },
-        {
-          year: "1936",
-          title: " 1936",
-          extent: [
-            11776858.924226, 2391312.26788, 11786737.484083, 2398666.551752,
-          ],
-        },
+        // {
+        //   year: "1936",
+        //   title: " 1936",
+        //   extent: [
+        //     11776858.924226, 2391312.26788, 11786737.484083, 2398666.551752,
+        //   ],
+        // },
         {
           year: "1942a",
           title: " 1942",
