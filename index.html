@@ -158,7 +158,7 @@
       const osmLayer = new ol.layer.Tile({
         source: new ol.source.OSM({
           attributions: [
-            '©OpenStreetMap | <a href="https://threads.com/@tomeyinhanoi">By Tomey</a>',
+            '©OpenStreetMap contributors | <a href="https://threads.com/@tomeyinhanoi">By Tomey</a>',
           ],
         }),
       });
@@ -242,10 +242,7 @@
           navigator.serviceWorker
             .register("/service-worker.js")
             .then((registration) => {
-              console.log(
-                "Service Worker registered with scope:",
-                registration.scope
-              );
+              console.log("Service Worker registered for caching.");
             })
             .catch((error) => {
               console.error("Service Worker registration failed:", error);
