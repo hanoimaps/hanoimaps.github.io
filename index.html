@@ -152,8 +152,8 @@
         },
       ];
 
-      const minZoomLevel = 12;
-      const maxZoomLevel = 18;
+      const minZoomLevel = 11;
+      const maxZoomLevel = 20;
 
       // Tạo các lớp
       const osmLayer = new ol.layer.Tile({
@@ -177,10 +177,14 @@
           opacity: 0.7,
         });
       });
+      const hanoiExtent = [
+        11777086.610951, 2390683.807687, 11787371.00678, 2400366.725511,
+      ];
 
       const mapView = new ol.View({
         zoom: minZoomLevel,
         maxZoom: maxZoomLevel,
+        extent: hanoiExtent,
       });
 
       const map = new ol.Map({
