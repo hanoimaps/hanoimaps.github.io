@@ -147,7 +147,7 @@
       mapData.forEach((data) => {
         historicLayers[data.year] = new ol.layer.Tile({
           source: new ol.source.XYZ({
-            url: `https://hanoimaps.github.io/maps-tiles/${data.year}/{z}/{x}/{-y}.png`,
+            url: `https://tomeytran.com/maps-tiles/${data.year}/{z}/{x}/{-y}.png`,
             minZoom: minZoomLevel,
             maxZoom: maxZoomLevel,
           }),
