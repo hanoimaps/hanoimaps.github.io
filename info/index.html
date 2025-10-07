@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hanoi Maps | Info</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 24px;
+        background-color: #faf9f6;
+        color: #222;
+        box-sizing: border-box;
+      }
+      h1 {
+        margin: 8px 0 24px 0;
+      }
+      .container {
+        max-width: 480px;
+        margin: 0 auto;
+      }
+      a {
+        text-decoration: none;
+        display: inline-flex;
+        color: inherit;
+        font-size: 16px;
+        align-items: center;
+        padding: 8px 0;
+      }
+      .yearCol {
+        padding: 8px 0;
+      }
+      .yearCol a {
+        padding: 0;
+      }
+      .yearCol a[href] {
+        text-decoration: underline;
+      }
+      .infoCol {
+        padding: 8px 0 16px 20px;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="/">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 16 16"
+          fill="none"
+          style="margin-right: 2px; margin-bottom: 0.5px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10 12L6 8L10 4"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        Home
+      </a>
+      <h1>Maps</h1>
+      <table id="maps-table" style="width: 100%; border-collapse: collapse">
+        <tbody></tbody>
+      </table>
+    </div>
+    <script>
+      const mapSources = [
+        {
+          year: "1891",
+          link: "https://commons.wikimedia.org/wiki/File:Plan_de_Hano%C3%AF_et_de_ses_Environs_-_Dress%C3%A9e_sous_la_direction_de_Charles_Halais_Ancien_R%C3%A9sident-Maire_de_Hano%C3%AF_;_Dessin%C3%A9_par_Rapha%C3%ABl_Enguehard_G%C3%A9ographe_;_Grav%C3%A9_par_A._Simon,_13_Rue_du_Val-de-Gr%C3%A2ce,_Paris_-_btv1b8439869f.jpg",
+          info: "Plan de Hanoï et de ses Environs (Charles Halais)",
+        },
+        {
+          year: "1894",
+          link: "https://gallica.bnf.fr/ark:/12148/btv1b53147353p",
+          info: "Plan de la ville de Hanoï (Bureau topographique des troupes de l'Indo-Chine)",
+        },
+        {
+          year: "1926",
+          link: "https://commons.wikimedia.org/wiki/File:Hanoi_map_1926_DDXVN.jpg",
+          info: "L'Indochine d'hier et d'aujourd'hui (Cucherousset)",
+        },
+        {
+          yar: "1929",
+          link: "https://catalogue.bnf.fr/ark:/12148/cb406928273",
+          info: "Plan de la ville de Hanoï (Service géographique de l’Indochine)",
+        },
+        {
+          year: "1930",
+          link: "",
+          info: "Ville de Hanoi (Bureau du Tourisme en Indochine)",
+        },
+        {
+          year: "1932",
+          link: "http://belleindochine.free.fr/images/Plan/1000PlanHanoi1932Madrolle.jpg",
+          info: "Plan de la ville d’Hanoi (Guide Madrolle)",
+        },
+        {
+          year: "1942",
+          link: "",
+          info: "",
+        },
+        {
+          year: "1952",
+          link: "",
+          info: "Plan de la Ville de Hanoi (Forces Terrestres d’Extrême-Orient)",
+        },
+      ];
+      const tbody = document.querySelector("#maps-table tbody");
+
+      mapSources.forEach(({ year, link, info }) => {
+        if (year && info && info.trim() !== "") {
+          const tr = document.createElement("tr");
+          const tdYear = document.createElement("td");
+          tdYear.className = "yearCol";
+          tdYear.style.verticalAlign = "top";
+          const a = document.createElement("a");
+          a.textContent = year;
+          if (link && link.trim() !== "") {
+            a.href = link;
+            a.target = "_blank";
+            a.rel = "noopener";
+          }
+          tdYear.appendChild(a);
+          const tdInfo = document.createElement("td");
+          tdInfo.textContent = info;
+          tdInfo.className = "infoCol";
+          tr.appendChild(tdYear);
+          tr.appendChild(tdInfo);
+          tbody.appendChild(tr);
+        }
+      });
+    </script>
+  </body>
+</html>

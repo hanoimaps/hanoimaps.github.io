@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hanoi Maps</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/ol@v9.1.0/ol.css"
+    />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <script src="https://cdn.jsdelivr.net/npm/ol@v9.1.0/dist/ol.js"></script>
+    <style>
+      html,
+      body,
+      #map {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .layer-switcher {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: white;
+        padding: 6px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        z-index: 1000;
+      }
+      .layer-switcher select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: none;
+        background: none;
+        font-size: 16px;
+        outline: none;
+        cursor: pointer;
+        color: #000;
+      }
+      #opacity-slider {
+        position: absolute;
+        z-index: 1001;
+        right: -40px;
+        top: 50%;
+        width: 140px;
+        height: 48px;
+        background: transparent;
+        transform: translateY(-50%) rotate(-90deg);
+        transform-origin: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div class="layer-switcher">
+      <select id="historic-layer-select"></select>
+    </div>
+    <div id="opacity-slider-wrapper">
+      <input
+        type="range"
+        id="opacity-slider"
+        min="0"
+        max="1"
+        step="0.01"
+        value="0.7"
+        aria-label="opacity"
+      />
+    </div>
+
+    <script>
+      // Danh sách các  lịch sử
+      const mapData = [
+        {
+          year: "1891b",
+          title: "1891",
+          extent: [
+            11778560.336252, 2392587.212477, 11784755.133579, 2397546.240792,
+          ],
+        },
+        {
+          year: "1894",
+          title: "1894",
+          extent: [
+            11779981.310497, 2391348.205003, 11785722.827001, 2398582.38102,
+          ],
+        },
+        {
+          year: "1926",
+          title: "1926",
+          extent: [
+            11781193.523914, 2394570.994076, 11784797.946318, 2397374.208348,
+          ],
+        },
+        {
+          year: "1929",
+          title: "1929",
+          extent: [
+            11776835.274703, 2391277.184008, 11786703.296099, 2398630.593322,
+          ],
+        },
+        {
+          year: "1930",
+          title: "1930",
+          extent: [
+            11780273.832504, 2391782.534119, 11785154.944323, 2398620.242014,
+          ],
+        },
+        {
+          year: "1932",
+          title: "1932",
+          extent: [
+            11779787.67009, 2391236.908184, 11786395.079343, 2398500.538078,
+          ],
+        },
+        {
+          year: "1942a",
+          title: "1942",
+          extent: [
+            11778407.93035, 2391208.420221, 11786963.948359, 2398505.336837,
+          ],
+        },
+        {
+          year: "1952",
+          title: "1952",
+          extent: [
+            11780196.139688, 2392283.311738, 11785605.082601, 2399324.539199,
+          ],
+        },
+      ];
+
+      const minZoomLevel = 12;
+      const maxZoomLevel = 18;
+
+      // Tạo các lớp
+      const osmLayer = new ol.layer.Tile({
+        source: new ol.source.OSM({
+          attributions: [
+            '©OpenStreetMap | <a href="https://threads.com/@tomeyinhanoi">By Tomey</a> | <a href="https://hanoimaps.github.io/info">Sources</a>',
+          ],
+        }),
+      });
+
+      const historicLayers = {};
+      mapData.forEach((data) => {
+        historicLayers[data.year] = new ol.layer.Tile({
+          source: new ol.source.XYZ({
+            url: `/maps-tiles/${data.year}/{z}/{x}/{-y}.png`,
+            minZoom: minZoomLevel,
+            maxZoom: maxZoomLevel,
+          }),
+          extent: data.extent,
+          visible: false,
+          opacity: 0.7,
+        });
+      });
+
+      const mapView = new ol.View({
+        zoom: minZoomLevel,
+        maxZoom: maxZoomLevel,
+      });
+
+      const map = new ol.Map({
+        target: "map",
+        layers: [osmLayer, ...Object.values(historicLayers)],
+        view: mapView,
+      });
+
+      // Tạo dropdown
+      const layerSelect = document.getElementById("historic-layer-select");
+      mapData.forEach((data) => {
+        const option = document.createElement("option");
+        option.value = data.year;
+        option.textContent = data.title;
+        layerSelect.appendChild(option);
+      });
+
+      // Hàm cập nhật  khi chọn layer
+      function updateMap() {
+        const selectedValue = layerSelect.value;
+        const selectedMap = mapData.find((data) => data.year === selectedValue);
+
+        for (const key in historicLayers) {
+          historicLayers[key].setVisible(false);
+        }
+
+        if (selectedMap) {
+          historicLayers[selectedValue].setVisible(true);
+          mapView.fit(selectedMap.extent, {
+            duration: 500,
+            padding: [50, 50, 50, 50],
+          });
+        }
+      }
+
+      // Sự kiện chọn layer
+      layerSelect.addEventListener("change", updateMap);
+
+      // Hiển thị  mặc định
+      if (mapData.length > 0) {
+        layerSelect.value = mapData[0].year;
+        updateMap();
+      }
+
+      // Slider opacity logic
+      const opacitySlider = document.getElementById("opacity-slider");
+      opacitySlider.addEventListener("input", function (e) {
+        const value = parseFloat(e.target.value);
+        for (const key in historicLayers) {
+          historicLayers[key].setOpacity(value);
+        }
+      });
+      // Set initial opacity
+      opacitySlider.value = 0.7;
+    </script>
+    <script>
+      // Service worker logic (unchanged)
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/service-worker.js")
+            .then((registration) => {
+              console.log("Service Worker registered for caching.");
+            })
+            .catch((error) => {
+              console.error("Service Worker registration failed:", error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
