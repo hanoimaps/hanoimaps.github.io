@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hanoi Maps</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/ol@v9.1.0/ol.css"
-    />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <script src="https://cdn.jsdelivr.net/npm/ol@v9.1.0/dist/ol.js"></script>
+    <link
+      href="https://unpkg.com/maplibre-gl@^5.9.0/dist/maplibre-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/maplibre-gl@^5.9.0/dist/maplibre-gl.js"></script>
     <style>
       html,
       body,
@@ -71,7 +71,6 @@
     </div>
 
     <script>
-      // Danh sách các  lịch sử
       const mapData = [
         {
           year: "1891b",
@@ -130,46 +129,35 @@
           ],
         },
       ];
-
+      const apiKey = "JOtQQjkj3YJ9dZzJKMJs";
       const minZoomLevel = 12;
       const maxZoomLevel = 18;
 
-      // Tạo các lớp
-      const osmLayer = new ol.layer.Tile({
-        source: new ol.source.OSM({
-          attributions: [
-            '©OpenStreetMap | <a href="https://threads.com/@tomeyinhanoi">By Tomey</a> | <a href="https://hanoimaps.github.io/info">Sources</a>',
-          ],
-        }),
-      });
-
-      const historicLayers = {};
-      mapData.forEach((data) => {
-        historicLayers[data.year] = new ol.layer.Tile({
-          source: new ol.source.XYZ({
-            url: `/maps-tiles/${data.year}/{z}/{x}/{-y}.png`,
-            minZoom: minZoomLevel,
-            maxZoom: maxZoomLevel,
-          }),
-          extent: data.extent,
-          visible: false,
-          opacity: 0.7,
-        });
-      });
-
-      const mapView = new ol.View({
-        zoom: minZoomLevel,
-        maxZoom: maxZoomLevel,
-      });
-
-      const map = new ol.Map({
-        target: "map",
-        layers: [osmLayer, ...Object.values(historicLayers)],
-        view: mapView,
-      });
-
-      // Tạo dropdown
       const layerSelect = document.getElementById("historic-layer-select");
+      const opacitySlider = document.getElementById("opacity-slider");
+      let symbolLayerIds = [];
+
+      function transformExtent(extent) {
+        const R = 20037508.34;
+        const lon1 = (extent[0] / R) * 180;
+        const lat1 =
+          (180 / Math.PI) *
+          (2 * Math.atan(Math.exp((extent[1] / R) * Math.PI)) - Math.PI / 2);
+        const lon2 = (extent[2] / R) * 180;
+        const lat2 =
+          (180 / Math.PI) *
+          (2 * Math.atan(Math.exp((extent[3] / R) * Math.PI)) - Math.PI / 2);
+        return [lon1, lat1, lon2, lat2];
+      }
+
+      // --- Initialize Map ---
+      const map = new maplibregl.Map({
+        container: "map",
+        style: `https://api.maptiler.com/maps/streets-v2/style.json?key=${apiKey}`,
+        center: [105.8542, 21.0285],
+        zoom: minZoomLevel,
+      });
+
       mapData.forEach((data) => {
         const option = document.createElement("option");
         option.value = data.year;
@@ -177,43 +165,108 @@
         layerSelect.appendChild(option);
       });
 
-      // Hàm cập nhật  khi chọn layer
-      function updateMap() {
-        const selectedValue = layerSelect.value;
-        const selectedMap = mapData.find((data) => data.year === selectedValue);
+      map.on("load", () => {
+        const firstSymbolId = map
+          .getStyle()
+          .layers.find((l) => l.type === "symbol")?.id;
 
-        for (const key in historicLayers) {
-          historicLayers[key].setVisible(false);
+        symbolLayerIds = map
+          .getStyle()
+          .layers.filter((layer) => layer.type === "symbol")
+          .map((layer) => layer.id);
+
+        mapData.forEach((data, index) => {
+          const layerId = `historic-${data.year}`;
+          map.addSource(layerId, {
+            type: "raster",
+            tiles: [`/maps-tiles/${data.year}/{z}/{x}/{y}.png`],
+            scheme: "tms",
+            tileSize: 256,
+            minzoom: minZoomLevel,
+            maxzoom: maxZoomLevel,
+            bounds: transformExtent(data.extent),
+          });
+
+          map.addLayer(
+            {
+              id: layerId,
+              type: "raster",
+              source: layerId,
+              paint: {
+                "raster-opacity": parseFloat(opacitySlider.value),
+              },
+              layout: {
+                visibility: index === 0 ? "visible" : "none",
+              },
+            },
+            firstSymbolId
+          );
+        });
+
+        if (mapData.length > 0) {
+          map.fitBounds(transformExtent(mapData[0].extent), {
+            padding: 50,
+            duration: 0,
+          });
         }
 
+        // Now it's safe to add controls
+        map.addControl(
+          new maplibregl.NavigationControl({ showCompass: false }),
+          "top-left"
+        );
+        map.addControl(
+          new maplibregl.GeolocateControl({
+            positionOptions: { enableHighAccuracy: true },
+            trackUserLocation: true,
+            showUserHeading: true,
+          }),
+          "top-left"
+        );
+
+        console.log("Setup complete. Controls and layers are ready.");
+      });
+
+      // --- EVENT LISTENERS for user interaction ---
+
+      // Handles changing the year from the dropdown
+      function changeHistoricLayer() {
+        const selectedYear = layerSelect.value;
+
+        mapData.forEach((data) => {
+          const layerId = `historic-${data.year}`;
+          const visibility = data.year === selectedYear ? "visible" : "none";
+          if (map.getLayer(layerId)) {
+            map.setLayoutProperty(layerId, "visibility", visibility);
+          }
+        });
+
+        const selectedMap = mapData.find((data) => data.year === selectedYear);
         if (selectedMap) {
-          historicLayers[selectedValue].setVisible(true);
-          mapView.fit(selectedMap.extent, {
-            duration: 500,
-            padding: [50, 50, 50, 50],
+          map.fitBounds(transformExtent(selectedMap.extent), {
+            padding: 50,
           });
         }
       }
 
-      // Sự kiện chọn layer
-      layerSelect.addEventListener("change", updateMap);
+      // Handles changing the opacity from the slider
+      function changeOpacity() {
+        const opacity = parseFloat(opacitySlider.value);
+        mapData.forEach((data) => {
+          const layerId = `historic-${data.year}`;
+          if (map.getLayer(layerId)) {
+            map.setPaintProperty(layerId, "raster-opacity", opacity);
+          }
+        });
 
-      // Hiển thị  mặc định
-      if (mapData.length > 0) {
-        layerSelect.value = mapData[0].year;
-        updateMap();
+        const newVisibility = opacity >= 0.6 ? "none" : "visible";
+        symbolLayerIds.forEach((id) => {
+          map.setLayoutProperty(id, "visibility", newVisibility);
+        });
       }
 
-      // Slider opacity logic
-      const opacitySlider = document.getElementById("opacity-slider");
-      opacitySlider.addEventListener("input", function (e) {
-        const value = parseFloat(e.target.value);
-        for (const key in historicLayers) {
-          historicLayers[key].setOpacity(value);
-        }
-      });
-      // Set initial opacity
-      opacitySlider.value = 0.7;
+      layerSelect.addEventListener("change", changeHistoricLayer);
+      opacitySlider.addEventListener("input", changeOpacity);
     </script>
     <script>
       // Service worker logic (unchanged)
