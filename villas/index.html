@@ -158,40 +158,26 @@
 
       // 3.2: Load GeoJSON
       async function loadAndParseData(url) {
-        const response = await fetch(url);
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-        // old code that read csv -> geojson
-        // return new Promise((resolve, reject) => {
-        //   Papa.parse(url, {
-        //     download: true,
-        //     header: true,
-        //     skipEmptyLines: true,
-        //     complete: (results) => {
-        //       const features = results.data
-        //         .map((row) => {
-        //           const lat = parseFloat(row.Latitude);
-        //           const lon = parseFloat(row.Longitude);
-        //           if (!isNaN(lat) && !isNaN(lon)) {
-        //             return {
-        //               type: "Feature",
-        //               geometry: { type: "Point", coordinates: [lon, lat] },
-        //               properties: {
-        //                 address: row.Address || "No address provided",
-        //               },
-        //             };
-        //           }
-        //           return null;
-        //         })
-        //         .filter(Boolean);
-        //       resolve({ type: "FeatureCollection", features });
-        //       console.log("Feature collection", features);
-        //     },
-        //     error: (err) => reject(err),
-        //   });
-        // });
+        return new Promise((resolve, reject) => {
+          const worker = new Worker("./webworker.js");
+          worker.onmessage = (e) => {
+            worker.terminate(); // Stop the worker when done
+            if (e.data.error) {
+              reject(new Error(e.data.error));
+            } else {
+              resolve(e.data.data);
+            }
+          };
+
+          worker.onerror = (e) => {
+            worker.terminate();
+            reject(
+              new Error(`Web Worker failed to start or execute: ${e.message}`)
+            );
+          };
+
+          worker.postMessage({ url });
+        });
       }
 
       // 3.3: Data layers
