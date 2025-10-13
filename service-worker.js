@@ -1,73 +1,99 @@
-const CACHE_NAME = 'allmaps-tiles-cache-v1';
-const ALLMAPS_TILE_URL_PREFIX = 'https://allmaps.xyz/images/e96b97a4f6272246/';
+const CACHE_NAME = "hanoi-main-map-cache-v1";
+const urlsToCache = [
+  "/",
+  "/index.html",
+  "/favicon.ico",
+  "https://unpkg.com/maplibre-gl@^5.9.0/dist/maplibre-gl.css",
+  "https://unpkg.com/maplibre-gl@^5.9.0/dist/maplibre-gl.js",
+];
 
-self.addEventListener('install', (event) => {
-  console.log('Service Worker installing.');
-  // Force the waiting service worker to become active.
-  self.skipWaiting();
+// --- 1. Pre-cache static assets ---
+self.addEventListener("install", (event) => {
+  console.log("Main Service Worker: Installing assets...");
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.addAll(urlsToCache).catch((error) => {
+        console.error("Failed to pre-cache some assets:", error);
+      });
+    })
+  );
+  self.skipWaiting(); // Force activation immediately
 });
 
-self.addEventListener('activate', (event) => {
-  console.log('Service Worker activating.');
+// --- 2. Clean up old caches ---
+self.addEventListener("activate", (event) => {
+  console.log("Main Service Worker: Activating and cleaning old caches...");
+  const cacheWhitelist = [CACHE_NAME];
+
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
-            console.log('Service Worker: Deleting old cache', cacheName);
+          if (cacheWhitelist.indexOf(cacheName) === -1) {
+            console.log(`Main Service Worker: Deleting old cache ${cacheName}`);
             return caches.delete(cacheName);
           }
-          return null;
         })
       );
     })
   );
-  // Tell the active service worker to take control of the page immediately.
   return self.clients.claim();
 });
 
-self.addEventListener('fetch', (event) => {
+// --- 3. Fetch Handler (Cache-First & Tile Caching) ---
+self.addEventListener("fetch", (event) => {
   const requestUrl = new URL(event.request.url);
 
-  // Only cache Allmaps tiles
-  if (requestUrl.origin === 'https://allmaps.xyz' && requestUrl.pathname.startsWith('/images/e96b97a4f6272246/')) {
+  if (requestUrl.pathname.startsWith("/villas/")) {
+    return;
+  }
+
+  // A. Cache-First for local precached assets (index.html, etc.)
+  if (
+    urlsToCache.some(
+      (url) => requestUrl.pathname === url || requestUrl.pathname === "/"
+    ) ||
+    requestUrl.href.includes("unpkg.com") // Ensure external libraries are cache-first
+  ) {
     event.respondWith(
       caches.match(event.request).then((response) => {
-        // Cache hit - return response
         if (response) {
           return response;
         }
+        return fetch(event.request);
+      })
+    );
+    return;
+  }
 
-        // No cache hit - fetch from network
+  // B. Cache-and-Update for Map Tiles (MapTiler Base Map & Historic Tiles)
+  if (
+    requestUrl.hostname.includes("api.maptiler.com") ||
+    requestUrl.pathname.startsWith("/maps-tiles/")
+  ) {
+    event.respondWith(
+      caches.match(event.request).then((response) => {
+        if (response) {
+          return response;
+        }
         return fetch(event.request).then((networkResponse) => {
-          // Check if we received a valid response
-          if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
+          if (
+            !networkResponse ||
+            networkResponse.status !== 200 ||
+            networkResponse.type !== "basic"
+          ) {
             return networkResponse;
           }
-
-          // IMPORTANT: Clone the response. A response is a stream
-          // and can only be consumed once. We need to consume it once
-          // to send it to the browser and once to cache it.
           const responseToCache = networkResponse.clone();
-
           caches.open(CACHE_NAME).then((cache) => {
             cache.put(event.request, responseToCache);
           });
-
           return networkResponse;
-        }).catch((error) => {
-          console.error('Service Worker: Fetch failed:', error);
-          // You could return a fallback image here if desired
-          // For now, just re-throw the error or return a generic response
-          return new Response('Network request failed and no cache available.', {
-            status: 503,
-            statusText: 'Service Unavailable',
-            headers: new Headers({
-              'Content-Type': 'text/plain'
-            })
-          });
         });
       })
     );
+    return;
   }
+
+  event.respondWith(fetch(event.request));
 });
