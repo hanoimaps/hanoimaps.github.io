@@ -56,7 +56,7 @@
   <body>
     <div id="map"></div>
     <div class="layer-switcher">
-      <select id="historic-layer-select"></select>
+      <select id="layer-select"></select>
     </div>
     <div id="opacity-slider-wrapper">
       <input
@@ -131,9 +131,8 @@
       ];
       const apiKey = "JOtQQjkj3YJ9dZzJKMJs";
       const minZoomLevel = 12;
-      const maxZoomLevel = 18;
 
-      const layerSelect = document.getElementById("historic-layer-select");
+      const layerSelect = document.getElementById("layer-select");
       const opacitySlider = document.getElementById("opacity-slider");
       let symbolLayerIds = [];
 
@@ -150,12 +149,12 @@
         return [lon1, lat1, lon2, lat2];
       }
 
-      // --- Initialize Map ---
       const map = new maplibregl.Map({
         container: "map",
         style: `https://api.maptiler.com/maps/streets-v2/style.json?key=${apiKey}`,
         center: [105.8542, 21.0285],
         zoom: minZoomLevel,
+        attributionControl: false,
       });
 
       mapData.forEach((data) => {
@@ -183,7 +182,6 @@
             scheme: "tms",
             tileSize: 256,
             minzoom: minZoomLevel,
-            maxzoom: maxZoomLevel,
             bounds: transformExtent(data.extent),
           });
 
@@ -203,6 +201,8 @@
           );
         });
 
+        modifyBaseStyle(map);
+
         if (mapData.length > 0) {
           map.fitBounds(transformExtent(mapData[0].extent), {
             padding: 50,
@@ -210,7 +210,6 @@
           });
         }
 
-        // Now it's safe to add controls
         map.addControl(
           new maplibregl.NavigationControl({ showCompass: false }),
           "top-left"
@@ -224,12 +223,51 @@
           "top-left"
         );
 
-        console.log("Setup complete. Controls and layers are ready.");
+        map.addControl(
+          new maplibregl.AttributionControl({
+            customAttribution:
+              '<a href="https://threads.com/@tomeyinhanoi" target="_blank">By Tomey</a>',
+            compact: true,
+          }),
+          "bottom-left"
+        );
       });
 
-      // --- EVENT LISTENERS for user interaction ---
+      // Styling
+      function modifyBaseStyle(map) {
+        console.log(
+          "All layer ids: ",
+          map.getStyle().layers.map((layer) => layer.id)
+        );
+        const layersToRecolor = ["Grass", "Meadow", "Forest", "Wood", "Scrub"];
+        const layersToHide = [
+          "Residential",
+          "Industrial",
+          "Other border",
+          "Disputed border",
+        ];
+        const pathsToRecolor = ["Path", "Path minor"];
 
-      // Handles changing the year from the dropdown
+        const applyProperty = (layerIds, type, key, value) => {
+          layerIds.forEach((id) => {
+            if (map.getLayer(id)) {
+              if (type === "paint") map.setPaintProperty(id, key, value);
+              if (type === "layout") map.setLayoutProperty(id, key, value);
+            }
+          });
+        };
+
+        applyProperty(layersToRecolor, "paint", "fill-color", "#A1E8A1");
+        applyProperty(layersToHide, "layout", "visibility", "none");
+        applyProperty(pathsToRecolor, "paint", "line-color", "#efeeef");
+
+        if (map.getLayer("Building") || map.getLayer("Building 3D")) {
+          map.setLayerZoomRange("Building", 16, 24);
+          map.setLayerZoomRange("Building 3D", 16, 24);
+        }
+      }
+
+      // Dropdown
       function changeHistoricLayer() {
         const selectedYear = layerSelect.value;
 
@@ -249,7 +287,7 @@
         }
       }
 
-      // Handles changing the opacity from the slider
+      // Opacity slider
       function changeOpacity() {
         const opacity = parseFloat(opacitySlider.value);
         mapData.forEach((data) => {
@@ -269,7 +307,7 @@
       opacitySlider.addEventListener("input", changeOpacity);
     </script>
     <script>
-      // Service worker logic (unchanged)
+      // Service worker for caching
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
           navigator.serviceWorker
