@@ -1,8 +1,9 @@
-const CACHE_NAME = "hanoi-villas-cache-v1";
+const CACHE_NAME = "hanoi-villas-cache-v2";
 const urlsToCache = [
-  "/",
-  "/index.html",
-  "/data.json",
+  "./",
+  "./index.html",
+  "./webworker.js",
+  "./data.json",
   "https://unpkg.com/maplibre-gl@5.9.0/dist/maplibre-gl.css",
   "https://unpkg.com/maplibre-gl@5.9.0/dist/maplibre-gl.js",
 ];
