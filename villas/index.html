@@ -20,7 +20,6 @@
         font-family: sans-serif;
       }
       a {
-        text-decoration: none;
         color: inherit;
       }
       .maplibregl-popup-content {
@@ -124,10 +123,10 @@
 
       // 3.1: Map styling
       function modifyBaseStyle(map) {
-        console.log(
-          "All layer ids: ",
-          map.getStyle().layers.map((layer) => layer.id)
-        );
+        // console.log(
+        //   "All layer ids: ",
+        //   map.getStyle().layers.map((layer) => layer.id)
+        // );
         const layersToRecolor = ["Grass", "Meadow", "Forest", "Wood", "Scrub"];
         const layersToHide = [
           "Residential",
@@ -261,8 +260,10 @@
       function addInteractivity(map) {
         // Popup for unclustered points
         map.on("click", UNCLUSTERED_LAYER_ID, (e) => {
-          const props = e.features?.[0]?.properties;
-          const coords = e.features?.[0]?.geometry?.coordinates;
+          const props = e.features[0].properties;
+          const coords = e.features[0].geometry?.coordinates;
+          const markerId = props.id;
+          console.log(markerId);
           if (props?.address && coords) {
             map.flyTo({ center: coords, zoom: map.getZoom() });
             const googleMapsUrl = `https://www.google.com/maps/place/${encodeURIComponent(
