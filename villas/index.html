@@ -264,8 +264,7 @@
           const props = e.features?.[0]?.properties;
           const coords = e.features?.[0]?.geometry?.coordinates;
           if (props?.address && coords) {
-            const lon = coords[0];
-            const lat = coords[1];
+            map.flyTo({ center: coords, zoom: map.getZoom() });
             const googleMapsUrl = `https://www.google.com/maps/place/${encodeURIComponent(
               props.address
             )}`;
@@ -273,7 +272,9 @@
             const popupHTML = `
                   <b>${props.address}</b>
                   <br>
-                  <a href="${googleMapsUrl}" target="_blank" style="text-decoration: none">Google Maps</a>
+                  <a href="${googleMapsUrl}" target="_blank">
+                    Google Maps
+                  </a>
                 `;
 
             new maplibregl.Popup({ closeButton: false, focusAfterOpen: false })
