@@ -249,7 +249,15 @@
           filter: ["!", ["has", "point_count"]], // Only apply to features that are NOT clusters
           paint: {
             "circle-color": "#FF5722",
-            "circle-radius": 5,
+            "circle-radius": [
+              "interpolate",
+              ["linear"],
+              ["zoom"],
+              15,
+              5,
+              22,
+              24,
+            ],
             "circle-stroke-width": 1,
             "circle-stroke-color": "#fff",
           },
@@ -265,7 +273,7 @@
           const markerId = props.id;
           console.log(markerId);
           if (props?.address && coords) {
-            map.flyTo({ center: coords, zoom: map.getZoom() });
+            map.flyTo({ center: coords, zoom: map.getZoom(), speed: 0.3 });
             const googleMapsUrl = `https://www.google.com/maps/place/${encodeURIComponent(
               props.address
             )}`;
