@@ -79,7 +79,7 @@
         map.addControl(
           new maplibregl.AttributionControl({
             customAttribution:
-              '<a href="https://threads.com/@tomeyinhanoi" target="_blank">By Tomey</a>',
+              '<a href="https://threads.com/@tomeyinhanoi" target="_blank" style="text-decoration: underline">By Tomey</a>',
             compact: true,
           }),
           "bottom-left"
@@ -150,8 +150,8 @@
         applyProperty(pathsToRecolor, "paint", "line-color", "#efeeef");
 
         if (map.getLayer("Building") || map.getLayer("Building 3D")) {
-          map.setLayerZoomRange("Building", 16, 24);
-          map.setLayerZoomRange("Building 3D", 16, 24);
+          map.setLayerZoomRange("Building", 14, 24);
+          map.setLayerZoomRange("Building 3D", 14, 24);
         }
       }
 
@@ -273,7 +273,6 @@
           const markerId = props.id;
           console.log(markerId);
           if (props?.address && coords) {
-            map.flyTo({ center: coords, zoom: map.getZoom(), speed: 0.3 });
             const googleMapsUrl = `https://www.google.com/maps/place/${encodeURIComponent(
               props.address
             )}`;
@@ -286,10 +285,25 @@
                   </a>
                 `;
 
-            new maplibregl.Popup({ closeButton: false, focusAfterOpen: false })
-              .setLngLat(coords) // Use coords directly
-              .setHTML(popupHTML)
-              .addTo(map);
+            if (window.currentPopup) window.currentPopup.remove();
+
+            map.flyTo({
+              center: coords,
+              zoom: map.getZoom(),
+              duration: 900,
+              curve: 1.42,
+              essential: true,
+            });
+
+            setTimeout(() => {
+              window.currentPopup = new maplibregl.Popup({
+                closeButton: false,
+                focusAfterOpen: false,
+              })
+                .setLngLat(coords)
+                .setHTML(popupHTML)
+                .addTo(map);
+            }, 600);
           }
         });
 
