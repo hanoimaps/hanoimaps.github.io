@@ -1,0 +1,8 @@
+{
+  "name": "HanoiMaps",
+  "short_name": "HanoiMaps",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "theme_color": "#000000"
+}

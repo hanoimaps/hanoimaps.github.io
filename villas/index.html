@@ -3,36 +3,24 @@
   <head>
     <meta charset="utf-8" />
     <title>Hanoi Maps | Villas</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,
+    viewport-fit=cover"
+    />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link
       href="https://unpkg.com/maplibre-gl@5.9.0/dist/maplibre-gl.css"
       rel="stylesheet"
     />
     <script src="https://unpkg.com/maplibre-gl@5.9.0/dist/maplibre-gl.js"></script>
-    <style>
-      html,
-      body,
-      #map {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
-      }
-      a {
-        color: inherit;
-      }
-      .maplibregl-popup-content {
-        background: rgba(30, 30, 30, 0.85);
-        color: white;
-        border: 1px solid #555;
-        backdrop-filter: blur(5px);
-        padding: 10px 15px;
-      }
-      .maplibregl-popup-anchor-bottom .maplibregl-popup-tip {
-        border-top-color: rgba(30, 30, 30, 0.85);
-      }
-    </style>
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <div id="map"></div>
@@ -63,7 +51,6 @@
       map.on("load", () => {
         map.addControl(
           new maplibregl.NavigationControl({
-            showCompass: false,
             visualizePitch: true,
           }),
           "top-left"
@@ -84,6 +71,15 @@
           }),
           "bottom-left"
         );
+
+        const compass = document.querySelector(".maplibregl-ctrl-compass");
+        compass.style.display = "none";
+        const toggle = () => {
+          compass.style.display =
+            Math.abs(map.getBearing()) > 0.1 ? "block" : "none";
+        };
+        ["rotate", "moveend"].forEach((e) => map.on(e, toggle));
+        toggle();
       });
 
       // 2.2: Caching
@@ -299,6 +295,7 @@
               window.currentPopup = new maplibregl.Popup({
                 closeButton: false,
                 focusAfterOpen: false,
+                anchor: "bottom",
               })
                 .setLngLat(coords)
                 .setHTML(popupHTML)
