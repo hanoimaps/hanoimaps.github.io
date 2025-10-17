@@ -190,7 +190,6 @@
           new maplibregl.GeolocateControl({
             positionOptions: { enableHighAccuracy: true },
             trackUserLocation: true,
-            showUserHeading: true,
           }),
           "top-left"
         );
@@ -203,14 +202,23 @@
           }),
           "bottom-left"
         );
+
+        const compass = document.querySelector(".maplibregl-ctrl-compass");
+        compass.style.display = "none";
+        const toggle = () => {
+          compass.style.display =
+            Math.abs(map.getBearing()) > 0.1 ? "block" : "none";
+        };
+        ["rotate", "moveend"].forEach((e) => map.on(e, toggle));
+        toggle();
       });
 
       // Styling
       function modifyBaseStyle(map) {
-        console.log(
-          "All layer ids: ",
-          map.getStyle().layers.map((layer) => layer.id)
-        );
+        // console.log(
+        //   "All layer ids: ",
+        //   map.getStyle().layers.map((layer) => layer.id)
+        // );
         const layersToRecolor = ["Grass", "Meadow", "Forest", "Wood", "Scrub"];
         const layersToHide = [
           "Residential",
