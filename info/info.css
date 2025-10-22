@@ -8,10 +8,6 @@ body {
   color: white;
 }
 
-body:hover {
-  background-image: url("https://viewcount-hanoimaps.vercel.app/api/count");
-}
-
 a {
   text-decoration: none;
   display: inline-flex;
