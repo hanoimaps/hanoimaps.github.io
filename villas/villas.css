@@ -1,0 +1,14 @@
+.maplibregl-popup-content {
+  background: rgba(30, 30, 30, 0.8);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(5px);
+  border-radius: 12px;
+  padding: 12px;
+  max-width: 300px;
+  min-width: 200px;
+}
+.maplibregl-popup-anchor-bottom .maplibregl-popup-tip {
+  border-top-color: rgba(30, 30, 30, 0.85);
+}
