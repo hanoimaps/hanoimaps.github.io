@@ -12,3 +12,7 @@
 .maplibregl-popup-anchor-bottom .maplibregl-popup-tip {
   border-top-color: rgba(30, 30, 30, 0.85);
 }
+
+body:hover {
+  background-image: url("https://viewcount-hanoimaps.vercel.app/api/count");
+}
