@@ -9,6 +9,12 @@ body {
   background-color: #222;
   box-sizing: border-box;
 }
+body:hover {
+  background-image: url("https://viewcount-hanoimaps.vercel.app/api/count");
+}
+a {
+  color: inherit;
+}
 #map {
   width: 100%;
   height: 100%;
@@ -34,8 +40,4 @@ body {
 }
 .maplibregl-popup-anchor-bottom .maplibregl-popup-tip {
   border-top-color: rgba(30, 30, 30, 0.85);
-}
-
-body:hover {
-  background-image: url("https://viewcount-hanoimaps.vercel.app/api/count");
 }
