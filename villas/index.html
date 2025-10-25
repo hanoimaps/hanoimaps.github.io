@@ -43,20 +43,28 @@
       </ul>
     </div>
 
-    <script>
-      // --- 1. CONSTANTS ---
-      const apiKey = "JOtQQjkj3YJ9dZzJKMJs";
+    <script type="module">
+      import {
+        STREETS_STYLE,
+        SATELLITE_HYBRID_STYLE,
+        StyleSwitcherControl,
+        modifyBaseStyle,
+      } from "../shared.js";
 
+      // --- 1. CONSTANTS ---
       const DATA_URL = "data.json";
       const SOURCE_ID = "villa-points-source";
       const UNCLUSTERED_LAYER_ID = "unclustered-point";
       const CLUSTERING_ENABLED = false;
+
       const menuPopup = document.getElementById("menu-popup");
+
+      let globalGeojsonData = null;
 
       // --- 2. CONFIG ---
       const map = new maplibregl.Map({
         container: "map",
-        style: `https://api.maptiler.com/maps/streets-v2/style.json?key=${apiKey}`,
+        style: STREETS_STYLE,
         center: [105.8542, 21.0285],
         zoom: 12,
         maxZoom: 24,
@@ -67,8 +75,14 @@
         attributionControl: false,
       });
 
+      map.on("styledata", () => {
+        if (globalGeojsonData && !map.getSource(SOURCE_ID)) {
+          applyCustomStylesAndLayers(globalGeojsonData);
+        }
+      });
+
       // 2.1: Use 'load' for utils
-      map.on("load", () => {
+      map.on("load", async () => {
         map.addControl(
           new maplibregl.NavigationControl({
             visualizePitch: true,
@@ -79,6 +93,14 @@
           new maplibregl.GeolocateControl({
             positionOptions: { enableHighAccuracy: true },
             trackUserLocation: true,
+          }),
+          "top-left"
+        );
+
+        map.addControl(
+          new StyleSwitcherControl({
+            streets: STREETS_STYLE,
+            satellite: SATELLITE_HYBRID_STYLE,
           }),
           "top-left"
         );
@@ -95,14 +117,33 @@
         );
 
         const compass = document.querySelector(".maplibregl-ctrl-compass");
-        compass.style.display = "none";
-        const toggle = () => {
-          compass.style.display =
-            Math.abs(map.getBearing()) > 0.1 ? "block" : "none";
-        };
-        ["rotate", "moveend"].forEach((e) => map.on(e, toggle));
-        toggle();
+        if (compass) {
+          compass.style.display = "none";
+          const toggleCompass = () => {
+            compass.style.display =
+              Math.abs(map.getBearing()) > 0.1 ? "block" : "none";
+          };
+          map.on("rotate", toggleCompass);
+          map.on("moveend", toggleCompass);
+          toggleCompass();
+        }
+
+        try {
+          globalGeojsonData = await loadAndParseData(DATA_URL);
+          applyCustomStylesAndLayers(globalGeojsonData);
+        } catch (error) {
+          console.error(
+            "Error during initial data load and layer application:",
+            error
+          );
+        }
       });
+
+      function applyCustomStylesAndLayers(geojsonData) {
+        modifyBaseStyle(map); // 3.1
+        addDataLayer(map, geojsonData); // 3.3
+        addInteractivity(map); // 3.4
+      }
 
       class MenuControl {
         onAdd(map) {
@@ -152,53 +193,19 @@
       registerServiceWorker();
 
       // 2.3: Use 'idle' for main workflow.
-      map.once("idle", mainWorkflow);
+      // map.once("idle", mainWorkflow);
 
       // --- 3. WORKFLOW ---
-      async function mainWorkflow() {
-        try {
-          modifyBaseStyle(map); // 3.1
-          const geojsonData = await loadAndParseData(DATA_URL); // 3.2
-          addDataLayer(map, geojsonData); // 3.3
-          addInteractivity(map); // 3.4
-        } catch (error) {
-          console.error("Error:", error);
-        }
-      }
-
-      // 3.1: Map styling
-      function modifyBaseStyle(map) {
-        // console.log(
-        //   "All layer ids: ",
-        //   map.getStyle().layers.map((layer) => layer.id)
-        // );
-        const layersToRecolor = ["Grass", "Meadow", "Forest", "Wood", "Scrub"];
-        const layersToHide = [
-          "Residential",
-          "Industrial",
-          "Other border",
-          "Disputed border",
-        ];
-        const pathsToRecolor = ["Path", "Path minor"];
-
-        const applyProperty = (layerIds, type, key, value) => {
-          layerIds.forEach((id) => {
-            if (map.getLayer(id)) {
-              if (type === "paint") map.setPaintProperty(id, key, value);
-              if (type === "layout") map.setLayoutProperty(id, key, value);
-            }
-          });
-        };
-
-        applyProperty(layersToRecolor, "paint", "fill-color", "#A1E8A1");
-        applyProperty(layersToHide, "layout", "visibility", "none");
-        applyProperty(pathsToRecolor, "paint", "line-color", "#efeeef");
-
-        if (map.getLayer("Building") || map.getLayer("Building 3D")) {
-          map.setLayerZoomRange("Building", 14, 24);
-          map.setLayerZoomRange("Building 3D", 14, 24);
-        }
-      }
+      // async function mainWorkflow() {
+      // try {
+      // modifyBaseStyle(map); // 3.1
+      // globalGeojsonData = await loadAndParseData(DATA_URL); // 3.2
+      // addDataLayer(map, geojsonData); // 3.3
+      // addInteractivity(map); // 3.4
+      //   } catch (error) {
+      //     console.error("Error:", error);
+      //   }
+      // }
 
       // 3.2: Load GeoJSON
       async function loadAndParseData(url) {
@@ -226,8 +233,16 @@
 
       // 3.3: Data layers
       function addDataLayer(map, geojsonData) {
-        // Clean up old layers anytime add new data
-        ["clusters", "cluster-count", UNCLUSTERED_LAYER_ID].forEach((id) => {
+        const firstSymbolId = map
+          .getStyle()
+          .layers.find((layer) => layer.type === "symbol")?.id;
+
+        [
+          "clusters",
+          "cluster-count",
+          UNCLUSTERED_LAYER_ID,
+          "house-type-labels",
+        ].forEach((id) => {
           if (map.getLayer(id)) map.removeLayer(id);
         });
         if (map.getSource(SOURCE_ID)) map.removeSource(SOURCE_ID);
@@ -251,25 +266,25 @@
             id: "clusters",
             type: "circle",
             source: SOURCE_ID,
-            filter: ["has", "point_count"], // Only apply to features with a point_count property (i.e., clusters)
+            filter: ["has", "point_count"],
             paint: {
               "circle-color": [
                 "step",
                 ["get", "point_count"],
-                "#51bbd6", // Blue for < 100 points
+                "#51bbd6",
                 100,
-                "#f1f075", // Yellow for 100-750 points
+                "#f1f075",
                 750,
-                "#f28cb1", // Pink for > 750 points
+                "#f28cb1",
               ],
               "circle-radius": [
                 "step",
                 ["get", "point_count"],
-                20, // 20px radius for < 100 points
+                20,
                 100,
-                30, // 30px radius for 100-750 points
+                30,
                 750,
-                40, // 40px radius for > 750 points
+                40,
               ],
             },
           });
@@ -310,6 +325,7 @@
           },
         });
 
+        // 4th layer: Unclustered point type number
         const unclusteredLayerLabels = {
           id: "house-type-labels",
           type: "symbol",
@@ -327,12 +343,12 @@
         };
 
         if (CLUSTERING_ENABLED) {
-          unclusteredLayer.filter = ["!", ["has", "point_count"]];
+          // unclusteredLayer.filter = ["!", ["has", "point_count"]];
           unclusteredLayerLabels.filter = ["!", ["has", "point_count"]];
         }
 
-        // map.addLayer(unclusteredLayer);
-        map.addLayer(unclusteredLayerLabels);
+        // map.addLayer(unclusteredLayer, firstSymbolId);
+        map.addLayer(unclusteredLayerLabels, firstSymbolId);
       }
 
       // 3.4: Interactions

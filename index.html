@@ -21,6 +21,7 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/maplibre-gl@^5.9.0/dist/maplibre-gl.js"></script>
+    <script type="module" src="shared.js"></script>
   </head>
   <body>
     <div id="map"></div>
@@ -38,7 +39,7 @@
         aria-label="opacity"
       />
     </div>
-    <script src="app.js" defer></script>
+    <script type="module" src="app.js" defer></script>
     <script>
       // Caching
       if ("serviceWorker" in navigator) {
