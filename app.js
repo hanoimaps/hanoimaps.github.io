@@ -1,5 +1,4 @@
 import {
-  apiKey,
   STREETS_STYLE,
   SATELLITE_HYBRID_STYLE,
   StyleSwitcherControl,
@@ -211,9 +210,7 @@ function setupMapLayers() {
     }
   });
 
-  if (map.getStyle().name === "MapTiler Streets") {
-    modifyBaseStyle(map);
-  }
+  modifyBaseStyle(map);
 }
 
 function applyLayerVisibility() {
