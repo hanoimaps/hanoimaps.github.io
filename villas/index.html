@@ -24,14 +24,34 @@
   </head>
   <body>
     <div id="map"></div>
+    <!--  POPUP -->
+    <div id="menu-popup" class="menu-popup">
+      <p>
+        1216 biệt thự theo quyết định
+        <a
+          href="https://thuvienphapluat.vn/van-ban/Bat-dong-san/Quyet-dinh-1845-QD-UBND-2022-Danh-muc-nha-biet-thu-cu-Ha-Noi-truoc-1954-516094.aspx"
+          target="_blank"
+          >1845/2022</a
+        >
+        UBND TP. Hà Nội.
+      </p>
+      <ul>
+        <li>1: Phải giữ nguyên hiện trạng</li>
+        <li>2: Phải giữ nguyên nét gốc</li>
+        <li>3: Được thay đổi hiện trạng</li>
+        <li>?: Chưa có trong danh sách</li>
+      </ul>
+    </div>
 
     <script>
       // --- 1. CONSTANTS ---
       const apiKey = "JOtQQjkj3YJ9dZzJKMJs";
+
       const DATA_URL = "data.json";
       const SOURCE_ID = "villa-points-source";
       const UNCLUSTERED_LAYER_ID = "unclustered-point";
       const CLUSTERING_ENABLED = false;
+      const menuPopup = document.getElementById("menu-popup");
 
       // --- 2. CONFIG ---
       const map = new maplibregl.Map({
@@ -63,6 +83,8 @@
           "top-left"
         );
 
+        map.addControl(new MenuControl(), "top-left");
+
         map.addControl(
           new maplibregl.AttributionControl({
             customAttribution:
@@ -81,6 +103,33 @@
         ["rotate", "moveend"].forEach((e) => map.on(e, toggle));
         toggle();
       });
+
+      class MenuControl {
+        onAdd(map) {
+          this._map = map;
+          this._container = document.createElement("div");
+          this._container.className = "maplibregl-ctrl maplibregl-ctrl-group";
+
+          const button = document.createElement("button");
+          button.className = "maplibregl-ctrl-icon maplibregl-ctrl-menu";
+          button.type = "button";
+          button.setAttribute("aria-label", "Open menu");
+
+          button.onclick = (e) => {
+            e.stopPropagation();
+            menuPopup.classList.toggle("active");
+          };
+
+          this._container.appendChild(button);
+          this._container.appendChild(menuPopup);
+          return this._container;
+        }
+
+        onRemove() {
+          this._container.parentNode.removeChild(this._container);
+          this._map = undefined;
+        }
+      }
 
       // 2.2: Caching
       function registerServiceWorker() {
@@ -237,7 +286,9 @@
               "text-size": 12,
             },
           });
-        } // 3rd layer: unclustered points
+        }
+
+        // 3rd layer: unclustered points
         map.addLayer({
           id: UNCLUSTERED_LAYER_ID,
           type: "circle",
@@ -258,6 +309,30 @@
             "circle-stroke-color": "#fff",
           },
         });
+
+        const unclusteredLayerLabels = {
+          id: "house-type-labels",
+          type: "symbol",
+          source: SOURCE_ID,
+          minzoom: 15.5,
+          layout: {
+            "text-field": ["get", "type"],
+            "text-font": ["Roboto Regular", "Arial Unicode MS Regular"],
+            "text-size": 12,
+            "text-allow-overlap": false,
+          },
+          paint: {
+            "text-color": "#ffffff",
+          },
+        };
+
+        if (CLUSTERING_ENABLED) {
+          unclusteredLayer.filter = ["!", ["has", "point_count"]];
+          unclusteredLayerLabels.filter = ["!", ["has", "point_count"]];
+        }
+
+        // map.addLayer(unclusteredLayer);
+        map.addLayer(unclusteredLayerLabels);
       }
 
       // 3.4: Interactions
@@ -275,7 +350,6 @@
 
             const popupHTML = `
                   <b>${props.address}</b>
-                  <br>
                   <a href="${googleMapsUrl}" target="_blank">
                     Google Maps
                   </a>
@@ -301,6 +375,12 @@
                 .setHTML(popupHTML)
                 .addTo(map);
             }, 600);
+          }
+        });
+
+        map.on("click", () => {
+          if (menuPopup.classList.contains("active")) {
+            menuPopup.classList.remove("active");
           }
         });
 
