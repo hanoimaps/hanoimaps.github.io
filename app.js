@@ -105,7 +105,7 @@ const map = new maplibregl.Map({
     [105.5, 20.7],
     [106.1, 21.5],
   ],
-  attributionControl: false,
+  attributionControl: { compact: true },
 });
 // --- 2. MAP LOAD ---
 map.on("load", () => {
