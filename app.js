@@ -1,4 +1,10 @@
-import { apiKey, STREETS_STYLE, SATELLITE_HYBRID_STYLE, StyleSwitcherControl, modifyBaseStyle } from './shared.js';
+import {
+  apiKey,
+  STREETS_STYLE,
+  SATELLITE_HYBRID_STYLE,
+  StyleSwitcherControl,
+  modifyBaseStyle,
+} from "./shared.js";
 
 // --- 1. CONSTANTS ---
 const mapData = [
@@ -11,6 +17,11 @@ const mapData = [
     year: "1873",
     title: "1873",
     extent: [11778588.863, 2391034.561, 11786438.652, 2399428.351],
+  },
+  {
+    year: "1885",
+    title: "1885",
+    extent: [11779497.477, 2391753.406, 11786836.372, 2398597.242],
   },
   {
     year: "1891b",
@@ -61,6 +72,11 @@ const mapData = [
     year: "1942a",
     title: "1942",
     extent: [11778407.93035, 2391208.420221, 11786963.948359, 2398505.336837],
+  },
+  {
+    year: "1951",
+    title: "1951",
+    extent: [11777080.729, 2389012.259, 11789107.024, 2399217.479],
   },
   {
     year: "1952",
@@ -205,8 +221,6 @@ function applyLayerVisibility() {
     }
   });
 }
-
-
 
 function changeHistoricLayer() {
   const selectedYear = layerSelect.value;
