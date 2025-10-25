@@ -27,6 +27,38 @@ a {
   margin-top: calc(0px - env(safe-area-inset-top, 0px));
 }
 
+/* Style Switcher Button */
+.maplibregl-ctrl-group .style-switcher-button {
+  width: 29px;
+  height: 29px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border-radius: 4px;
+}
+
+.maplibregl-ctrl-group .style-switcher-button .style-switcher-icon {
+  width: 18px;
+  height: 18px;
+  filter: invert(0%);
+  transition: filter 0.3s ease;
+}
+
+.maplibregl-ctrl-group .style-switcher-button.is-satellite {
+  background-color: rgba(30, 30, 30);
+}
+
+.maplibregl-ctrl-group
+  .style-switcher-button.is-satellite
+  .style-switcher-icon {
+  filter: invert(100%);
+}
+/* ======== */
+
 .maplibregl-popup-content {
   background-color: rgba(30, 30, 30, 0.8);
   color: white;
@@ -73,7 +105,7 @@ a {
 }
 
 .maplibregl-ctrl-menu {
-  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"%3E%3Ctext x="10" y="16" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" font-weight="bold" fill="%23333"%3Ei%3C/text%3E%3C/svg%3E');
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"%3E%3Ctext x="10" y="15" text-anchor="middle" font-size="22" font-family="Bradley Hand ITC Bold, cursive" fill="%23333" font-weight="bold"%3Ei%3C/text%3E%3C/svg%3E');
   background-size: 18px 18px;
   background-position: center;
   background-repeat: no-repeat;
