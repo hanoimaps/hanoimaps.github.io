@@ -292,9 +292,11 @@ map.on("load", () => {
 });
 
 map.on("styledata", () => {
-  setupMapLayers(); // Re-add styles after setStyle() completes.
-  applyLayerVisibility();
-  changeOpacity();
+  setTimeout(() => {
+    setupMapLayers(); // Re-add styles after setStyle() completes.
+    applyLayerVisibility();
+    changeOpacity();
+  }, 50);
 });
 
 layerSelect.addEventListener("change", changeHistoricLayer);
