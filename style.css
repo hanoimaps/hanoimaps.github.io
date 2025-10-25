@@ -58,3 +58,34 @@ body:hover {
   transform: translateY(-50%) rotate(-90deg);
   transform-origin: center;
 }
+
+/* Style Switcher Button */
+.maplibregl-ctrl-group .style-switcher-button {
+  width: 29px;
+  height: 29px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border-radius: 4px;
+}
+
+.maplibregl-ctrl-group .style-switcher-button .style-switcher-icon {
+  width: 18px;
+  height: 18px;
+  filter: invert(0%);
+  transition: filter 0.3s ease;
+}
+
+.maplibregl-ctrl-group .style-switcher-button.is-satellite {
+  background-color: rgba(30, 30, 30);
+}
+
+.maplibregl-ctrl-group
+  .style-switcher-button.is-satellite
+  .style-switcher-icon {
+  filter: invert(100%);
+}
