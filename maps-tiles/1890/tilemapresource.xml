@@ -3,8 +3,8 @@
       <Title>1890_modified.tif</Title>
       <Abstract></Abstract>
       <SRS>EPSG:3857</SRS>
-      <BoundingBox minx="105.79999114129788" miny="20.98652004850585" maxx="105.89491520906034" maxy="21.07764854687195"/>
-      <Origin x="105.79999114129788" y="20.98652004850585"/>
+      <BoundingBox minx="105.80029670521780" miny="20.98662862172426" maxx="105.89495029209151" maxy="21.07679113106507"/>
+      <Origin x="105.80029670521780" y="20.98662862172426"/>
       <TileFormat width="256" height="256" mime-type="image/png" extension="png"/>
       <TileSets profile="mercator">
         <TileSet href="12" units-per-pixel="38.21851413574219" order="12"/>
