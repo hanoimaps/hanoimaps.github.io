@@ -1,0 +1,1229 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "1",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.85238,
+          21.03613
+        ]
+      },
+      "properties": {
+        "number": "1",
+        "name_vn": "Hoài niệm về những thành phố",
+        "from_date": "2025-11-01",
+        "to_date": "2025-11-30",
+        "start_date": "2025-11-01",
+        "start_time": "10:00",
+        "time": "90'",
+        "isInviteOnly": "Yes",
+        "isRegister": "No",
+        "address": "Trung tâm văn hoá nghệ thuật 22 Hàng Buồm",
+        "address_url": "https://www.google.com/maps/place/22+Hang+Buom+Culture+and+Arts+Center/@21.0361326,105.8498004,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abc1fa899227:0xd09ca63132b759d4!8m2!3d21.0361276!4d105.8523753!16s%2Fg%2F11sgz08tv7?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "2",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.85368,
+          21.02549
+        ]
+      },
+      "properties": {
+        "number": "2",
+        "name_vn": "Nghệ thuật của chuyển động và ánh sáng",
+        "from_date": "2025-11-01",
+        "to_date": "2025-11-30",
+        "start_date": "2025-11-03",
+        "start_time": "10:00",
+        "time": "30'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "61 Tràng Tiền",
+        "address_url": "https://www.google.com/maps/place/61+Tr%C3%A0ng+Ti%E1%BB%81n,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.0254968,105.8511054,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abeb4390bc49:0x9999660f53d6f08f!8m2!3d21.0254918!4d105.8536803!16s%2Fg%2F11q2xcnk7r?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8315,
+          21.0347
+        ]
+      },
+      "properties": {
+        "number": "3",
+        "name_vn": "Thời gian và những thành phố",
+        "from_date": "2025-11-01",
+        "to_date": "2025-11-22",
+        "start_date": "2025-11-03",
+        "start_time": "18:00",
+        "time": "60'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "Matca 48 Ngọc Hà",
+        "address_url": "https://www.google.com/maps/place/Matca+Space+for+Photography/@21.0347098,105.8289268,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab232289ec6d:0xebb748b7a0cc98!8m2!3d21.0347048!4d105.8315017!16s%2Fg%2F11h6v0yv3w?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "4",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.04847,
+          21.16726
+        ]
+      },
+      "properties": {
+        "number": "4",
+        "name_vn": "Tiếp nối: Việt Nam",
+        "from_date": "2025-11-01",
+        "to_date": "2025-11-30",
+        "start_date": "2025-11-04",
+        "start_time": "9:00",
+        "time": "60'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "2 Lê Thái Tổ",
+        "address_url": "https://www.google.com/maps/place/2+P.+L%C3%AA+Th%C3%A1i+T%E1%BB%95,+H%C3%A0ng+Tr%E1%BB%91ng,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0318174,105.8485955,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbfea5bc50d:0x3ba3149c7b28c788!8m2!3d21.0318124!4d105.8511704!16s%2Fg%2F11rhs5156r?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "5",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.84256,
+          21.01965
+        ]
+      },
+      "properties": {
+        "number": "5",
+        "name_vn": "Mùa thức tỉnh",
+        "from_date": "2025-11-01",
+        "to_date": "2025-11-30",
+        "start_date": "2025-11-04",
+        "start_time": "18:00",
+        "time": "30'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "Viện Pháp Hà Nội 15 Thiền Quang",
+        "address_url": "https://www.google.com/maps/place/Vi%E1%BB%87n+Ph%C3%A1p+H%C3%A0+N%E1%BB%99i/@21.0196556,105.839981,17z/data=!3m1!4b1!4m6!3m5!1s0x3135aba53be38637:0xf1e61a9e6619afb9!8m2!3d21.0196506!4d105.8425559!16s%2Fg%2F11tcyd9px8?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "6",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.85341,
+          21.02555
+        ]
+      },
+      "properties": {
+        "number": "6",
+        "name_vn": "Diện mạo vạn vật",
+        "from_date": "2025-11-01",
+        "to_date": "2025-11-30",
+        "start_date": "2025-11-05",
+        "start_time": "10:00",
+        "time": "30'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "93 Đinh Tiên Hoàng",
+        "address_url": "https://www.google.com/maps/place/93+%C4%90inh+Ti%C3%AAn+Ho%C3%A0ng,+Tr%C3%A0ng+Ti%E1%BB%81n,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.0255504,105.8508307,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abeb466b0fcf:0xb0ea81d314dae1c5!8m2!3d21.0255454!4d105.8534056!16s%2Fg%2F11c5kl1__9?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "7",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.04847,
+          21.16726
+        ]
+      },
+      "properties": {
+        "number": "7",
+        "name_vn": "Nhật ký kẻ ngỡ ngàng",
+        "from_date": "2025-11-01",
+        "to_date": "2025-11-30",
+        "start_date": "2025-11-05",
+        "start_time": "18:00",
+        "time": "60'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "2 Lê Thái Tổ",
+        "address_url": "https://www.google.com/maps/place/2+P.+L%C3%AA+Th%C3%A1i+T%E1%BB%95,+H%C3%A0ng+Tr%E1%BB%91ng,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0318174,105.8485955,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbfea5bc50d:0x3ba3149c7b28c788!8m2!3d21.0318124!4d105.8511704!16s%2Fg%2F11rhs5156r?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "8",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.83567,
+          21.02812
+        ]
+      },
+      "properties": {
+        "number": "8",
+        "name_vn": "Khoa thi Hương cuối thế kỷ XIX",
+        "from_date": "2025-11-01",
+        "to_date": "2025-11-30",
+        "start_date": "2025-11-06",
+        "start_time": "10:00",
+        "time": "30'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "Văn Miếu Quốc Tử Giám",
+        "address_url": "https://www.google.com/maps/place/Temple+Of+Literature/@21.0281225,105.8330943,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab9926e7bd67:0x580e078874d5df1e!8m2!3d21.0281175!4d105.8356692!16zL20vMGI5aGp6?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "9",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.85368,
+          21.02549
+        ]
+      },
+      "properties": {
+        "number": "9",
+        "name_vn": "Nhịp ký ức",
+        "from_date": "2025-11-01",
+        "to_date": "2025-11-30",
+        "start_date": "2025-11-06",
+        "start_time": "18:00",
+        "time": "60'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "61 Tràng Tiền",
+        "address_url": "https://www.google.com/maps/place/61+Tr%C3%A0ng+Ti%E1%BB%81n,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.0254968,105.8511054,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abeb4390bc49:0x9999660f53d6f08f!8m2!3d21.0254918!4d105.8536803!16s%2Fg%2F11q2xcnk7r?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "10",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.85597,
+          21.02636
+        ]
+      },
+      "properties": {
+        "number": "10",
+        "name_vn": "Những khung hình về biến đổi khí hậu",
+        "from_date": "2025-11-01",
+        "to_date": "2025-11-30",
+        "start_date": "2025-11-06",
+        "start_time": "19:00",
+        "time": "90'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "Vườn hoa Diên Hồng",
+        "address_url": "https://www.google.com/maps/place/V%C6%B0%E1%BB%9Dn+hoa+Con+C%C3%B3c/@21.02637,105.8533936,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab9b61922873:0x781691a6313a78b1!8m2!3d21.026365!4d105.8559685!16s%2Fg%2F11g5shh09v?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "11",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8509,
+          21.02128
+        ]
+      },
+      "properties": {
+        "number": "11",
+        "name_vn": "Giao điểm Việt Nam",
+        "from_date": "2025-11-01",
+        "to_date": "2025-11-30",
+        "start_date": "2025-11-07",
+        "start_time": "9:30",
+        "time": "30'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "Đại sứ quán Pháp 57 Trần Hưng Đạo",
+        "address_url": "https://www.google.com/maps/place/Embassy+of+France/@21.020903,105.8479528,17z/data=!4m15!1m8!3m7!1s0x3135ab92ee8589cf:0xb4494b7601259f46!2zNTcgVHLhuqduIEjGsG5nIMSQ4bqhbywgSMOgbmcgQsOgaSwgSG_DoG4gS2nhur9tLCBIw6AgTuG7mWksIFZpZXRuYW0!3b1!8m2!3d21.020898!4d105.8505277!16s%2Fg%2F11s9kzvwhy!3m5!1s0x3135ab92e88b4c13:0x77d34faecb8a570f!8m2!3d21.0212813!4d105.8508958!16s%2Fg%2F121g7bbg?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.85341,
+          21.02555
+        ]
+      },
+      "properties": {
+        "number": "12",
+        "name_vn": "Từ những con phố Ireland",
+        "from_date": "2025-11-01",
+        "to_date": "2025-11-20",
+        "start_date": "2025-11-07",
+        "start_time": "17:00",
+        "time": "30'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "93 Đinh Tiên Hoàng",
+        "address_url": "https://www.google.com/maps/place/93+%C4%90inh+Ti%C3%AAn+Ho%C3%A0ng,+Tr%C3%A0ng+Ti%E1%BB%81n,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.0255504,105.8508307,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abeb466b0fcf:0xb0ea81d314dae1c5!8m2!3d21.0255454!4d105.8534056!16s%2Fg%2F11c5kl1__9?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.85193,
+          21.02081
+        ]
+      },
+      "properties": {
+        "number": "13",
+        "name_vn": "Những ngã rẽ",
+        "from_date": "2025-11-04",
+        "to_date": "2025-11-30",
+        "start_date": "2025-11-09",
+        "start_time": "18:00",
+        "time": "30'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "46 Hàng Bài",
+        "address_url": "https://www.google.com/maps/place/46+P.+H%C3%A0ng+B%C3%A0i,+H%C3%A0ng+B%C3%A0i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.0208233,105.851617,20.08z/data=!4m6!3m5!1s0x3135ab92cf3b5e19:0x57b61cd7b8d6dcdb!8m2!3d21.0208051!4d105.8519301!16s%2Fg%2F11p06b6vxp?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "14",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.84871,
+          21.03543
+        ]
+      },
+      "properties": {
+        "number": "14",
+        "name_vn": "Thực hành nhiếp ảnh của những nghệ sĩ trẻ",
+        "from_date": "2025-11-01",
+        "to_date": "2025-11-30",
+        "start_date": "2025-11-10",
+        "start_time": "18:00",
+        "time": "60'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "40 Lãn Ông",
+        "address_url": "https://www.google.com/maps/place/40+P.+L%C3%A3n+%C3%94ng,+H%C3%A0ng+B%E1%BB%93,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.0354377,105.8461382,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbec30cc7fb:0x6c39b789e47ac4a7!8m2!3d21.0354327!4d105.8487131!16s%2Fg%2F11sg_xh6y1?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "15",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.84256,
+          21.01965
+        ]
+      },
+      "properties": {
+        "number": "15",
+        "name_vn": "Thơ, khoa học viễn tưởng, thể xác và linh hồn",
+        "from_date": "2025-11-02",
+        "to_date": "2025-11-14",
+        "start_date": "2025-11-02",
+        "start_time": "10:00",
+        "time": "30'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "Viện Pháp Hà Nội 15 Thiền Quang",
+        "address_url": "https://www.google.com/maps/place/Vi%E1%BB%87n+Ph%C3%A1p+H%C3%A0+N%E1%BB%99i/@21.0196556,105.839981,17z/data=!3m1!4b1!4m6!3m5!1s0x3135aba53be38637:0xf1e61a9e6619afb9!8m2!3d21.0196506!4d105.8425559!16s%2Fg%2F11tcyd9px8?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "16",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.81481,
+          21.00315
+        ]
+      },
+      "properties": {
+        "number": "16",
+        "name_vn": "Miền trập",
+        "from_date": "2025-11-02",
+        "to_date": "2025-11-20",
+        "start_date": "2025-11-02",
+        "start_time": "14:00",
+        "time": "60'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "Trung tâm Nghệ thuật đương đại Vincom",
+        "address_url": "https://www.google.com/maps/place/Vincom+Center+for+Contemporary+Art+(VCCA)/@21.0031473,105.8141675,19z/data=!3m1!4b1!4m6!3m5!1s0x3135ad597553836d:0xba07438658777045!8m2!3d21.003146!4d105.8148112!16s%2Fg%2F11h585qs6b?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.81481,
+          21.00315
+        ]
+      },
+      "properties": {
+        "number": "17",
+        "name_vn": "Lưu trữ và hậu lưu trữ",
+        "from_date": "2025-11-02",
+        "to_date": "2025-11-20",
+        "start_date": "2025-11-02",
+        "start_time": "15:00",
+        "time": "90'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "Trung tâm Nghệ thuật đương đại Vincom",
+        "address_url": "https://www.google.com/maps/place/Vincom+Center+for+Contemporary+Art+(VCCA)/@21.0031473,105.8141675,19z/data=!3m1!4b1!4m6!3m5!1s0x3135ad597553836d:0xba07438658777045!8m2!3d21.003146!4d105.8148112!16s%2Fg%2F11h585qs6b?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "18",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.81481,
+          21.00315
+        ]
+      },
+      "properties": {
+        "number": "18",
+        "name_vn": "Little Hanoi: Thế hệ tiếp nối",
+        "from_date": "2025-11-03",
+        "to_date": "2025-11-21",
+        "start_date": "2025-11-02",
+        "start_time": "16:00",
+        "time": "30'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "Trung tâm Nghệ thuật đương đại Vincom",
+        "address_url": "https://www.google.com/maps/place/Vincom+Center+for+Contemporary+Art+(VCCA)/@21.0031473,105.8141675,19z/data=!3m1!4b1!4m6!3m5!1s0x3135ad597553836d:0xba07438658777045!8m2!3d21.003146!4d105.8148112!16s%2Fg%2F11h585qs6b?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "19",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.82672,
+          21.01056
+        ]
+      },
+      "properties": {
+        "number": "19",
+        "name_vn": "Nhìn hay được nhìn",
+        "from_date": "2025-11-05",
+        "to_date": "2025-11-19",
+        "start_date": "2025-11-05",
+        "start_time": "15:00",
+        "time": "30'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "Complex 01 29 ngách 31 ngõ 167 Tây Sơn",
+        "address_url": "https://www.google.com/maps/place/Complex+01/@21.0105691,105.8241474,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab68dd1984e5:0x3d307d4682570ec7!8m2!3d21.0105641!4d105.8267223!16s%2Fg%2F11fvc4fcl3?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "20",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.85215,
+          21.02867
+        ]
+      },
+      "properties": {
+        "number": "20",
+        "name_vn": "Phong cảnh dọc",
+        "from_date": "2025-11-07",
+        "to_date": "2025-11-23",
+        "start_date": "2025-11-07",
+        "start_time": "19:00",
+        "time": "30'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "Hồ Hoàn Kiếm",
+        "address_url": "https://www.google.com/maps/place/Ho%C3%A0n+Ki%E1%BA%BFm+Lake/@21.0287797,105.8497898,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab953357c995:0x1babf6bb4f9a20e!8m2!3d21.0286669!4d105.8521484!16zL20vMGdwNjV3?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "21",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.84021,
+          21.04683
+        ]
+      },
+      "properties": {
+        "number": "21",
+        "name_vn": "Phản chiếu vô thời",
+        "from_date": "2025-11-08",
+        "to_date": "2025-11-28",
+        "start_date": "2025-11-08",
+        "start_time": "18:00",
+        "time": "60'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "S+ Six Senses Space 168 Trấn Vũ",
+        "address_url": "https://www.google.com/maps/place/S%2B+Six+Senses+Space/@21.0468306,105.8376347,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab495d5ab157:0x6eb532543c3ad482!8m2!3d21.0468256!4d105.8402096!16s%2Fg%2F11fnwjdh90?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "22",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.85412,
+          21.0249
+        ]
+      },
+      "properties": {
+        "number": "22",
+        "name_vn": "Việt Nam 1990-2015: Một đất nước đang đổi thay",
+        "from_date": "2025-11-21",
+        "to_date": "2025-12-05",
+        "start_date": "2025-11-21",
+        "start_time": "18:00",
+        "time": "60'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "45 Tràng Tiền",
+        "address_url": "https://www.google.com/maps/place/45+Tr%C3%A0ng+Ti%E1%BB%81n,+H%C3%A0ng+B%C3%B4ng,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.0249638,105.8536244,19.85z/data=!4m6!3m5!1s0x3135abeb6727eed9:0xe70fbecbf8b16928!8m2!3d21.0249028!4d105.854121!16s%2Fg%2F11lmpk070d?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "23",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.85238,
+          21.03613
+        ]
+      },
+      "properties": {
+        "number": "23",
+        "name_vn": "Chụp ảnh / Photo Shot: Trải nghiệm máy ảnh vintage",
+        "from_date": "2025-11-01",
+        "to_date": "2025-11-01",
+        "start_date": "2025-11-01",
+        "start_time": "9:00",
+        "time": "240'",
+        "isInviteOnly": "Yes",
+        "isRegister": "No",
+        "address": "Trung tâm văn hoá nghệ thuật 22 Hàng Buồm",
+        "address_url": "https://www.google.com/maps/place/22+Hang+Buom+Culture+and+Arts+Center/@21.0361326,105.8498004,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abc1fa899227:0xd09ca63132b759d4!8m2!3d21.0361276!4d105.8523753!16s%2Fg%2F11sgz08tv7?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "24",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.85238,
+          21.03613
+        ]
+      },
+      "properties": {
+        "number": "24",
+        "name_vn": "Art tour / Visite guidée: Hoài niệm về những thành phố",
+        "from_date": "2025-11-01",
+        "to_date": "2025-11-01",
+        "start_date": "2025-11-01",
+        "start_time": "11:10",
+        "time": "60'",
+        "isInviteOnly": "Yes",
+        "isRegister": "No",
+        "address": "Trung tâm văn hoá nghệ thuật 22 Hàng Buồm",
+        "address_url": "https://www.google.com/maps/place/22+Hang+Buom+Culture+and+Arts+Center/@21.0361326,105.8498004,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abc1fa899227:0xd09ca63132b759d4!8m2!3d21.0361276!4d105.8523753!16s%2Fg%2F11sgz08tv7?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "25",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8315,
+          21.0347
+        ]
+      },
+      "properties": {
+        "number": "25",
+        "name_vn": "Portfolio review / Lecture de portfolio: Antoine d'Agata & Tania Bohórquez Salinas",
+        "from_date": "2025-11-02",
+        "to_date": "2025-11-02",
+        "start_date": "2025-11-02",
+        "start_time": "9:00",
+        "time": "360'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "Matca 48 Ngọc Hà",
+        "address_url": "https://www.google.com/maps/place/Matca+Space+for+Photography/@21.0347098,105.8289268,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab232289ec6d:0xebb748b7a0cc98!8m2!3d21.0347048!4d105.8315017!16s%2Fg%2F11h6v0yv3w?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "26",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.81481,
+          21.00315
+        ]
+      },
+      "properties": {
+        "number": "26",
+        "name_vn": "Art tour / Visite guidée: Lưu trữ và hậu lưu trữ",
+        "from_date": "2025-11-02",
+        "to_date": "2025-11-02",
+        "start_date": "2025-11-02",
+        "start_time": "16:00",
+        "time": "120'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "Trung tâm Nghệ thuật đương đại Vincom",
+        "address_url": "https://www.google.com/maps/place/Vincom+Center+for+Contemporary+Art+(VCCA)/@21.0031473,105.8141675,19z/data=!3m1!4b1!4m6!3m5!1s0x3135ad597553836d:0xba07438658777045!8m2!3d21.003146!4d105.8148112!16s%2Fg%2F11h585qs6b?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "27",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8315,
+          21.0347
+        ]
+      },
+      "properties": {
+        "number": "27",
+        "name_vn": "Thảo luận / Discussion / Talk: Antoine d'Agata & Tania Bohórquez Salinas",
+        "from_date": "2025-11-02",
+        "to_date": "2025-11-02",
+        "start_date": "2025-11-02",
+        "start_time": "18:00",
+        "time": "90'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "Matca 48 Ngọc Hà",
+        "address_url": "https://www.google.com/maps/place/Matca+Space+for+Photography/@21.0347098,105.8289268,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab232289ec6d:0xebb748b7a0cc98!8m2!3d21.0347048!4d105.8315017!16s%2Fg%2F11h6v0yv3w?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "28",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.84256,
+          21.01965
+        ]
+      },
+      "properties": {
+        "number": "28",
+        "name_vn": "Portfolio review / Lecture de portfolio",
+        "from_date": "2025-11-03",
+        "to_date": "2025-11-03",
+        "start_date": "2025-11-03",
+        "start_time": "9:00",
+        "time": "180'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "Viện Pháp Hà Nội 15 Thiền Quang",
+        "address_url": "https://www.google.com/maps/place/Vi%E1%BB%87n+Ph%C3%A1p+H%C3%A0+N%E1%BB%99i/@21.0196556,105.839981,17z/data=!3m1!4b1!4m6!3m5!1s0x3135aba53be38637:0xf1e61a9e6619afb9!8m2!3d21.0196506!4d105.8425559!16s%2Fg%2F11tcyd9px8?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "29",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.82672,
+          21.01056
+        ]
+      },
+      "properties": {
+        "number": "29",
+        "name_vn": "Bàn tròn / Table-ronde / Round table 1: Phác họa sự nghiệp nhiếp ảnh trong bối cảnh quốc tế",
+        "from_date": "2025-11-03",
+        "to_date": "2025-11-03",
+        "start_date": "2025-11-03",
+        "start_time": "14:00",
+        "time": "180'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "Complex 01 29 ngách 31 ngõ 167 Tây Sơn",
+        "address_url": "https://www.google.com/maps/place/Complex+01/@21.0105691,105.8241474,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab68dd1984e5:0x3d307d4682570ec7!8m2!3d21.0105641!4d105.8267223!16s%2Fg%2F11fvc4fcl3?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "30",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.84256,
+          21.01965
+        ]
+      },
+      "properties": {
+        "number": "30",
+        "name_vn": "Workshop / Atelier: Carô Gervay",
+        "from_date": "2025-11-04",
+        "to_date": "2025-11-04",
+        "start_date": "2025-11-04",
+        "start_time": "9:00",
+        "time": "180'",
+        "isInviteOnly": "No",
+        "isRegister": "Yes",
+        "address": "Viện Pháp Hà Nội 15 Thiền Quang",
+        "address_url": "https://www.google.com/maps/place/Vi%E1%BB%87n+Ph%C3%A1p+H%C3%A0+N%E1%BB%99i/@21.0196556,105.839981,17z/data=!3m1!4b1!4m6!3m5!1s0x3135aba53be38637:0xf1e61a9e6619afb9!8m2!3d21.0196506!4d105.8425559!16s%2Fg%2F11tcyd9px8?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "31",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.04847,
+          21.16726
+        ]
+      },
+      "properties": {
+        "number": "31",
+        "name_vn": "Thảo luận / Discussion & Art tour / Visite guidée: Tiếp nối: Việt Nam",
+        "from_date": "2025-11-04",
+        "to_date": "2025-11-04",
+        "start_date": "2025-11-04",
+        "start_time": "9:30",
+        "time": "120'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "2 Lê Thái Tổ",
+        "address_url": "https://www.google.com/maps/place/2+P.+L%C3%AA+Th%C3%A1i+T%E1%BB%95,+H%C3%A0ng+Tr%E1%BB%91ng,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0318174,105.8485955,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbfea5bc50d:0x3ba3149c7b28c788!8m2!3d21.0318124!4d105.8511704!16s%2Fg%2F11rhs5156r?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "32",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.82672,
+          21.01056
+        ]
+      },
+      "properties": {
+        "number": "32",
+        "name_vn": "Bàn tròn / Table-ronde / Round table 2: Tái định nghĩa vai trò của nhiếp ảnh trong thời A.I",
+        "from_date": "2025-11-04",
+        "to_date": "2025-11-04",
+        "start_date": "2025-11-04",
+        "start_time": "14:00",
+        "time": "180'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "Complex 01 29 ngách 31 ngõ 167 Tây Sơn",
+        "address_url": "https://www.google.com/maps/place/Complex+01/@21.0105691,105.8241474,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab68dd1984e5:0x3d307d4682570ec7!8m2!3d21.0105641!4d105.8267223!16s%2Fg%2F11fvc4fcl3?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.85373,
+          21.0254
+        ]
+      },
+      "properties": {
+        "number": "33",
+        "name_vn": "Ra mắt sách / Lancement de livre / Book launch: Những Ký Ức Phai Mờ",
+        "from_date": "2025-11-06",
+        "to_date": "2025-11-06",
+        "start_date": "2025-11-06",
+        "start_time": "17:00",
+        "time": "120'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "62 Tràng Tiền",
+        "address_url": "https://www.google.com/maps/place/62+Tr%C3%A0ng+Ti%E1%BB%81n,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.0253386,105.853719,3a,76y,184.28h,109.81t/data=!3m7!1e1!3m5!1shKlk2ktRYFXqi3UQgTtQPg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-19.808793868109007%26panoid%3DhKlk2ktRYFXqi3UQgTtQPg%26yaw%3D184.27721412640608!7i16384!8i8192!4m6!3m5!1s0x3135abeb430de209:0x87e7e89cca919637!8m2!3d21.0253966!4d105.853731!16s%2Fg%2F11q2nd_hdt?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "34",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8509,
+          21.02128
+        ]
+      },
+      "properties": {
+        "number": "34",
+        "name_vn": "Thảo luận / Discussion / Talk: Giao điểm Việt Nam",
+        "from_date": "2025-11-07",
+        "to_date": "2025-11-07",
+        "start_date": "2025-11-07",
+        "start_time": "10:30",
+        "time": "90'",
+        "isInviteOnly": "No",
+        "isRegister": "Yes",
+        "address": "Đại sứ quán Pháp 57 Trần Hưng Đạo",
+        "address_url": "https://www.google.com/maps/place/Embassy+of+France/@21.020903,105.8479528,17z/data=!4m15!1m8!3m7!1s0x3135ab92ee8589cf:0xb4494b7601259f46!2zNTcgVHLhuqduIEjGsG5nIMSQ4bqhbywgSMOgbmcgQsOgaSwgSG_DoG4gS2nhur9tLCBIw6AgTuG7mWksIFZpZXRuYW0!3b1!8m2!3d21.020898!4d105.8505277!16s%2Fg%2F11s9kzvwhy!3m5!1s0x3135ab92e88b4c13:0x77d34faecb8a570f!8m2!3d21.0212813!4d105.8508958!16s%2Fg%2F121g7bbg?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "35",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.82672,
+          21.01056
+        ]
+      },
+      "properties": {
+        "number": "35",
+        "name_vn": "Bàn tròn / Table-ronde / Round table 3: Nhiếp ảnh ngày nay có đang trở lại ngày xưa?",
+        "from_date": "2025-11-07",
+        "to_date": "2025-11-07",
+        "start_date": "2025-11-07",
+        "start_time": "14:00",
+        "time": "180'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "Complex 01 29 ngách 31 ngõ 167 Tây Sơn",
+        "address_url": "https://www.google.com/maps/place/Complex+01/@21.0105691,105.8241474,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab68dd1984e5:0x3d307d4682570ec7!8m2!3d21.0105641!4d105.8267223!16s%2Fg%2F11fvc4fcl3?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "36",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.85215,
+          21.02867
+        ]
+      },
+      "properties": {
+        "number": "36",
+        "name_vn": "Art tour / Visite guidée: Phong cảnh dọc",
+        "from_date": "2025-11-07",
+        "to_date": "2025-11-07",
+        "start_date": "2025-11-07",
+        "start_time": "19:30",
+        "time": "60'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "Hồ Hoàn Kiếm",
+        "address_url": "https://www.google.com/maps/place/Ho%C3%A0n+Ki%E1%BA%BFm+Lake/@21.0287797,105.8497898,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab953357c995:0x1babf6bb4f9a20e!8m2!3d21.0286669!4d105.8521484!16zL20vMGdwNjV3?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "37",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.85341,
+          21.02555
+        ]
+      },
+      "properties": {
+        "number": "37",
+        "name_vn": "Workshop / Atelier: Chụp ảnh bằng iPhone",
+        "from_date": "2025-11-08",
+        "to_date": "2025-11-08",
+        "start_date": "2025-11-08",
+        "start_time": "10:00",
+        "time": "180'",
+        "isInviteOnly": "No",
+        "isRegister": "Yes",
+        "address": "93 Đinh Tiên Hoàng",
+        "address_url": "https://www.google.com/maps/place/93+%C4%90inh+Ti%C3%AAn+Ho%C3%A0ng,+Tr%C3%A0ng+Ti%E1%BB%81n,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.0255504,105.8508307,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abeb466b0fcf:0xb0ea81d314dae1c5!8m2!3d21.0255454!4d105.8534056!16s%2Fg%2F11c5kl1__9?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "38",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.85341,
+          21.02555
+        ]
+      },
+      "properties": {
+        "number": "38",
+        "name_vn": "Workshop / Atelier: Chụp ảnh bằng iPhone",
+        "from_date": "2025-11-08",
+        "to_date": "2025-11-08",
+        "start_date": "2025-11-08",
+        "start_time": "14:00",
+        "time": "180'",
+        "isInviteOnly": "No",
+        "isRegister": "Yes",
+        "address": "93 Đinh Tiên Hoàng",
+        "address_url": "https://www.google.com/maps/place/93+%C4%90inh+Ti%C3%AAn+Ho%C3%A0ng,+Tr%C3%A0ng+Ti%E1%BB%81n,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.0255504,105.8508307,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abeb466b0fcf:0xb0ea81d314dae1c5!8m2!3d21.0255454!4d105.8534056!16s%2Fg%2F11c5kl1__9?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "39",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.84021,
+          21.04683
+        ]
+      },
+      "properties": {
+        "number": "39",
+        "name_vn": "Workshop / Atelier: Nhiếp ảnh ướt",
+        "from_date": "2025-11-09",
+        "to_date": "2025-11-09",
+        "start_date": "2025-11-09",
+        "start_time": "9:00",
+        "time": "180'",
+        "isInviteOnly": "No",
+        "isRegister": "Yes",
+        "address": "S+ Six Senses Space 168 Trấn Vũ",
+        "address_url": "https://www.google.com/maps/place/S%2B+Six+Senses+Space/@21.0468306,105.8376347,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab495d5ab157:0x6eb532543c3ad482!8m2!3d21.0468256!4d105.8402096!16s%2Fg%2F11fnwjdh90?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "40",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.85669,
+          21.02615
+        ]
+      },
+      "properties": {
+        "number": "40",
+        "name_vn": "Chiếu phim / Projection de film / Film screening: Vô tận: Thế giới của Luigi Ghirri",
+        "from_date": "2025-11-09",
+        "to_date": "2025-11-09",
+        "start_date": "2025-11-09",
+        "start_time": "16:00",
+        "time": "73'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "Casa Italia 18 Lê Phụng Hiểu",
+        "address_url": "https://www.google.com/maps/place/Casa+Italia/@21.0261526,105.8560463,19z/data=!3m1!4b1!4m6!3m5!1s0x3135abebbf2e6ead:0x1f8c65b2cc4cf983!8m2!3d21.0261513!4d105.85669!16s%2Fg%2F11btrrsk1c?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "41",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.85136,
+          21.00987
+        ]
+      },
+      "properties": {
+        "number": "41",
+        "name_vn": "Ra mắt sách / Lancement de livre / Book launch: Hà Nội 1987",
+        "from_date": "2025-11-11",
+        "to_date": "2025-11-11",
+        "start_date": "2025-11-11",
+        "start_time": "10:00",
+        "time": "120'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "Chung Workspace 344 Phố Huế",
+        "address_url": "https://www.google.com/maps/place/Chung+Workspace/@21.0098799,105.8487822,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abd21744f21d:0x406a48d43a28d6c5!8m2!3d21.0098749!4d105.8513571!16s%2Fg%2F11x7n1_ymx?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "42",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.84256,
+          21.01965
+        ]
+      },
+      "properties": {
+        "number": "42",
+        "name_vn": "Workshop / Atelier: Sách ảnh nghệ thuật",
+        "from_date": "2025-11-15",
+        "to_date": "2025-11-15",
+        "start_date": "2025-11-15",
+        "start_time": "10:30",
+        "time": "450'",
+        "isInviteOnly": "No",
+        "isRegister": "Yes",
+        "address": "Viện Pháp Hà Nội 15 Thiền Quang",
+        "address_url": "https://www.google.com/maps/place/Vi%E1%BB%87n+Ph%C3%A1p+H%C3%A0+N%E1%BB%99i/@21.0196556,105.839981,17z/data=!3m1!4b1!4m6!3m5!1s0x3135aba53be38637:0xf1e61a9e6619afb9!8m2!3d21.0196506!4d105.8425559!16s%2Fg%2F11tcyd9px8?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "43",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.82672,
+          21.01056
+        ]
+      },
+      "properties": {
+        "number": "43",
+        "name_vn": "Chiếu phim / Projection de film / Film screening: Nhiếp ảnh gia Marc Riboud, chứng nhân của thế kỷ 20",
+        "from_date": "2025-11-15",
+        "to_date": "2025-11-16",
+        "start_date": "2025-11-15",
+        "start_time": "19:00",
+        "time": "53'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "Complex 01 29 ngách 31 ngõ 167 Tây Sơn",
+        "address_url": "https://www.google.com/maps/place/Complex+01/@21.0105691,105.8241474,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab68dd1984e5:0x3d307d4682570ec7!8m2!3d21.0105641!4d105.8267223!16s%2Fg%2F11fvc4fcl3?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "44",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.82672,
+          21.01056
+        ]
+      },
+      "properties": {
+        "number": "44",
+        "name_vn": "Chiếu phim / Projection de film / Film screening: Nhiếp ảnh gia Marc Riboud, chứng nhân của thế kỷ 20",
+        "from_date": "2025-11-15",
+        "to_date": "2025-11-16",
+        "start_date": "2025-11-15",
+        "start_time": "19:00",
+        "time": "53'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "Complex 01 29 ngách 31 ngõ 167 Tây Sơn",
+        "address_url": "https://www.google.com/maps/place/Complex+01/@21.0105691,105.8241474,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab68dd1984e5:0x3d307d4682570ec7!8m2!3d21.0105641!4d105.8267223!16s%2Fg%2F11fvc4fcl3?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "45",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.81481,
+          21.00315
+        ]
+      },
+      "properties": {
+        "number": "45",
+        "name_vn": "Thảo luận / Discussion / Talk: Khi nhiếp ảnh không chỉ là tư liệu",
+        "from_date": "2025-11-19",
+        "to_date": "2025-11-19",
+        "start_date": "2025-11-19",
+        "start_time": "15:00",
+        "time": "120'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "Trung tâm Nghệ thuật đương đại Vincom",
+        "address_url": "https://www.google.com/maps/place/Vincom+Center+for+Contemporary+Art+(VCCA)/@21.0031473,105.8141675,19z/data=!3m1!4b1!4m6!3m5!1s0x3135ad597553836d:0xba07438658777045!8m2!3d21.003146!4d105.8148112!16s%2Fg%2F11h585qs6b?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "46",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.84256,
+          21.01965
+        ]
+      },
+      "properties": {
+        "number": "46",
+        "name_vn": "Workshop / Atelier: Sách ảnh nghệ thuật",
+        "from_date": "2025-11-22",
+        "to_date": "2025-11-22",
+        "start_date": "2025-11-22",
+        "start_time": "10:30",
+        "time": "450'",
+        "isInviteOnly": "No",
+        "isRegister": "Yes",
+        "address": "Viện Pháp Hà Nội 15 Thiền Quang",
+        "address_url": "https://www.google.com/maps/place/Vi%E1%BB%87n+Ph%C3%A1p+H%C3%A0+N%E1%BB%99i/@21.0196556,105.839981,17z/data=!3m1!4b1!4m6!3m5!1s0x3135aba53be38637:0xf1e61a9e6619afb9!8m2!3d21.0196506!4d105.8425559!16s%2Fg%2F11tcyd9px8?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "47",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.84256,
+          21.01965
+        ]
+      },
+      "properties": {
+        "number": "47",
+        "name_vn": "Workshop / Atelier: Sách ảnh nghệ thuật",
+        "from_date": "2025-11-23",
+        "to_date": "2025-11-23",
+        "start_date": "2025-11-23",
+        "start_time": "9:30",
+        "time": "630'",
+        "isInviteOnly": "No",
+        "isRegister": "Yes",
+        "address": "Viện Pháp Hà Nội 15 Thiền Quang",
+        "address_url": "https://www.google.com/maps/place/Vi%E1%BB%87n+Ph%C3%A1p+H%C3%A0+N%E1%BB%99i/@21.0196556,105.839981,17z/data=!3m1!4b1!4m6!3m5!1s0x3135aba53be38637:0xf1e61a9e6619afb9!8m2!3d21.0196506!4d105.8425559!16s%2Fg%2F11tcyd9px8?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "48",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.85553,
+          21.02498
+        ]
+      },
+      "properties": {
+        "number": "48",
+        "name_vn": "Thuyết trình / Présentation: Catherine Karnow",
+        "from_date": "2025-11-22",
+        "to_date": "2025-11-22",
+        "start_date": "2025-11-22",
+        "start_time": "14:00",
+        "time": "120'",
+        "isInviteOnly": "No",
+        "isRegister": "Yes",
+        "address": "15 Ngô Quyền",
+        "address_url": "https://www.google.com/maps/place/15+P.+Ng%C3%B4+Quy%E1%BB%81n,+Tr%C3%A0ng+Ti%E1%BB%81n,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0249833,105.8529574,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab178501ebc3:0x72620a83dd0fd0bd!8m2!3d21.0249783!4d105.8555323!16s%2Fg%2F11sc5c7h37?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "49",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.85553,
+          21.02498
+        ]
+      },
+      "properties": {
+        "number": "49",
+        "name_vn": "Thuyết trình / Présentation: Catherine Karnow",
+        "from_date": "2025-11-23",
+        "to_date": "2025-11-23",
+        "start_date": "2025-11-23",
+        "start_time": "14:00",
+        "time": "120'",
+        "isInviteOnly": "No",
+        "isRegister": "Yes",
+        "address": "15 Ngô Quyền",
+        "address_url": "https://www.google.com/maps/place/15+P.+Ng%C3%B4+Quy%E1%BB%81n,+Tr%C3%A0ng+Ti%E1%BB%81n,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0249833,105.8529574,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab178501ebc3:0x72620a83dd0fd0bd!8m2!3d21.0249783!4d105.8555323!16s%2Fg%2F11sc5c7h37?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "50",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8315,
+          21.0347
+        ]
+      },
+      "properties": {
+        "number": "50",
+        "name_vn": "Mở Xưởng / Atelier ouvert / Open Studio: Roots & Worlds 2025: Elsewhere, Within",
+        "from_date": "2025-11-23",
+        "to_date": "2025-11-23",
+        "start_date": "2025-11-23",
+        "start_time": "16:00",
+        "time": "180'",
+        "isInviteOnly": "No",
+        "isRegister": "No",
+        "address": "Matca 48 Ngọc Hà",
+        "address_url": "https://www.google.com/maps/place/Matca+Space+for+Photography/@21.0347098,105.8289268,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab232289ec6d:0xebb748b7a0cc98!8m2!3d21.0347048!4d105.8315017!16s%2Fg%2F11h6v0yv3w?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "51",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.85412,
+          21.0249
+        ]
+      },
+      "properties": {
+        "number": "51",
+        "name_vn": "Portfolio review / Lecture de portfolio: Catherine Karnow",
+        "from_date": "2025-11-24",
+        "to_date": "2025-12-04",
+        "start_date": "2025-11-24",
+        "start_time": "N/A",
+        "time": "N/A",
+        "isInviteOnly": "No",
+        "isRegister": "Yes",
+        "address": "45 Tràng Tiền",
+        "address_url": "https://www.google.com/maps/place/45+Tr%C3%A0ng+Ti%E1%BB%81n,+H%C3%A0ng+B%C3%B4ng,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.0249638,105.8536244,19.85z/data=!4m6!3m5!1s0x3135abeb6727eed9:0xe70fbecbf8b16928!8m2!3d21.0249028!4d105.854121!16s%2Fg%2F11lmpk070d?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+      }
+    }
+  ]
+}

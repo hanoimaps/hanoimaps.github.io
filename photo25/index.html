@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Hanoi '25</title>
+    <link
+      href="https://unpkg.com/maplibre-gl@^5.9.0/dist/maplibre-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/maplibre-gl@^5.9.0/dist/maplibre-gl.js"></script>
+    <style>
+      @font-face {
+        font-family: "Averta";
+        src: url("AvertaStd-Regular.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Averta";
+        src: url("AvertaStd-Semibold.ttf") format("truetype");
+        font-weight: 600;
+        font-style: semibold;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        overflow: hidden;
+        background-color: #222;
+        box-sizing: border-box;
+      }
+
+      #map {
+        width: 100%;
+        height: 100%;
+        min-height: 100dvh;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+
+      /* POPUP */
+      .maplibregl-popup-content {
+        font-family: "Averta", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, "Helvetica Neue", Arial, sans-serif;
+        background-image: linear-gradient(
+          to bottom,
+          rgba(113, 44, 144, 1),
+          rgba(39, 24, 42, 0.9)
+        );
+        color: white;
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+        padding: 12px 16px;
+        gap: 4px;
+        max-width: 180px;
+        overflow-y: auto;
+      }
+      .maplibregl-popup-anchor-bottom .maplibregl-popup-tip {
+        border-top-color: rgba(74, 32, 102, 1);
+      }
+      .marker-btn {
+        color: white;
+        text-decoration: underline;
+        font-size: 13px;
+        font-weight: 500;
+      }
+      .popup-title {
+        font-size: 16px;
+        margin: 0 0 8px;
+        color: white;
+      }
+
+      /* SWITCH MAP */
+      .maplibregl-ctrl-group .style-switcher-button {
+        width: 29px;
+        height: 29px;
+        background-color: #fff;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        border-radius: 4px;
+      }
+      .maplibregl-ctrl-group .style-switcher-button .style-switcher-icon {
+        width: 18px;
+        height: 18px;
+        filter: invert(0%);
+        transition: filter 0.3s ease;
+      }
+      .maplibregl-ctrl-group .style-switcher-button.is-satellite {
+        background-color: rgba(30, 30, 30);
+      }
+      .maplibregl-ctrl-group
+        .style-switcher-button.is-satellite
+        .style-switcher-icon {
+        filter: invert(100%);
+      }
+
+      /* CALENDAR */
+      #controls {
+        position: fixed;
+        bottom: 1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 1rem;
+        z-index: 10;
+      }
+      #calendar-icon,
+      #reset-button {
+        padding: 12px;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        background-color: white;
+        color: #222;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #reset-button[hidden] {
+        display: none;
+        opacity: 0;
+      }
+      #date-selector {
+        opacity: 0;
+        position: absolute;
+        pointer-events: none;
+        width: 0;
+        height: 0;
+      }
+      #calendar-icon svg,
+      #reset-button svg {
+        width: 24px;
+        height: 24px;
+        fill: currentColor;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="controls">
+      <button id="calendar-icon" title="Chọn ngày">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-calendar3"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"
+          />
+          <path
+            d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+          />
+        </svg>
+      </button>
+      <input type="date" id="date-selector" />
+      <button id="reset-button" title="Hiện tất cả" hidden>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-arrow-counterclockwise"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"
+          />
+          <path
+            d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"
+          />
+        </svg>
+      </button>
+    </div>
+    <script defer>
+      // --- 0. CORE FLOW ---
+      window.onload = async function () {
+        const isDataLoaded = await loadEvents("events.json");
+        if (isDataLoaded) {
+          initializeMap();
+          setupEventListeners();
+        } else {
+          document.getElementById("map").innerHTML =
+            '<h1 style="text-align: center;">Không tìm thấy dữ liệu.</h1>';
+        }
+      };
+
+      // --- 1. CONSTANTS ---
+      let map;
+      let geojsonData = null;
+      const DATA_SOURCE_ID = "event-points-source";
+      const EVENT_LAYER_ID = "event-circles";
+      const apiKey = "yirfoVznNRHBz863QlU2";
+      const STREETS_STYLE = `https://api.maptiler.com/maps/streets-v2/style.json?key=${apiKey}`;
+      const SATELLITE_HYBRID_STYLE = {
+        version: 8,
+        metadata: { "maplibregl:arbitrary-bottom-layer-id": "aerial-layer" },
+        sources: {
+          "esri-world-imagery": {
+            type: "raster",
+            tiles: [
+              "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+            ],
+            tileSize: 256,
+            maxzoom: 19,
+            attribution:
+              '<a href="https://threads.com/@tomeyinhanoi" target="_blank" style="text-decoration: underline">By Tomey</a> | Tiles © Esri World Imagery',
+          },
+          "maptiler-streets": {
+            type: "vector",
+            url: `https://api.maptiler.com/tiles/v3/tiles.json?key=${apiKey}`,
+          },
+        },
+        glyphs: `https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=${apiKey}`,
+        center: [105.8542, 21.0285],
+        zoom: 12,
+        layers: [
+          {
+            id: "aerial-layer",
+            type: "raster",
+            source: "esri-world-imagery",
+            minzoom: 0,
+            maxzoom: 24,
+          },
+          {
+            id: "road_label",
+            type: "symbol",
+            source: "maptiler-streets",
+            "source-layer": "transportation_name",
+            minzoom: 12,
+            layout: {
+              "text-field": "{name}",
+              "text-font": ["Roboto Regular", "Arial Unicode MS Regular"],
+              "text-size": {
+                base: 1.2,
+                stops: [
+                  [12, 10],
+                  [15, 12],
+                  [18, 14],
+                ],
+              },
+              "text-transform": "uppercase",
+              "text-rotation-alignment": "map",
+              "symbol-placement": "line",
+              "symbol-spacing": 350,
+              "text-allow-overlap": false,
+            },
+            paint: {
+              "text-color": "#d9d9d9",
+              "text-halo-color": "rgba(0, 0, 0, 0.8)",
+              "text-halo-width": 1.2,
+            },
+          },
+          {
+            id: "place_label",
+            type: "symbol",
+            source: "maptiler-streets",
+            "source-layer": "place",
+            layout: {
+              "text-field": "{name}",
+              "text-font": ["Roboto Regular", "Arial Unicode MS Regular"],
+              "text-size": 14,
+              "text-variable-anchor": ["bottom"],
+              "text-radial-offset": 0.5,
+              "text-justify": "auto",
+              "symbol-sort-key": ["get", "rank"],
+              "text-allow-overlap": false,
+            },
+            paint: {
+              "text-color": "#FFFFFF",
+              "text-halo-color": "rgba(0, 0, 0, 0.8)",
+              "text-halo-width": 1.5,
+            },
+          },
+        ],
+      };
+
+      function initializeMap() {
+        map = new maplibregl.Map({
+          container: "map",
+          style: STREETS_STYLE,
+          center: [105.8542, 21.0285],
+          zoom: 12.5,
+          maxBounds: [
+            [105.5, 20.7],
+            [106.1, 21.5],
+          ],
+          attributionControl: false,
+        });
+        map.addControl(new maplibregl.NavigationControl(), "top-left");
+        map.addControl(
+          new maplibregl.GeolocateControl({
+            positionOptions: { enableHighAccuracy: true },
+            trackUserLocation: true,
+          }),
+          "top-left"
+        );
+        map.addControl(
+          new StyleSwitcherControl({
+            streets: STREETS_STYLE,
+            satellite: SATELLITE_HYBRID_STYLE,
+          }),
+          "top-left"
+        );
+        map.addControl(
+          new maplibregl.AttributionControl({
+            customAttribution:
+              '<a href="https://threads.com/@tomeyinhanoi" target="_blank" style="text-decoration: underline">By Tomey</a>',
+            compact: true,
+          }),
+          "bottom-left"
+        );
+        map.on("load", () => {
+          modifyBaseStyle(map);
+          addDataLayer(map, geojsonData);
+        });
+      }
+
+      async function loadEvents(geoJsonUrl) {
+        try {
+          const response = await fetch(geoJsonUrl);
+          if (!response.ok)
+            throw new Error(`HTTP error! status: ${response.status}`);
+          geojsonData = await response.json();
+          return geojsonData.features.length > 0;
+        } catch (error) {
+          console.error("Error loading GeoJSON data:", error);
+          return false;
+        }
+      }
+
+      class StyleSwitcherControl {
+        constructor(styles) {
+          this._streets = styles.streets;
+          this._satellite = styles.satellite;
+          this._isSatellite = false;
+        }
+        onAdd(map) {
+          this._map = map;
+          this._container = document.createElement("div");
+          this._container.className = "maplibregl-ctrl maplibregl-ctrl-group";
+          this._button = document.createElement("button");
+          this._button.type = "button";
+          this._button.className = "style-switcher-button";
+          this._button.onclick = () => this.toggleStyle();
+          this._button.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="style-switcher-icon"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>`;
+          this.updateButton();
+          this._container.appendChild(this._button);
+          return this._container;
+        }
+        updateButton() {
+          if (this._isSatellite) {
+            this._button.classList.add("is-satellite");
+          } else {
+            this._button.classList.remove("is-satellite");
+          }
+        }
+        toggleStyle() {
+          this._isSatellite = !this._isSatellite;
+          this.updateButton();
+          const newStyle = this._isSatellite ? this._satellite : this._streets;
+          this._map.setStyle(newStyle);
+          this._map.once("styledata", () => {
+            addDataLayer(this._map, geojsonData);
+            const selectedDate = document.getElementById("date-selector").value;
+            if (selectedDate) {
+              filterByDate(selectedDate);
+            }
+          });
+        }
+        onRemove() {
+          this._container.parentNode.removeChild(this._container);
+          this._map = undefined;
+        }
+      }
+
+      function addDataLayer(map, geojsonData) {
+        if (map.getLayer(EVENT_LAYER_ID)) map.removeLayer(EVENT_LAYER_ID);
+        if (map.getSource(DATA_SOURCE_ID)) map.removeSource(DATA_SOURCE_ID);
+        map.addSource(DATA_SOURCE_ID, { type: "geojson", data: geojsonData });
+        map.addLayer({
+          id: EVENT_LAYER_ID,
+          type: "circle",
+          source: DATA_SOURCE_ID,
+          paint: {
+            "circle-color": ["literal", "#3b1753"],
+            "circle-radius": [
+              "interpolate",
+              ["linear"],
+              ["zoom"],
+              12,
+              7,
+              16,
+              16,
+            ],
+            "circle-stroke-width": 1.5,
+            "circle-stroke-color": "#fff",
+            "circle-opacity": 0.8,
+          },
+        });
+        addInteractivityForLayer(map);
+      }
+
+      function addInteractivityForLayer(map) {
+        const popup = new maplibregl.Popup({
+          closeButton: false,
+          closeOnClick: true,
+          offset: 15,
+          anchor: "bottom",
+        });
+
+        map.on("click", EVENT_LAYER_ID, (e) => {
+          const features = map.queryRenderedFeatures(e.point, {
+            layers: [EVENT_LAYER_ID],
+          });
+
+          if (!features.length) {
+            return;
+          }
+
+          const coords = e.features[0].geometry.coordinates.slice();
+          while (Math.abs(e.lngLat.lng - coords[0]) > 180) {
+            coords[0] += e.lngLat.lng > coords[0] ? 360 : -360;
+          }
+
+          let itemsHtml = "";
+          features.forEach((feature, index) => {
+            const props = feature.properties;
+
+            if (index > 0) {
+              itemsHtml +=
+                '<hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.3); margin: 10px 0;">';
+            }
+
+            itemsHtml += `
+              <div>
+                  <h3 class="popup-title">${props.number}. ${props.name_vn}</h3>
+                  <p style="margin: 2px 0; font-size: 13px;">Từ ${
+                    props.from_date
+                  }</p>
+                  <p style="margin: 2px 0; font-size: 13px;">Đến ${
+                    props.to_date
+                  }</p>
+                  <strong>Khai mạc:</strong> ${props.start_date} 
+                    (lúc ${props.start_time})
+                  <br>
+                  ${
+                    props.address_url
+                      ? `<a 
+                              href="${props.address_url}" 
+                              target="_blank" 
+                              rel="noopener noreferrer" 
+                              class="marker-btn">
+                              ${props.address}
+                          </a>`
+                      : `<span style="font-size: 13px;">${props.address}</span>` // Fallback nếu không có address_url
+                  }
+              </div>
+            `;
+          });
+          const popupHTML = `<div class="popup">${itemsHtml}</div>`;
+
+          map.flyTo({
+            center: coords,
+            zoom: map.getZoom(),
+            duration: 900,
+            curve: 1.42,
+            essential: true,
+          });
+
+          setTimeout(() => {
+            popup.setLngLat(coords).setHTML(popupHTML).addTo(map);
+          }, 600);
+        });
+
+        map.on("mouseenter", EVENT_LAYER_ID, () => {
+          map.getCanvas().style.cursor = "pointer";
+        });
+
+        map.on("mouseleave", EVENT_LAYER_ID, () => {
+          map.getCanvas().style.cursor = "";
+        });
+      }
+
+      function modifyBaseStyle(map) {
+        const layersToRecolor = ["Grass", "Meadow", "Forest", "Wood", "Scrub"];
+        const layersToHide = [
+          "Residential",
+          "Industrial",
+          "Other border",
+          "Disputed border",
+        ];
+        const pathsToRecolor = ["Path", "Path minor"];
+        layersToRecolor.forEach((id) => {
+          if (map.getLayer(id)) {
+            map.setPaintProperty(id, "fill-color", "#A1E8A1");
+          }
+        });
+        layersToHide.forEach((id) => {
+          if (map.getLayer(id)) {
+            map.setLayoutProperty(id, "visibility", "none");
+          }
+        });
+        pathsToRecolor.forEach((id) => {
+          if (map.getLayer(id)) {
+            map.setPaintProperty(id, "line-color", "#efeeef");
+          }
+        });
+        if (map.getLayer("Building") || map.getLayer("Building 3D")) {
+          map.setLayerZoomRange("Building", 14, 24);
+          map.setLayerZoomRange("Building 3D", 14, 24);
+        }
+      }
+
+      function filterByDate(selectedDate) {
+        const resetButton = document.getElementById("reset-button");
+        if (!selectedDate) {
+          map.setFilter(EVENT_LAYER_ID, null);
+          map.setFilter("event-labels", null);
+          resetButton.hidden = true;
+        } else {
+          const filter = [
+            "all",
+            ["<=", ["get", "from_date"], selectedDate],
+            [">=", ["get", "to_date"], selectedDate],
+          ];
+          map.setFilter(EVENT_LAYER_ID, filter);
+          map.setFilter("event-labels", filter);
+          resetButton.hidden = false;
+        }
+      }
+      function setupEventListeners() {
+        const dateSelector = document.getElementById("date-selector");
+        const calendarIcon = document.getElementById("calendar-icon");
+        const resetButton = document.getElementById("reset-button");
+        calendarIcon.addEventListener("click", () => {
+          dateSelector.showPicker();
+        });
+        dateSelector.addEventListener("change", (e) => {
+          filterByDate(e.target.value);
+        });
+        resetButton.addEventListener("click", () => {
+          dateSelector.value = "";
+          filterByDate("");
+        });
+      }
+    </script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/service-worker.js")
+            .then((registration) => {
+              console.log("Service Worker registered for caching.");
+            })
+            .catch((error) => {
+              console.error("Service Worker registration failed:", error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
