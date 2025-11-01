@@ -2,7 +2,11 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,
+    viewport-fit=cover"
+    />
     <title>Photo Hanoi '25</title>
     <link
       href="https://unpkg.com/maplibre-gl@^5.9.0/dist/maplibre-gl.css"
@@ -58,7 +62,7 @@
         border-radius: 8px;
         padding: 12px 16px;
         gap: 4px;
-        max-width: 180px;
+        width: 200px;
         overflow-y: auto;
       }
       .maplibregl-popup-anchor-bottom .maplibregl-popup-tip {
@@ -67,11 +71,11 @@
       .marker-btn {
         color: white;
         text-decoration: underline;
-        font-size: 13px;
+        font-size: 14px;
         font-weight: 500;
       }
       .popup-title {
-        font-size: 16px;
+        font-size: 17px;
         margin: 0 0 8px;
         color: white;
       }
@@ -162,11 +166,16 @@
         opacity: 0;
       }
       #date-selector {
-        opacity: 0;
         position: absolute;
-        pointer-events: none;
-        width: 0;
-        height: 0;
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
       }
       #calendar-icon svg,
       #reset-button svg {
@@ -174,29 +183,36 @@
         height: 24px;
         fill: currentColor;
       }
+      #calendar-wrapper {
+        position: relative;
+        display: block;
+      }
     </style>
   </head>
   <body>
     <div id="map"></div>
     <div id="controls">
-      <button id="calendar-icon" title="Chọn ngày">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          class="bi bi-calendar3"
-          viewBox="0 0 16 16"
-        >
-          <path
-            d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"
-          />
-          <path
-            d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
-          />
-        </svg>
-      </button>
-      <input type="date" id="date-selector" />
+      <div id="calendar-wrapper">
+        <label for="date-selector" id="calendar-icon" title="Chọn ngày">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-calendar3"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"
+            />
+            <path
+              d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+            />
+          </svg>
+        </label>
+        <input type="date" id="date-selector" />
+      </div>
+
       <button id="reset-button" title="Hiện tất cả" hidden>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -234,6 +250,12 @@
       let geojsonData = null;
       const DATA_SOURCE_ID = "event-points-source";
       const EVENT_LAYER_ID = "event-circles";
+      const popup = new maplibregl.Popup({
+        closeButton: false,
+        closeOnClick: true,
+        offset: 15,
+        anchor: "bottom",
+      });
       const apiKey = "yirfoVznNRHBz863QlU2";
       const STREETS_STYLE = `https://api.maptiler.com/maps/streets-v2/style.json?key=${apiKey}`;
       const SATELLITE_HYBRID_STYLE = {
@@ -352,7 +374,7 @@
               '<a href="https://threads.com/@tomeyinhanoi" target="_blank" style="text-decoration: underline">By Tomey</a>',
             compact: true,
           }),
-          "bottom-left"
+          "top-right"
         );
         map.on("load", () => {
           modifyBaseStyle(map);
@@ -404,7 +426,11 @@
           this.updateButton();
           const newStyle = this._isSatellite ? this._satellite : this._streets;
           this._map.setStyle(newStyle);
+
           this._map.once("styledata", () => {
+            if (!this._isSatellite) {
+              modifyBaseStyle(this._map);
+            }
             addDataLayer(this._map, geojsonData);
             const selectedDate = document.getElementById("date-selector").value;
             if (selectedDate) {
@@ -446,13 +472,6 @@
       }
 
       function addInteractivityForLayer(map) {
-        const popup = new maplibregl.Popup({
-          closeButton: false,
-          closeOnClick: true,
-          offset: 15,
-          anchor: "bottom",
-        });
-
         map.on("click", EVENT_LAYER_ID, (e) => {
           const features = map.queryRenderedFeatures(e.point, {
             layers: [EVENT_LAYER_ID],
@@ -545,6 +564,7 @@
             duration: 900,
             curve: 1.42,
             essential: true,
+            offset: [0, 120],
           });
 
           setTimeout(() => {
@@ -635,8 +655,8 @@
         // Kiểm tra nếu là sự kiện 1 ngày
         if (props.from_date === props.to_date) {
           dateHtml = `
-            <p style="margin: 2px 0; font-size: 13px;">
-                <strong>${fromDateFormatted} (lúc ${props.start_time})</strong>
+            <p style="margin: 2px 0; font-size: 14px;">
+                ${fromDateFormatted} (lúc ${props.start_time})
             </p>
           `;
         }
@@ -644,10 +664,10 @@
         else {
           const startDateFormatted = formatDate(props.start_date);
           dateHtml = `
-            <p style="margin: 2px 0; font-size: 13px;">
+            <p style="margin: 2px 0; font-size: 14px;">
                 ${fromDateFormatted} -> ${toDateFormatted}
             </p>
-            <strong>Khai mạc:</strong> ${startDateFormatted} (lúc ${props.start_time})
+            Khai mạc: ${startDateFormatted} (lúc ${props.start_time})
             <br>
           `;
         }
@@ -689,7 +709,7 @@
                           class="marker-btn">
                           ${props.address}
                       </a>`
-                  : `<span style="font-size: 13px;">${props.address}</span>`
+                  : `<span style="font-size: 14px;">${props.address}</span>`
               }
 
               
@@ -713,12 +733,10 @@
 
       function setupEventListeners() {
         const dateSelector = document.getElementById("date-selector");
-        const calendarIcon = document.getElementById("calendar-icon");
         const resetButton = document.getElementById("reset-button");
-        calendarIcon.addEventListener("click", () => {
-          dateSelector.showPicker();
-        });
+
         dateSelector.addEventListener("change", (e) => {
+          if (popup.isOpen()) popup.remove();
           filterByDate(e.target.value);
         });
         resetButton.addEventListener("click", () => {
