@@ -1,10 +1,17 @@
-const CACHE_NAME = "hanoi-main-map-cache-v1";
+const CACHE_NAME = "hanoi-main-map-cache-v3";
 const urlsToCache = [
   "/",
   "/index.html",
+  "/style.css",
+  "/app.js",
+  "/shared.js",
   "/favicon.ico",
   "https://unpkg.com/maplibre-gl@^5.9.0/dist/maplibre-gl.css",
   "https://unpkg.com/maplibre-gl@^5.9.0/dist/maplibre-gl.js",
+];
+
+const TILE_MAP_URLS = [
+  "services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/",
 ];
 
 // --- 1. Pre-cache static assets ---
@@ -44,56 +51,31 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   const requestUrl = new URL(event.request.url);
 
-  if (requestUrl.pathname.startsWith("/villas/")) {
-    return;
-  }
-
-  // A. Cache-First for local precached assets (index.html, etc.)
-  if (
-    urlsToCache.some(
-      (url) => requestUrl.pathname === url || requestUrl.pathname === "/"
-    ) ||
-    requestUrl.href.includes("unpkg.com") // Ensure external libraries are cache-first
-  ) {
+  // Use a network-first strategy for map tiles to avoid caching LFS pointers.
+  if (requestUrl.pathname.startsWith("/maps-tiles/")) {
     event.respondWith(
-      caches.match(event.request).then((response) => {
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      })
-    );
-    return;
-  }
-
-  // B. Cache-and-Update for Map Tiles (MapTiler Base Map & Historic Tiles)
-  if (
-    requestUrl.hostname.includes("api.maptiler.com") ||
-    requestUrl.pathname.startsWith("/maps-tiles/")
-  ) {
-    event.respondWith(
-      caches.match(event.request).then((response) => {
-        if (response) {
-          return response;
-        }
-        return fetch(event.request).then((networkResponse) => {
-          if (
-            !networkResponse ||
-            networkResponse.status !== 200 ||
-            networkResponse.type !== "basic"
-          ) {
-            return networkResponse;
+      fetch(event.request)
+        .then((networkResponse) => {
+          if (networkResponse.ok) {
+            const responseToCache = networkResponse.clone();
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(event.request, responseToCache);
+            });
           }
-          const responseToCache = networkResponse.clone();
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, responseToCache);
-          });
           return networkResponse;
-        });
-      })
+        })
+        .catch(() => {
+          // If the network fails, fall back to the cache.
+          return caches.match(event.request);
+        })
     );
     return;
   }
 
-  event.respondWith(fetch(event.request));
+  // Use a cache-first strategy for all other assets.
+  event.respondWith(
+    caches.match(event.request).then((response) => {
+      return response || fetch(event.request);
+    })
+  );
 });

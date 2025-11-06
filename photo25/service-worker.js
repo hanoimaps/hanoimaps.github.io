@@ -1,36 +1,29 @@
-const CACHE_NAME = "hanoi-main-map-cache-v1";
+const CACHE_NAME = "photo-map-cache-v1";
 const urlsToCache = [
-  "/",
-  "/index.html",
-  "/favicon.ico",
+  "./",
+  "index.html",
+  "AvertaStd-Regular.ttf",
+  "AvertaStd-Semibold.ttf",
   "https://unpkg.com/maplibre-gl@^5.9.0/dist/maplibre-gl.css",
   "https://unpkg.com/maplibre-gl@^5.9.0/dist/maplibre-gl.js",
 ];
 
-// --- 1. Pre-cache static assets ---
 self.addEventListener("install", (event) => {
-  console.log("Main Service Worker: Installing assets...");
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(urlsToCache).catch((error) => {
-        console.error("Failed to pre-cache some assets:", error);
-      });
+      return cache.addAll(urlsToCache);
     })
   );
-  self.skipWaiting(); // Force activation immediately
+  self.skipWaiting();
 });
 
-// --- 2. Clean up old caches ---
 self.addEventListener("activate", (event) => {
-  console.log("Main Service Worker: Activating and cleaning old caches...");
   const cacheWhitelist = [CACHE_NAME];
-
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
           if (cacheWhitelist.indexOf(cacheName) === -1) {
-            console.log(`Main Service Worker: Deleting old cache ${cacheName}`);
             return caches.delete(cacheName);
           }
         })
@@ -40,60 +33,34 @@ self.addEventListener("activate", (event) => {
   return self.clients.claim();
 });
 
-// --- 3. Fetch Handler (Cache-First & Tile Caching) ---
 self.addEventListener("fetch", (event) => {
   const requestUrl = new URL(event.request.url);
 
-  if (requestUrl.pathname.startsWith("/villas/")) {
-    return;
-  }
-
-  // A. Cache-First for local precached assets (index.html, etc.)
-  if (
-    urlsToCache.some(
-      (url) => requestUrl.pathname === url || requestUrl.pathname === "/"
-    ) ||
-    requestUrl.href.includes("unpkg.com") // Ensure external libraries are cache-first
-  ) {
+  // Network-first for events.json to ensure freshness.
+  if (requestUrl.href.endsWith("events.json")) {
     event.respondWith(
-      caches.match(event.request).then((response) => {
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      })
-    );
-    return;
-  }
-
-  // B. Cache-and-Update for Map Tiles (MapTiler Base Map & Historic Tiles)
-  if (
-    requestUrl.hostname.includes("api.maptiler.com") ||
-    requestUrl.pathname.startsWith("/maps-tiles/")
-  ) {
-    event.respondWith(
-      caches.match(event.request).then((response) => {
-        if (response) {
-          return response;
-        }
-        return fetch(event.request).then((networkResponse) => {
-          if (
-            !networkResponse ||
-            networkResponse.status !== 200 ||
-            networkResponse.type !== "basic"
-          ) {
-            return networkResponse;
+      fetch(event.request)
+        .then((networkResponse) => {
+          if (networkResponse.ok) {
+            const responseToCache = networkResponse.clone();
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(event.request, responseToCache);
+            });
           }
-          const responseToCache = networkResponse.clone();
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, responseToCache);
-          });
           return networkResponse;
-        });
-      })
+        })
+        .catch(() => {
+          // If the network fails, fall back to the cache.
+          return caches.match(event.request);
+        })
     );
     return;
   }
 
-  event.respondWith(fetch(event.request));
+  // Cache-first for all other assets.
+  event.respondWith(
+    caches.match(event.request).then((response) => {
+      return response || fetch(event.request);
+    })
+  );
 });

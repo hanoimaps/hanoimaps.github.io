@@ -38,10 +38,6 @@
         box-sizing: border-box;
       }
 
-      body:hover {
-        background-image: url("https://viewcount-hanoimaps.vercel.app/api/count");
-      }
-
       #map {
         width: 100%;
         height: 100%;
@@ -55,11 +51,14 @@
       .maplibregl-popup-content {
         font-family: "Averta", -apple-system, BlinkMacSystemFont, "Segoe UI",
           Roboto, "Helvetica Neue", Arial, sans-serif;
-        background-image: linear-gradient(
-          to bottom,
-          rgba(113, 44, 144, 1),
-          rgba(39, 24, 42, 0.9)
-        );
+        background-image: radial-gradient(
+            circle at 85% 15%,
+            #703285 0%,
+            transparent 60%
+          ),
+          radial-gradient(circle at 10% 50%, #2a1f7e 0%, transparent 70%),
+          radial-gradient(circle at 70% 90%, #34aad3 0%, transparent 60%);
+        background-color: #000;
         color: white;
         display: flex;
         flex-direction: column;
@@ -75,7 +74,7 @@
       .marker-btn {
         color: white;
         text-decoration: underline;
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 500;
       }
       .popup-title {
@@ -236,12 +235,18 @@
         </svg>
       </button>
     </div>
-    <script defer>
+    <script type="module">
+      import {
+        STREETS_STYLE,
+        SATELLITE_HYBRID_STYLE,
+        StyleSwitcherControl,
+        modifyBaseStyle,
+      } from "../shared.js";
       // --- 0. CORE FLOW ---
       window.onload = async function () {
-        const isDataLoaded = await loadEvents("events.json");
-        if (isDataLoaded) {
-          initializeMap();
+        const data = await loadEvents("events.json");
+        if (data) {
+          initializeMap(data);
           setupEventListeners();
         } else {
           document.getElementById("map").innerHTML =
@@ -251,7 +256,6 @@
 
       // --- 1. CONSTANTS ---
       let map;
-      let geojsonData = null;
       const DATA_SOURCE_ID = "event-points-source";
       const EVENT_LAYER_ID = "event-circles";
       const popup = new maplibregl.Popup({
@@ -260,92 +264,8 @@
         offset: 15,
         anchor: "bottom",
       });
-      const apiKey = "JOtQQjkj3YJ9dZzJKMJs";
-      const STREETS_STYLE = `https://api.maptiler.com/maps/streets-v2/style.json?key=${apiKey}`;
-      const SATELLITE_HYBRID_STYLE = {
-        version: 8,
-        metadata: { "maplibregl:arbitrary-bottom-layer-id": "aerial-layer" },
-        sources: {
-          "esri-world-imagery": {
-            type: "raster",
-            tiles: [
-              "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
-            ],
-            tileSize: 256,
-            maxzoom: 19,
-            attribution:
-              '<a href="https://threads.com/@tomeyinhanoi" target="_blank" style="text-decoration: underline">By Tomey</a> | Tiles © Esri World Imagery',
-          },
-          "maptiler-streets": {
-            type: "vector",
-            url: `https://api.maptiler.com/tiles/v3/tiles.json?key=${apiKey}`,
-          },
-        },
-        glyphs: `https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=${apiKey}`,
-        center: [105.8542, 21.0285],
-        zoom: 12,
-        layers: [
-          {
-            id: "aerial-layer",
-            type: "raster",
-            source: "esri-world-imagery",
-            minzoom: 0,
-            maxzoom: 24,
-          },
-          {
-            id: "road_label",
-            type: "symbol",
-            source: "maptiler-streets",
-            "source-layer": "transportation_name",
-            minzoom: 12,
-            layout: {
-              "text-field": "{name}",
-              "text-font": ["Roboto Regular", "Arial Unicode MS Regular"],
-              "text-size": {
-                base: 1.2,
-                stops: [
-                  [12, 10],
-                  [15, 12],
-                  [18, 14],
-                ],
-              },
-              "text-transform": "uppercase",
-              "text-rotation-alignment": "map",
-              "symbol-placement": "line",
-              "symbol-spacing": 350,
-              "text-allow-overlap": false,
-            },
-            paint: {
-              "text-color": "#d9d9d9",
-              "text-halo-color": "rgba(0, 0, 0, 0.8)",
-              "text-halo-width": 1.2,
-            },
-          },
-          {
-            id: "place_label",
-            type: "symbol",
-            source: "maptiler-streets",
-            "source-layer": "place",
-            layout: {
-              "text-field": "{name}",
-              "text-font": ["Roboto Regular", "Arial Unicode MS Regular"],
-              "text-size": 14,
-              "text-variable-anchor": ["bottom"],
-              "text-radial-offset": 0.5,
-              "text-justify": "auto",
-              "symbol-sort-key": ["get", "rank"],
-              "text-allow-overlap": false,
-            },
-            paint: {
-              "text-color": "#FFFFFF",
-              "text-halo-color": "rgba(0, 0, 0, 0.8)",
-              "text-halo-width": 1.5,
-            },
-          },
-        ],
-      };
 
-      function initializeMap() {
+      function initializeMap(geojsonData) {
         map = new maplibregl.Map({
           container: "map",
           style: STREETS_STYLE,
@@ -384,73 +304,30 @@
           modifyBaseStyle(map);
           addDataLayer(map, geojsonData);
         });
-      }
 
-      async function loadEvents(geoJsonUrl) {
-        try {
-          const response = await fetch(geoJsonUrl);
-          if (!response.ok)
-            throw new Error(`HTTP error! status: ${response.status}`);
-          geojsonData = await response.json();
-          return geojsonData.features.length > 0;
-        } catch (error) {
-          console.error("Error loading GeoJSON data:", error);
-          return false;
-        }
-      }
+        map.on("styledata", () => {
+          // When a style change happens, our source will be removed.
+          // We use this as a trigger to re-initialize our layers and custom styles.
+          if (geojsonData && !map.getSource(DATA_SOURCE_ID)) {
+            modifyBaseStyle(map);
+            addDataLayer(map, geojsonData);
 
-      class StyleSwitcherControl {
-        constructor(styles) {
-          this._streets = styles.streets;
-          this._satellite = styles.satellite;
-          this._isSatellite = false;
-        }
-        onAdd(map) {
-          this._map = map;
-          this._container = document.createElement("div");
-          this._container.className = "maplibregl-ctrl maplibregl-ctrl-group";
-          this._button = document.createElement("button");
-          this._button.type = "button";
-          this._button.className = "style-switcher-button";
-          this._button.onclick = () => this.toggleStyle();
-          this._button.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="style-switcher-icon"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>`;
-          this.updateButton();
-          this._container.appendChild(this._button);
-          return this._container;
-        }
-        updateButton() {
-          if (this._isSatellite) {
-            this._button.classList.add("is-satellite");
-          } else {
-            this._button.classList.remove("is-satellite");
-          }
-        }
-        toggleStyle() {
-          this._isSatellite = !this._isSatellite;
-          this.updateButton();
-          const newStyle = this._isSatellite ? this._satellite : this._streets;
-          this._map.setStyle(newStyle);
-
-          this._map.once("styledata", () => {
-            if (!this._isSatellite) {
-              modifyBaseStyle(this._map);
-            }
-            addDataLayer(this._map, geojsonData);
+            // Re-apply the date filter if it was set
             const selectedDate = document.getElementById("date-selector").value;
             if (selectedDate) {
               filterByDate(selectedDate);
             }
-          });
-        }
-        onRemove() {
-          this._container.parentNode.removeChild(this._container);
-          this._map = undefined;
-        }
+          }
+        });
       }
 
       function addDataLayer(map, geojsonData) {
-        if (map.getLayer(EVENT_LAYER_ID)) map.removeLayer(EVENT_LAYER_ID);
-        if (map.getSource(DATA_SOURCE_ID)) map.removeSource(DATA_SOURCE_ID);
+        if (map.getLayer(EVENT_LAYER_ID)) {
+          map.removeLayer(EVENT_LAYER_ID);
+        }
+        if (map.getSource(DATA_SOURCE_ID)) {
+          map.removeSource(DATA_SOURCE_ID);
+        }
         map.addSource(DATA_SOURCE_ID, { type: "geojson", data: geojsonData });
         map.addLayer({
           id: EVENT_LAYER_ID,
@@ -475,6 +352,18 @@
         addInteractivityForLayer(map);
       }
 
+      async function loadEvents(geoJsonUrl) {
+        try {
+          const response = await fetch(geoJsonUrl);
+          if (!response.ok)
+            throw new Error(`HTTP error! status: ${response.status}`);
+          const geojsonData = await response.json();
+          return geojsonData.features.length > 0 ? geojsonData : null;
+        } catch (error) {
+          console.error("Error loading GeoJSON data:", error);
+          return null;
+        }
+      }
       function addInteractivityForLayer(map) {
         map.on("click", EVENT_LAYER_ID, (e) => {
           const features = map.queryRenderedFeatures(e.point, {
@@ -591,36 +480,6 @@
         });
       }
 
-      function modifyBaseStyle(map) {
-        const layersToRecolor = ["Grass", "Meadow", "Forest", "Wood", "Scrub"];
-        const layersToHide = [
-          "Residential",
-          "Industrial",
-          "Other border",
-          "Disputed border",
-        ];
-        const pathsToRecolor = ["Path", "Path minor"];
-        layersToRecolor.forEach((id) => {
-          if (map.getLayer(id)) {
-            map.setPaintProperty(id, "fill-color", "#A1E8A1");
-          }
-        });
-        layersToHide.forEach((id) => {
-          if (map.getLayer(id)) {
-            map.setLayoutProperty(id, "visibility", "none");
-          }
-        });
-        pathsToRecolor.forEach((id) => {
-          if (map.getLayer(id)) {
-            map.setPaintProperty(id, "line-color", "#efeeef");
-          }
-        });
-        if (map.getLayer("Building") || map.getLayer("Building 3D")) {
-          map.setLayerZoomRange("Building", 14, 24);
-          map.setLayerZoomRange("Building 3D", 14, 24);
-        }
-      }
-
       function filterByDate(selectedDate) {
         const resetButton = document.getElementById("reset-button");
         if (!selectedDate) {
@@ -668,11 +527,13 @@
         else {
           const startDateFormatted = formatDate(props.start_date);
           dateHtml = `
-            <p style="margin: 2px 0; font-size: 14px;">
+            <p style="margin: 2px 0; font-size: 13px;">
                 ${fromDateFormatted} -> ${toDateFormatted}
             </p>
-            Khai mạc: ${startDateFormatted} (lúc ${props.start_time})
             <br>
+            <p style="margin: 2px 0; font-size: 13px;">
+              Khai mạc: ${startDateFormatted} (lúc ${props.start_time})
+            </p>
           `;
         }
 
@@ -713,7 +574,20 @@
                           class="marker-btn">
                           ${props.address}
                       </a>`
-                  : `<span style="font-size: 14px;">${props.address}</span>`
+                  : `<span style="font-size: 13px;">${props.address}</span>`
+              }
+
+              ${
+                props.event_url
+                  ? `<p><a
+                              href="${props.event_url}"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="marker-btn">
+                              Link triển lãm
+                            </a></p>
+                    `
+                  : ""
               }
 
               
@@ -753,7 +627,7 @@
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
           navigator.serviceWorker
-            .register("/service-worker.js")
+            .register("service-worker.js")
             .then((registration) => {
               console.log("Service Worker registered for caching.");
             })

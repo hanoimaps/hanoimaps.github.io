@@ -28,9 +28,9 @@ const mapData = [
     extent: [11777601.14, 2390271.32, 11788168.039, 2401139.759],
   },
   {
-    year: "1891b",
+    year: "1891c",
     title: "1891",
-    extent: [11778560.336252, 2392587.212477, 11784755.133579, 2397546.240792],
+    extent: [11776457.163, 2391658.082, 11785818.686, 2402941.453],
   },
   {
     year: "1894",
@@ -132,6 +132,9 @@ const map = new maplibregl.Map({
   ],
   attributionControl: false,
 });
+
+map.keyboard.disable(); // for keyboard interaction
+
 // --- 2. MAP LOAD ---
 map.on("load", () => {
   setupMapLayers();
@@ -190,6 +193,110 @@ map.on("styledata", () => {
 layerSelect.addEventListener("change", changeHistoricLayer);
 opacitySlider.addEventListener("input", changeOpacity);
 
+// Key interaction
+document.addEventListener("keydown", (event) => {
+  const activeEl = document.activeElement;
+  if (
+    activeEl &&
+    (activeEl.tagName === "TEXTAREA" ||
+      (activeEl.tagName === "INPUT" && activeEl.type === "text"))
+  ) {
+    return;
+  }
+  const panAmount = 100;
+
+  switch (event.key) {
+    case "ArrowLeft": {
+      event.preventDefault();
+      const select = layerSelect;
+      if (select.selectedIndex > 0) {
+        select.selectedIndex -= 1;
+      } else {
+        select.selectedIndex = select.options.length - 1;
+      }
+      break;
+    }
+
+    case "ArrowRight": {
+      event.preventDefault();
+      const select = layerSelect;
+      if (select.selectedIndex < select.options.length - 1) {
+        select.selectedIndex += 1;
+      } else {
+        select.selectedIndex = 0;
+      }
+      break;
+    }
+
+    case "Enter": {
+      event.preventDefault();
+      layerSelect.dispatchEvent(new Event("change"));
+      break;
+    }
+
+    case "ArrowUp": {
+      event.preventDefault();
+      const slider = opacitySlider;
+      let value = parseFloat(slider.value);
+      value = Math.min(1.0, value + parseFloat(slider.step));
+      slider.value = value.toFixed(1);
+      slider.dispatchEvent(new Event("input"));
+      break;
+    }
+
+    case "ArrowDown": {
+      event.preventDefault();
+      const slider = opacitySlider;
+      let value = parseFloat(slider.value);
+      value = Math.max(0.0, value - parseFloat(slider.step));
+      slider.value = value.toFixed(1);
+      slider.dispatchEvent(new Event("input"));
+      break;
+    }
+
+    case "+":
+    case "=": {
+      event.preventDefault();
+      map.zoomIn();
+      break;
+    }
+
+    case "-": {
+      event.preventDefault();
+      map.zoomOut();
+      break;
+    }
+
+    case "w":
+    case "W": {
+      event.preventDefault();
+      map.panBy([0, -panAmount], { duration: 100 }); // Pan Up
+      break;
+    }
+
+    case "s":
+    case "S": {
+      event.preventDefault();
+      map.panBy([0, panAmount], { duration: 100 }); // Pan Down
+      break;
+    }
+
+    case "a":
+    case "A": {
+      event.preventDefault();
+      map.panBy([-panAmount, 0], { duration: 100 }); // Pan Left
+      break;
+    }
+
+    case "d":
+    case "D": {
+      event.preventDefault();
+      map.panBy([panAmount, 0], { duration: 100 }); // Pan Right
+      break;
+    }
+  }
+});
+
 // Utils
 function setupMapLayers() {
   const firstSymbolId = map
@@ -208,7 +315,9 @@ function setupMapLayers() {
     if (!map.getSource(layerId)) {
       map.addSource(layerId, {
         type: "raster",
-        tiles: [`/maps-tiles/${data.year}/{z}/{x}/{y}.png`],
+        tiles: [
+          `https://pub-3bf64388e8f74a8a97c18eb8dc6ff165.r2.dev/maps-tiles/${data.year}/{z}/{x}/{y}.png`,
+        ],
         scheme: "tms",
         tileSize: 256,
         minzoom: minZoomLevel,
