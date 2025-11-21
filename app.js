@@ -3,6 +3,7 @@ import {
   SATELLITE_HYBRID_STYLE,
   StyleSwitcherControl,
   modifyBaseStyle,
+  setupKeyboardControls,
 } from "./shared.js";
 
 // --- 1. CONSTANTS ---
@@ -207,13 +208,11 @@ map.on("load", () => {
     }),
     "top-left"
   );
-  map.addControl(
-    new StyleSwitcherControl({
-      streets: STREETS_STYLE,
-      satellite: SATELLITE_HYBRID_STYLE,
-    }),
-    "top-left"
-  );
+  const styleSwitcher = new StyleSwitcherControl({
+    streets: STREETS_STYLE,
+    satellite: SATELLITE_HYBRID_STYLE,
+  });
+  map.addControl(styleSwitcher, "top-left");
   map.addControl(
     new maplibregl.AttributionControl({
       customAttribution:
@@ -230,6 +229,8 @@ map.on("load", () => {
   };
   ["rotate", "moveend"].forEach((e) => map.on(e, toggle));
   toggle();
+
+  setupKeyboardControls(map, layerSelect, opacitySlider, styleSwitcher);
 });
 
 map.on("styledata", () => {
@@ -243,109 +244,7 @@ map.on("styledata", () => {
 layerSelect.addEventListener("change", changeHistoricLayer);
 opacitySlider.addEventListener("input", changeOpacity);
 
-// Key interaction
-document.addEventListener("keydown", (event) => {
-  const activeEl = document.activeElement;
-  if (
-    activeEl &&
-    (activeEl.tagName === "TEXTAREA" ||
-      (activeEl.tagName === "INPUT" && activeEl.type === "text"))
-  ) {
-    return;
-  }
-  const panAmount = 100;
 
-  switch (event.key) {
-    case "ArrowLeft": {
-      event.preventDefault();
-      const select = layerSelect;
-      if (select.selectedIndex > 0) {
-        select.selectedIndex -= 1;
-      } else {
-        select.selectedIndex = select.options.length - 1;
-      }
-      break;
-    }
-
-    case "ArrowRight": {
-      event.preventDefault();
-      const select = layerSelect;
-      if (select.selectedIndex < select.options.length - 1) {
-        select.selectedIndex += 1;
-      } else {
-        select.selectedIndex = 0;
-      }
-      break;
-    }
-
-    case "Enter": {
-      event.preventDefault();
-      layerSelect.dispatchEvent(new Event("change"));
-      break;
-    }
-
-    case "ArrowUp": {
-      event.preventDefault();
-      const slider = opacitySlider;
-      let value = parseFloat(slider.value);
-      value = Math.min(1.0, value + parseFloat(slider.step));
-      slider.value = value.toFixed(1);
-      slider.dispatchEvent(new Event("input"));
-      break;
-    }
-
-    case "ArrowDown": {
-      event.preventDefault();
-      const slider = opacitySlider;
-      let value = parseFloat(slider.value);
-      value = Math.max(0.0, value - parseFloat(slider.step));
-      slider.value = value.toFixed(1);
-      slider.dispatchEvent(new Event("input"));
-      break;
-    }
-
-    case "+":
-    case "=": {
-      event.preventDefault();
-      map.zoomIn();
-      break;
-    }
-
-    case "-": {
-      event.preventDefault();
-      map.zoomOut();
-      break;
-    }
-
-    case "w":
-    case "W": {
-      event.preventDefault();
-      map.panBy([0, -panAmount], { duration: 100 }); // Pan Up
-      break;
-    }
-
-    case "s":
-    case "S": {
-      event.preventDefault();
-      map.panBy([0, panAmount], { duration: 100 }); // Pan Down
-      break;
-    }
-
-    case "a":
-    case "A": {
-      event.preventDefault();
-      map.panBy([-panAmount, 0], { duration: 100 }); // Pan Left
-      break;
-    }
-
-    case "d":
-    case "D": {
-      event.preventDefault();
-      map.panBy([panAmount, 0], { duration: 100 }); // Pan Right
-      break;
-    }
-  }
-});
 
 // Utils
 function setupMapLayers() {

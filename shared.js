@@ -189,3 +189,121 @@ export function modifyBaseStyle(map) {
     map.setLayerZoomRange("Building 3D", 14, 24);
   }
 }
+
+export function setupKeyboardControls(map, layerSelect, opacitySlider, styleSwitcher) {
+  document.addEventListener("keydown", (event) => {
+    const activeEl = document.activeElement;
+    if (
+      activeEl &&
+      (activeEl.tagName === "TEXTAREA" ||
+        (activeEl.tagName === "INPUT" && activeEl.type === "text"))
+    ) {
+      return;
+    }
+    const panAmount = 100;
+
+    switch (event.key) {
+      case "0": {
+        styleSwitcher.toggleStyle(); // trigger when hit "0"
+        break;
+      }
+
+      case "ArrowLeft": {
+        event.preventDefault();
+        const select = layerSelect;
+        if (select.selectedIndex > 0) {
+          select.selectedIndex -= 1;
+        } else {
+          select.selectedIndex = select.options.length - 1;
+        }
+        break;
+      }
+
+      case "ArrowRight": {
+        event.preventDefault();
+        const select = layerSelect;
+        if (select.selectedIndex < select.options.length - 1) {
+          select.selectedIndex += 1;
+        } else {
+          select.selectedIndex = 0;
+        }
+        break;
+      }
+
+      case "Enter": {
+        event.preventDefault();
+        layerSelect.dispatchEvent(new Event("change"));
+        break;
+      }
+
+      case "ArrowUp": {
+        event.preventDefault();
+        const slider = opacitySlider;
+        let value = parseFloat(slider.value);
+        value = Math.min(1.0, value + parseFloat(slider.step));
+        slider.value = value.toFixed(1);
+        slider.dispatchEvent(new Event("input"));
+        break;
+      }
+
+      case "ArrowDown": {
+        event.preventDefault();
+        const slider = opacitySlider;
+        let value = parseFloat(slider.value);
+        value = Math.max(0.0, value - parseFloat(slider.step));
+        slider.value = value.toFixed(1);
+        slider.dispatchEvent(new Event("input"));
+        break;
+      }
+
+      case "+":
+      case "=": {
+        event.preventDefault();
+        map.zoomIn();
+        break;
+      }
+
+      case "-": {
+        event.preventDefault();
+        map.zoomOut();
+        break;
+      }
+
+      case "i":
+      case "I":
+      case "w":
+      case "W": {
+        event.preventDefault();
+        map.panBy([0, -panAmount], { duration: 100 }); // Pan Up
+        break;
+      }
+
+      case "k":
+      case "K":
+      case "s":
+      case "S": {
+        event.preventDefault();
+        map.panBy([0, panAmount], { duration: 100 }); // Pan Down
+        break;
+      }
+
+      case "a":
+      case "A":
+      case "j":
+      case "J": {
+        event.preventDefault();
+        map.panBy([-panAmount, 0], { duration: 100 }); // Pan Left
+        break;
+      }
+
+      case "l":
+      case "L":
+      case "d":
+      case "D": {
+        event.preventDefault();
+        map.panBy([panAmount, 0], { duration: 100 }); // Pan Right
+        break;
+      }
+    }
+  });
+}
