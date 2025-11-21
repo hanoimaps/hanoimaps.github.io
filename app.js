@@ -129,6 +129,11 @@ const mapData = [
     extent: [11779658.451, 2390156.164, 11785887.337, 2399513.857],
   },
   {
+    year: "1935",
+    title: "1935",
+    extent: [11758101.232, 2376738.152, 11802936.911, 2412851.734],
+  },
+  {
     year: "1936",
     title: "1936.1",
     extent: [11779646.327, 2390099.977, 11785979.312, 2399506.4],
@@ -243,8 +248,6 @@ map.on("styledata", () => {
 
 layerSelect.addEventListener("change", changeHistoricLayer);
 opacitySlider.addEventListener("input", changeOpacity);
-
-
 
 // Utils
 function setupMapLayers() {
