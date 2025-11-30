@@ -202,10 +202,7 @@ map.on("load", () => {
     });
   }
 
-  map.addControl(
-    new maplibregl.NavigationControl({ showCompass: true }),
-    "top-left"
-  );
+  map.addControl(new maplibregl.NavigationControl(), "top-left");
   map.addControl(
     new maplibregl.GeolocateControl({
       positionOptions: { enableHighAccuracy: true },
@@ -226,14 +223,6 @@ map.on("load", () => {
     }),
     "bottom-left"
   );
-
-  const compass = document.querySelector(".maplibregl-ctrl-compass");
-  compass.style.display = "none";
-  const toggle = () => {
-    compass.style.display = Math.abs(map.getBearing()) > 0.1 ? "block" : "none";
-  };
-  ["rotate", "moveend"].forEach((e) => map.on(e, toggle));
-  toggle();
 
   setupKeyboardControls(map, layerSelect, opacitySlider, styleSwitcher);
 });
