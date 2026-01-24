@@ -14,8 +14,6 @@ export const SATELLITE_HYBRID_STYLE = {
       ],
       tileSize: 256,
       maxzoom: 19,
-      attribution:
-        '<a href="https://threads.com/@tomeyinhanoi" target="_blank" style="text-decoration: underline">By Tomey</a> | Tiles © Esri World Imagery',
     },
     "maptiler-streets": {
       type: "vector",
@@ -190,7 +188,12 @@ export function modifyBaseStyle(map) {
   }
 }
 
-export function setupKeyboardControls(map, layerSelect, opacitySlider, styleSwitcher) {
+export function setupKeyboardControls(
+  map,
+  layerSelect,
+  opacitySlider,
+  styleSwitcher,
+) {
   document.addEventListener("keydown", (event) => {
     const activeEl = document.activeElement;
     if (

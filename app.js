@@ -7,6 +7,11 @@ import {
 } from "./shared.js";
 
 // --- 1. CONSTANTS ---
+const GEOJSON_PATH = "bio_streets.geojson";
+let streetData = null;
+let isStreetViewActive = false;
+let selectedStreetId = null;
+
 const mapData = [
   {
     year: "1831",
@@ -208,7 +213,7 @@ map.on("load", () => {
       positionOptions: { enableHighAccuracy: true },
       trackUserLocation: true,
     }),
-    "top-left"
+    "top-left",
   );
   const styleSwitcher = new StyleSwitcherControl({
     streets: STREETS_STYLE,
@@ -221,10 +226,138 @@ map.on("load", () => {
         '<a href="https://threads.com/@tomeyinhanoi" target="_blank" style="text-decoration: underline">By Tomey</a> | <a href="/info" target="_blank"  style="text-decoration: underline">Sources</a>',
       compact: true,
     }),
-    "bottom-left"
+    "bottom-left",
   );
 
   setupKeyboardControls(map, layerSelect, opacitySlider, styleSwitcher);
+
+  // Fetch Street Data and setup interactions
+  fetch(GEOJSON_PATH)
+    .then((res) => res.json())
+    .then((data) => {
+      streetData = data;
+      setupStreetLayers();
+    });
+
+  const streetBtn = document.getElementById("street-view-btn");
+  streetBtn.addEventListener("click", () => {
+    isStreetViewActive = !isStreetViewActive;
+    streetBtn.classList.toggle("active", isStreetViewActive);
+
+    if (map.getLayer("streets-line")) {
+      const visibility = isStreetViewActive ? "visible" : "none";
+      map.setLayoutProperty("streets-line", "visibility", visibility);
+      if (map.getLayer("streets-line-hit-area")) {
+        map.setLayoutProperty(
+          "streets-line-hit-area",
+          "visibility",
+          visibility,
+        );
+      }
+    } else {
+      setupStreetLayers();
+    }
+
+    if (!isStreetViewActive) {
+      if (window.currentPopup) {
+        window.currentPopup.remove();
+        window.currentPopup = null;
+      }
+      if (selectedStreetId !== null && map.getSource("osm-streets")) {
+        map.setFeatureState(
+          { source: "osm-streets", id: selectedStreetId },
+          { selected: false },
+        );
+        selectedStreetId = null;
+      }
+    }
+  });
+
+  // Change cursor to pointer on hover
+  map.on("mouseenter", "streets-line-hit-area", () => {
+    map.getCanvas().style.cursor = "pointer";
+  });
+
+  // Change it back when leaving
+  map.on("mouseleave", "streets-line-hit-area", () => {
+    map.getCanvas().style.cursor = "";
+  });
+
+  // Handle outside clicks to clear selection
+  map.on("click", (e) => {
+    const features = map.queryRenderedFeatures(e.point, {
+      layers: ["streets-line-hit-area"],
+    });
+
+    if (!features.length) {
+      if (selectedStreetId !== null && map.getSource("osm-streets")) {
+        map.setFeatureState(
+          { source: "osm-streets", id: selectedStreetId },
+          { selected: false },
+        );
+        selectedStreetId = null;
+      }
+      if (window.currentPopup) {
+        window.currentPopup.remove();
+        window.currentPopup = null;
+      }
+    }
+  });
+
+  map.on("click", "streets-line-hit-area", (e) => {
+    if (e.features.length > 0) {
+      const feature = e.features[0];
+      const newId = feature.id;
+      map.flyTo({
+        center: e.lngLat,
+        zoom: map.getZoom(),
+        duration: 900,
+        curve: 1.42,
+        essential: true,
+        offset: [0, 120],
+      });
+
+      // Reset previous selection
+      if (selectedStreetId !== null) {
+        if (map.getSource("osm-streets")) {
+          map.setFeatureState(
+            { source: "osm-streets", id: selectedStreetId },
+            { selected: false },
+          );
+        }
+      }
+
+      // Set new selection
+      selectedStreetId = newId;
+      map.setFeatureState(
+        { source: "osm-streets", id: selectedStreetId },
+        { selected: true },
+      );
+
+      // Show popup
+      if (window.currentPopup) window.currentPopup.remove();
+      window.currentPopup = new maplibregl.Popup()
+        .setLngLat(e.lngLat)
+        .setHTML(
+          `<div style="padding: 8px; border-radius: 8px; background-color: white;">
+                  <div style="font-size:17px;font-weight:600;margin-bottom:8px">${
+                    feature.properties.french_name || "Unknown"
+                  }</div>
+                  ${
+                    feature.properties.french_name
+                      ? `<div style="color:#666;font-size:13px;margin-bottom:4px">${feature.properties.name}</div>`
+                      : ""
+                  }
+                  ${
+                    feature.properties.description
+                      ? `<div style="color:#0066cc;font-size:13px;margin-top:4px;padding-top:4px;border-top:1px solid #ddd">${feature.properties.description}</div>`
+                      : ""
+                  }
+                </div>`,
+        )
+        .addTo(map);
+    }
+  });
 });
 
 map.on("styledata", () => {
@@ -280,12 +413,84 @@ function setupMapLayers() {
             visibility: index === 0 ? "visible" : "none",
           },
         },
-        firstSymbolId
+        firstSymbolId,
       );
     }
   });
 
   modifyBaseStyle(map);
+  setupStreetLayers();
+}
+
+function setupStreetLayers() {
+  if (!streetData) return;
+
+  if (!map.getSource("osm-streets")) {
+    map.addSource("osm-streets", { type: "geojson", data: streetData });
+  }
+
+  const filterConfig = ["to-boolean", ["get", "description"]];
+
+  // 1. Add Invisible Hit Area Layer (Wider)
+  if (!map.getLayer("streets-line-hit-area")) {
+    map.addLayer({
+      id: "streets-line-hit-area",
+      type: "line",
+      source: "osm-streets",
+      layout: {
+        visibility: isStreetViewActive ? "visible" : "none",
+        "line-cap": "round",
+        "line-join": "round",
+      },
+      filter: filterConfig,
+      paint: {
+        "line-color": "#000000", // Color doesn't matter, opacity is 0
+        "line-width": 25, // Fixed 25px hit area
+        "line-opacity": 0,
+      },
+    });
+  }
+
+  // 2. Add Visible Street Line Layer
+  if (!map.getLayer("streets-line")) {
+    map.addLayer({
+      id: "streets-line",
+      type: "line",
+      source: "osm-streets",
+      layout: {
+        visibility: isStreetViewActive ? "visible" : "none",
+        "line-cap": "round",
+        "line-join": "round",
+      },
+      filter: filterConfig,
+      paint: {
+        "line-color": [
+          "case",
+          ["boolean", ["feature-state", "selected"], false],
+          "#292991ff",
+          "#4d94ff",
+        ],
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          12,
+          ["case", ["boolean", ["feature-state", "selected"], false], 6, 2],
+          16,
+          ["case", ["boolean", ["feature-state", "selected"], false], 12, 6],
+        ],
+        "line-opacity": 0.8,
+      },
+    });
+  }
+
+  // Restore selection state if it exists
+  if (selectedStreetId !== null && map.getSource("osm-streets")) {
+    map.setFeatureState(
+      { source: "osm-streets", id: selectedStreetId },
+      { selected: true },
+    );
+  }
 }
 
 function applyLayerVisibility() {
@@ -327,7 +532,7 @@ function changeOpacity() {
     }
   });
 
-  const newVisibility = opacity >= 0.7 ? "none" : "visible";
+  const newVisibility = opacity >= 0.85 ? "none" : "visible";
   symbolLayerIds.forEach((id) => {
     if (map.getLayer(id)) {
       map.setLayoutProperty(id, "visibility", newVisibility);
