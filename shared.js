@@ -1,4 +1,4 @@
-export const apiKey = "JOtQQjkj3YJ9dZzJKMJs";
+export const apiKey = "yirfoVznNRHBz863QlU2";
 
 export const STREETS_STYLE = `https://api.maptiler.com/maps/streets-v2/style.json?key=${apiKey}`;
 export const SATELLITE_HYBRID_STYLE = {

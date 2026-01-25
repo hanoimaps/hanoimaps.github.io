@@ -542,8 +542,8 @@
       "id": 11550307,
       "properties": {
         "name": "Phố Phan Chu Trinh",
-        "french_name": "Rue Cité Krug",
-        "description": "Đại biểu Hội đồng Thành Phố năm 1920."
+        "french_name": "Boulevard Rialan",
+        "description": ""
       },
       "geometry": {
         "type": "LineString",
@@ -1184,8 +1184,8 @@
       "id": 11557666,
       "properties": {
         "name": "Ngõ Thịnh Yên",
-        "french_name": "Rue Gustave Dumoutier",
-        "description": "Gustave Dumoutier (1850-1904), phiên dịch của Toàn quyền Paul Bert, từng là thanh tra Học chính Bắc Kỳ, tác giả của gần 60 công trình khảo cứu về văn hóa, tôn giáo Việt Nam, được giới nghiên cứu trong và ngoài nước tôn vinh là nhà Việt Nam học và nhà Hà Nội học người nước ngoài đầu tiên."
+        "french_name": "",
+        "description": ""
       },
       "geometry": {
         "type": "LineString",
@@ -1439,7 +1439,7 @@
       "id": 11711442,
       "properties": {
         "name": "Phố Lê Hồng Phong",
-        "french_name": "Rue Giovaninelli",
+        "french_name": "Boulevard Giovaninelli",
         "description": "Ange Laurent Giovaninelli (1837-1903), sĩ quan cấp tướng trong quân đội Pháp, cùng Louis Brière de l'Isle chỉ huy đánh chiếm Lạng Sơn tháng 2-1885."
       },
       "geometry": {
@@ -2297,8 +2297,8 @@
       "id": 28103274,
       "properties": {
         "name": "Phố Huế",
-        "french_name": "Rue Sergent Giác",
-        "description": "Nguyên là đội lính khố đỏ."
+        "french_name": "",
+        "description": ""
       },
       "geometry": {
         "type": "LineString",
@@ -4956,8 +4956,8 @@
       "id": 36084921,
       "properties": {
         "name": "Phố Nguyễn Đình Chiểu",
-        "french_name": "Rue Julien Blanc",
-        "description": "Julien Blanc, chủ hiệu thuốc tây Blanc ở Phố Tràng Tiền, từng là hội viên Hội đồng Thành Phố Hà Nội."
+        "french_name": "",
+        "description": ""
       },
       "geometry": {
         "type": "LineString",
@@ -12437,8 +12437,8 @@
       "id": 529921993,
       "properties": {
         "name": "Ngõ Bảo Khánh",
-        "french_name": "Rue Pottier",
-        "description": "Pottier Edouard (1839-1903), Phó Thủy sư Đô đốc Pháp, tham gia đánh chiếm Vĩnh Long, Nam Kỳ (1867)."
+        "french_name": "",
+        "description": ""
       },
       "geometry": {
         "type": "LineString",
@@ -14282,7 +14282,7 @@
       "id": 600115744,
       "properties": {
         "name": "Ngõ Phan Chu Trinh",
-        "french_name": "Rue Cité Krug",
+        "french_name": "Cité Krug",
         "description": "Đại biểu Hội đồng Thành Phố năm 1920."
       },
       "geometry": {
@@ -17568,7 +17568,7 @@
       "id": 697572031,
       "properties": {
         "name": "Phố Lê Hồng Phong",
-        "french_name": "Rue Giovaninelli",
+        "french_name": "Boulevard Giovaninelli",
         "description": "Ange Laurent Giovaninelli (1837-1903), sĩ quan cấp tướng trong quân đội Pháp, cùng Louis Brière de l'Isle chỉ huy đánh chiếm Lạng Sơn tháng 2-1885."
       },
       "geometry": {
@@ -17589,7 +17589,7 @@
       "id": 697572032,
       "properties": {
         "name": "Phố Lê Hồng Phong",
-        "french_name": "Rue Giovaninelli",
+        "french_name": "Boulevard Giovaninelli",
         "description": "Ange Laurent Giovaninelli (1837-1903), sĩ quan cấp tướng trong quân đội Pháp, cùng Louis Brière de l'Isle chỉ huy đánh chiếm Lạng Sơn tháng 2-1885."
       },
       "geometry": {
@@ -18982,7 +18982,7 @@
       "id": 703403026,
       "properties": {
         "name": "Phố Lê Hồng Phong",
-        "french_name": "Rue Giovaninelli",
+        "french_name": "Boulevard Giovaninelli",
         "description": "Ange Laurent Giovaninelli (1837-1903), sĩ quan cấp tướng trong quân đội Pháp, cùng Louis Brière de l'Isle chỉ huy đánh chiếm Lạng Sơn tháng 2-1885."
       },
       "geometry": {
@@ -18998,7 +18998,7 @@
       "id": 703403028,
       "properties": {
         "name": "Phố Lê Hồng Phong",
-        "french_name": "Rue Giovaninelli",
+        "french_name": "Boulevard Giovaninelli",
         "description": "Ange Laurent Giovaninelli (1837-1903), sĩ quan cấp tướng trong quân đội Pháp, cùng Louis Brière de l'Isle chỉ huy đánh chiếm Lạng Sơn tháng 2-1885."
       },
       "geometry": {
@@ -24671,8 +24671,8 @@
       "id": 711134472,
       "properties": {
         "name": "Phố Huế",
-        "french_name": "Rue Sergent Giác",
-        "description": "Nguyên là đội lính khố đỏ."
+        "french_name": "",
+        "description": ""
       },
       "geometry": {
         "type": "LineString",
@@ -24783,8 +24783,8 @@
       "id": 711138761,
       "properties": {
         "name": "Phố Phan Chu Trinh",
-        "french_name": "Rue Cité Krug",
-        "description": "Đại biểu Hội đồng Thành Phố năm 1920."
+        "french_name": "Boulevard Rialan",
+        "description": ""
       },
       "geometry": {
         "type": "LineString",
@@ -27272,8 +27272,8 @@
       "id": 838419177,
       "properties": {
         "name": "Phố Huế",
-        "french_name": "Rue Sergent Giác",
-        "description": "Nguyên là đội lính khố đỏ."
+        "french_name": "",
+        "description": ""
       },
       "geometry": {
         "type": "LineString",
@@ -27790,8 +27790,8 @@
       "id": 873097728,
       "properties": {
         "name": "Ngõ Trần Quốc Toản",
-        "french_name": "Rue de Reinach",
-        "description": "Lucien Joseph de Reinach (1864-1909), viên cai trị người Pháp, đến Bắc Kỳ năm 1893, tổ chức các đạo lính địa phương, trông coi việc làm Đường hỏa xa Bắc Lệ."
+        "french_name": "",
+        "description": ""
       },
       "geometry": {
         "type": "LineString",
@@ -28829,8 +28829,8 @@
       "id": 943964870,
       "properties": {
         "name": "Phố Phan Chu Trinh",
-        "french_name": "Rue Cité Krug",
-        "description": "Đại biểu Hội đồng Thành Phố năm 1920."
+        "french_name": "Boulevard Rialan",
+        "description": ""
       },
       "geometry": {
         "type": "LineString",
@@ -29971,8 +29971,8 @@
       "id": 951487947,
       "properties": {
         "name": "Phố Huế",
-        "french_name": "Rue Sergent Giác",
-        "description": "Nguyên là đội lính khố đỏ."
+        "french_name": "",
+        "description": ""
       },
       "geometry": {
         "type": "LineString",
@@ -30108,8 +30108,8 @@
       "id": 953227391,
       "properties": {
         "name": "Phố Phan Chu Trinh",
-        "french_name": "Rue Cité Krug",
-        "description": "Đại biểu Hội đồng Thành Phố năm 1920."
+        "french_name": "Boulevard Rialan",
+        "description": ""
       },
       "geometry": {
         "type": "LineString",
@@ -30353,8 +30353,8 @@
       "id": 954856201,
       "properties": {
         "name": "Phố Phan Chu Trinh",
-        "french_name": "Rue Cité Krug",
-        "description": "Đại biểu Hội đồng Thành Phố năm 1920."
+        "french_name": "Boulevard Rialan",
+        "description": ""
       },
       "geometry": {
         "type": "LineString",
@@ -30587,8 +30587,8 @@
       "id": 961685431,
       "properties": {
         "name": "Phố Huế",
-        "french_name": "Rue Sergent Giác",
-        "description": "Nguyên là đội lính khố đỏ."
+        "french_name": "",
+        "description": ""
       },
       "geometry": {
         "type": "LineString",
@@ -34860,8 +34860,8 @@
       "id": 1217544977,
       "properties": {
         "name": "Phố Huế",
-        "french_name": "Rue Sergent Giác",
-        "description": "Nguyên là đội lính khố đỏ."
+        "french_name": "",
+        "description": ""
       },
       "geometry": {
         "type": "LineString",
@@ -35736,8 +35736,8 @@
       "id": 1225696487,
       "properties": {
         "name": "Phố Huế",
-        "french_name": "Rue Sergent Giác",
-        "description": "Nguyên là đội lính khố đỏ."
+        "french_name": "",
+        "description": ""
       },
       "geometry": {
         "type": "LineString",
@@ -36766,7 +36766,7 @@
       "id": 1240127120,
       "properties": {
         "name": "Phố Lê Hồng Phong",
-        "french_name": "Rue Giovaninelli",
+        "french_name": "Boulevard Giovaninelli",
         "description": "Ange Laurent Giovaninelli (1837-1903), sĩ quan cấp tướng trong quân đội Pháp, cùng Louis Brière de l'Isle chỉ huy đánh chiếm Lạng Sơn tháng 2-1885."
       },
       "geometry": {
@@ -36834,8 +36834,8 @@
       "id": 1240127124,
       "properties": {
         "name": "Phố Huế",
-        "french_name": "Rue Sergent Giác",
-        "description": "Nguyên là đội lính khố đỏ."
+        "french_name": "",
+        "description": ""
       },
       "geometry": {
         "type": "LineString",
@@ -36933,8 +36933,8 @@
       "id": 1240218191,
       "properties": {
         "name": "Phố Nguyễn Đình Chiểu",
-        "french_name": "Rue Julien Blanc",
-        "description": "Julien Blanc, chủ hiệu thuốc tây Blanc ở Phố Tràng Tiền, từng là hội viên Hội đồng Thành Phố Hà Nội."
+        "french_name": "",
+        "description": ""
       },
       "geometry": {
         "type": "LineString",
@@ -37266,8 +37266,8 @@
       "id": 1243387893,
       "properties": {
         "name": "Phố Phan Chu Trinh",
-        "french_name": "Rue Cité Krug",
-        "description": "Đại biểu Hội đồng Thành Phố năm 1920."
+        "french_name": "Boulevard Rialan",
+        "description": ""
       },
       "geometry": {
         "type": "LineString",
@@ -38325,7 +38325,7 @@
       "id": 1281102177,
       "properties": {
         "name": "Phố Lê Hồng Phong",
-        "french_name": "Rue Giovaninelli",
+        "french_name": "Boulevard Giovaninelli",
         "description": "Ange Laurent Giovaninelli (1837-1903), sĩ quan cấp tướng trong quân đội Pháp, cùng Louis Brière de l'Isle chỉ huy đánh chiếm Lạng Sơn tháng 2-1885."
       },
       "geometry": {
@@ -39123,7 +39123,7 @@
       "id": 1305203175,
       "properties": {
         "name": "Phố Lê Hồng Phong",
-        "french_name": "Rue Giovaninelli",
+        "french_name": "Boulevard Giovaninelli",
         "description": "Ange Laurent Giovaninelli (1837-1903), sĩ quan cấp tướng trong quân đội Pháp, cùng Louis Brière de l'Isle chỉ huy đánh chiếm Lạng Sơn tháng 2-1885."
       },
       "geometry": {
@@ -39236,8 +39236,8 @@
       "id": 1311925556,
       "properties": {
         "name": "Phố Huế",
-        "french_name": "Rue Sergent Giác",
-        "description": "Nguyên là đội lính khố đỏ."
+        "french_name": "",
+        "description": ""
       },
       "geometry": {
         "type": "LineString",
