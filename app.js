@@ -363,7 +363,7 @@ map.on("load", () => {
                   }
                   ${
                     feature.properties.description
-                      ? `<div style="color:#0066cc;font-size:13px;margin-top:4px;padding-top:4px;border-top:1px solid #ddd">${feature.properties.description}</div>`
+                      ? `<div style="color:#0066cc;font-size:13px;margin-top:4px;padding-top:4px;border-top:1px solid #ddd">${feature.properties.description.replace(/(<b>(?:Các lần đổi tên):<\/b>.*)/i, '<span style="color:#666;display:block;margin-top:5px;font-size:12px">$1</span>')}</div>`
                       : ""
                   }
                 </div>`,
@@ -442,7 +442,11 @@ function setupStreetLayers() {
     map.addSource("osm-streets", { type: "geojson", data: streetData });
   }
 
-  const filterConfig = ["to-boolean", ["get", "description"]];
+  const filterConfig = [
+    "all",
+    ["to-boolean", ["get", "description"]],
+    ["to-boolean", ["get", "french_name"]],
+  ];
 
   // 1. Add Invisible Hit Area Layer (Wider)
   if (!map.getLayer("streets-line-hit-area")) {

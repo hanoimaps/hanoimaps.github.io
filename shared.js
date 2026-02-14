@@ -307,6 +307,15 @@ export function setupKeyboardControls(
         map.panBy([panAmount, 0], { duration: 100 }); // Pan Right
         break;
       }
+
+      case "p":
+      case "P": {
+        const streetBtn = document.getElementById("street-view-btn");
+        if (streetBtn) {
+          streetBtn.click();
+        }
+        break;
+      }
     }
   });
 }
