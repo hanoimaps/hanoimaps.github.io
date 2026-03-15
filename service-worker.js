@@ -1,4 +1,4 @@
-const CACHE_NAME = "hanoi-main-map-cache-v3";
+const CACHE_NAME = "hanoi-main-map-cache-v4";
 const urlsToCache = [
   "/",
   "/index.html",
@@ -51,11 +51,14 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   const requestUrl = new URL(event.request.url);
 
-  // Use a network-first strategy for map tiles to avoid caching LFS pointers.
+  // Use a cache-first strategy for map tiles because historical maps never change.
   if (requestUrl.pathname.startsWith("/maps-tiles/")) {
     event.respondWith(
-      fetch(event.request)
-        .then((networkResponse) => {
+      caches.match(event.request).then((cachedResponse) => {
+        if (cachedResponse) {
+          return cachedResponse;
+        }
+        return fetch(event.request).then((networkResponse) => {
           if (networkResponse.ok) {
             const responseToCache = networkResponse.clone();
             caches.open(CACHE_NAME).then((cache) => {
@@ -63,11 +66,8 @@ self.addEventListener("fetch", (event) => {
             });
           }
           return networkResponse;
-        })
-        .catch(() => {
-          // If the network fails, fall back to the cache.
-          return caches.match(event.request);
-        }),
+        });
+      }),
     );
     return;
   }

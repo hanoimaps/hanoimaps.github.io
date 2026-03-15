@@ -386,53 +386,60 @@ opacitySlider.addEventListener("input", changeOpacity);
 
 // Utils
 function setupMapLayers() {
-  const firstSymbolId = map
-    .getStyle()
-    .layers.find((l) => l.type === "symbol")?.id;
-
   symbolLayerIds = map
     .getStyle()
     .layers.filter((layer) => layer.type === "symbol")
     .map((layer) => layer.id);
 
-  mapData.forEach((data, index) => {
-    const layerId = `historic-${data.year}`;
-
-    // Add source if it doesn't exist
-    if (!map.getSource(layerId)) {
-      map.addSource(layerId, {
-        type: "raster",
-        tiles: [
-          `https://pub-3bf64388e8f74a8a97c18eb8dc6ff165.r2.dev/maps-tiles/${data.year}/{z}/{x}/{y}.png`,
-        ],
-        scheme: "tms",
-        tileSize: 256,
-        minzoom: minZoomLevel,
-        bounds: transformExtent(data.extent),
-      });
-    }
-
-    // Add layer if it doesn't exist
-    if (!map.getLayer(layerId)) {
-      map.addLayer(
-        {
-          id: layerId,
-          type: "raster",
-          source: layerId,
-          paint: {
-            "raster-opacity": parseFloat(opacitySlider.value),
-          },
-          layout: {
-            visibility: index === 0 ? "visible" : "none",
-          },
-        },
-        firstSymbolId,
-      );
-    }
-  });
-
   modifyBaseStyle(map);
   setupStreetLayers();
+
+  if (mapData.length > 0) {
+    loadHistoricLayer(mapData[0].year);
+    map.setLayoutProperty(
+      `historic-${mapData[0].year}`,
+      "visibility",
+      "visible",
+    );
+  }
+}
+
+function loadHistoricLayer(year) {
+  const data = mapData.find((d) => d.year === year);
+  if (!data) return;
+
+  const layerId = `historic-${data.year}`;
+  if (map.getSource(layerId)) return;
+
+  const firstSymbolId = map
+    .getStyle()
+    .layers.find((l) => l.type === "symbol")?.id;
+
+  map.addSource(layerId, {
+    type: "raster",
+    tiles: [
+      `https://pub-3bf64388e8f74a8a97c18eb8dc6ff165.r2.dev/maps-tiles/${data.year}/{z}/{x}/{y}.png`,
+    ],
+    scheme: "tms",
+    tileSize: 256,
+    minzoom: minZoomLevel,
+    bounds: transformExtent(data.extent),
+  });
+
+  map.addLayer(
+    {
+      id: layerId,
+      type: "raster",
+      source: layerId,
+      paint: {
+        "raster-opacity": parseFloat(opacitySlider.value),
+      },
+      layout: {
+        visibility: "none",
+      },
+    },
+    firstSymbolId,
+  );
 }
 
 function setupStreetLayers() {
@@ -512,6 +519,7 @@ function setupStreetLayers() {
 
 function applyLayerVisibility() {
   const selectedYear = layerSelect.value;
+  loadHistoricLayer(selectedYear);
   mapData.forEach((data) => {
     const layerId = `historic-${data.year}`;
     const visibility = data.year === selectedYear ? "visible" : "none";
@@ -523,6 +531,7 @@ function applyLayerVisibility() {
 
 function changeHistoricLayer() {
   const selectedYear = layerSelect.value;
+  loadHistoricLayer(selectedYear);
 
   mapData.forEach((data) => {
     const layerId = `historic-${data.year}`;
