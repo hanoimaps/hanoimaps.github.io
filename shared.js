@@ -38,7 +38,7 @@ export const SATELLITE_HYBRID_STYLE = {
       "source-layer": "transportation_name",
       minzoom: 12,
       layout: {
-        "text-field": "{name}",
+        "text-field": ["coalesce", ["get", "name:vi"], ["get", "name"]],
         "text-font": ["Roboto Regular", "Arial Unicode MS Regular"],
         "text-size": {
           base: 1.2,
@@ -66,7 +66,7 @@ export const SATELLITE_HYBRID_STYLE = {
       source: "maptiler-streets",
       "source-layer": "place",
       layout: {
-        "text-field": "{name}",
+        "text-field": ["coalesce", ["get", "name:vi"], ["get", "name"]],
         "text-font": ["Roboto Regular", "Arial Unicode MS Regular"],
         "text-size": 14,
         "text-variable-anchor": ["bottom"],
@@ -186,6 +186,38 @@ export function modifyBaseStyle(map) {
     map.setLayerZoomRange("Building", 14, 24);
     map.setLayerZoomRange("Building 3D", 14, 24);
   }
+
+  localizeLabels(map, "vi");
+}
+
+export function localizeLabels(map, lang) {
+  const style = map.getStyle();
+  if (!style || !style.layers) return;
+
+  style.layers.forEach((layer) => {
+    if (layer.type === "symbol") {
+      const textField = map.getLayoutProperty(layer.id, "text-field");
+      if (textField) {
+        // If it's a simple string token like "{name}"
+        if (typeof textField === "string" && textField.includes("{name}")) {
+          const localized = textField.replace("{name}", `{name:${lang}}`);
+          map.setLayoutProperty(layer.id, "text-field", localized);
+        }
+        // If it's already an expression that uses "name", wrap it to prefer lang
+        else if (JSON.stringify(textField).includes('"name"')) {
+          // Don't wrap if we already wrapped it in a previous call
+          if (!JSON.stringify(textField).includes(`"name:${lang}"`)) {
+            map.setLayoutProperty(layer.id, "text-field", [
+              "coalesce",
+              ["get", `name:${lang}`],
+              ["get", "name"],
+              textField,
+            ]);
+          }
+        }
+      }
+    }
+  });
 }
 
 export function setupKeyboardControls(
