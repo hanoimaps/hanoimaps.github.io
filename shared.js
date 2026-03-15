@@ -190,7 +190,12 @@ export function modifyBaseStyle(map) {
   localizeLabels(map, "vi");
 }
 
-export function localizeLabels(map, lang) {
+/**
+ * Localizes map labels to a specific language if available in the vector tiles.
+ * @param {maplibregl.Map} map
+ * @param {string} lang - ISO language code (e.g., 'vi', 'en')
+ */
+export function localizeLabels(map, lang = "vi") {
   const style = map.getStyle();
   if (!style || !style.layers) return;
 
@@ -210,6 +215,7 @@ export function localizeLabels(map, lang) {
             map.setLayoutProperty(layer.id, "text-field", [
               "coalesce",
               ["get", `name:${lang}`],
+              ["get", "name:latin"],
               ["get", "name"],
               textField,
             ]);

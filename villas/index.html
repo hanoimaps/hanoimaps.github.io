@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -72,7 +72,7 @@
           [105.5, 20.7],
           [106.1, 21.5],
         ],
-        attributionControl: { compact: true },
+        attributionControl: false,
       });
 
       map.on("styledata", () => {
@@ -87,14 +87,14 @@
           new maplibregl.NavigationControl({
             visualizePitch: true,
           }),
-          "top-left"
+          "top-left",
         );
         map.addControl(
           new maplibregl.GeolocateControl({
             positionOptions: { enableHighAccuracy: true },
             trackUserLocation: true,
           }),
-          "top-left"
+          "top-left",
         );
 
         map.addControl(
@@ -102,7 +102,7 @@
             streets: STREETS_STYLE,
             satellite: SATELLITE_HYBRID_STYLE,
           }),
-          "top-left"
+          "top-left",
         );
 
         map.addControl(new MenuControl(), "top-left");
@@ -113,7 +113,7 @@
               '<a href="https://threads.com/@tomeyinhanoi" target="_blank" style="text-decoration: underline">By Tomey</a> | <a href="https://thuvienphapluat.vn/van-ban/Bat-dong-san/Quyet-dinh-1845-QD-UBND-2022-Danh-muc-nha-biet-thu-cu-Ha-Noi-truoc-1954-516094.aspx" target="_blank"  style="text-decoration: underline">Sources</a>',
             compact: true,
           }),
-          "bottom-left"
+          "bottom-left",
         );
 
         const compass = document.querySelector(".maplibregl-ctrl-compass");
@@ -134,7 +134,7 @@
         } catch (error) {
           console.error(
             "Error during initial data load and layer application:",
-            error
+            error,
           );
         }
       });
@@ -181,7 +181,7 @@
               .then((registration) => {
                 console.log(
                   "ServiceWorker registration successful with scope: ",
-                  registration.scope
+                  registration.scope,
                 );
               })
               .catch((error) => {
@@ -223,7 +223,7 @@
           worker.onerror = (e) => {
             worker.terminate();
             reject(
-              new Error(`Web Worker failed to start or execute: ${e.message}`)
+              new Error(`Web Worker failed to start or execute: ${e.message}`),
             );
           };
 
@@ -361,7 +361,7 @@
           console.log(markerId);
           if (props?.address && coords) {
             const googleMapsUrl = `https://www.google.com/maps/place/${encodeURIComponent(
-              props.address
+              props.address,
             )}`;
 
             const popupHTML = `
