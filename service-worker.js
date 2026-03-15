@@ -22,7 +22,7 @@ self.addEventListener("install", (event) => {
       return cache.addAll(urlsToCache).catch((error) => {
         console.error("Failed to pre-cache some assets:", error);
       });
-    })
+    }),
   );
   self.skipWaiting(); // Force activation immediately
 });
@@ -40,9 +40,9 @@ self.addEventListener("activate", (event) => {
             console.log(`Main Service Worker: Deleting old cache ${cacheName}`);
             return caches.delete(cacheName);
           }
-        })
+        }),
       );
-    })
+    }),
   );
   return self.clients.claim();
 });
@@ -67,15 +67,26 @@ self.addEventListener("fetch", (event) => {
         .catch(() => {
           // If the network fails, fall back to the cache.
           return caches.match(event.request);
-        })
+        }),
     );
     return;
   }
 
-  // Use a cache-first strategy for all other assets.
+  // Use a stale-while-revalidate strategy for all other assets (images, json, js, etc.)
   event.respondWith(
-    caches.match(event.request).then((response) => {
-      return response || fetch(event.request);
-    })
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.match(event.request).then((cachedResponse) => {
+        const fetchPromise = fetch(event.request)
+          .then((networkResponse) => {
+            if (networkResponse.ok) {
+              cache.put(event.request, networkResponse.clone());
+            }
+            return networkResponse;
+          })
+          .catch(() => cachedResponse); // Fallback to cache if network fails entirely
+
+        return cachedResponse || fetchPromise;
+      });
+    }),
   );
 });

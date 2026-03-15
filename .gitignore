@@ -1,2 +1,4 @@
 *.md
-photo25/
+.env
+*.py
+*.sh

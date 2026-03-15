@@ -60,13 +60,14 @@ map.on("load", () => {
     "bottom-left",
   );
 
-  // Fetch Threads Data
-  fetch(GEOJSON_PATH)
+  // Fetch Threads Data with priority
+  fetch(GEOJSON_PATH, { priority: "high" })
     .then((res) => res.json())
     .then((data) => {
       threadsData = data;
       setupThreadsLayers();
-    });
+    })
+    .catch((err) => console.error("Error loading threads data:", err));
 });
 
 map.on("styledata", () => {
