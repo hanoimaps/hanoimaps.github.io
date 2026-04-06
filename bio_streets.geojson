@@ -1217,8 +1217,8 @@
       "id": 11558435,
       "properties": {
         "name": "Phố Nguyễn Khuyến",
-        "french_name": "Rue Sinh Tư",
-        "description": "<b>Các lần đổi tên:</b><br/>1888: Sinh Tư (route)<br/>1945: Bùi Huy Bích (Phố)<br/>1949: Sinh Tư (Phố)<br/>1951: Sinh Tư (Phố)"
+        "french_name": "Rue Sinh Từ",
+        "description": "<b>Các lần đổi tên:</b><br/>1888: Sinh Từ (route)<br/>1945: Bùi Huy Bích (Phố)<br/>1949: Sinh Từ (Phố)<br/>1951: Sinh Từ (Phố)"
       },
       "geometry": {
         "type": "LineString",
@@ -2843,7 +2843,7 @@
       "properties": {
         "name": "Phố Mạc Đĩnh Chi",
         "french_name": "Voie N° 214",
-        "description": "<b>Các lần đổi tên:</b><br/>1931: Mạc Đĩnh Chi (Rue)<br/>1945: Bà Huyện Thanh Quan (Phố)<br/>1945: Bà Huyện Thanh Quan (Rue)<br/>1945: Mạc Đĩnh Chi (Phố)<br/>1949: Mạc Đĩnh Chi (Phố)<br/>1949: Mạc Đĩnh Chi (Rue)<br/>1949: Trinh Hoài Đức (Phố)<br/>1951: Mạc Đĩnh Chi (Phố)<br/>1951: Mạc Đĩnh Chi (Rue)<br/>1951: Trinh Hoài Đức (Phố)"
+        "description": "<b>Các lần đổi tên:</b><br/>1931: Mạc Đĩnh Chi (Rue)<br/>1945: Bà Huyện Thanh Quan (Phố)<br/>1945: Bà Huyện Thanh Quan (Rue)<br/>1945: Mạc Đĩnh Chi (Phố)<br/>1949: Mạc Đĩnh Chi (Phố)<br/>1949: Mạc Đĩnh Chi (Rue)<br/>1949: Trịnh Hoài Đức (Phố)<br/>1951: Mạc Đĩnh Chi (Phố)<br/>1951: Mạc Đĩnh Chi (Rue)<br/>1951: Trịnh Hoài Đức (Phố)"
       },
       "geometry": {
         "type": "LineString",
@@ -3276,7 +3276,7 @@
       "properties": {
         "name": "Phố Nguyễn Thiếp",
         "french_name": "Rue Duranton",
-        "description": "Viên cai trị thực dân người Pháp, từng làm Hiệp lý Hà Nội và Công sứ cầu Đơ (Hà Đông) năm 1903-1906.<br/><br/><b>Các lần đổi tên:</b><br/>1909: Duranton (Rue)<br/>1945: Nguyễn Mậu Kiên (Phố)<br/>1945: Nguyễn Mậu Kiện (Phố)<br/>1949: Nguyễn Thiệp (Phố)<br/>1951: Nguyễn Thiệp (Phố)"
+        "description": "Viên cai trị thực dân người Pháp, từng làm Hiệp lý Hà Nội và Công sứ cầu Đơ (Hà Đông) năm 1903-1906.<br/><br/><b>Các lần đổi tên:</b><br/>1909: Duranton (Rue)<br/>1945: Nguyễn Mậu Kiên (Phố)<br/>1945: Nguyễn Mậu Kiện (Phố)<br/>1949: Nguyễn Thiếp (Phố)<br/>1951: Nguyễn Thiếp (Phố)"
       },
       "geometry": {
         "type": "LineString",
@@ -3292,7 +3292,7 @@
       "properties": {
         "name": "Phố Hàng Khoai",
         "french_name": "Rue des Tubercules",
-        "description": "<b>Các lần đổi tên:</b><br/>Trước thời Pháp thuộc: Hàng Khoái<br/>Trước 1890: Tubercules (Rue)<br/>1945: Hàng Khoái<br/>1949: Hàng Khoái<br/>1951: Hàng Khoái"
+        "description": "<b>Các lần đổi tên:</b><br/>Trước thời Pháp thuộc: Hàng Khoai<br/>Trước 1890: Tubercules (Rue)<br/>1945: Hàng Khoai<br/>1949: Hàng Khoai<br/>1951: Hàng Khoai"
       },
       "geometry": {
         "type": "LineString",
@@ -10399,7 +10399,7 @@
       "properties": {
         "name": "Phố Nguyễn Thiếp",
         "french_name": "Rue Duranton",
-        "description": "Viên cai trị thực dân người Pháp, từng làm Hiệp lý Hà Nội và Công sứ cầu Đơ (Hà Đông) năm 1903-1906.<br/><br/><b>Các lần đổi tên:</b><br/>1909: Duranton (Rue)<br/>1945: Nguyễn Mậu Kiên (Phố)<br/>1945: Nguyễn Mậu Kiện (Phố)<br/>1949: Nguyễn Thiệp (Phố)<br/>1951: Nguyễn Thiệp (Phố)"
+        "description": "Viên cai trị thực dân người Pháp, từng làm Hiệp lý Hà Nội và Công sứ cầu Đơ (Hà Đông) năm 1903-1906.<br/><br/><b>Các lần đổi tên:</b><br/>1909: Duranton (Rue)<br/>1945: Nguyễn Mậu Kiên (Phố)<br/>1945: Nguyễn Mậu Kiện (Phố)<br/>1949: Nguyễn Thiếp (Phố)<br/>1951: Nguyễn Thiếp (Phố)"
       },
       "geometry": {
         "type": "LineString",
@@ -10415,7 +10415,7 @@
       "properties": {
         "name": "Phố Nguyễn Thiếp",
         "french_name": "Rue Duranton",
-        "description": "Viên cai trị thực dân người Pháp, từng làm Hiệp lý Hà Nội và Công sứ cầu Đơ (Hà Đông) năm 1903-1906.<br/><br/><b>Các lần đổi tên:</b><br/>1909: Duranton (Rue)<br/>1945: Nguyễn Mậu Kiên (Phố)<br/>1945: Nguyễn Mậu Kiện (Phố)<br/>1949: Nguyễn Thiệp (Phố)<br/>1951: Nguyễn Thiệp (Phố)"
+        "description": "Viên cai trị thực dân người Pháp, từng làm Hiệp lý Hà Nội và Công sứ cầu Đơ (Hà Đông) năm 1903-1906.<br/><br/><b>Các lần đổi tên:</b><br/>1909: Duranton (Rue)<br/>1945: Nguyễn Mậu Kiên (Phố)<br/>1945: Nguyễn Mậu Kiện (Phố)<br/>1949: Nguyễn Thiếp (Phố)<br/>1951: Nguyễn Thiếp (Phố)"
       },
       "geometry": {
         "type": "LineString",
@@ -21447,8 +21447,8 @@
       "id": 708539242,
       "properties": {
         "name": "Phố Nguyễn Khuyến",
-        "french_name": "Rue Sinh Tư",
-        "description": "<b>Các lần đổi tên:</b><br/>1888: Sinh Tư (route)<br/>1945: Bùi Huy Bích (Phố)<br/>1949: Sinh Tư (Phố)<br/>1951: Sinh Tư (Phố)"
+        "french_name": "Rue Sinh Từ",
+        "description": "<b>Các lần đổi tên:</b><br/>1888: Sinh Từ (route)<br/>1945: Bùi Huy Bích (Phố)<br/>1949: Sinh Từ (Phố)<br/>1951: Sinh Từ (Phố)"
       },
       "geometry": {
         "type": "LineString",
@@ -21479,8 +21479,8 @@
       "id": 708539244,
       "properties": {
         "name": "Phố Nguyễn Khuyến",
-        "french_name": "Rue Sinh Tư",
-        "description": "<b>Các lần đổi tên:</b><br/>1888: Sinh Tư (route)<br/>1945: Bùi Huy Bích (Phố)<br/>1949: Sinh Tư (Phố)<br/>1951: Sinh Tư (Phố)"
+        "french_name": "Rue Sinh Từ",
+        "description": "<b>Các lần đổi tên:</b><br/>1888: Sinh Từ (route)<br/>1945: Bùi Huy Bích (Phố)<br/>1949: Sinh Từ (Phố)<br/>1951: Sinh Từ (Phố)"
       },
       "geometry": {
         "type": "LineString",
@@ -25927,7 +25927,7 @@
       "properties": {
         "name": "Phố Hàng Khoai",
         "french_name": "Rue des Tubercules",
-        "description": "<b>Các lần đổi tên:</b><br/>Trước thời Pháp thuộc: Hàng Khoái<br/>Trước 1890: Tubercules (Rue)<br/>1945: Hàng Khoái<br/>1949: Hàng Khoái<br/>1951: Hàng Khoái"
+        "description": "<b>Các lần đổi tên:</b><br/>Trước thời Pháp thuộc: Hàng Khoai<br/>Trước 1890: Tubercules (Rue)<br/>1945: Hàng Khoai<br/>1949: Hàng Khoai<br/>1951: Hàng Khoai"
       },
       "geometry": {
         "type": "LineString",
@@ -26607,8 +26607,8 @@
       "id": 772362117,
       "properties": {
         "name": "Phố Nguyễn Khuyến",
-        "french_name": "Rue Sinh Tư",
-        "description": "<b>Các lần đổi tên:</b><br/>1888: Sinh Tư (route)<br/>1945: Bùi Huy Bích (Phố)<br/>1949: Sinh Tư (Phố)<br/>1951: Sinh Tư (Phố)"
+        "french_name": "Rue Sinh Từ",
+        "description": "<b>Các lần đổi tên:</b><br/>1888: Sinh Từ (route)<br/>1945: Bùi Huy Bích (Phố)<br/>1949: Sinh Từ (Phố)<br/>1951: Sinh Từ (Phố)"
       },
       "geometry": {
         "type": "LineString",
@@ -26679,7 +26679,7 @@
       "properties": {
         "name": "Phố Hàng Khoai",
         "french_name": "Rue des Tubercules",
-        "description": "<b>Các lần đổi tên:</b><br/>Trước thời Pháp thuộc: Hàng Khoái<br/>Trước 1890: Tubercules (Rue)<br/>1945: Hàng Khoái<br/>1949: Hàng Khoái<br/>1951: Hàng Khoái"
+        "description": "<b>Các lần đổi tên:</b><br/>Trước thời Pháp thuộc: Hàng Khoai<br/>Trước 1890: Tubercules (Rue)<br/>1945: Hàng Khoai<br/>1949: Hàng Khoai<br/>1951: Hàng Khoai"
       },
       "geometry": {
         "type": "LineString",
@@ -35124,7 +35124,7 @@
       "properties": {
         "name": "Phố Nguyễn Thiếp",
         "french_name": "Rue Duranton",
-        "description": "Viên cai trị thực dân người Pháp, từng làm Hiệp lý Hà Nội và Công sứ cầu Đơ (Hà Đông) năm 1903-1906.<br/><br/><b>Các lần đổi tên:</b><br/>1909: Duranton (Rue)<br/>1945: Nguyễn Mậu Kiên (Phố)<br/>1945: Nguyễn Mậu Kiện (Phố)<br/>1949: Nguyễn Thiệp (Phố)<br/>1951: Nguyễn Thiệp (Phố)"
+        "description": "Viên cai trị thực dân người Pháp, từng làm Hiệp lý Hà Nội và Công sứ cầu Đơ (Hà Đông) năm 1903-1906.<br/><br/><b>Các lần đổi tên:</b><br/>1909: Duranton (Rue)<br/>1945: Nguyễn Mậu Kiên (Phố)<br/>1945: Nguyễn Mậu Kiện (Phố)<br/>1949: Nguyễn Thiếp (Phố)<br/>1951: Nguyễn Thiếp (Phố)"
       },
       "geometry": {
         "type": "LineString",

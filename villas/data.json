@@ -499,7 +499,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.77794, 20.97442]
+        "coordinates": [105.8340501, 21.0319815]
       },
       "properties": {
         "address": "15 Chu Văn An Điện Biên Ba Đình",
@@ -8806,7 +8806,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.78432, 20.97052]
+        "coordinates": [105.8455433, 21.0134362]
       },
       "properties": {
         "address": "94-96 Tô Hiến Thành Lê Đại Hành Hai Bà Trưng",
@@ -8845,7 +8845,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.78463, 20.97123]
+        "coordinates": [105.8460391, 21.0130943]
       },
       "properties": {
         "address": "63 Tô Hiến Thành Lê Đại Hành Hai Bà Trưng",
@@ -8858,7 +8858,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.78432, 20.97052]
+        "coordinates": [105.8425618, 21.013453]
       },
       "properties": {
         "address": "100 Tô Hiến Thành Lê Đại Hành Hai Bà Trưng",
@@ -8910,7 +8910,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.78462, 20.97127]
+        "coordinates": [105.8458422, 21.0131247]
       },
       "properties": {
         "address": "59 Tô Hiến Thành Lê Đại Hành Hai Bà Trưng",
@@ -8923,7 +8923,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.78463, 20.97123]
+        "coordinates": [105.8458422, 21.0131247]
       },
       "properties": {
         "address": "63A Tô Hiến Thành Lê Đại Hành Hai Bà Trưng",

@@ -365,11 +365,14 @@
             )}`;
 
             const popupHTML = `
-                  <b>${props.address}</b>
-                  <a href="${googleMapsUrl}" target="_blank">
-                    Google Maps
-                  </a>
-                `;
+              <div class="villa-popup-container">
+                <div class="villa-popup-addr">${props.address}</div>
+                <div class="villa-popup-type">Nhóm: ${props.type || "?"}</div>
+                <div class="villa-popup-link">
+                  <a href="${googleMapsUrl}" target="_blank">Google Maps ↗</a>
+                </div>
+              </div>
+            `;
 
             if (window.currentPopup) window.currentPopup.remove();
 
