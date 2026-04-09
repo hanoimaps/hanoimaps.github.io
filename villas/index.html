@@ -35,12 +35,26 @@
         >
         UBND TP. Hà Nội.
       </p>
-      <ul>
-        <li>1: Phải giữ nguyên hiện trạng</li>
-        <li>2: Phải giữ nguyên nét gốc</li>
-        <li>3: Được thay đổi hiện trạng</li>
-        <li>?: Chưa có trong danh sách</li>
-      </ul>
+      <label
+        ><input type="checkbox" id="filter-1" checked /> 1: Phải giữ nguyên hiện
+        trạng</label
+      >
+      <label
+        ><input type="checkbox" id="filter-2" checked /> 2: Phải giữ nguyên nét
+        bề ngoài</label
+      >
+      <label
+        ><input type="checkbox" id="filter-3" checked /> 3: Được thay đổi hiện
+        trạng</label
+      >
+      <label
+        ><input type="checkbox" id="filter-new" checked /> ?: Không thuộc danh
+        sách (<a
+          href="https://www.entreprises-coloniales.fr/inde-indochine/CCI_Hanoi_electeurs-1940.pdf"
+          target="_blank"
+          >link</a
+        >)</label
+      >
     </div>
 
     <script type="module">
@@ -51,15 +65,18 @@
         modifyBaseStyle,
       } from "../shared.js";
 
-      // --- 1. CONSTANTS ---
       const DATA_URL = "data.json";
+      const DATA_NEW_URL = "data_new.json";
       const SOURCE_ID = "villa-points-source";
+      const NEW_SOURCE_ID = "villa-new-points-source";
       const UNCLUSTERED_LAYER_ID = "unclustered-point";
+      const NEW_UNCLUSTERED_LAYER_ID = "unclustered-new-point";
       const CLUSTERING_ENABLED = false;
 
       const menuPopup = document.getElementById("menu-popup");
 
       let globalGeojsonData = null;
+      let globalNewGeojsonData = null;
 
       // --- 2. CONFIG ---
       const map = new maplibregl.Map({
@@ -77,7 +94,7 @@
 
       map.on("styledata", () => {
         if (globalGeojsonData && !map.getSource(SOURCE_ID)) {
-          applyCustomStylesAndLayers(globalGeojsonData);
+          applyCustomStylesAndLayers(globalGeojsonData, globalNewGeojsonData);
         }
       });
 
@@ -110,7 +127,7 @@
         map.addControl(
           new maplibregl.AttributionControl({
             customAttribution:
-              '<a href="https://threads.com/@tomeyinhanoi" target="_blank" style="text-decoration: underline">By Tomey</a> | <a href="https://thuvienphapluat.vn/van-ban/Bat-dong-san/Quyet-dinh-1845-QD-UBND-2022-Danh-muc-nha-biet-thu-cu-Ha-Noi-truoc-1954-516094.aspx" target="_blank"  style="text-decoration: underline">Sources</a>',
+              '<a href="https://threads.com/@tomeyinhanoi" target="_blank" style="text-decoration: underline">By Tomey</a>',
             compact: true,
           }),
           "bottom-left",
@@ -129,8 +146,13 @@
         }
 
         try {
-          globalGeojsonData = await loadAndParseData(DATA_URL);
-          applyCustomStylesAndLayers(globalGeojsonData);
+          const [data1, data2] = await Promise.all([
+            loadAndParseData(DATA_URL),
+            loadAndParseData(DATA_NEW_URL).catch(() => null), // fail gracefully if not exists
+          ]);
+          globalGeojsonData = data1;
+          globalNewGeojsonData = data2;
+          applyCustomStylesAndLayers(globalGeojsonData, globalNewGeojsonData);
         } catch (error) {
           console.error(
             "Error during initial data load and layer application:",
@@ -139,9 +161,9 @@
         }
       });
 
-      function applyCustomStylesAndLayers(geojsonData) {
+      function applyCustomStylesAndLayers(geojsonData, newGeojsonData) {
         modifyBaseStyle(map); // 3.1
-        addDataLayer(map, geojsonData); // 3.3
+        addDataLayer(map, geojsonData, newGeojsonData); // 3.3
         addInteractivity(map); // 3.4
       }
 
@@ -232,7 +254,7 @@
       }
 
       // 3.3: Data layers
-      function addDataLayer(map, geojsonData) {
+      function addDataLayer(map, geojsonData, newGeojsonData) {
         const firstSymbolId = map
           .getStyle()
           .layers.find((layer) => layer.type === "symbol")?.id;
@@ -241,11 +263,13 @@
           "clusters",
           "cluster-count",
           UNCLUSTERED_LAYER_ID,
+          NEW_UNCLUSTERED_LAYER_ID,
           "house-type-labels",
         ].forEach((id) => {
           if (map.getLayer(id)) map.removeLayer(id);
         });
         if (map.getSource(SOURCE_ID)) map.removeSource(SOURCE_ID);
+        if (map.getSource(NEW_SOURCE_ID)) map.removeSource(NEW_SOURCE_ID);
 
         const sourceOptions = {
           type: "geojson",
@@ -310,7 +334,13 @@
           source: SOURCE_ID,
           filter: ["!", ["has", "point_count"]], // Only apply to features that are NOT clusters
           paint: {
-            "circle-color": "#FF5722",
+            "circle-color": [
+              "match",
+              ["get", "type"],
+              "?",
+              "#2196F3",
+              "#FF5722",
+            ],
             "circle-radius": [
               "interpolate",
               ["linear"],
@@ -349,53 +379,143 @@
 
         // map.addLayer(unclusteredLayer, firstSymbolId);
         map.addLayer(unclusteredLayerLabels, firstSymbolId);
+
+        // 5th layer: New unclustered points (blue colored)
+        if (newGeojsonData) {
+          map.addSource(NEW_SOURCE_ID, {
+            type: "geojson",
+            data: newGeojsonData,
+          });
+
+          map.addLayer({
+            id: NEW_UNCLUSTERED_LAYER_ID,
+            type: "circle",
+            source: NEW_SOURCE_ID,
+            paint: {
+              "circle-color": "#2196F3", // Blue color
+              "circle-radius": [
+                "interpolate",
+                ["linear"],
+                ["zoom"],
+                15,
+                5,
+                22,
+                24,
+              ],
+              "circle-stroke-width": 1,
+              "circle-stroke-color": "#fff",
+            },
+          });
+        }
+
+        // Filter controls
+        function updateFilters() {
+          const show1 = document.getElementById("filter-1").checked;
+          const show2 = document.getElementById("filter-2").checked;
+          const show3 = document.getElementById("filter-3").checked;
+          const showNew = document.getElementById("filter-new").checked;
+
+          const visibleTypes = [];
+          if (show1) visibleTypes.push("1");
+          if (show2) visibleTypes.push("2");
+          if (show3) visibleTypes.push("3");
+
+          const typeFilter =
+            visibleTypes.length > 0
+              ? ["in", "type", ...visibleTypes]
+              : ["literal", false];
+
+          map.setFilter(UNCLUSTERED_LAYER_ID, typeFilter);
+          if (map.getLayer("house-type-labels")) {
+            map.setFilter("house-type-labels", typeFilter);
+          }
+
+          if (map.getLayer(NEW_UNCLUSTERED_LAYER_ID)) {
+            map.setLayoutProperty(
+              NEW_UNCLUSTERED_LAYER_ID,
+              "visibility",
+              showNew ? "visible" : "none",
+            );
+          }
+        }
+
+        document
+          .querySelectorAll('#menu-popup input[type="checkbox"]')
+          .forEach((cb) => {
+            cb.addEventListener("change", updateFilters);
+          });
       }
 
       // 3.4: Interactions
       function addInteractivity(map) {
         // Popup for unclustered points
-        map.on("click", UNCLUSTERED_LAYER_ID, (e) => {
+        const handlePointClick = (e) => {
           const props = e.features[0].properties;
           const coords = e.features[0].geometry?.coordinates;
-          const markerId = props.id;
-          console.log(markerId);
-          if (props?.address && coords) {
-            const googleMapsUrl = `https://www.google.com/maps/place/${encodeURIComponent(
-              props.address,
-            )}`;
+          if (!props?.address || !coords) return;
 
-            const popupHTML = `
-              <div class="villa-popup-container">
-                <div class="villa-popup-addr">${props.address}</div>
-                <div class="villa-popup-type">Nhóm: ${props.type || "?"}</div>
-                <div class="villa-popup-link">
-                  <a href="${googleMapsUrl}" target="_blank">Google Maps ↗</a>
-                </div>
+          // Find features with exact same coordinates from both layers
+          const allFeatures = map.queryRenderedFeatures(e.point, {
+            layers: [UNCLUSTERED_LAYER_ID, NEW_UNCLUSTERED_LAYER_ID],
+          });
+          const sameCoord = allFeatures.filter((f) => {
+            const c = f.geometry?.coordinates;
+            return c && c[0] === coords[0] && c[1] === coords[1];
+          });
+
+          const descriptions = sameCoord
+            .map((f) => f.properties.description)
+            .filter(Boolean);
+
+          const googleMapsUrl = `https://www.google.com/maps/place/${encodeURIComponent(
+            props.address,
+          )}`;
+
+          const descHTML =
+            descriptions.length > 1
+              ? `<div class="villa-popup-descriptions">${descriptions.map((d) => `<div>${d}</div>`).join("")}</div>`
+              : descriptions.length === 1
+                ? `<div>${descriptions[0]}</div>`
+                : "";
+
+          const popupHTML = `
+            <div class="villa-popup-container">
+              <div class="villa-popup-addr">${props.address}</div>
+              <div class="villa-popup-type">${props.french_address || ""}
+                <br/><br/>
+                <span>${descHTML}</span>
               </div>
-            `;
+              <div class="villa-popup-link">
+                <div class="villa-popup-type">Nhóm: ${props.type || "?"}</div>
+                <a href="${googleMapsUrl}" target="_blank">Google Maps ↗</a>
+              </div>
+            </div>
+          `;
 
-            if (window.currentPopup) window.currentPopup.remove();
+          if (window.currentPopup) window.currentPopup.remove();
 
-            map.flyTo({
-              center: coords,
-              zoom: map.getZoom(),
-              duration: 900,
-              curve: 1.42,
-              essential: true,
-            });
+          map.flyTo({
+            center: coords,
+            zoom: map.getZoom(),
+            duration: 900,
+            curve: 1.42,
+            essential: true,
+          });
 
-            setTimeout(() => {
-              window.currentPopup = new maplibregl.Popup({
-                closeButton: false,
-                focusAfterOpen: false,
-                anchor: "bottom",
-              })
-                .setLngLat(coords)
-                .setHTML(popupHTML)
-                .addTo(map);
-            }, 600);
-          }
-        });
+          setTimeout(() => {
+            window.currentPopup = new maplibregl.Popup({
+              closeButton: false,
+              focusAfterOpen: false,
+              anchor: "bottom",
+            })
+              .setLngLat(coords)
+              .setHTML(popupHTML)
+              .addTo(map);
+          }, 600);
+        };
+
+        map.on("click", UNCLUSTERED_LAYER_ID, handlePointClick);
+        map.on("click", NEW_UNCLUSTERED_LAYER_ID, handlePointClick);
 
         map.on("click", () => {
           if (menuPopup.classList.contains("active")) {
@@ -403,12 +523,17 @@
           }
         });
 
-        map.on("mouseenter", UNCLUSTERED_LAYER_ID, () => {
+        const setCursorPointer = () => {
           map.getCanvas().style.cursor = "pointer";
-        });
-        map.on("mouseleave", UNCLUSTERED_LAYER_ID, () => {
+        };
+        const setCursorDefault = () => {
           map.getCanvas().style.cursor = "default";
-        });
+        };
+
+        map.on("mouseenter", UNCLUSTERED_LAYER_ID, setCursorPointer);
+        map.on("mouseleave", UNCLUSTERED_LAYER_ID, setCursorDefault);
+        map.on("mouseenter", NEW_UNCLUSTERED_LAYER_ID, setCursorPointer);
+        map.on("mouseleave", NEW_UNCLUSTERED_LAYER_ID, setCursorDefault);
 
         if (CLUSTERING_ENABLED) {
           // Click clusters to zooms in

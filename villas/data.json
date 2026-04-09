@@ -7090,7 +7090,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85294, 21.00269]
+        "coordinates": [105.8506081, 21.0164781]
       },
       "properties": {
         "address": "33+35 Ngô Thì Nhậm Phạm Đình Hổ Hai Bà Trưng",
@@ -8793,7 +8793,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.78851, 21.08814]
+        "coordinates": [105.8475148, 21.0137212]
       },
       "properties": {
         "address": "46 Tô Hiến Thành Nguyễn Du Hai Bà Trưng",
@@ -8871,7 +8871,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85545, 21.00409]
+        "coordinates": [105.8506081, 21.0164781]
       },
       "properties": {
         "address": "29 Tô Hiến Thành Nguyễn Du Hai Bà Trưng",
