@@ -1,0 +1,2941 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 704134579,
+      "properties": {
+        "name": "Toà án Hà Nội",
+        "french_name": "Palais de Justice à Hanoï",
+        "description": "Công trình Tòa án Hà Nội được thiết kế từ năm 1900, phê duyệt năm 1905 và xây dựng giai đoạn 1906–1908 trên khu đất giáp các phố Lý Thường Kiệt, Hai Bà Trưng và Hỏa Lò. Công trình do Henri Vildieu thiết kế theo kiến trúc tân cổ điển.\n\nHiện nay công trình do Tòa án nhân dân tối cao và Tòa án nhân dân Thành phố Hà Nội quản lý và sử dụng.",
+        "@id": "way/704134579",
+        "building": "government"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8467541,
+              21.0251999
+            ],
+            [
+              105.8466768,
+              21.0249824
+            ],
+            [
+              105.8467761,
+              21.0249517
+            ],
+            [
+              105.8467849,
+              21.0249765
+            ],
+            [
+              105.8469602,
+              21.0249222
+            ],
+            [
+              105.8469982,
+              21.0249104
+            ],
+            [
+              105.8470877,
+              21.0248827
+            ],
+            [
+              105.847127,
+              21.0248705
+            ],
+            [
+              105.8472855,
+              21.0248214
+            ],
+            [
+              105.8472775,
+              21.0247989
+            ],
+            [
+              105.8473962,
+              21.0247622
+            ],
+            [
+              105.8474769,
+              21.0249893
+            ],
+            [
+              105.8473637,
+              21.0250244
+            ],
+            [
+              105.8473468,
+              21.024977
+            ],
+            [
+              105.847197,
+              21.0250234
+            ],
+            [
+              105.8472121,
+              21.025066
+            ],
+            [
+              105.8470148,
+              21.0251271
+            ],
+            [
+              105.8469987,
+              21.025082
+            ],
+            [
+              105.8468546,
+              21.0251266
+            ],
+            [
+              105.8468681,
+              21.0251646
+            ],
+            [
+              105.8467541,
+              21.0251999
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 459907471,
+      "properties": {
+        "name": "Đại học Đông Dương",
+        "french_name": "Université Indochinoise",
+        "description": "Trường Đại học Đông Dương được phê duyệt năm 1907 theo thiết kế của Ernest Hébrard theo phong cách kiến trúc Đông Dương. Trước đó có dự kiến từ năm 1902 và thay đổi địa điểm trước khi xây dựng.\n\nCông trình được xây dựng qua các giai đoạn:\n\n* Giai đoạn 1913–1922: xây dựng khu cánh trái (Trường Y khoa).\n* Giai đoạn 1921–1923: xây dựng khu cánh phải gồm phòng học và giảng đường.\n* Giai đoạn 1924: xây dựng khu nhà chính theo thiết kế của Hébrard.\n* Giai đoạn 1933–1937: xây dựng thêm các giảng đường cho khoa luật.\n* Giai đoạn 1928–1945: xây dựng bổ sung và cải tạo các hạng mục.\n\nCông trình gồm khu cánh trái, khu cánh phải, khu nhà chính và các hạng mục phục vụ giảng dạy và nghiên cứu. Hiện nay do Đại học Quốc gia Hà Nội và Đại học Dược Hà Nội quản lý và sử dụng.",
+        "@id": "way/459907471",
+        "building": "university"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8583733,
+              21.0208266
+            ],
+            [
+              105.8585459,
+              21.0208778
+            ],
+            [
+              105.8584919,
+              21.0210364
+            ],
+            [
+              105.8585048,
+              21.0210403
+            ],
+            [
+              105.8584967,
+              21.0210639
+            ],
+            [
+              105.8585708,
+              21.0210859
+            ],
+            [
+              105.8585541,
+              21.021135
+            ],
+            [
+              105.8584807,
+              21.0211132
+            ],
+            [
+              105.8584712,
+              21.021141
+            ],
+            [
+              105.8584586,
+              21.0211373
+            ],
+            [
+              105.8584241,
+              21.0212386
+            ],
+            [
+              105.8584362,
+              21.0212422
+            ],
+            [
+              105.8584118,
+              21.021314
+            ],
+            [
+              105.8582263,
+              21.0212589
+            ],
+            [
+              105.8582861,
+              21.0210832
+            ],
+            [
+              105.8582649,
+              21.0210769
+            ],
+            [
+              105.8583084,
+              21.020949
+            ],
+            [
+              105.8583296,
+              21.0209553
+            ],
+            [
+              105.8583733,
+              21.0208266
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 701882899,
+      "properties": {
+        "name": "Sở Địa chính Bắc Kỳ",
+        "french_name": "Service du Cadastre du Tonkin",
+        "description": "Khu văn phòng Sở Địa chính Bắc Kỳ được xây dựng giai đoạn 1921–1923 theo thiết kế của Adolphe Bussy theo phong cách tân cổ điển. Năm 1933, công trình được tu bổ và mở rộng theo thiết kế của Mondet.\n\nCông trình gồm khu văn phòng, nhà Giám đốc, các nhà phụ và nhà kho. Hiện nay khu văn phòng được sử dụng làm trụ sở Bảo hiểm xã hội Việt Nam.",
+        "@id": "way/701882899",
+        "building": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8507401,
+              21.0255417
+            ],
+            [
+              105.8510026,
+              21.02547
+            ],
+            [
+              105.8509653,
+              21.0253511
+            ],
+            [
+              105.8509962,
+              21.0253427
+            ],
+            [
+              105.8509849,
+              21.0253067
+            ],
+            [
+              105.851143,
+              21.0252636
+            ],
+            [
+              105.851195,
+              21.0254293
+            ],
+            [
+              105.8511535,
+              21.0254406
+            ],
+            [
+              105.8512431,
+              21.0257264
+            ],
+            [
+              105.850833,
+              21.0258384
+            ],
+            [
+              105.8507401,
+              21.0255417
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 864177631,
+      "properties": {
+        "name": "Trường Mỹ thuật Đông Dương",
+        "french_name": "École des Beaux-arts",
+        "description": "Trường Mỹ thuật Đông Dương được cho phép xây dựng năm 1925 trên cơ sở cải tạo các công trình có sẵn. Việc cải tạo và xây mới do nhà thầu Aviat thực hiện theo thiết kế của Charles Lacollonge.\n\nCông trình được xây dựng từ năm 1925, gồm các khối nhà học, xưởng và nhà ở giáo viên. Hiện nay được sử dụng làm Trường Đại học Mỹ thuật Việt Nam.",
+        "@id": "way/864177631",
+        "building": "university"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8425375,
+              21.0223111
+            ],
+            [
+              105.8425745,
+              21.0224305
+            ],
+            [
+              105.8426641,
+              21.0224063
+            ],
+            [
+              105.8426747,
+              21.0224404
+            ],
+            [
+              105.8430286,
+              21.0223448
+            ],
+            [
+              105.8430242,
+              21.0223307
+            ],
+            [
+              105.8430711,
+              21.0223181
+            ],
+            [
+              105.8430546,
+              21.0222648
+            ],
+            [
+              105.8431669,
+              21.0222345
+            ],
+            [
+              105.8430761,
+              21.0219413
+            ],
+            [
+              105.8428981,
+              21.0219893
+            ],
+            [
+              105.8429779,
+              21.0222471
+            ],
+            [
+              105.842794,
+              21.0222968
+            ],
+            [
+              105.8427783,
+              21.0222461
+            ],
+            [
+              105.8425375,
+              21.0223111
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 704147379,
+      "properties": {
+        "name": "Trường Trung học Paul Bert",
+        "french_name": "Collège Paul Bert",
+        "description": "Trường Trung học Paul Bert được xây dựng năm 1897 theo thiết kế của Berruer. Sau đó công trình được đổi tên thành Trường Cao đẳng Tiểu học Nam sinh, và đến cuối những năm 1920 được sử dụng làm Trường Nữ sinh bản xứ.\n\nCông trình gồm khối nhà học phục vụ giảng dạy. Hiện nay được sử dụng làm Trường THCS Trưng Vương.",
+        "@id": "way/704147379",
+        "building": "school"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8523949,
+              21.0236351
+            ],
+            [
+              105.852357,
+              21.0234711
+            ],
+            [
+              105.8522355,
+              21.0234956
+            ],
+            [
+              105.8521952,
+              21.0233216
+            ],
+            [
+              105.8523246,
+              21.0232955
+            ],
+            [
+              105.8522852,
+              21.023125
+            ],
+            [
+              105.8522509,
+              21.0231319
+            ],
+            [
+              105.852248,
+              21.0231192
+            ],
+            [
+              105.852145,
+              21.0231399
+            ],
+            [
+              105.8521308,
+              21.0230786
+            ],
+            [
+              105.8522395,
+              21.0230567
+            ],
+            [
+              105.8522382,
+              21.023051
+            ],
+            [
+              105.8523916,
+              21.0230205
+            ],
+            [
+              105.8524083,
+              21.0230938
+            ],
+            [
+              105.8523969,
+              21.0230961
+            ],
+            [
+              105.8524433,
+              21.0232995
+            ],
+            [
+              105.8524594,
+              21.0232963
+            ],
+            [
+              105.852487,
+              21.0234172
+            ],
+            [
+              105.852473,
+              21.02342
+            ],
+            [
+              105.8525161,
+              21.0236082
+            ],
+            [
+              105.8525258,
+              21.0236062
+            ],
+            [
+              105.8525466,
+              21.0236963
+            ],
+            [
+              105.852376,
+              21.0237306
+            ],
+            [
+              105.8523558,
+              21.023643
+            ],
+            [
+              105.8523949,
+              21.0236351
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 871892003,
+      "properties": {
+        "name": "Viện Pasteur",
+        "french_name": "Institut Pasteur",
+        "description": "Công trình Viện Pasteur được xây dựng năm 1927 theo thiết kế của Gaston Roger theo phong cách kiến trúc Đông Dương.\n\nCông trình gồm nhiều hạng mục từ khu bảo vệ đến các khối nghiên cứu và làm việc, được xây dựng thống nhất qua các giai đoạn.\n\nHiện nay công trình được sử dụng làm Viện Vệ sinh Dịch tễ Trung ương.",
+        "@id": "way/871892003",
+        "building": "yes",
+        "building:levels": "3"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8596132,
+              21.0130687
+            ],
+            [
+              105.8596183,
+              21.0130355
+            ],
+            [
+              105.8593306,
+              21.0129973
+            ],
+            [
+              105.8593275,
+              21.0130175
+            ],
+            [
+              105.8591979,
+              21.0130003
+            ],
+            [
+              105.8592292,
+              21.0127948
+            ],
+            [
+              105.8593514,
+              21.012811
+            ],
+            [
+              105.8593448,
+              21.0128539
+            ],
+            [
+              105.8596892,
+              21.0128995
+            ],
+            [
+              105.8596952,
+              21.0128599
+            ],
+            [
+              105.8597959,
+              21.0128733
+            ],
+            [
+              105.8597902,
+              21.012911
+            ],
+            [
+              105.8601402,
+              21.0129575
+            ],
+            [
+              105.8601458,
+              21.0129207
+            ],
+            [
+              105.8602825,
+              21.0129389
+            ],
+            [
+              105.8602504,
+              21.0131493
+            ],
+            [
+              105.8601075,
+              21.0131303
+            ],
+            [
+              105.8601104,
+              21.0131114
+            ],
+            [
+              105.8598249,
+              21.0130734
+            ],
+            [
+              105.8598214,
+              21.0130964
+            ],
+            [
+              105.8596132,
+              21.0130687
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 37933255,
+      "properties": {
+        "name": "Bảo tàng Louis Finot",
+        "french_name": "Musée Louis Finot",
+        "description": "Bảo tàng Louis Finot được khởi công năm 1925 và hoàn thành năm 1932 theo thiết kế của Ernest Hébrard.\n\nCông trình gồm khối trưng bày và khu làm việc, kho lưu trữ phục vụ chức năng sưu tập, nghiên cứu và trưng bày. Hiện nay được sử dụng làm Bảo tàng Lịch sử.",
+        "@id": "way/37933255",
+        "building": "museum"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8599164,
+              21.023907
+            ],
+            [
+              105.859943,
+              21.0239153
+            ],
+            [
+              105.859989,
+              21.0238932
+            ],
+            [
+              105.8600309,
+              21.0239078
+            ],
+            [
+              105.8600507,
+              21.0239459
+            ],
+            [
+              105.8600826,
+              21.0239556
+            ],
+            [
+              105.8599038,
+              21.0244665
+            ],
+            [
+              105.8598703,
+              21.0244563
+            ],
+            [
+              105.8598486,
+              21.0245185
+            ],
+            [
+              105.8598901,
+              21.0245685
+            ],
+            [
+              105.8598838,
+              21.0245858
+            ],
+            [
+              105.8599606,
+              21.0246103
+            ],
+            [
+              105.8599314,
+              21.0246902
+            ],
+            [
+              105.859853,
+              21.0246653
+            ],
+            [
+              105.859783,
+              21.0246925
+            ],
+            [
+              105.8597707,
+              21.0246886
+            ],
+            [
+              105.8597417,
+              21.0247695
+            ],
+            [
+              105.8596557,
+              21.0247425
+            ],
+            [
+              105.8596845,
+              21.0246622
+            ],
+            [
+              105.8596715,
+              21.0246581
+            ],
+            [
+              105.8596493,
+              21.0245904
+            ],
+            [
+              105.8594674,
+              21.0245289
+            ],
+            [
+              105.8594948,
+              21.0244583
+            ],
+            [
+              105.8596752,
+              21.0245193
+            ],
+            [
+              105.859681,
+              21.0245044
+            ],
+            [
+              105.8597382,
+              21.0244813
+            ],
+            [
+              105.8597608,
+              21.0244182
+            ],
+            [
+              105.8597356,
+              21.0244103
+            ],
+            [
+              105.8599164,
+              21.023907
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 704147341,
+      "properties": {
+        "name": "Sở Mật thám Bắc Kỳ",
+        "french_name": "Service de la Sûreté au Tonkin",
+        "description": "Công trình Sở Mật thám Bắc Kỳ do Aldophe Bussy thiết kế, xây dựng giai đoạn 1914–1915. Năm 1930 được phê duyệt mở rộng thành Khu Cảnh sát với quy mô lớn.\n\nCông trình gồm khối Sở Mật thám ban đầu và khu mở rộng thành Khu Cảnh sát. Hiện nay được sử dụng làm trụ sở và văn phòng của các đơn vị thuộc Bộ Công an.",
+        "@id": "way/704147341",
+        "building": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8458622,
+              21.0222174
+            ],
+            [
+              105.8459886,
+              21.0221805
+            ],
+            [
+              105.8460676,
+              21.0224169
+            ],
+            [
+              105.846155,
+              21.0223914
+            ],
+            [
+              105.8461478,
+              21.0223699
+            ],
+            [
+              105.8462475,
+              21.022341
+            ],
+            [
+              105.8462544,
+              21.0223618
+            ],
+            [
+              105.8463256,
+              21.0223411
+            ],
+            [
+              105.8462412,
+              21.0220876
+            ],
+            [
+              105.8463784,
+              21.0220478
+            ],
+            [
+              105.8464994,
+              21.0224109
+            ],
+            [
+              105.8464735,
+              21.0224184
+            ],
+            [
+              105.8464756,
+              21.0224246
+            ],
+            [
+              105.8464184,
+              21.0224413
+            ],
+            [
+              105.8464157,
+              21.0224334
+            ],
+            [
+              105.846393,
+              21.0224401
+            ],
+            [
+              105.8463871,
+              21.0224225
+            ],
+            [
+              105.8460763,
+              21.0225138
+            ],
+            [
+              105.8460831,
+              21.0225337
+            ],
+            [
+              105.8460673,
+              21.0225383
+            ],
+            [
+              105.8460691,
+              21.0225438
+            ],
+            [
+              105.8460069,
+              21.0225621
+            ],
+            [
+              105.8460051,
+              21.0225567
+            ],
+            [
+              105.8459783,
+              21.0225645
+            ],
+            [
+              105.8458622,
+              21.0222174
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 37629570,
+      "properties": {
+        "name": "Phủ Toàn quyền Đông Dương",
+        "french_name": "Palais du Gouverneur Général\nde l’Indochine",
+        "description": "Phủ Toàn quyền Đông Dương là cơ quan đứng đầu bộ máy cai trị của Pháp tại Đông Dương, thành lập năm 1887. Khu công trình nằm trong vườn Bách thảo, gồm dinh Toàn quyền, khu nhà Văn phòng và các hạng mục khác, do Charles Lichtenfelder thiết kế theo kiến trúc cổ điển Pháp.\n\nDinh Toàn quyền được xây dựng giai đoạn 1901–1905, diện tích khoảng 1200 m², hiện là Văn phòng Chủ tịch nước. Khu nhà Văn phòng xây dựng các năm 1906 và 1920, nhiều lần mở rộng, hiện là Văn phòng Chính phủ.",
+        "@id": "way/37629570",
+        "building": "yes",
+        "building:colour": "#E5B24F",
+        "building:levels": "4"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8343188,
+              21.0395159
+            ],
+            [
+              105.8342982,
+              21.0394117
+            ],
+            [
+              105.8343469,
+              21.0394034
+            ],
+            [
+              105.8343304,
+              21.0393197
+            ],
+            [
+              105.8343123,
+              21.0392278
+            ],
+            [
+              105.8342636,
+              21.0392361
+            ],
+            [
+              105.834245,
+              21.039142
+            ],
+            [
+              105.8345656,
+              21.0390878
+            ],
+            [
+              105.8345814,
+              21.0391694
+            ],
+            [
+              105.834585,
+              21.0391879
+            ],
+            [
+              105.8345175,
+              21.0391993
+            ],
+            [
+              105.8345341,
+              21.0392847
+            ],
+            [
+              105.8345501,
+              21.0393669
+            ],
+            [
+              105.8346167,
+              21.0393556
+            ],
+            [
+              105.8346222,
+              21.0393837
+            ],
+            [
+              105.8346374,
+              21.0394619
+            ],
+            [
+              105.834488,
+              21.0394872
+            ],
+            [
+              105.8344724,
+              21.0394898
+            ],
+            [
+              105.8344597,
+              21.039492
+            ],
+            [
+              105.8343188,
+              21.0395159
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 858616447,
+      "properties": {
+        "name": "Trường tiểu học Pháp - Việt",
+        "french_name": "École Franco-Annamite",
+        "description": "Trường tiểu học Pháp – Việt được thiết kế năm 1905 bởi Charles Lichtenfelder và xây dựng giai đoạn 1905–1907 do nhà thầu Vola thực hiện.\n\nCông trình gồm khối nhà học phục vụ giảng dạy. Hiện nay được sử dụng làm Trường THCS Ngô Sĩ Liên.",
+        "@id": "way/858616447",
+        "building": "school",
+        "building:levels": "4"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8524448,
+              21.0194161
+            ],
+            [
+              105.8522372,
+              21.0190193
+            ],
+            [
+              105.8522908,
+              21.018997
+            ],
+            [
+              105.8522705,
+              21.018957
+            ],
+            [
+              105.8522972,
+              21.018947
+            ],
+            [
+              105.8522475,
+              21.0188583
+            ],
+            [
+              105.8524244,
+              21.0187787
+            ],
+            [
+              105.8524496,
+              21.0188289
+            ],
+            [
+              105.8525249,
+              21.0187939
+            ],
+            [
+              105.8527704,
+              21.0192671
+            ],
+            [
+              105.8527386,
+              21.0192806
+            ],
+            [
+              105.8527512,
+              21.019304
+            ],
+            [
+              105.8527211,
+              21.0193193
+            ],
+            [
+              105.8527032,
+              21.0193333
+            ],
+            [
+              105.8526861,
+              21.0193409
+            ],
+            [
+              105.8525154,
+              21.0189995
+            ],
+            [
+              105.8523886,
+              21.0190565
+            ],
+            [
+              105.8525552,
+              21.0193892
+            ],
+            [
+              105.8525354,
+              21.019404
+            ],
+            [
+              105.8525027,
+              21.0194145
+            ],
+            [
+              105.8524841,
+              21.0194236
+            ],
+            [
+              105.8524714,
+              21.0194035
+            ],
+            [
+              105.8524448,
+              21.0194161
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 700621000,
+      "properties": {
+        "name": "Trường Nữ sinh tiểu học Pháp-Việt",
+        "french_name": "École Brieux",
+        "description": "Trường Nữ sinh tiểu học Pháp – Việt (Trường Brieux) được hình thành năm 1910 trên cơ sở cải tạo công trình cũ. Việc cải tạo do nhà thầu Pées và Chazeau thực hiện giai đoạn 1912–1913, sau đó được mở rộng năm 1926.\n\nCông trình gồm khối nhà học cải tạo từ công trình trước và phần mở rộng phục vụ giảng dạy. Hiện nay được sử dụng làm Trường THCS Thanh Quan.",
+        "@id": "way/700621000",
+        "building": "school"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8472124,
+              21.0380101
+            ],
+            [
+              105.847205,
+              21.0375545
+            ],
+            [
+              105.8472352,
+              21.0375282
+            ],
+            [
+              105.8474793,
+              21.0375119
+            ],
+            [
+              105.8474846,
+              21.0376195
+            ],
+            [
+              105.847323,
+              21.0376271
+            ],
+            [
+              105.847329,
+              21.0379006
+            ],
+            [
+              105.8474377,
+              21.0378968
+            ],
+            [
+              105.8474484,
+              21.0380019
+            ],
+            [
+              105.8472124,
+              21.0380101
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 904081650,
+      "properties": {
+        "name": "Trường Trung học Albert Sarraut",
+        "french_name": "Lycée Albert Sarraut",
+        "description": "Trường Trung học Đông Dương được xây dựng năm 1915 theo thiết kế của Aldophe Bussy. Trước đó năm 1912 có kế hoạch cải tạo Trường Paul Bert nhưng không thực hiện. Năm 1923, công trình được đổi tên thành Trường Trung học Albert Sarraut.\n\nCông trình gồm khối nhà học phục vụ giảng dạy. Hiện nay được sử dụng làm trụ sở Ban Đối ngoại và Ban Tổ chức Trung ương Đảng.",
+        "@id": "way/904081650",
+        "building:colour": "#ECD6A4",
+        "building:levels": "3"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.836495,
+              21.039368
+            ],
+            [
+              105.83647,
+              21.0392258
+            ],
+            [
+              105.8364644,
+              21.039195
+            ],
+            [
+              105.8368552,
+              21.0391333
+            ],
+            [
+              105.836861,
+              21.0391652
+            ],
+            [
+              105.8368864,
+              21.0393067
+            ],
+            [
+              105.8368949,
+              21.0393533
+            ],
+            [
+              105.8365035,
+              21.0394151
+            ],
+            [
+              105.836495,
+              21.039368
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1206532593,
+      "properties": {
+        "name": "Khu Học xá Đông Dương",
+        "french_name": "Cité Universitaire",
+        "description": "Khu Học xá được quyết định xây dựng năm 1941 theo đồ án “Jardin Symbolique” của Louis Chauchon, Maurice Masson và Robert Gilles. Năm 1942, quy hoạch tổng thể được lập bởi Félix Godard và Moncet và được phê duyệt.\n\nCông trình gồm các hạng mục quy hoạch theo đồ án tổng thể, trong đó chỉ một phần được xây dựng, các hạng mục còn lại không được thực hiện.",
+        "@id": "way/1206532593",
+        "building:levels": "4"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8423243,
+              21.0070287
+            ],
+            [
+              105.842324,
+              21.0069798
+            ],
+            [
+              105.8423593,
+              21.0069796
+            ],
+            [
+              105.842359,
+              21.0069312
+            ],
+            [
+              105.8424413,
+              21.0069308
+            ],
+            [
+              105.8424922,
+              21.0069306
+            ],
+            [
+              105.842522,
+              21.0069304
+            ],
+            [
+              105.8425222,
+              21.0069693
+            ],
+            [
+              105.8428025,
+              21.006968
+            ],
+            [
+              105.8429537,
+              21.0069673
+            ],
+            [
+              105.843014,
+              21.0069671
+            ],
+            [
+              105.8430138,
+              21.0069311
+            ],
+            [
+              105.8431091,
+              21.0069306
+            ],
+            [
+              105.8431941,
+              21.0069302
+            ],
+            [
+              105.8431943,
+              21.0069616
+            ],
+            [
+              105.8432521,
+              21.0069617
+            ],
+            [
+              105.843397,
+              21.006961
+            ],
+            [
+              105.8435861,
+              21.0069602
+            ],
+            [
+              105.8435858,
+              21.0069105
+            ],
+            [
+              105.8436767,
+              21.0069101
+            ],
+            [
+              105.8437451,
+              21.0069101
+            ],
+            [
+              105.843745,
+              21.0069237
+            ],
+            [
+              105.8439578,
+              21.0069239
+            ],
+            [
+              105.8439583,
+              21.0070797
+            ],
+            [
+              105.843221,
+              21.0070842
+            ],
+            [
+              105.8430048,
+              21.0070851
+            ],
+            [
+              105.8423602,
+              21.0070868
+            ],
+            [
+              105.8423602,
+              21.0070285
+            ],
+            [
+              105.8423243,
+              21.0070287
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 910389742,
+      "properties": {
+        "name": "Nhà hát Thành phố",
+        "french_name": "Théâtre municipal de Hanoi",
+        "description": "Nhà hát Thành phố được xây dựng giai đoạn 1908–1916 theo thiết kế của François Lagisquet và Harlay theo phong cách tân cổ điển.\n\nCông trình gồm khối nhà hát phục vụ biểu diễn. Năm 1945, công trình được sử dụng trong sự kiện Cách mạng tháng Tám.",
+        "@id": "way/910389742",
+        "building:levels": "5.5"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8579849,
+              21.0242518
+            ],
+            [
+              105.8578207,
+              21.0242981
+            ],
+            [
+              105.8577929,
+              21.024297
+            ],
+            [
+              105.8577652,
+              21.0242901
+            ],
+            [
+              105.8577368,
+              21.024274
+            ],
+            [
+              105.8577177,
+              21.0242544
+            ],
+            [
+              105.8577048,
+              21.0242297
+            ],
+            [
+              105.8576986,
+              21.0242009
+            ],
+            [
+              105.8576986,
+              21.0241733
+            ],
+            [
+              105.8577091,
+              21.0241474
+            ],
+            [
+              105.8577202,
+              21.0241256
+            ],
+            [
+              105.8577387,
+              21.0241032
+            ],
+            [
+              105.8579204,
+              21.0240509
+            ],
+            [
+              105.8579849,
+              21.0242518
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 910882957,
+      "properties": {
+        "name": "Phủ Thống sứ Bắc Kỳ",
+        "french_name": "Résidence Supérieure au Tonkin",
+        "description": "Phủ Thống sứ Bắc Kỳ là cơ quan đứng đầu bộ máy cai trị của Pháp tại Bắc Kỳ, chịu sự giám sát của Toàn quyền Đông Dương. Công trình do Aldophe Bussy thiết kế theo kiến trúc cổ điển Pháp thời kỳ Napoleon III.\n\nKhu Văn phòng xây dựng năm 1892, hiện là Bộ Lao động – Thương binh và Xã hội. Dinh Thống sứ xây dựng năm 1918, hiện là Nhà khách Chính phủ.",
+        "@id": "way/910882957",
+        "building:colour": "#B9A973",
+        "building:levels": "3"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8553323,
+              21.0261532
+            ],
+            [
+              105.8552902,
+              21.0260295
+            ],
+            [
+              105.8550629,
+              21.0260976
+            ],
+            [
+              105.8550361,
+              21.0260871
+            ],
+            [
+              105.8549292,
+              21.0257766
+            ],
+            [
+              105.8549444,
+              21.0257486
+            ],
+            [
+              105.8551717,
+              21.0256698
+            ],
+            [
+              105.8551235,
+              21.025552
+            ],
+            [
+              105.8548725,
+              21.0256386
+            ],
+            [
+              105.8548808,
+              21.025664
+            ],
+            [
+              105.8548616,
+              21.0256974
+            ],
+            [
+              105.8548402,
+              21.0256867
+            ],
+            [
+              105.8548162,
+              21.0257284
+            ],
+            [
+              105.8548376,
+              21.0257391
+            ],
+            [
+              105.8548124,
+              21.0257829
+            ],
+            [
+              105.8547857,
+              21.0257924
+            ],
+            [
+              105.8548244,
+              21.0259088
+            ],
+            [
+              105.8547786,
+              21.0259217
+            ],
+            [
+              105.8548202,
+              21.0260501
+            ],
+            [
+              105.8548669,
+              21.0260369
+            ],
+            [
+              105.8549047,
+              21.0261506
+            ],
+            [
+              105.8549351,
+              21.0261396
+            ],
+            [
+              105.8549735,
+              21.0261589
+            ],
+            [
+              105.8549597,
+              21.0261828
+            ],
+            [
+              105.8550144,
+              21.0262103
+            ],
+            [
+              105.8550282,
+              21.0261864
+            ],
+            [
+              105.8550659,
+              21.0262054
+            ],
+            [
+              105.8550746,
+              21.0262347
+            ],
+            [
+              105.855221,
+              21.0261884
+            ],
+            [
+              105.8552347,
+              21.0262263
+            ],
+            [
+              105.8553042,
+              21.0262043
+            ],
+            [
+              105.8552904,
+              21.0261664
+            ],
+            [
+              105.8553323,
+              21.0261532
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1218000630,
+      "properties": {
+        "name": "Phòng Thương Mại và Nông nghiệp\nHà Nội",
+        "french_name": "Chambre de Commerce et d’Agriculture",
+        "description": "Công trình Phòng Thương mại và Nông nghiệp Hà Nội do nhà thầu Robert Joseph thiết kế và xây dựng giai đoạn 1939–1940 theo phong cách hiện đại. Dự án được ký kết năm 1939 giữa Pierre Guillaume và Robert Joseph.\n\nCông trình gồm khối nhà làm việc của Phòng Thương mại và Nông nghiệp, ban đầu có trụ sở tại phố Tràng Thi sau đó chuyển về phố Lê Thái Tổ. Hiện nay được sử dụng làm Bưu điện Trung tâm 1.",
+        "@id": "way/1218000630",
+        "building:levels": "3"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8535559,
+              21.0263279
+            ],
+            [
+              105.8537144,
+              21.0263093
+            ],
+            [
+              105.8537875,
+              21.0262993
+            ],
+            [
+              105.8538116,
+              21.0262617
+            ],
+            [
+              105.8539819,
+              21.0262048
+            ],
+            [
+              105.8538934,
+              21.0259882
+            ],
+            [
+              105.853587,
+              21.0260946
+            ],
+            [
+              105.8535387,
+              21.0261265
+            ],
+            [
+              105.8535307,
+              21.0261566
+            ],
+            [
+              105.8535333,
+              21.0261954
+            ],
+            [
+              105.8535559,
+              21.0263279
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 702790718,
+      "properties": {
+        "name": "Institution des Jeunes Filles annamites",
+        "french_name": "Công trình Trường Cao đẳng tiểu học Nữ sinh Pháp được thiết kế năm 1918 bởi Charles Lacollonge. Ban đầu dự kiến làm trường nữ sinh sư phạm bản xứ, sau khi xây dựng hoàn thành được chuyển sang sử dụng cho Trường Cao đẳng tiểu học Nữ sinh Pháp.\n\nCông trình gồm khối nhà học phục vụ giảng dạy. Hiện nay được sử dụng làm trụ sở Bộ Tư pháp.",
+        "description": "Công trình Trường Cao đẳng tiểu học Nữ sinh Pháp được thiết kế năm 1918 bởi Charles Lacollonge. Ban đầu dự kiến làm trường nữ sinh sư phạm bản xứ, sau khi xây dựng hoàn thành được chuyển sang sử dụng cho Trường Cao đẳng tiểu học Nữ sinh Pháp.\n\nCông trình gồm khối nhà học phục vụ giảng dạy. Hiện nay được sử dụng làm trụ sở Bộ Tư pháp.",
+        "@id": "way/702790718",
+        "building": "government_office"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.834759,
+              21.0323383
+            ],
+            [
+              105.8347238,
+              21.0321751
+            ],
+            [
+              105.8348199,
+              21.0321571
+            ],
+            [
+              105.8348261,
+              21.0321858
+            ],
+            [
+              105.8352321,
+              21.0321097
+            ],
+            [
+              105.8352282,
+              21.0320916
+            ],
+            [
+              105.8352712,
+              21.0320836
+            ],
+            [
+              105.8352671,
+              21.0320648
+            ],
+            [
+              105.8353309,
+              21.0320529
+            ],
+            [
+              105.8353346,
+              21.0320701
+            ],
+            [
+              105.8353761,
+              21.0320623
+            ],
+            [
+              105.8353798,
+              21.0320796
+            ],
+            [
+              105.8357854,
+              21.0320037
+            ],
+            [
+              105.8357785,
+              21.0319716
+            ],
+            [
+              105.8358782,
+              21.0319529
+            ],
+            [
+              105.8359136,
+              21.0321173
+            ],
+            [
+              105.8358125,
+              21.0321363
+            ],
+            [
+              105.8358086,
+              21.032118
+            ],
+            [
+              105.835404,
+              21.0321939
+            ],
+            [
+              105.8354171,
+              21.0322552
+            ],
+            [
+              105.835266,
+              21.0322835
+            ],
+            [
+              105.835253,
+              21.0322234
+            ],
+            [
+              105.8348522,
+              21.0322986
+            ],
+            [
+              105.8348568,
+              21.03232
+            ],
+            [
+              105.834759,
+              21.0323383
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 703386662,
+      "properties": {
+        "name": "Bệnh viện bản xứ",
+        "french_name": "Hôpital Indigène",
+        "description": "Bệnh viện bản xứ được thành lập năm 1904 và xây dựng từ năm 1905 theo thiết kế của Henri Vildieu.\n\nCông trình gồm hai khu:\n\n* Khu thứ nhất gồm các khối văn phòng, khám bệnh, phẫu thuật, điều trị và các hạng mục phục vụ y tế.\n* Khu thứ hai gồm các khối văn phòng, hộ sinh, đào tạo, điều trị và bào chế thuốc.\n\nHiện nay hai khu được sử dụng làm Bệnh viện Việt Đức và Bệnh viện Phụ sản Trung ương.",
+        "@id": "way/703386662",
+        "building": "hospital"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8467864,
+              21.0276047
+            ],
+            [
+              105.8470072,
+              21.0275621
+            ],
+            [
+              105.8470255,
+              21.0276498
+            ],
+            [
+              105.8468049,
+              21.0276906
+            ],
+            [
+              105.8467864,
+              21.0276047
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 910882952,
+      "properties": {
+        "name": "Sở Bưu điện Hà Nội",
+        "french_name": "Service des Postes et Telegraphes",
+        "description": "Sở Bưu điện Hà Nội có tòa nhà đầu tiên xây dựng giai đoạn 1894–1899 do Adolphe Bussy thiết kế theo phong cách tân cổ điển. Năm 1942, công trình được xây thêm tòa nhà mới theo thiết kế của Felix Godard theo phong cách hiện đại.\n\nCông trình gồm hai khối: khối ban đầu phục vụ giao dịch và thu cước, và khối xây thêm năm 1942. Hiện nay do Bưu điện Thành phố Hà Nội quản lý và sử dụng.",
+        "@id": "way/910882952",
+        "building:levels": "5"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8537144,
+              21.0263093
+            ],
+            [
+              105.8535559,
+              21.0263279
+            ],
+            [
+              105.8535461,
+              21.0263293
+            ],
+            [
+              105.8536005,
+              21.0266756
+            ],
+            [
+              105.853654,
+              21.0270373
+            ],
+            [
+              105.8538263,
+              21.0270135
+            ],
+            [
+              105.8537928,
+              21.0267687
+            ],
+            [
+              105.8537592,
+              21.0267719
+            ],
+            [
+              105.8537257,
+              21.0265547
+            ],
+            [
+              105.8537498,
+              21.0265522
+            ],
+            [
+              105.8537144,
+              21.0263093
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 838258691,
+      "properties": {
+        "name": "Bảo tàng Maurice Long",
+        "french_name": "Musée Maurice Long",
+        "description": "Công trình được xây dựng đầu năm 1901 theo thiết kế của Aldophe Bussy và khánh thành năm 1902 để phục vụ Triển lãm Hà Nội lần thứ hai giai đoạn 1902–1903. Trước đó khu đất được sử dụng làm Trường đua ngựa.\n\nSau triển lãm, công trình được chuyển đổi chức năng và đổi tên qua các giai đoạn: Bảo tàng Nông nghiệp – Thương mại – Công nghiệp, và từ năm 1923 là Bảo tàng Maurice Long.\n\nCông trình gồm khối nhà triển lãm phục vụ trưng bày và tổ chức hội chợ.",
+        "@id": "way/838258691",
+        "building": "yes",
+        "building:levels": "4"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.843713,
+              21.0228975
+            ],
+            [
+              105.8440835,
+              21.0227924
+            ],
+            [
+              105.8446684,
+              21.0226265
+            ],
+            [
+              105.8445053,
+              21.0221254
+            ],
+            [
+              105.8440276,
+              21.022261
+            ],
+            [
+              105.8439368,
+              21.0222867
+            ],
+            [
+              105.8436918,
+              21.0223572
+            ],
+            [
+              105.8435473,
+              21.0223917
+            ],
+            [
+              105.843713,
+              21.0228975
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 854938905,
+      "properties": {
+        "name": "Ga Hà Nội",
+        "french_name": "Gare de Hanoï",
+        "description": "Ga Hà Nội thuộc kế hoạch xây dựng hệ thống đường sắt Đông Dương được thông qua năm 1897. Công trình do kỹ sư Brorreil thiết kế năm 1898 và được phê duyệt bởi Paul Doumer, sau đó có điều chỉnh về kiến trúc trong quá trình xây dựng.\n\nCông trình gồm khối nhà ga phục vụ vận hành và khai thác đường sắt. Sau đó được sửa chữa và cải tạo qua nhiều giai đoạn.",
+        "@id": "way/854938905",
+        "building:colour": "#A0B1BE",
+        "building:levels": "4"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8410348,
+              21.0243815
+            ],
+            [
+              105.8409882,
+              21.0243821
+            ],
+            [
+              105.8409746,
+              21.0243822
+            ],
+            [
+              105.8409709,
+              21.0241046
+            ],
+            [
+              105.8409889,
+              21.0241044
+            ],
+            [
+              105.8410335,
+              21.0241039
+            ],
+            [
+              105.8411711,
+              21.0241031
+            ],
+            [
+              105.8412148,
+              21.0241017
+            ],
+            [
+              105.8412178,
+              21.0243241
+            ],
+            [
+              105.8412185,
+              21.0243793
+            ],
+            [
+              105.8411778,
+              21.0243792
+            ],
+            [
+              105.8410348,
+              21.0243815
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 505820399,
+      "properties": {
+        "name": "Trường Trung học Bảo hộ",
+        "french_name": "Lycée du Protectorat",
+        "description": "Trường Trung học Bảo hộ được thành lập năm 1908 trên cơ sở sáp nhập các trường: Thông ngôn, Sư phạm, Trung học Pháp – Việt và tiểu học thuộc Trường Sư phạm. Công trình sử dụng cơ sở cũ và được xây dựng bổ sung từ năm 1908 theo thiết kế của Charles Lichtenfelder, các giai đoạn sau tiếp tục xây dựng theo thiết kế của Aldophe Bussy.\n\nCông trình gồm các khối nhà học và hạng mục phục vụ giảng dạy được xây dựng qua nhiều giai đoạn. Hiện nay được sử dụng làm Trường THPT Chu Văn An.",
+        "@id": "way/505820399",
+        "building": "school",
+        "building:levels": "2"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8311066,
+              21.0432527
+            ],
+            [
+              105.8311107,
+              21.0430697
+            ],
+            [
+              105.8312461,
+              21.0430723
+            ],
+            [
+              105.8312446,
+              21.0431404
+            ],
+            [
+              105.8314338,
+              21.0431441
+            ],
+            [
+              105.8316246,
+              21.0431478
+            ],
+            [
+              105.8317735,
+              21.0431509
+            ],
+            [
+              105.8317721,
+              21.0432119
+            ],
+            [
+              105.8317709,
+              21.0432658
+            ],
+            [
+              105.8317481,
+              21.0432653
+            ],
+            [
+              105.8311066,
+              21.0432527
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 701882970,
+      "properties": {
+        "name": "Dinh thự của Phó Toàn quyền Đông Dương",
+        "french_name": "Hôtel du Secrétaire général du Gouverneur Général de l’Indochine",
+        "description": "Dinh thự Phó Toàn quyền Đông Dương nằm tại khu vực các phố Pottier, Jules Ferry và Beauchamp. Công trình gồm trụ sở Ngân hàng Đông Dương xây dựng trước năm 1902 và nhà của Giám đốc phụ trách dân sự. Năm 1904, hai khu nhà được cải tạo thành dinh thự Phó Toàn quyền, thiết kế theo phong cách tân cổ điển. Hiện nay công trình là trụ sở Báo Nhân Dân.",
+        "@id": "way/701882970",
+        "building": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8509292,
+              21.0302912
+            ],
+            [
+              105.8507408,
+              21.030161
+            ],
+            [
+              105.8508179,
+              21.0300646
+            ],
+            [
+              105.8508307,
+              21.030074
+            ],
+            [
+              105.8508843,
+              21.0300039
+            ],
+            [
+              105.8508997,
+              21.0300114
+            ],
+            [
+              105.850944,
+              21.0298287
+            ],
+            [
+              105.8510707,
+              21.0298593
+            ],
+            [
+              105.851003,
+              21.0302042
+            ],
+            [
+              105.8509292,
+              21.0302912
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 377094389,
+      "properties": {
+        "name": "Sở Lưu trữ và Thư viện Đông Dương",
+        "french_name": "Direction des Archives et Bibliothèque de l’Indochine",
+        "description": "Sở Lưu trữ và Thư viện Đông Dương có khu nhà xây dựng năm 1903. Năm 1917, sau khi cơ quan được thành lập, khu nhà được chuyển thành kho sách. Từ năm 1919 đến 1925, các hạng mục được xây dựng bổ sung và quy hoạch lại theo dạng chữ U.\n\nCông trình gồm kho sách, phòng đọc, kho lưu trữ tài liệu, nhà Giám đốc và các hạng mục phục vụ lưu trữ, nghiên cứu. Hiện nay do Thư viện Quốc gia Hà Nội và Trung tâm Lưu trữ Quốc gia I quản lý và sử dụng.",
+        "@id": "way/377094389",
+        "building": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8492453,
+              21.0257616
+            ],
+            [
+              105.8492656,
+              21.0258217
+            ],
+            [
+              105.8493738,
+              21.0257898
+            ],
+            [
+              105.8493468,
+              21.02571
+            ],
+            [
+              105.8494383,
+              21.0256829
+            ],
+            [
+              105.8494943,
+              21.0258483
+            ],
+            [
+              105.8494061,
+              21.0258744
+            ],
+            [
+              105.8493887,
+              21.0258229
+            ],
+            [
+              105.8492749,
+              21.0258565
+            ],
+            [
+              105.849287,
+              21.0258923
+            ],
+            [
+              105.8492535,
+              21.0259022
+            ],
+            [
+              105.8492589,
+              21.0259181
+            ],
+            [
+              105.8492062,
+              21.0259336
+            ],
+            [
+              105.8492113,
+              21.0259487
+            ],
+            [
+              105.849162,
+              21.0259633
+            ],
+            [
+              105.8491564,
+              21.0259468
+            ],
+            [
+              105.8490955,
+              21.0259648
+            ],
+            [
+              105.8490874,
+              21.0259408
+            ],
+            [
+              105.8490659,
+              21.0259471
+            ],
+            [
+              105.8490562,
+              21.0259183
+            ],
+            [
+              105.8489409,
+              21.0259523
+            ],
+            [
+              105.8489515,
+              21.0259835
+            ],
+            [
+              105.8489271,
+              21.0259907
+            ],
+            [
+              105.8489367,
+              21.0260194
+            ],
+            [
+              105.8488735,
+              21.026038
+            ],
+            [
+              105.8488631,
+              21.0260071
+            ],
+            [
+              105.8487764,
+              21.0260326
+            ],
+            [
+              105.848739,
+              21.0259192
+            ],
+            [
+              105.8489158,
+              21.0258671
+            ],
+            [
+              105.8489303,
+              21.02591
+            ],
+            [
+              105.8490394,
+              21.0258779
+            ],
+            [
+              105.8490223,
+              21.0258273
+            ],
+            [
+              105.8492453,
+              21.0257616
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 697572004,
+      "properties": {
+        "name": "Sở Tài chính Đông Dương",
+        "french_name": "Direction des Finances de l’Indochine",
+        "description": "Sở Tài chính và Trước bạ được phê duyệt xây dựng cuối năm 1924 theo thiết kế của Ernest Hébrard. Công trình do hãng Verneuil & Gravereaud thi công năm 1925 và hoàn thành năm 1928, thuộc phong cách kiến trúc Đông Dương.\n\nCông trình gồm hai khối chức năng: Sở Tài chính (Direction des Finances) và Sở\nTrước bạ (Sous-Direction de l’Enregistrement). Hiện nay được sử dụng làm trụ sở Bộ Ngoại giao.",
+        "@id": "way/697572004",
+        "building": "yes",
+        "building:colour": "#F5D277",
+        "building:levels": "3"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8366563,
+              21.0357741
+            ],
+            [
+              105.8369338,
+              21.0357372
+            ],
+            [
+              105.8369393,
+              21.0357729
+            ],
+            [
+              105.836944,
+              21.0358038
+            ],
+            [
+              105.8368345,
+              21.0358184
+            ],
+            [
+              105.8368384,
+              21.035844
+            ],
+            [
+              105.8368577,
+              21.0359705
+            ],
+            [
+              105.8371723,
+              21.0359286
+            ],
+            [
+              105.8371534,
+              21.0358054
+            ],
+            [
+              105.8371488,
+              21.035775
+            ],
+            [
+              105.8370562,
+              21.0357873
+            ],
+            [
+              105.8370517,
+              21.0357576
+            ],
+            [
+              105.8370469,
+              21.0357265
+            ],
+            [
+              105.8372802,
+              21.0356954
+            ],
+            [
+              105.8372764,
+              21.0356702
+            ],
+            [
+              105.8372963,
+              21.0356675
+            ],
+            [
+              105.8372785,
+              21.0355512
+            ],
+            [
+              105.8372656,
+              21.0355529
+            ],
+            [
+              105.8372609,
+              21.0355217
+            ],
+            [
+              105.8371303,
+              21.0355391
+            ],
+            [
+              105.8371362,
+              21.035578
+            ],
+            [
+              105.8370028,
+              21.0355957
+            ],
+            [
+              105.837001,
+              21.035584
+            ],
+            [
+              105.8369989,
+              21.0355707
+            ],
+            [
+              105.8368941,
+              21.0355847
+            ],
+            [
+              105.8368961,
+              21.0355977
+            ],
+            [
+              105.836898,
+              21.03561
+            ],
+            [
+              105.8367681,
+              21.0356273
+            ],
+            [
+              105.8367639,
+              21.0355999
+            ],
+            [
+              105.8366288,
+              21.0356179
+            ],
+            [
+              105.8366335,
+              21.0356483
+            ],
+            [
+              105.8366187,
+              21.0356502
+            ],
+            [
+              105.8366336,
+              21.0357475
+            ],
+            [
+              105.8366519,
+              21.0357451
+            ],
+            [
+              105.8366563,
+              21.0357741
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 842605273,
+      "properties": {
+        "name": "Viện Mắt Hà Nội",
+        "french_name": "Institut Ophtalmologique de Hanoi",
+        "description": "Viện Mắt Hà Nội được nghiên cứu năm 1913 và xây dựng từ năm 1914 theo thiết kế của Adolphe Bussy, sau đó được xây dựng và thay đổi qua nhiều giai đoạn.\n\nCông trình gồm phòng điều trị, nhà phụ và phòng phát thuốc phục vụ khám và chữa bệnh. Hiện nay do Viện Mắt Trung ương quản lý và sử dụng.",
+        "@id": "way/842605273",
+        "building": "hospital",
+        "building:levels": "7"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8493915,
+              21.0179887
+            ],
+            [
+              105.8493728,
+              21.0175433
+            ],
+            [
+              105.8494667,
+              21.0175399
+            ],
+            [
+              105.8494695,
+              21.0176073
+            ],
+            [
+              105.8497209,
+              21.0175981
+            ],
+            [
+              105.8497271,
+              21.0177464
+            ],
+            [
+              105.8494997,
+              21.0177547
+            ],
+            [
+              105.8495094,
+              21.0179844
+            ],
+            [
+              105.8493915,
+              21.0179887
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 910882953,
+      "properties": {
+        "name": "Dinh Thống sứ Bắc Kỳ",
+        "french_name": "Hôtel de la Résidence\nSupérieure",
+        "description": "Phủ Thống sứ Bắc Kỳ là cơ quan đứng đầu bộ máy cai trị của Pháp tại Bắc Kỳ, chịu sự giám sát của Toàn quyền Đông Dương. Công trình do Aldophe Bussy thiết kế theo kiến trúc cổ điển Pháp thời Napoleon III.\n\nKhu Văn phòng xây dựng năm 1892, hiện là Bộ Lao động – Thương binh và Xã hội. Dinh Thống sứ xây dựng năm 1918, hiện là Nhà khách Chính phủ.",
+        "@id": "way/910882953",
+        "building:colour": "#DFC86D",
+        "building:levels": "2.5"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.855379,
+              21.0266486
+            ],
+            [
+              105.8553484,
+              21.0266577
+            ],
+            [
+              105.8552745,
+              21.0266797
+            ],
+            [
+              105.855207,
+              21.0266997
+            ],
+            [
+              105.8551777,
+              21.0266137
+            ],
+            [
+              105.8552471,
+              21.0265931
+            ],
+            [
+              105.8553209,
+              21.0265712
+            ],
+            [
+              105.8553508,
+              21.0265623
+            ],
+            [
+              105.855379,
+              21.0266486
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1087731725,
+      "properties": {
+        "name": "Sở Công chính Bắc Kỳ",
+        "french_name": "Circonscription territorriale des Travaux publics au Tonkin",
+        "description": "Sở Công chính Bắc Kỳ có tòa nhà đầu tiên xây dựng giai đoạn 1903–1904. Từ năm 1907 đến 1940, các hạng mục được xây dựng bổ sung theo thiết kế của Henri Cérutti và Henri Vildieu theo phong cách tân cổ điển.\n\nCông trình gồm khối trụ sở ban đầu, Trường Công chính, phòng thí nghiệm và nhà kho.",
+        "@id": "way/1087731725",
+        "building": "yes",
+        "building:levels": "3"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8557735,
+              21.0317945
+            ],
+            [
+              105.8558676,
+              21.0318152
+            ],
+            [
+              105.8558913,
+              21.0317215
+            ],
+            [
+              105.8559281,
+              21.0317296
+            ],
+            [
+              105.855969,
+              21.0315677
+            ],
+            [
+              105.8561139,
+              21.0314891
+            ],
+            [
+              105.8561981,
+              21.0314974
+            ],
+            [
+              105.8562793,
+              21.0315306
+            ],
+            [
+              105.8563562,
+              21.031367
+            ],
+            [
+              105.8559978,
+              21.0313149
+            ],
+            [
+              105.8558723,
+              21.031404
+            ],
+            [
+              105.8557735,
+              21.0317945
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 704147287,
+      "properties": {
+        "name": "Trại lính khố xanh",
+        "french_name": "Garde indigène de l’Indochine",
+        "description": "Công trình Trại lính khố xanh có các bản vẽ từ năm 1895, một số hạng mục đã xây dựng trước thời điểm này. Giai đoạn 1895–1903, các hạng mục tiếp tục được xây dựng theo thiết kế của Henri Vildieu. Từ năm 1923 đến 1944, công trình được xây dựng bổ sung và mở rộng.\n\nCông trình gồm các khối nhà phục vụ chức năng doanh trại. Hiện nay khu đất được sử dụng cho Cục Quản lý Xuất nhập cảnh, dấu tích còn lại là cổng vào.",
+        "@id": "way/704147287",
+        "building": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8513557,
+              21.0220043
+            ],
+            [
+              105.8513429,
+              21.0219548
+            ],
+            [
+              105.8512847,
+              21.0219679
+            ],
+            [
+              105.8512713,
+              21.0219142
+            ],
+            [
+              105.8513525,
+              21.021896
+            ],
+            [
+              105.8513468,
+              21.021874
+            ],
+            [
+              105.8516628,
+              21.0218028
+            ],
+            [
+              105.8516792,
+              21.0218664
+            ],
+            [
+              105.851706,
+              21.0218604
+            ],
+            [
+              105.8517219,
+              21.0219218
+            ],
+            [
+              105.8513557,
+              21.0220043
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1196719784,
+      "properties": {
+        "name": "Sở Thương chính và Độc quyền Đông Dương",
+        "french_name": "Direction des Douanes et Régies de l’Indochine",
+        "description": "Sở Thương chính và Độc quyền Đông Dương được thành lập năm 1897. Công trình được phê duyệt và xây dựng năm 1906, do Henri Vildieu thiết kế theo phong cách tân cổ điển.\n\nCông trình gồm khối nhà làm việc phục vụ chức năng quản lý thương chính và độc quyền. Hiện nay do Bảo tàng Cách mạng Việt Nam quản lý và sử dụng.",
+        "@id": "way/1196719784"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8581069,
+              21.0255997
+            ],
+            [
+              105.8583939,
+              21.0256773
+            ],
+            [
+              105.8584024,
+              21.0256496
+            ],
+            [
+              105.8586816,
+              21.0257251
+            ],
+            [
+              105.8587246,
+              21.0256809
+            ],
+            [
+              105.8587823,
+              21.0256687
+            ],
+            [
+              105.8588563,
+              21.0256456
+            ],
+            [
+              105.8589415,
+              21.0254643
+            ],
+            [
+              105.8589612,
+              21.0254696
+            ],
+            [
+              105.8590213,
+              21.0252755
+            ],
+            [
+              105.859002,
+              21.0252703
+            ],
+            [
+              105.8590755,
+              21.0250333
+            ],
+            [
+              105.8584946,
+              21.0248764
+            ],
+            [
+              105.8584877,
+              21.0248988
+            ],
+            [
+              105.8583698,
+              21.0248669
+            ],
+            [
+              105.8582462,
+              21.0252655
+            ],
+            [
+              105.8581809,
+              21.0254759
+            ],
+            [
+              105.8581481,
+              21.025467
+            ],
+            [
+              105.8581069,
+              21.0255997
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1196719785,
+      "properties": {
+        "name": "Sở Thương chính và Độc quyền Đông Dương",
+        "french_name": "Direction des Douanes et Régies de l’Indochine",
+        "description": "Sở Thương chính và Độc quyền Đông Dương được thành lập năm 1897. Công trình được phê duyệt và xây dựng năm 1906, do Henri Vildieu thiết kế theo phong cách tân cổ điển.\n\nCông trình gồm khối nhà làm việc phục vụ chức năng quản lý thương chính và độc quyền. Hiện nay do Bảo tàng Cách mạng Việt Nam quản lý và sử dụng.",
+        "@id": "way/1196719785"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8587007,
+              21.0256361
+            ],
+            [
+              105.8588606,
+              21.0251345
+            ],
+            [
+              105.8585141,
+              21.0250383
+            ],
+            [
+              105.8584255,
+              21.0253162
+            ],
+            [
+              105.8583542,
+              21.0255399
+            ],
+            [
+              105.8587007,
+              21.0256361
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16183368,
+      "properties": {
+        "name": "Sở Thương chính và Độc quyền Đông Dương",
+        "french_name": "Direction des Douanes et Régies de l’Indochine",
+        "description": "Sở Thương chính và Độc quyền Đông Dương được thành lập năm 1897. Công trình được phê duyệt và xây dựng năm 1906, do Henri Vildieu thiết kế theo phong cách tân cổ điển.\n\nCông trình gồm khối nhà làm việc phục vụ chức năng quản lý thương chính và độc quyền. Hiện nay do Bảo tàng Cách mạng Việt Nam quản lý và sử dụng.",
+        "@id": "relation/16183368",
+        "building": "civic"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                105.8581069,
+                21.0255997
+              ],
+              [
+                105.8583939,
+                21.0256773
+              ],
+              [
+                105.8584024,
+                21.0256496
+              ],
+              [
+                105.8586816,
+                21.0257251
+              ],
+              [
+                105.8587246,
+                21.0256809
+              ],
+              [
+                105.8587823,
+                21.0256687
+              ],
+              [
+                105.8588563,
+                21.0256456
+              ],
+              [
+                105.8589415,
+                21.0254643
+              ],
+              [
+                105.8589612,
+                21.0254696
+              ],
+              [
+                105.8590213,
+                21.0252755
+              ],
+              [
+                105.859002,
+                21.0252703
+              ],
+              [
+                105.8590755,
+                21.0250333
+              ],
+              [
+                105.8584946,
+                21.0248764
+              ],
+              [
+                105.8584877,
+                21.0248988
+              ],
+              [
+                105.8583698,
+                21.0248669
+              ],
+              [
+                105.8582462,
+                21.0252655
+              ],
+              [
+                105.8581809,
+                21.0254759
+              ],
+              [
+                105.8581481,
+                21.025467
+              ],
+              [
+                105.8581069,
+                21.0255997
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 340128580,
+      "properties": {
+        "name": "Nhà lao Trung ương (Nhà tù Hỏa Lò)",
+        "french_name": "Maison Centrale",
+        "description": "Nhà lao Trung ương (Nhà tù Hỏa Lò) là trại giam gồm phạm nhân chính trị và thường phạm. Công trình do Henri Vildieu thiết kế từ năm 1895, xây dựng giai đoạn 1896–1899 và được mở rộng qua các giai đoạn sau. Hiện nay một phần công trình được giữ làm di tích, phần còn lại đã được thay thế bằng Hanoi Tower.",
+        "@id": "way/340128580",
+        "building": "yes",
+        "building:levels": "2"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8463733,
+              21.0248634
+            ],
+            [
+              105.8464886,
+              21.0251919
+            ],
+            [
+              105.8465123,
+              21.0251851
+            ],
+            [
+              105.8465621,
+              21.0253456
+            ],
+            [
+              105.8467209,
+              21.0258569
+            ],
+            [
+              105.8465936,
+              21.0258892
+            ],
+            [
+              105.8465727,
+              21.0258221
+            ],
+            [
+              105.8466094,
+              21.0258111
+            ],
+            [
+              105.8465039,
+              21.0254987
+            ],
+            [
+              105.8464603,
+              21.0255089
+            ],
+            [
+              105.8463666,
+              21.0252143
+            ],
+            [
+              105.8463157,
+              21.0252262
+            ],
+            [
+              105.8462811,
+              21.025126
+            ],
+            [
+              105.8463684,
+              21.0251022
+            ],
+            [
+              105.8463139,
+              21.0249418
+            ],
+            [
+              105.8461783,
+              21.025084
+            ],
+            [
+              105.846134,
+              21.025054
+            ],
+            [
+              105.8462938,
+              21.0248807
+            ],
+            [
+              105.8463733,
+              21.0248634
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 704153585,
+      "properties": {
+        "name": "Kho bạc Đông Dương",
+        "french_name": "Trésorerie Générale",
+        "description": "Kho bạc Đông Dương được xây dựng trước năm 1898. Năm 1903 có chủ trương mở rộng, đến năm 1913 dự án được thực hiện theo thiết kế của Lichtenfelder theo phong cách tân cổ điển.\n\nCông trình gồm khối ban đầu và phần mở rộng. Hiện nay được sử dụng làm văn phòng các cơ quan của Thành phố Hà Nội.",
+        "@id": "way/704153585",
+        "building": "government",
+        "building:levels": "2"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8543483,
+              21.0280747
+            ],
+            [
+              105.8543182,
+              21.0278666
+            ],
+            [
+              105.8548263,
+              21.0278026
+            ],
+            [
+              105.8548511,
+              21.0279742
+            ],
+            [
+              105.8546145,
+              21.028004
+            ],
+            [
+              105.8546198,
+              21.0280405
+            ],
+            [
+              105.8543483,
+              21.0280747
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

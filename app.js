@@ -8,9 +8,13 @@ import {
 
 // --- 1. CONSTANTS ---
 const GEOJSON_PATH = "bio_streets.geojson";
+const BUILDINGS_GEOJSON_PATH = "bio_houses.geojson";
+
 let streetData = null;
+let buildingData = null;
 let isStreetViewActive = false;
 let selectedStreetId = null;
+let selectedBuildingId = null;
 
 const mapData = [
   {
@@ -253,6 +257,14 @@ map.on("load", () => {
       setupStreetLayers();
     });
 
+  // Fetch Building Data (polygon) and setup interactions
+  fetch(BUILDINGS_GEOJSON_PATH)
+    .then((res) => res.json())
+    .then((data) => {
+      buildingData = data;
+      setupBuildingLayers();
+    });
+
   streetBtn.addEventListener("click", () => {
     isStreetViewActive = !isStreetViewActive;
     streetBtn.classList.toggle("active", isStreetViewActive);
@@ -271,6 +283,23 @@ map.on("load", () => {
       setupStreetLayers();
     }
 
+    if (map.getLayer("buildings-fill")) {
+      const visibility = isStreetViewActive ? "visible" : "none";
+      map.setLayoutProperty("buildings-fill", "visibility", visibility);
+      if (map.getLayer("buildings-outline")) {
+        map.setLayoutProperty("buildings-outline", "visibility", visibility);
+      }
+      if (map.getLayer("buildings-fill-hit-area")) {
+        map.setLayoutProperty(
+          "buildings-fill-hit-area",
+          "visibility",
+          visibility,
+        );
+      }
+    } else {
+      setupBuildingLayers();
+    }
+
     if (!isStreetViewActive) {
       if (window.currentPopup) {
         window.currentPopup.remove();
@@ -282,6 +311,13 @@ map.on("load", () => {
           { selected: false },
         );
         selectedStreetId = null;
+      }
+      if (selectedBuildingId !== null && map.getSource("osm-buildings")) {
+        map.setFeatureState(
+          { source: "osm-buildings", id: selectedBuildingId },
+          { selected: false },
+        );
+        selectedBuildingId = null;
       }
     }
   });
@@ -296,11 +332,25 @@ map.on("load", () => {
     map.getCanvas().style.cursor = "";
   });
 
+  map.on("mouseenter", "buildings-fill-hit-area", () => {
+    map.getCanvas().style.cursor = "pointer";
+  });
+
+  map.on("mouseleave", "buildings-fill-hit-area", () => {
+    map.getCanvas().style.cursor = "";
+  });
+
   // Handle outside clicks to clear selection
   map.on("click", (e) => {
-    const features = map.queryRenderedFeatures(e.point, {
-      layers: ["streets-line-hit-area"],
-    });
+    const hitLayers = [];
+    if (map.getLayer("streets-line-hit-area"))
+      hitLayers.push("streets-line-hit-area");
+    if (map.getLayer("buildings-fill-hit-area"))
+      hitLayers.push("buildings-fill-hit-area");
+
+    const features = hitLayers.length
+      ? map.queryRenderedFeatures(e.point, { layers: hitLayers })
+      : [];
 
     if (!features.length) {
       if (selectedStreetId !== null && map.getSource("osm-streets")) {
@@ -309,6 +359,13 @@ map.on("load", () => {
           { selected: false },
         );
         selectedStreetId = null;
+      }
+      if (selectedBuildingId !== null && map.getSource("osm-buildings")) {
+        map.setFeatureState(
+          { source: "osm-buildings", id: selectedBuildingId },
+          { selected: false },
+        );
+        selectedBuildingId = null;
       }
       if (window.currentPopup) {
         window.currentPopup.remove();
@@ -339,6 +396,15 @@ map.on("load", () => {
           );
         }
       }
+      if (selectedBuildingId !== null) {
+        if (map.getSource("osm-buildings")) {
+          map.setFeatureState(
+            { source: "osm-buildings", id: selectedBuildingId },
+            { selected: false },
+          );
+        }
+        selectedBuildingId = null;
+      }
 
       // Set new selection
       selectedStreetId = newId;
@@ -347,28 +413,50 @@ map.on("load", () => {
         { selected: true },
       );
 
-      // Show popup
-      if (window.currentPopup) window.currentPopup.remove();
-      window.currentPopup = new maplibregl.Popup()
-        .setLngLat(e.lngLat)
-        .setHTML(
-          `<div style="padding: 8px; border-radius: 8px; background-color: white;">
-                  <div style="font-size:17px;font-weight:600;margin-bottom:8px">${
-                    feature.properties.french_name || "Unknown"
-                  }</div>
-                  ${
-                    feature.properties.french_name
-                      ? `<div style="color:#666;font-size:13px;margin-bottom:4px">${feature.properties.name}</div>`
-                      : ""
-                  }
-                  ${
-                    feature.properties.description
-                      ? `<div style="color:#0066cc;font-size:13px;margin-top:4px;padding-top:4px;border-top:1px solid #ddd">${feature.properties.description.replace(/(<b>(?:Các lần đổi tên):<\/b>.*)/i, '<span style="color:#666;display:block;margin-top:5px;font-size:12px">$1</span>')}</div>`
-                      : ""
-                  }
-                </div>`,
-        )
-        .addTo(map);
+      showPopupForFeature(feature, e.lngLat);
+    }
+  });
+
+  map.on("click", "buildings-fill-hit-area", (e) => {
+    if (e.features.length > 0) {
+      const feature = e.features[0];
+      const newId = feature.id;
+      map.flyTo({
+        center: e.lngLat,
+        zoom: map.getZoom(),
+        duration: 900,
+        curve: 1.42,
+        essential: true,
+        offset: [0, 120],
+      });
+
+      // Reset previous selection
+      if (selectedBuildingId !== null) {
+        if (map.getSource("osm-buildings")) {
+          map.setFeatureState(
+            { source: "osm-buildings", id: selectedBuildingId },
+            { selected: false },
+          );
+        }
+      }
+      if (selectedStreetId !== null) {
+        if (map.getSource("osm-streets")) {
+          map.setFeatureState(
+            { source: "osm-streets", id: selectedStreetId },
+            { selected: false },
+          );
+        }
+        selectedStreetId = null;
+      }
+
+      // Set new selection
+      selectedBuildingId = newId;
+      map.setFeatureState(
+        { source: "osm-buildings", id: selectedBuildingId },
+        { selected: true },
+      );
+
+      showPopupForFeature(feature, e.lngLat);
     }
   });
 });
@@ -385,6 +473,36 @@ layerSelect.addEventListener("change", changeHistoricLayer);
 opacitySlider.addEventListener("input", changeOpacity);
 
 // Utils
+function showPopupForFeature(feature, lngLat) {
+  if (window.currentPopup) window.currentPopup.remove();
+
+  window.currentPopup = new maplibregl.Popup()
+    .setLngLat(lngLat)
+    .setHTML(
+      `<div style="padding: 8px; border-radius: 8px; background-color: white;">
+        <div style="font-size:17px;font-weight:600;margin-bottom:8px">${
+          feature.properties?.french_name || "Unknown"
+        }</div>
+        ${
+          feature.properties?.french_name
+            ? `<div style="color:#666;font-size:13px;margin-bottom:4px">${
+                feature.properties?.name || ""
+              }</div>`
+            : ""
+        }
+        ${
+          feature.properties?.description
+            ? `<div style="color:#0066cc;font-size:13px;margin-top:4px;padding-top:4px;border-top:1px solid #ddd;white-space:pre-line">${feature.properties.description.replace(
+                /(<b>(?:Các lần đổi tên):<\/b>.*)/i,
+                '<span style="color:#666;display:block;margin-top:5px;font-size:12px">$1</span>',
+              )}</div>`
+            : ""
+        }
+      </div>`,
+    )
+    .addTo(map);
+}
+
 function setupMapLayers() {
   symbolLayerIds = map
     .getStyle()
@@ -392,6 +510,7 @@ function setupMapLayers() {
     .map((layer) => layer.id);
 
   modifyBaseStyle(map);
+  setupBuildingLayers();
   setupStreetLayers();
 
   if (mapData.length > 0) {
@@ -440,6 +559,95 @@ function loadHistoricLayer(year) {
     },
     firstSymbolId,
   );
+}
+
+function setupBuildingLayers() {
+  if (!buildingData) return;
+
+  if (!map.getSource("osm-buildings")) {
+    map.addSource("osm-buildings", { type: "geojson", data: buildingData });
+  } else {
+    map.getSource("osm-buildings").setData(buildingData);
+  }
+
+  const firstSymbolId = map
+    .getStyle()
+    .layers.find((l) => l.type === "symbol")?.id;
+
+  if (!map.getLayer("buildings-fill-hit-area")) {
+    const layer = {
+      id: "buildings-fill-hit-area",
+      type: "fill",
+      source: "osm-buildings",
+      layout: {
+        visibility: isStreetViewActive ? "visible" : "none",
+      },
+      paint: {
+        "fill-color": "#000000",
+        "fill-opacity": 0,
+      },
+    };
+
+    if (firstSymbolId) map.addLayer(layer, firstSymbolId);
+    else map.addLayer(layer);
+  }
+
+  // Visible building fill
+  if (!map.getLayer("buildings-fill")) {
+    const layer = {
+      id: "buildings-fill",
+      type: "fill",
+      source: "osm-buildings",
+      layout: {
+        visibility: isStreetViewActive ? "visible" : "none",
+      },
+      paint: {
+        "fill-color": ["coalesce", ["get", "building:colour"], "#B9A973"],
+        "fill-opacity": [
+          "case",
+          ["boolean", ["feature-state", "selected"], false],
+          0.8,
+          0.55,
+        ],
+      },
+    };
+
+    if (firstSymbolId) map.addLayer(layer, firstSymbolId);
+    else map.addLayer(layer);
+  }
+
+  // Outline on top of fill
+  if (!map.getLayer("buildings-outline")) {
+    const layer = {
+      id: "buildings-outline",
+      type: "line",
+      source: "osm-buildings",
+      layout: {
+        visibility: isStreetViewActive ? "visible" : "none",
+      },
+      paint: {
+        "line-color": ["coalesce", ["get", "building:colour"], "#B9A973"],
+        "line-width": [
+          "case",
+          ["boolean", ["feature-state", "selected"], false],
+          3,
+          2,
+        ],
+        "line-opacity": 0.95,
+      },
+    };
+
+    if (firstSymbolId) map.addLayer(layer, firstSymbolId);
+    else map.addLayer(layer);
+  }
+
+  // Restore selection state if it exists
+  if (selectedBuildingId !== null && map.getSource("osm-buildings")) {
+    map.setFeatureState(
+      { source: "osm-buildings", id: selectedBuildingId },
+      { selected: true },
+    );
+  }
 }
 
 function setupStreetLayers() {
