@@ -32,7 +32,7 @@ body:hover {
   top: 10px;
   right: 10px;
   background: white;
-  padding: 5px;
+  padding: 6px 8px;
   border-radius: 8px;
   border: 1px solid #ccc;
   z-index: 1000;
@@ -47,6 +47,10 @@ body:hover {
   outline: none;
   cursor: pointer;
   color: #000;
+  text-align: center;
+  text-align-last: center;
+  padding: 0 2px;
+  box-sizing: content-box;
 }
 #opacity-slider {
   position: absolute;
@@ -93,22 +97,7 @@ body:hover {
 /* Popup Styles */
 .maplibregl-popup-content {
   border-radius: 8px !important;
+  width: 240px;
+  height: 300px;
 }
 
-.maplibregl-popup-close-button {
-  font-size: 24px !important;
-  width: 24px;
-  height: 24px;
-  line-height: 24px;
-  top: 4px !important;
-  right: 4px !important;
-  color: #555;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-}
-.maplibregl-popup-close-button:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-  color: #000;
-}

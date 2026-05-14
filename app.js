@@ -476,10 +476,10 @@ opacitySlider.addEventListener("input", changeOpacity);
 function showPopupForFeature(feature, lngLat) {
   if (window.currentPopup) window.currentPopup.remove();
 
-  window.currentPopup = new maplibregl.Popup()
+  window.currentPopup = new maplibregl.Popup({ closeButton: false })
     .setLngLat(lngLat)
     .setHTML(
-      `<div style="padding: 8px; border-radius: 8px; background-color: white;">
+      `<div style="padding: 8px; border-radius: 8px; background-color: white; height: 100%; display: flex; flex-direction: column; box-sizing: border-box;">
         <div style="font-size:17px;font-weight:600;margin-bottom:8px">${
           feature.properties?.french_name || "Unknown"
         }</div>
@@ -488,15 +488,15 @@ function showPopupForFeature(feature, lngLat) {
             ? `<div style="color:#666;font-size:13px;margin-bottom:4px">${
                 feature.properties?.name || ""
               }</div>`
-            : ""
+            : "<div></div>"
         }
         ${
           feature.properties?.description
-            ? `<div style="color:#0066cc;font-size:13px;margin-top:4px;padding-top:4px;border-top:1px solid #ddd;white-space:pre-line">${feature.properties.description.replace(
+            ? `<div style="color:#0066cc;font-size:13px;margin-top:4px;padding-top:4px;border-top:1px solid #ddd;white-space:pre-line; flex: 1; overflow-y: auto;">${feature.properties.description.replace(
                 /(<b>(?:Các lần đổi tên):<\/b>.*)/i,
                 '<span style="color:#666;display:block;margin-top:5px;font-size:12px">$1</span>',
               )}</div>`
-            : ""
+            : "<div></div>"
         }
       </div>`,
     )
@@ -794,3 +794,10 @@ mapData.forEach((data) => {
   option.textContent = data.title;
   layerSelect.appendChild(option);
 });
+
+const setSelectWidth = () => {
+  const len = layerSelect.options[layerSelect.selectedIndex]?.text.length || 4;
+  layerSelect.style.width = `${len * 10}px`; // ~10px per char on mobile
+};
+setSelectWidth();
+layerSelect.addEventListener("change", setSelectWidth);

@@ -241,6 +241,9 @@ export function setupKeyboardControls(
     ) {
       return;
     }
+    if (event.metaKey || event.ctrlKey) {
+      return;
+    }
     const panAmount = 100;
 
     switch (event.key) {
