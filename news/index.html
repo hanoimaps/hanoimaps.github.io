@@ -5,6 +5,7 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hanoi Maps | Publications</title>
+    <link rel="preconnect" href="https://baochi-tvqg.vercel.app" />
     <link rel="stylesheet" href="/info/info.css" />
     <style>
       .container {
@@ -89,12 +90,14 @@
 
       .meta {
         font-size: 16px;
+        padding: 2px;
       }
 
       .title {
         font-size: 13px !important;
         line-height: 1.45;
         opacity: 0.75;
+        padding: 2px;
       }
 
       #load-more {
@@ -181,6 +184,10 @@
 
       function updateLoadMore(visible) {
         loadMoreButton.style.display = visible ? "block" : "none";
+        if (visible) {
+          loadMoreButton.disabled = false;
+          loadMoreButton.textContent = "Load more";
+        }
       }
 
       function renderResults(items) {
@@ -209,20 +216,27 @@
         statusEl.textContent = `${seenArticles.size} result${
           seenArticles.size > 1 ? "s" : ""
         }`;
-        freshItems.forEach((item) => {
+        const fragment = document.createDocumentFragment();
+        freshItems.forEach((item, index) => {
           const card = document.createElement("article");
           card.className = "card";
 
           const imageLink = document.createElement("a");
-          imageLink.href = item.article_url;
+          imageLink.href = item.image_full_url || item.article_url;
           imageLink.target = "_blank";
           imageLink.rel = "noopener";
 
           const image = document.createElement("img");
           image.className = "thumb";
-          image.src = item.image_url;
           image.alt = item.title || "News image";
-          image.loading = "lazy";
+          image.decoding = "async";
+          image.loading = index < 8 && currentOffset === 0 ? "eager" : "lazy";
+          image.fetchPriority = index < 8 && currentOffset === 0 ? "high" : "low";
+          image.sizes = item.image_sizes || "(max-width: 768px) 50vw, 240px";
+          if (item.image_srcset) {
+            image.srcset = item.image_srcset;
+          }
+          image.src = item.image_url;
           imageLink.appendChild(image);
 
           const meta = document.createElement("div");
@@ -246,8 +260,9 @@
           card.appendChild(imageLink);
           card.appendChild(meta);
           card.appendChild(title);
-          resultsEl.appendChild(card);
+          fragment.appendChild(card);
         });
+        resultsEl.appendChild(fragment);
         currentOffset += items.length;
         updateLoadMore(items.length === PAGE_SIZE);
       }
@@ -261,6 +276,12 @@
           return;
         }
         loading = true;
+        if (append) {
+          loadMoreButton.disabled = true;
+          loadMoreButton.textContent = "Loading...";
+        } else {
+          updateLoadMore(false);
+        }
         statusEl.textContent = append ? "Loading..." : "Searching...";
         try {
           const response = await fetch(
@@ -277,6 +298,8 @@
           statusEl.textContent = append ? "Load failed" : "Search failed";
           updateLoadMore(false);
         } finally {
+          loadMoreButton.disabled = false;
+          loadMoreButton.textContent = "Load more";
           loading = false;
         }
       }
