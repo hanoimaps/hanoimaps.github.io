@@ -20,6 +20,7 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/maplibre-gl@5.9.0/dist/maplibre-gl.js"></script>
+    <link rel="stylesheet" href="/shared.css" />
     <link rel="stylesheet" href="/villas/villas.css" />
   </head>
   <body>
@@ -61,7 +62,9 @@
       import {
         STREETS_STYLE,
         SATELLITE_HYBRID_STYLE,
+        ExpandableMenuControl,
         StyleSwitcherControl,
+        createSiteNavPanel,
         modifyBaseStyle,
       } from "../shared.js";
 
@@ -73,7 +76,16 @@
       const NEW_UNCLUSTERED_LAYER_ID = "unclustered-new-point";
       const CLUSTERING_ENABLED = false;
 
-      const menuPopup = document.getElementById("menu-popup");
+      const villaFilterPopup = document.getElementById("menu-popup");
+      const siteMenuControl = new ExpandableMenuControl(
+        createSiteNavPanel("villas"),
+      );
+      const villaFilterControl = new ExpandableMenuControl(villaFilterPopup, {
+        buttonLabel: "Open villa filters",
+        buttonActiveLabel: "Close villa filters",
+        buttonClassName: "villa-filter-toggle map-control-icon-button",
+        buttonHTML: '<span class="villa-filter-icon" aria-hidden="true">i</span>',
+      });
 
       let globalGeojsonData = null;
       let globalNewGeojsonData = null;
@@ -100,12 +112,8 @@
 
       // 2.1: Use 'load' for utils
       map.on("load", async () => {
-        map.addControl(
-          new maplibregl.NavigationControl({
-            visualizePitch: true,
-          }),
-          "top-left",
-        );
+        map.addControl(siteMenuControl, "top-left");
+
         map.addControl(
           new maplibregl.GeolocateControl({
             positionOptions: { enableHighAccuracy: true },
@@ -122,7 +130,7 @@
           "top-left",
         );
 
-        map.addControl(new MenuControl(), "top-left");
+        map.addControl(villaFilterControl, "top-left");
 
         map.addControl(
           new maplibregl.AttributionControl({
@@ -165,33 +173,6 @@
         modifyBaseStyle(map); // 3.1
         addDataLayer(map, geojsonData, newGeojsonData); // 3.3
         addInteractivity(map); // 3.4
-      }
-
-      class MenuControl {
-        onAdd(map) {
-          this._map = map;
-          this._container = document.createElement("div");
-          this._container.className = "maplibregl-ctrl maplibregl-ctrl-group";
-
-          const button = document.createElement("button");
-          button.className = "maplibregl-ctrl-icon maplibregl-ctrl-menu";
-          button.type = "button";
-          button.setAttribute("aria-label", "Open menu");
-
-          button.onclick = (e) => {
-            e.stopPropagation();
-            menuPopup.classList.toggle("active");
-          };
-
-          this._container.appendChild(button);
-          this._container.appendChild(menuPopup);
-          return this._container;
-        }
-
-        onRemove() {
-          this._container.parentNode.removeChild(this._container);
-          this._map = undefined;
-        }
       }
 
       // 2.2: Caching
@@ -496,6 +477,7 @@
 
           map.flyTo({
             center: coords,
+            offset: [0, 120],
             zoom: map.getZoom(),
             duration: 900,
             curve: 1.42,
@@ -518,9 +500,8 @@
         map.on("click", NEW_UNCLUSTERED_LAYER_ID, handlePointClick);
 
         map.on("click", () => {
-          if (menuPopup.classList.contains("active")) {
-            menuPopup.classList.remove("active");
-          }
+          siteMenuControl.close();
+          villaFilterControl.close();
         });
 
         const setCursorPointer = () => {

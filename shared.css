@@ -1,0 +1,137 @@
+/* Shared MapLibre control styles */
+:root {
+  --map-control-size: 29px;
+  --map-control-radius: 4px;
+  --map-control-border: 1px solid #ccc;
+}
+
+.maplibregl-ctrl-top-left .maplibregl-ctrl {
+  margin: 10px 0 0 10px;
+}
+
+.maplibregl-ctrl-group {
+  border-radius: var(--map-control-radius);
+  overflow: hidden;
+}
+
+.map-control-group {
+  background: transparent;
+  overflow: visible;
+}
+
+.map-menu-control {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+}
+
+.map-control-icon-button,
+.maplibregl-ctrl-group .style-switcher-button {
+  width: var(--map-control-size);
+  height: var(--map-control-size);
+  background: #fff;
+  border: var(--map-control-border);
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border-radius: var(--map-control-radius);
+  box-sizing: border-box;
+}
+
+.map-control-icon-button .map-control-icon,
+.map-control-icon-button .style-switcher-icon,
+.maplibregl-ctrl-group .style-switcher-button .style-switcher-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.maplibregl-ctrl-group .style-switcher-button .style-switcher-icon {
+  filter: invert(0%);
+  transition: filter 0.3s ease;
+}
+
+.maplibregl-ctrl-group .style-switcher-button.is-satellite {
+  background-color: rgba(30, 30, 30);
+}
+
+.maplibregl-ctrl-group
+  .style-switcher-button.is-satellite
+  .style-switcher-icon {
+  filter: invert(100%);
+}
+
+.map-menu-toggle {
+  background: #fff;
+  border: var(--map-control-border);
+}
+
+.map-menu-toggle-lines {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  gap: 3px;
+}
+
+.map-menu-toggle-lines span {
+  display: block;
+  width: 16px;
+  height: 2px;
+  background: #1f2124;
+  border-radius: 999px;
+}
+
+.map-menu-expanded {
+  display: none;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  border: var(--map-control-border);
+  border-radius: var(--map-control-radius);
+  height: var(--map-control-size);
+  padding: 0 10px;
+  box-sizing: border-box;
+  max-width: calc(100vw - 20px);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.map-menu-expanded::-webkit-scrollbar {
+  display: none;
+}
+
+.map-menu-expanded.active {
+  display: inline-flex;
+}
+
+.menu-popup.active {
+  display: block;
+}
+
+.map-menu-expanded a {
+  color: #111;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 400;
+  flex: 0 0 auto;
+}
+
+.map-menu-expanded a.is-current {
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .map-menu-expanded {
+    gap: 10px;
+    padding: 0 8px;
+  }
+
+  .map-menu-expanded a {
+    font-size: 14px;
+  }
+}

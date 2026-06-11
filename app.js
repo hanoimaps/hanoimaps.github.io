@@ -1,7 +1,9 @@
 import {
   STREETS_STYLE,
   SATELLITE_HYBRID_STYLE,
+  ExpandableMenuControl,
   StyleSwitcherControl,
+  createSiteNavPanel,
   modifyBaseStyle,
   setupKeyboardControls,
 } from "./shared.js";
@@ -206,6 +208,7 @@ map.on("load", () => {
   const topRightControls = document.getElementById("top-right-controls");
   const streetBtn = document.createElement("button");
   streetBtn.id = "street-view-btn";
+  streetBtn.className = "map-control-icon-button";
   streetBtn.title = "Toggle Street View";
   streetBtn.innerHTML = `
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="style-switcher-icon">
@@ -225,7 +228,10 @@ map.on("load", () => {
     });
   }
 
-  map.addControl(new maplibregl.NavigationControl(), "top-left");
+  const topNavMenuControl = new ExpandableMenuControl(
+    createSiteNavPanel("maps"),
+  );
+  map.addControl(topNavMenuControl, "top-left");
   map.addControl(
     new maplibregl.GeolocateControl({
       positionOptions: { enableHighAccuracy: true },
@@ -342,6 +348,8 @@ map.on("load", () => {
 
   // Handle outside clicks to clear selection
   map.on("click", (e) => {
+    topNavMenuControl.close();
+
     const hitLayers = [];
     if (map.getLayer("streets-line-hit-area"))
       hitLayers.push("streets-line-hit-area");

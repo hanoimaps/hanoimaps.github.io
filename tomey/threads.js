@@ -1,7 +1,9 @@
 import {
   STREETS_STYLE,
   SATELLITE_HYBRID_STYLE,
+  ExpandableMenuControl,
   StyleSwitcherControl,
+  createSiteNavPanel,
   modifyBaseStyle,
 } from "../shared.js";
 
@@ -34,13 +36,17 @@ map.on("load", () => {
   modifyBaseStyle(map);
 
   // Controls
-  map.addControl(new maplibregl.NavigationControl(), "top-left");
+  const topNavMenuControl = new ExpandableMenuControl(
+    createSiteNavPanel("tomey")
+  );
+  map.addControl(topNavMenuControl, "top-left");
+
   map.addControl(
     new maplibregl.GeolocateControl({
       positionOptions: { enableHighAccuracy: true },
       trackUserLocation: true,
     }),
-    "top-left",
+    "top-left"
   );
 
   map.addControl(
@@ -48,7 +54,7 @@ map.on("load", () => {
       streets: STREETS_STYLE,
       satellite: SATELLITE_HYBRID_STYLE,
     }),
-    "top-left",
+    "top-left"
   );
 
   map.addControl(
@@ -57,8 +63,12 @@ map.on("load", () => {
         '<a href="https://threads.com/@tomeyinhanoi" target="_blank" style="text-decoration: underline">By Tomey</a> | <a href="/info" target="_blank"  style="text-decoration: underline">Sources</a>',
       compact: true,
     }),
-    "bottom-left",
+    "bottom-left"
   );
+
+  map.on("click", () => {
+    topNavMenuControl.close();
+  });
 
   // Fetch Threads Data with priority
   fetch(GEOJSON_PATH, { priority: "high" })
@@ -218,7 +228,9 @@ function showPopup(feature, lngLat) {
       </div>
       <div class="thread-right-col">
         <div class="thread-header">
-          <a href="${props.permalink || "#"}" target="_blank" class="thread-username">@${username}</a>
+          <a href="${
+            props.permalink || "#"
+          }" target="_blank" class="thread-username">@${username}</a>
           <span class="thread-date">${dateString}</span>
         </div>
         <div class="thread-content">${props.text || ""}</div>
@@ -243,7 +255,7 @@ function showPopup(feature, lngLat) {
             <div class="thread-carousel-slide">
               <img src="${url}" class="thread-media-img" loading="lazy">
             </div>
-          `,
+          `
             )
             .join("")}
         </div>
@@ -317,10 +329,10 @@ window.moveCarousel = (btn, direction) => {
 
 function updateCarouselButtons(container) {
   const prevBtn = container.parentElement.querySelector(
-    ".carousel-nav-btn.prev",
+    ".carousel-nav-btn.prev"
   );
   const nextBtn = container.parentElement.querySelector(
-    ".carousel-nav-btn.next",
+    ".carousel-nav-btn.next"
   );
 
   if (!prevBtn || !nextBtn) return;

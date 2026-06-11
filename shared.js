@@ -94,11 +94,12 @@ export class StyleSwitcherControl {
   onAdd(map) {
     this._map = map;
     this._container = document.createElement("div");
-    this._container.className = "maplibregl-ctrl maplibregl-ctrl-group";
+    this._container.className =
+      "maplibregl-ctrl maplibregl-ctrl-group map-control-group";
 
     this._button = document.createElement("button");
     this._button.type = "button";
-    this._button.className = "style-switcher-button";
+    this._button.className = "style-switcher-button map-control-icon-button";
     this._button.onclick = () => this.toggleStyle();
     this._button.innerHTML = `
       <svg
@@ -147,6 +148,114 @@ export class StyleSwitcherControl {
     const newStyleUrl = this._isSatellite ? this._satellite : this._streets;
 
     this._map.setStyle(newStyleUrl);
+  }
+
+  onRemove() {
+    this._container.parentNode.removeChild(this._container);
+    this._map = undefined;
+  }
+}
+
+export function createSiteNavPanel(activeKey = "maps") {
+  const items = [
+    { key: "maps", href: "/", label: "Maps" },
+    { key: "news", href: "/news/", label: "News" },
+    { key: "villas", href: "/villas/", label: "Villas" },
+    { key: "tomey", href: "/tomey/", label: "Tomey" },
+  ];
+
+  const panel = document.createElement("nav");
+  panel.className = "map-menu-expanded";
+  panel.setAttribute("aria-label", "Primary");
+  panel.setAttribute("aria-hidden", "true");
+  panel.innerHTML = items
+    .map(
+      (item) => `
+        <a href="${item.href}" class="${item.key === activeKey ? "is-current" : ""}" ${
+          item.key === activeKey ? 'aria-current="page"' : ""
+        }>${item.label}</a>
+      `,
+    )
+    .join("");
+
+  return panel;
+}
+
+export class ExpandableMenuControl {
+  constructor(panel, options = {}) {
+    this._panel = panel;
+    this._buttonLabel = options.buttonLabel || "Open menu";
+    this._buttonActiveLabel = options.buttonActiveLabel || "Close menu";
+    this._buttonHTML = options.buttonHTML;
+    this._containerClassName = options.containerClassName || "map-menu-control";
+    this._buttonClassName =
+      options.buttonClassName || "map-menu-toggle map-control-icon-button";
+  }
+
+  onAdd(map) {
+    this._map = map;
+    this._expanded = false;
+
+    this._container = document.createElement("div");
+    this._container.className = `maplibregl-ctrl ${this._containerClassName}`;
+
+    this._toggleButton = document.createElement("button");
+    this._toggleButton.type = "button";
+    this._toggleButton.className = this._buttonClassName;
+    this._toggleButton.setAttribute("aria-label", this._buttonLabel);
+    this._toggleButton.setAttribute("aria-expanded", "false");
+    this._toggleButton.innerHTML =
+      this._buttonHTML ||
+      `
+      <span class="map-menu-toggle-lines" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    `;
+
+    if (typeof this._panel === "string") {
+      const wrapper = document.createElement("div");
+      wrapper.innerHTML = this._panel.trim();
+      this._panel = wrapper.firstElementChild;
+    }
+
+    this._toggleButton.addEventListener("click", (event) => {
+      event.stopPropagation();
+      this.toggle();
+    });
+
+    if (this._panel) {
+      this._panel.addEventListener("click", (event) => {
+        event.stopPropagation();
+      });
+      this._panel.setAttribute("aria-hidden", "true");
+      this._panel.classList.remove("active");
+      this._container.append(this._toggleButton, this._panel);
+    } else {
+      this._container.append(this._toggleButton);
+    }
+
+    return this._container;
+  }
+
+  toggle(forceExpanded) {
+    this._expanded =
+      typeof forceExpanded === "boolean" ? forceExpanded : !this._expanded;
+    this._container.classList.toggle("is-expanded", this._expanded);
+    this._toggleButton.setAttribute("aria-expanded", String(this._expanded));
+    this._toggleButton.setAttribute(
+      "aria-label",
+      this._expanded ? this._buttonActiveLabel : this._buttonLabel,
+    );
+    if (this._panel) {
+      this._panel.setAttribute("aria-hidden", String(!this._expanded));
+      this._panel.classList.toggle("active", this._expanded);
+    }
+  }
+
+  close() {
+    if (this._expanded) this.toggle(false);
   }
 
   onRemove() {
