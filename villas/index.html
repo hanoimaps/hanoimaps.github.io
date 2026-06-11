@@ -64,6 +64,8 @@
         SATELLITE_HYBRID_STYLE,
         ExpandableMenuControl,
         StyleSwitcherControl,
+        addCompassControl,
+        setupMapKeyboardShortcuts,
         createSiteNavPanel,
         modifyBaseStyle,
       } from "../shared.js";
@@ -122,14 +124,20 @@
           "top-left",
         );
 
-        map.addControl(
-          new StyleSwitcherControl({
-            streets: STREETS_STYLE,
-            satellite: SATELLITE_HYBRID_STYLE,
-          }),
-          "top-left",
-        );
+        const styleSwitcher = new StyleSwitcherControl({
+          streets: STREETS_STYLE,
+          satellite: SATELLITE_HYBRID_STYLE,
+        });
+        map.addControl(styleSwitcher, "top-left");
+        setupMapKeyboardShortcuts({
+          map,
+          styleSwitcher,
+          enableStyleToggle: true,
+          enablePan: true,
+          enableZoom: true,
+        });
 
+        addCompassControl(map, "top-left");
         map.addControl(villaFilterControl, "top-left");
 
         map.addControl(
@@ -140,18 +148,6 @@
           }),
           "bottom-left",
         );
-
-        const compass = document.querySelector(".maplibregl-ctrl-compass");
-        if (compass) {
-          compass.style.display = "none";
-          const toggleCompass = () => {
-            compass.style.display =
-              Math.abs(map.getBearing()) > 0.1 ? "block" : "none";
-          };
-          map.on("rotate", toggleCompass);
-          map.on("moveend", toggleCompass);
-          toggleCompass();
-        }
 
         try {
           const [data1, data2] = await Promise.all([

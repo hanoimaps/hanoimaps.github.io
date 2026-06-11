@@ -3,9 +3,10 @@ import {
   SATELLITE_HYBRID_STYLE,
   ExpandableMenuControl,
   StyleSwitcherControl,
+  addCompassControl,
   createSiteNavPanel,
   modifyBaseStyle,
-  setupKeyboardControls,
+  setupMapKeyboardShortcuts,
 } from "./shared.js";
 
 // --- 1. CONSTANTS ---
@@ -244,6 +245,7 @@ map.on("load", () => {
     satellite: SATELLITE_HYBRID_STYLE,
   });
   map.addControl(styleSwitcher, "top-left");
+  addCompassControl(map, "top-left");
   map.addControl(
     new maplibregl.AttributionControl({
       customAttribution:
@@ -253,7 +255,18 @@ map.on("load", () => {
     "bottom-left",
   );
 
-  setupKeyboardControls(map, layerSelect, opacitySlider, styleSwitcher);
+  setupMapKeyboardShortcuts({
+    map,
+    layerSelect,
+    opacitySlider,
+    styleSwitcher,
+    enableStyleToggle: true,
+    enableYearSwitch: true,
+    enableOpacity: true,
+    enableStreetToggle: true,
+    enablePan: true,
+    enableZoom: true,
+  });
 
   // Fetch Street Data and setup interactions
   fetch(GEOJSON_PATH)

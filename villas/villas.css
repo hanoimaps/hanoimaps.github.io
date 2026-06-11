@@ -1,31 +1,8 @@
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
-    Arial, sans-serif;
-  overflow: hidden;
-  background-color: #222;
-  box-sizing: border-box;
-}
 body:hover {
   background-image: url("https://viewcount-hanoimaps.vercel.app/api/count");
 }
 a {
   color: inherit;
-}
-#map {
-  width: 100%;
-  height: 100%;
-  min-height: 100dvh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding-top: env(safe-area-inset-top, 0px);
-  padding-bottom: env(safe-area-inset-bottom, 0px);
-  margin-top: calc(0px - env(safe-area-inset-top, 0px));
 }
 
 .maplibregl-popup-content {

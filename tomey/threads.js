@@ -3,6 +3,8 @@ import {
   SATELLITE_HYBRID_STYLE,
   ExpandableMenuControl,
   StyleSwitcherControl,
+  addCompassControl,
+  setupMapKeyboardShortcuts,
   createSiteNavPanel,
   modifyBaseStyle,
 } from "../shared.js";
@@ -49,13 +51,19 @@ map.on("load", () => {
     "top-left"
   );
 
-  map.addControl(
-    new StyleSwitcherControl({
-      streets: STREETS_STYLE,
-      satellite: SATELLITE_HYBRID_STYLE,
-    }),
-    "top-left"
-  );
+  const styleSwitcher = new StyleSwitcherControl({
+    streets: STREETS_STYLE,
+    satellite: SATELLITE_HYBRID_STYLE,
+  });
+  map.addControl(styleSwitcher, "top-left");
+  addCompassControl(map, "top-left");
+  setupMapKeyboardShortcuts({
+    map,
+    styleSwitcher,
+    enableStyleToggle: true,
+    enablePan: true,
+    enableZoom: true,
+  });
 
   map.addControl(
     new maplibregl.AttributionControl({
