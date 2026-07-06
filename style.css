@@ -56,3 +56,25 @@ body:hover {
   width: 240px;
   height: 300px;
 }
+
+.maplibregl-marker {
+  z-index: 10000 !important;
+}
+
+/* Search input inside the menu-expanded panel */
+.search-input {
+  border: none;
+  outline: none;
+  font-size: 16px !important;
+  background: transparent;
+  width: 180px;
+  padding: 0;
+  margin: 0;
+  line-height: normal;
+  font-family: inherit;
+  color: #111;
+}
+
+.search-input::placeholder {
+  color: #999;
+}

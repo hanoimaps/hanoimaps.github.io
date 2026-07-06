@@ -1,4 +1,5 @@
 import {
+  apiKey,
   STREETS_STYLE,
   SATELLITE_HYBRID_STYLE,
   ExpandableMenuControl,
@@ -11,7 +12,7 @@ import {
 
 // --- 1. CONSTANTS ---
 const GEOJSON_PATH = "bio_streets.geojson";
-const BUILDINGS_GEOJSON_PATH = "bio_houses.geojson";
+// const BUILDINGS_GEOJSON_PATH = "bio_houses.geojson";
 
 let streetData = null;
 let buildingData = null;
@@ -188,6 +189,116 @@ const opacitySlider = document.getElementById("opacity-slider");
 
 let symbolLayerIds = [];
 
+// --- Search Control ---
+class SearchControl {
+  constructor() {
+    this._expanded = false;
+    this._marker = null;
+  }
+
+  onAdd(map) {
+    this._map = map;
+    this._container = document.createElement("div");
+    this._container.className = "maplibregl-ctrl map-menu-control";
+    this._container.addEventListener("click", (e) => e.stopPropagation());
+
+    this._button = document.createElement("button");
+    this._button.type = "button";
+    this._button.className = "map-menu-toggle map-control-icon-button";
+    this._button.title = "Search";
+    this._button.setAttribute("aria-label", "Search");
+    this._button.setAttribute("aria-expanded", "false");
+    this._button.innerHTML = `
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px">
+        <circle cx="11" cy="11" r="8"/>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+    `;
+
+    this._panel = document.createElement("div");
+    this._panel.className = "map-menu-expanded";
+    this._panel.setAttribute("aria-hidden", "true");
+
+    this._input = document.createElement("input");
+    this._input.type = "text";
+    this._input.className = "search-input";
+    this._input.placeholder = "Search…";
+    this._panel.appendChild(this._input);
+
+    this._button.addEventListener("click", (e) => {
+      e.stopPropagation();
+      this.toggle();
+    });
+
+    this._input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        this.search(this._input.value);
+      }
+    });
+
+    document.addEventListener("click", () => {
+      if (this._expanded) this.toggle(false);
+    });
+
+    this._container.append(this._button, this._panel);
+    return this._container;
+  }
+
+  toggle(force) {
+    this._expanded = typeof force === "boolean" ? force : !this._expanded;
+    this._panel.classList.toggle("active", this._expanded);
+    this._panel.setAttribute("aria-hidden", String(!this._expanded));
+    this._button.setAttribute("aria-expanded", String(this._expanded));
+    if (this._expanded) setTimeout(() => this._input.focus(), 50);
+  }
+
+  async search(query) {
+    if (!query.trim()) return;
+    try {
+      const url = `https://api.maptiler.com/geocoding/${encodeURIComponent(
+        query
+      )}.json?key=${apiKey}&language=vi&limit=5&bbox=105.666,20.9109,106.0033,21.1382`;
+      const res = await fetch(url);
+      const data = await res.json();
+      if (data.features && data.features.length > 0) {
+        const feature = data.features[0];
+        const [lng, lat] = feature.center;
+
+        this.clearMarker();
+        this._marker = new maplibregl.Marker()
+          .setLngLat([lng, lat])
+
+          .addTo(this._map);
+
+        this._map.flyTo({
+          center: [lng, lat],
+          zoom: 15,
+          duration: 1000,
+          essential: true,
+        });
+        this.toggle(false);
+        this._input.value = "";
+      }
+    } catch (err) {
+      console.error("Search error:", err);
+    }
+  }
+
+  clearMarker() {
+    if (this._marker) {
+      this._marker.remove();
+      this._marker = null;
+    }
+  }
+
+  onRemove() {
+    this._container.parentNode.removeChild(this._container);
+    if (this._marker) this._marker.remove();
+    this._map = undefined;
+  }
+}
+
 // --- 1. MAP INIT ---
 const map = new maplibregl.Map({
   container: "map",
@@ -195,13 +306,11 @@ const map = new maplibregl.Map({
   center: [105.8542, 21.0285],
   zoom: minZoomLevel,
   maxBounds: [
-    [105.5, 20.7],
-    [106.1, 21.5],
+    [105.6659884745061, 20.910896521037643],
+    [106.00332688523798, 21.138244129606704],
   ],
   attributionControl: false,
 });
-
-map.keyboard.disable(); // for keyboard interaction
 
 // --- 2. MAP LOAD ---
 map.on("load", () => {
@@ -230,29 +339,38 @@ map.on("load", () => {
   }
 
   const topNavMenuControl = new ExpandableMenuControl(
-    createSiteNavPanel("maps"),
+    createSiteNavPanel("maps")
   );
   map.addControl(topNavMenuControl, "top-left");
-  map.addControl(
-    new maplibregl.GeolocateControl({
-      positionOptions: { enableHighAccuracy: true },
-      trackUserLocation: true,
-    }),
-    "top-left",
-  );
+
+  const geolocateControl = new maplibregl.GeolocateControl({
+    positionOptions: { enableHighAccuracy: true },
+    trackUserLocation: true,
+  });
+  map.addControl(geolocateControl, "top-left");
+  geolocateControl.on("geolocate", () => searchControl.clearMarker());
   const styleSwitcher = new StyleSwitcherControl({
     streets: STREETS_STYLE,
     satellite: SATELLITE_HYBRID_STYLE,
   });
   map.addControl(styleSwitcher, "top-left");
   addCompassControl(map, "top-left");
+
+  // Search control
+  const searchControl = new SearchControl();
+  map.addControl(searchControl, "top-left");
+
+  // Clear search marker when map rotates (compass) or style changes (streets/satellite toggle)
+  map.on("rotatestart", () => searchControl.clearMarker());
+  map.on("style.load", () => searchControl.clearMarker());
+
   map.addControl(
     new maplibregl.AttributionControl({
       customAttribution:
         '<a href="https://threads.com/@tomeyinhanoi" target="_blank" style="text-decoration: underline">By Tomey</a> | <a href="/info" target="_blank"  style="text-decoration: underline">Sources</a>',
       compact: true,
     }),
-    "bottom-left",
+    "bottom-left"
   );
 
   setupMapKeyboardShortcuts({
@@ -277,14 +395,15 @@ map.on("load", () => {
     });
 
   // Fetch Building Data (polygon) and setup interactions
-  fetch(BUILDINGS_GEOJSON_PATH)
-    .then((res) => res.json())
-    .then((data) => {
-      buildingData = data;
-      setupBuildingLayers();
-    });
+  // fetch(BUILDINGS_GEOJSON_PATH)
+  //   .then((res) => res.json())
+  //   .then((data) => {
+  //     buildingData = data;
+  //     setupBuildingLayers();
+  //   });
 
   streetBtn.addEventListener("click", () => {
+    searchControl.clearMarker();
     isStreetViewActive = !isStreetViewActive;
     streetBtn.classList.toggle("active", isStreetViewActive);
 
@@ -295,7 +414,7 @@ map.on("load", () => {
         map.setLayoutProperty(
           "streets-line-hit-area",
           "visibility",
-          visibility,
+          visibility
         );
       }
     } else {
@@ -312,7 +431,7 @@ map.on("load", () => {
         map.setLayoutProperty(
           "buildings-fill-hit-area",
           "visibility",
-          visibility,
+          visibility
         );
       }
     } else {
@@ -327,14 +446,14 @@ map.on("load", () => {
       if (selectedStreetId !== null && map.getSource("osm-streets")) {
         map.setFeatureState(
           { source: "osm-streets", id: selectedStreetId },
-          { selected: false },
+          { selected: false }
         );
         selectedStreetId = null;
       }
       if (selectedBuildingId !== null && map.getSource("osm-buildings")) {
         map.setFeatureState(
           { source: "osm-buildings", id: selectedBuildingId },
-          { selected: false },
+          { selected: false }
         );
         selectedBuildingId = null;
       }
@@ -377,14 +496,14 @@ map.on("load", () => {
       if (selectedStreetId !== null && map.getSource("osm-streets")) {
         map.setFeatureState(
           { source: "osm-streets", id: selectedStreetId },
-          { selected: false },
+          { selected: false }
         );
         selectedStreetId = null;
       }
       if (selectedBuildingId !== null && map.getSource("osm-buildings")) {
         map.setFeatureState(
           { source: "osm-buildings", id: selectedBuildingId },
-          { selected: false },
+          { selected: false }
         );
         selectedBuildingId = null;
       }
@@ -397,6 +516,7 @@ map.on("load", () => {
 
   map.on("click", "streets-line-hit-area", (e) => {
     if (e.features.length > 0) {
+      searchControl.clearMarker();
       const feature = e.features[0];
       const newId = feature.id;
       map.flyTo({
@@ -413,7 +533,7 @@ map.on("load", () => {
         if (map.getSource("osm-streets")) {
           map.setFeatureState(
             { source: "osm-streets", id: selectedStreetId },
-            { selected: false },
+            { selected: false }
           );
         }
       }
@@ -421,7 +541,7 @@ map.on("load", () => {
         if (map.getSource("osm-buildings")) {
           map.setFeatureState(
             { source: "osm-buildings", id: selectedBuildingId },
-            { selected: false },
+            { selected: false }
           );
         }
         selectedBuildingId = null;
@@ -431,7 +551,7 @@ map.on("load", () => {
       selectedStreetId = newId;
       map.setFeatureState(
         { source: "osm-streets", id: selectedStreetId },
-        { selected: true },
+        { selected: true }
       );
 
       showPopupForFeature(feature, e.lngLat);
@@ -440,6 +560,7 @@ map.on("load", () => {
 
   map.on("click", "buildings-fill-hit-area", (e) => {
     if (e.features.length > 0) {
+      searchControl.clearMarker();
       const feature = e.features[0];
       const newId = feature.id;
       map.flyTo({
@@ -456,7 +577,7 @@ map.on("load", () => {
         if (map.getSource("osm-buildings")) {
           map.setFeatureState(
             { source: "osm-buildings", id: selectedBuildingId },
-            { selected: false },
+            { selected: false }
           );
         }
       }
@@ -464,7 +585,7 @@ map.on("load", () => {
         if (map.getSource("osm-streets")) {
           map.setFeatureState(
             { source: "osm-streets", id: selectedStreetId },
-            { selected: false },
+            { selected: false }
           );
         }
         selectedStreetId = null;
@@ -474,7 +595,7 @@ map.on("load", () => {
       selectedBuildingId = newId;
       map.setFeatureState(
         { source: "osm-buildings", id: selectedBuildingId },
-        { selected: true },
+        { selected: true }
       );
 
       showPopupForFeature(feature, e.lngLat);
@@ -515,11 +636,11 @@ function showPopupForFeature(feature, lngLat) {
           feature.properties?.description
             ? `<div style="color:#0066cc;font-size:13px;margin-top:4px;padding-top:4px;border-top:1px solid #ddd;white-space:pre-line; flex: 1; overflow-y: auto;">${feature.properties.description.replace(
                 /(<b>(?:Các lần đổi tên):<\/b>.*)/i,
-                '<span style="color:#666;display:block;margin-top:5px;font-size:12px">$1</span>',
+                '<span style="color:#666;display:block;margin-top:5px;font-size:12px">$1</span>'
               )}</div>`
             : "<div></div>"
         }
-      </div>`,
+      </div>`
     )
     .addTo(map);
 }
@@ -539,7 +660,7 @@ function setupMapLayers() {
     map.setLayoutProperty(
       `historic-${mapData[0].year}`,
       "visibility",
-      "visible",
+      "visible"
     );
   }
 }
@@ -578,7 +699,7 @@ function loadHistoricLayer(year) {
         visibility: "none",
       },
     },
-    firstSymbolId,
+    firstSymbolId
   );
 }
 
@@ -666,7 +787,7 @@ function setupBuildingLayers() {
   if (selectedBuildingId !== null && map.getSource("osm-buildings")) {
     map.setFeatureState(
       { source: "osm-buildings", id: selectedBuildingId },
-      { selected: true },
+      { selected: true }
     );
   }
 }
@@ -741,7 +862,7 @@ function setupStreetLayers() {
   if (selectedStreetId !== null && map.getSource("osm-streets")) {
     map.setFeatureState(
       { source: "osm-streets", id: selectedStreetId },
-      { selected: true },
+      { selected: true }
     );
   }
 }

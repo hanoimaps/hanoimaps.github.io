@@ -1,6 +1,6 @@
 /* Shared MapLibre control styles */
 :root {
-  --map-control-size: 29px;
+  --map-control-size: 30px;
   --map-control-radius: 4px;
   --map-control-border: 1px solid #ccc;
 }
@@ -11,9 +11,8 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
-    Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
   overflow: hidden;
   background-color: #222;
   box-sizing: border-box;
@@ -38,6 +37,20 @@ body {
 .maplibregl-ctrl-group {
   border-radius: var(--map-control-radius);
   overflow: hidden;
+  box-shadow: none !important;
+}
+
+.maplibregl-ctrl button,
+.maplibregl-ctrl-group button {
+  width: var(--map-control-size) !important;
+  height: var(--map-control-size) !important;
+  border: var(--map-control-border) !important;
+  border-radius: var(--map-control-radius);
+}
+
+.maplibregl-ctrl button + button,
+.maplibregl-ctrl-group button + button {
+  border-top: 0 !important;
 }
 
 .map-control-group {
@@ -92,6 +105,12 @@ body {
 .map-menu-toggle {
   background: #fff;
   border: var(--map-control-border);
+}
+
+.map-menu-toggle:hover,
+.map-menu-toggle:focus,
+.map-menu-toggle:active {
+  background-color: rgba(255, 255, 255, 0.8) !important;
 }
 
 .map-menu-toggle-lines {

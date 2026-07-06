@@ -163,7 +163,7 @@ export function addCompassControl(map, position = "top-left") {
       showCompass: true,
       visualizePitch: true,
     }),
-    position,
+    position
   );
 }
 
@@ -182,10 +182,12 @@ export function createSiteNavPanel(activeKey = "maps") {
   panel.innerHTML = items
     .map(
       (item) => `
-        <a href="${item.href}" class="${item.key === activeKey ? "is-current" : ""}" ${
-          item.key === activeKey ? 'aria-current="page"' : ""
-        }>${item.label}</a>
-      `,
+        <a href="${item.href}" class="${
+        item.key === activeKey ? "is-current" : ""
+      }" ${item.key === activeKey ? 'aria-current="page"' : ""}>${
+        item.label
+      }</a>
+      `
     )
     .join("");
 
@@ -257,7 +259,7 @@ export class ExpandableMenuControl {
     this._toggleButton.setAttribute("aria-expanded", String(this._expanded));
     this._toggleButton.setAttribute(
       "aria-label",
-      this._expanded ? this._buttonActiveLabel : this._buttonLabel,
+      this._expanded ? this._buttonActiveLabel : this._buttonLabel
     );
     if (this._panel) {
       this._panel.setAttribute("aria-hidden", String(!this._expanded));
@@ -360,6 +362,8 @@ export function setupMapKeyboardShortcuts(options = {}) {
     enableZoom = false,
   } = options;
 
+  map?.keyboard?.disable();
+
   document.addEventListener("keydown", (event) => {
     const activeEl = document.activeElement;
     if (
@@ -450,60 +454,65 @@ export function setupMapKeyboardShortcuts(options = {}) {
         break;
       }
 
-      case "i":
-      case "I":
-      case "w":
-      case "W": {
-        if (!enablePan || !map) break;
-        event.preventDefault();
-        map.panBy([0, -panAmount], { duration: 100 }); // Pan Up
-        break;
-      }
+      // case "i":
+      // case "I":
+      // case "w":
+      // case "W": {
+      //   if (!enablePan || !map) break;
+      //   event.preventDefault();
+      //   map.panBy([0, -panAmount], { duration: 100 }); // Pan Up
+      //   break;
+      // }
 
-      case "k":
-      case "K":
-      case "s":
-      case "S": {
-        if (!enablePan || !map) break;
-        event.preventDefault();
-        map.panBy([0, panAmount], { duration: 100 }); // Pan Down
-        break;
-      }
+      // case "k":
+      // case "K":
+      // case "s":
+      // case "S": {
+      //   if (!enablePan || !map) break;
+      //   event.preventDefault();
+      //   map.panBy([0, panAmount], { duration: 100 }); // Pan Down
+      //   break;
+      // }
 
-      case "a":
-      case "A":
-      case "j":
-      case "J": {
-        if (!enablePan || !map) break;
-        event.preventDefault();
-        map.panBy([-panAmount, 0], { duration: 100 }); // Pan Left
-        break;
-      }
+      // case "a":
+      // case "A":
+      // case "j":
+      // case "J": {
+      //   if (!enablePan || !map) break;
+      //   event.preventDefault();
+      //   map.panBy([-panAmount, 0], { duration: 100 }); // Pan Left
+      //   break;
+      // }
 
-      case "l":
-      case "L":
-      case "d":
-      case "D": {
-        if (!enablePan || !map) break;
-        event.preventDefault();
-        map.panBy([panAmount, 0], { duration: 100 }); // Pan Right
-        break;
-      }
+      // case "l":
+      // case "L":
+      // case "d":
+      // case "D": {
+      //   if (!enablePan || !map) break;
+      //   event.preventDefault();
+      //   map.panBy([panAmount, 0], { duration: 100 }); // Pan Right
+      //   break;
+      // }
 
-      case "p":
-      case "P": {
-        if (!enableStreetToggle) break;
-        const streetBtn = document.getElementById("street-view-btn");
-        if (streetBtn) {
-          streetBtn.click();
-        }
-        break;
-      }
+      // case "p":
+      // case "P": {
+      //   if (!enableStreetToggle) break;
+      //   const streetBtn = document.getElementById("street-view-btn");
+      //   if (streetBtn) {
+      //     streetBtn.click();
+      //   }
+      //   break;
+      // }
     }
   });
 }
 
-export function setupKeyboardControls(map, layerSelect, opacitySlider, styleSwitcher) {
+export function setupKeyboardControls(
+  map,
+  layerSelect,
+  opacitySlider,
+  styleSwitcher
+) {
   setupMapKeyboardShortcuts({
     map,
     layerSelect,
