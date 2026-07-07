@@ -6,13 +6,20 @@ import {
   StyleSwitcherControl,
   addCompassControl,
   createSiteNavPanel,
+  findLocalStreetMatch,
+  isLikelyHistoricalStreetQuery,
   modifyBaseStyle,
+  normalize,
+  parseAddressQuery,
   setupMapKeyboardShortcuts,
 } from "./shared.js";
 
 // --- 1. CONSTANTS ---
 const GEOJSON_PATH = "bio_streets.geojson";
 // const BUILDINGS_GEOJSON_PATH = "bio_houses.geojson";
+
+const SEARCH_BBOX = [105.8124, 21.0069, 105.8691, 21.0470];
+const SEARCH_BBOX_PARAM = SEARCH_BBOX.join(",");
 
 let streetData = null;
 let buildingData = null;
@@ -255,37 +262,172 @@ class SearchControl {
 
   async search(query) {
     if (!query.trim()) return;
+
+    const addressParts = parseAddressQuery(query);
+    const preferLocalStreet = isLikelyHistoricalStreetQuery(addressParts.street);
+
+    if (preferLocalStreet || !addressParts.number) {
+      const handled = await this.searchLocalStreetAddress(query, addressParts);
+      if (handled) return;
+    }
+
+    // ── Try MapTiler geocoding first ──
     try {
       const url = `https://api.maptiler.com/geocoding/${encodeURIComponent(
         query
-      )}.json?key=${apiKey}&language=vi&limit=5&bbox=105.666,20.9109,106.0033,21.1382`;
+      )}.json?key=${apiKey}&language=vi&limit=5&bbox=${SEARCH_BBOX_PARAM}`;
       const res = await fetch(url);
       const data = await res.json();
       if (data.features && data.features.length > 0) {
-        const feature = data.features[0];
+        const feature = data.features.find((item) =>
+          isLngLatInSearchBbox(item.center)
+        );
+        if (!feature) throw new Error("No MapTiler result inside search bbox");
         const [lng, lat] = feature.center;
 
-        this.clearMarker();
-        this._marker = new maplibregl.Marker()
-          .setLngLat([lng, lat])
+    if (preferLocalStreet || this.isSuspiciousMapTilerStreetResult(feature, query)) {
+      const handled = await this.searchLocalStreetAddress(query, addressParts);
+      if (handled) return;
+    }
 
-          .addTo(this._map);
+        const address = feature.place_name || feature.text || query;
+
+        this.addSearchMarker([lng, lat], query, address, feature.center);
 
         this._map.flyTo({
           center: [lng, lat],
           zoom: 15,
           duration: 1000,
           essential: true,
+          offset: [0, 120],
         });
         this.toggle(false);
         this._input.value = "";
+        return;
       }
     } catch (err) {
       console.error("Search error:", err);
     }
+
+    // ── Fallback: not found on MapTiler → check local French-name data ──
+    await this.searchLocalStreetAddress(query, addressParts);
+  }
+
+  async searchLocalStreetAddress(query, addressParts = parseAddressQuery(query)) {
+    const localMatch = await findLocalStreetMatch(
+      addressParts.street || query,
+      streetData
+    );
+    if (localMatch) {
+      if (addressParts.number && localMatch.properties?.name) {
+        try {
+          const modernAddress = `${addressParts.number} ${localMatch.properties.name}`;
+          const url = `https://api.maptiler.com/geocoding/${encodeURIComponent(
+            modernAddress
+          )}.json?key=${apiKey}&language=vi&limit=5&bbox=${SEARCH_BBOX_PARAM}`;
+          const res = await fetch(url);
+          const data = await res.json();
+          if (data.features && data.features.length > 0) {
+            const feature = data.features.find((item) =>
+              isLngLatInSearchBbox(item.center)
+            );
+            if (!feature) throw new Error("No MapTiler result inside search bbox");
+            const [lng, lat] = feature.center;
+            const address = feature.place_name || modernAddress;
+
+            this.addSearchMarker([lng, lat], query, address, feature.center);
+            this._map.flyTo({
+              center: [lng, lat],
+              zoom: 15,
+              duration: 1000,
+              essential: true,
+              offset: [0, 120],
+            });
+            this.toggle(false);
+            this._input.value = "";
+            return true;
+          }
+        } catch (err) {
+          console.error("Search error:", err);
+        }
+      }
+
+      const coords = localMatch.geometry.coordinates;
+      const midpoint = coords[Math.floor(coords.length / 2)];
+      const address = addressParts.number
+        ? `${addressParts.number} ${localMatch.properties?.name || ""}`.trim()
+        : localMatch.properties?.name || "";
+
+      this.addSearchMarker(midpoint, query, address, localMatch.geometry);
+      this._map.flyTo({
+        center: midpoint,
+        zoom: 15,
+        duration: 1000,
+        essential: true,
+        offset: [0, 120],
+      });
+      this.toggle(false);
+      this._input.value = "";
+      return true;
+    }
+    return false;
+  }
+
+  isSuspiciousMapTilerStreetResult(feature, query) {
+    const resultText = normalize(
+      `${feature.place_name || ""} ${feature.text || ""}`
+    );
+    const queryWords = normalize(query)
+      .split(/\s+/)
+      .filter((word) => word.length > 2 && !/^\d/.test(word));
+    return queryWords.length > 0 && !queryWords.every((word) => resultText.includes(word));
+  }
+
+  addSearchMarker(lngLat, title, address, matchKey = lngLat) {
+    this.clearMarker();
+    this._marker = new maplibregl.Marker().setLngLat(lngLat).addTo(this._map);
+    this._marker.getElement().classList.add("search-result-marker");
+    this._marker.getElement().addEventListener("click", (event) => {
+      event.stopPropagation();
+      this.showSearchPopup(lngLat, title, address);
+    });
+  }
+
+  showSearchPopup(lngLat, title, address) {
+    if (window.currentPopup) window.currentPopup.remove();
+
+    window.currentPopup = new maplibregl.Popup({ closeButton: false })
+      .setLngLat(lngLat)
+      .setHTML(
+        `<div style="position:relative;padding:8px 30px 8px 8px;border-radius:8px;background-color:white;height:96px;display:flex;flex-direction:column;box-sizing:border-box;">
+          <button type="button" class="search-popup-close" aria-label="Close search result" style="position:absolute;top:6px;right:6px;border:0;background:transparent;font-size:18px;line-height:1;cursor:pointer;color:#666;padding:2px 5px">×</button>
+          <div style="font-size:17px;font-weight:600;margin-bottom:8px">${escapeHtml(
+            title
+          )}</div>
+          <div style="color:#666;font-size:13px;margin-bottom:4px">${escapeHtml(
+            address
+          )}</div>
+        </div>`
+      )
+      .addTo(this._map);
+
+    const popupEl = window.currentPopup.getElement();
+    const popupContent = popupEl.querySelector(".maplibregl-popup-content");
+    if (popupContent) popupContent.style.height = "96px";
+
+    popupEl
+      .querySelector(".search-popup-close")
+      ?.addEventListener("click", (event) => {
+        event.stopPropagation();
+        this.clearMarker();
+      });
   }
 
   clearMarker() {
+    if (window.currentPopup) {
+      window.currentPopup.remove();
+      window.currentPopup = null;
+    }
     if (this._marker) {
       this._marker.remove();
       this._marker = null;
@@ -615,6 +757,31 @@ layerSelect.addEventListener("change", changeHistoricLayer);
 opacitySlider.addEventListener("input", changeOpacity);
 
 // Utils
+function isLngLatInSearchBbox(lngLat) {
+  if (!Array.isArray(lngLat) || lngLat.length < 2) return false;
+  const [lng, lat] = lngLat;
+  return (
+    lng >= SEARCH_BBOX[0] &&
+    lat >= SEARCH_BBOX[1] &&
+    lng <= SEARCH_BBOX[2] &&
+    lat <= SEARCH_BBOX[3]
+  );
+}
+
+function escapeHtml(value) {
+  return String(value || "").replace(
+    /[&<>'"]/g,
+    (char) =>
+      ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        "'": "&#39;",
+        '"': "&quot;",
+      }[char])
+  );
+}
+
 function showPopupForFeature(feature, lngLat) {
   if (window.currentPopup) window.currentPopup.remove();
 

@@ -533,3 +533,199 @@ export function setupStyleSwitcherHotkey(styleSwitcher) {
     enableStyleToggle: true,
   });
 }
+
+// ──────────────────────────────────────────────
+// Street search helpers
+// ──────────────────────────────────────────────
+
+/**
+ * Normalize a string for fuzzy matching: lowercase, strip Vietnamese/French diacritics.
+ */
+export function normalize(str) {
+  if (!str) return "";
+  return str
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "") // strip combining diacritics
+    .replace(/[^a-z0-9\s]/g, " ") // non-alphanumeric → space
+    .replace(/\s+/g, " ") // collapse whitespace
+    .trim();
+}
+
+/**
+ * Strip HTML tags from a string.
+ */
+export function stripHtml(html) {
+  if (!html) return "";
+  const div = document.createElement("div");
+  div.innerHTML = html;
+  return div.textContent || div.innerText || "";
+}
+
+export function parseAddressQuery(query) {
+  const trimmed = (query || "").trim();
+  const numberPart = String.raw`\d+(?:\s*(?:bis|ter)|[a-z])?`;
+  const match = trimmed.match(
+    new RegExp(`^(${numberPart}(?:[/-]${numberPart})*)\\s+(.+)$`, "i")
+  );
+  return match
+    ? { number: match[1].replace(/\s+/g, " ").trim(), street: match[2].trim() }
+    : { number: "", street: trimmed };
+}
+
+export function expandHistoricalStreetTerms(norm) {
+  return (norm || "")
+    .replace(/\b(?:bd|boul)\b/g, "boulevard")
+    .replace(/\br\b/g, "rue")
+    .replace(/\bav\b/g, "avenue")
+    .replace(/\bpl\b/g, "place")
+    .replace(/\bq\b/g, "quai");
+}
+
+function stripHistoricalStreetTerms(norm) {
+  return (norm || "")
+    .replace(
+      /\b(rue|boulevard|quai|avenue|place|square|impasse|passage|route|chemin|allee|cite|des|de|du|d|la|le|les)\b/g,
+      " "
+    )
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+export function isLikelyHistoricalStreetQuery(query) {
+  const q = normalize(query);
+  return /\b(rue|bd|boul|boulevard|quai|avenue|av|place|square|impasse|passage|route|chemin|allee|cite)\b/.test(
+    q
+  );
+}
+
+/**
+ * Levenshtein edit distance between two strings.
+ */
+export function levenshtein(a, b) {
+  const m = a.length,
+    n = b.length;
+  const dp = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0));
+  for (let i = 0; i <= m; i++) dp[i][0] = i;
+  for (let j = 0; j <= n; j++) dp[0][j] = j;
+  for (let i = 1; i <= m; i++) {
+    for (let j = 1; j <= n; j++) {
+      dp[i][j] =
+        a[i - 1] === b[j - 1]
+          ? dp[i - 1][j - 1]
+          : 1 + Math.min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]);
+    }
+  }
+  return dp[m][n];
+}
+
+/**
+ * Check whether every word in queryNorm appears (fuzzily) within haystackNorm.
+ * Uses Levenshtein distance for word-level tolerance.
+ */
+export function fuzzyContains(haystackNorm, queryNorm) {
+  if (!queryNorm) return false;
+  const queryWords = queryNorm.split(/\s+/).filter(Boolean);
+  const hayWords = haystackNorm.split(/\s+/).filter(Boolean);
+  return queryWords.every((qw) =>
+    hayWords.some((hw) => {
+      if (hw.includes(qw) || qw.includes(hw)) return true;
+      const maxDist = Math.max(1, Math.floor(qw.length / 3));
+      return levenshtein(hw, qw) <= maxDist;
+    })
+  );
+}
+
+// Module-level cache for the external lookup table
+let _lookupTable = null;
+
+/**
+ * Two-tier local street search.
+ *
+ * Tier 1 — scan the loaded GeoJSON (streetData.features) for matches against
+ *          `name`, `french_name`, and `description` (historical names).
+ * Tier 2 — if nothing found, consult the external lookup table
+ *          (french_street_lookup.json) and resolve the modern name back
+ *          into the GeoJSON.
+ *
+ * Returns a GeoJSON feature (with geometry) or null.
+ */
+export async function findLocalStreetMatch(query, streetData) {
+  if (!query || !streetData || !streetData.features) return null;
+  const q = expandHistoricalStreetTerms(normalize(query));
+  const qCore = stripHistoricalStreetTerms(q);
+  if (!q) return null;
+
+  // ── Tier 1: search the GeoJSON directly ──────────────────────────
+  const candidates = [];
+  for (const feature of streetData.features) {
+    const props = feature.properties;
+    if (!props) continue;
+
+    const nameNorm = normalize(props.name);
+    const frenchNorm = expandHistoricalStreetTerms(normalize(props.french_name));
+    const descNorm = expandHistoricalStreetTerms(
+      normalize(stripHtml(props.description || ""))
+    );
+
+    const texts = [
+      nameNorm,
+      frenchNorm,
+      descNorm,
+      stripHistoricalStreetTerms(nameNorm),
+      stripHistoricalStreetTerms(frenchNorm),
+      stripHistoricalStreetTerms(descNorm),
+    ];
+
+    const score = texts.reduce((best, text) => {
+      if (!text) return best;
+      if (text === q || (qCore && text === qCore)) return Math.max(best, 5);
+      if (text.includes(q) || (qCore && text.includes(qCore)))
+        return Math.max(best, 4);
+      if (fuzzyContains(text, q) || (qCore && fuzzyContains(text, qCore)))
+        return Math.max(best, 2);
+      // match when a query word appears inside the text
+      if (
+        q.split(/\s+/).some((word) => word.length > 2 && text.includes(word))
+      )
+        return Math.max(best, 1);
+      return best;
+    }, 0);
+
+    if (score > 0) candidates.push({ feature, score });
+  }
+
+  candidates.sort((a, b) => b.score - a.score);
+  if (candidates.length > 0) return candidates[0].feature;
+
+  // ── Tier 2: consult the external lookup table ────────────────────
+  try {
+    if (!_lookupTable) {
+      const res = await fetch("french_street_lookup.json");
+      _lookupTable = await res.json();
+    }
+    for (const entry of _lookupTable.mappings) {
+      const oldNameNorm = expandHistoricalStreetTerms(normalize(entry.old_name));
+      if (
+        fuzzyContains(oldNameNorm, q) ||
+        oldNameNorm.includes(q) ||
+        (qCore && fuzzyContains(stripHistoricalStreetTerms(oldNameNorm), qCore))
+      ) {
+        // Found a mapping — search GeoJSON by the modern Vietnamese name
+        const modernNorm = normalize(entry.modern_name);
+        for (const feature of streetData.features) {
+          const fn = normalize(feature.properties?.name);
+          if (fn && (fn.includes(modernNorm) || modernNorm.includes(fn))) {
+            return feature;
+          }
+        }
+        // modern name not in GeoJSON → caller falls back to MapTiler
+        return null;
+      }
+    }
+  } catch (_) {
+    // lookup file not available — silently skip
+  }
+
+  return null;
+}
