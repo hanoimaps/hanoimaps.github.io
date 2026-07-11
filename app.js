@@ -190,6 +190,7 @@ const mapData = [
   },
 ];
 const minZoomLevel = 12;
+const DEFAULT_HISTORIC_YEAR = "1942a";
 
 const layerSelect = document.getElementById("layer-select");
 const opacitySlider = document.getElementById("opacity-slider");
@@ -473,8 +474,9 @@ map.on("load", () => {
 
   setupMapLayers();
 
-  if (mapData.length > 0) {
-    map.fitBounds(transformExtent(mapData[0].extent), {
+  const initialMap = getSelectedHistoricMap();
+  if (initialMap) {
+    map.fitBounds(transformExtent(initialMap.extent), {
       padding: 50,
       duration: 0,
     });
@@ -822,14 +824,19 @@ function setupMapLayers() {
   setupBuildingLayers();
   setupStreetLayers();
 
-  if (mapData.length > 0) {
-    loadHistoricLayer(mapData[0].year);
+  const initialMap = getSelectedHistoricMap();
+  if (initialMap) {
+    loadHistoricLayer(initialMap.year);
     map.setLayoutProperty(
-      `historic-${mapData[0].year}`,
+      `historic-${initialMap.year}`,
       "visibility",
       "visible"
     );
   }
+}
+
+function getSelectedHistoricMap() {
+  return mapData.find((data) => data.year === layerSelect.value) || mapData[0];
 }
 
 function loadHistoricLayer(year) {
@@ -1103,6 +1110,7 @@ mapData.forEach((data) => {
   option.textContent = data.title;
   layerSelect.appendChild(option);
 });
+layerSelect.value = DEFAULT_HISTORIC_YEAR;
 
 const setSelectWidth = () => {
   const len = layerSelect.options[layerSelect.selectedIndex]?.text.length || 4;
