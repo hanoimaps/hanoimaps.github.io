@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallica</title>
+    <link rel="stylesheet" href="/info/info.css" />
+    <style>
+      .container {
+        max-width: 480px;
+        margin: 0 auto;
+      }
+
+      a {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+      }
+
+      #waitlist-form {
+        display: grid;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      #email,
+      button {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px 14px;
+        border: 1px solid rgba(255, 255, 255, 0.88);
+        border-radius: 999px;
+        background: transparent;
+        color: inherit;
+        font: inherit;
+        font-size: 16px;
+        outline: none;
+      }
+
+      #email::placeholder {
+        color: rgba(255, 255, 255, 0.68);
+      }
+
+      button {
+        cursor: pointer;
+        line-height: 1.35;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="/">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 16 16"
+          fill="none"
+          style="margin-right: 2px; margin-bottom: 0.5px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10 12L6 8L10 4"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        Home
+      </a>
+      <form id="waitlist-form" method="post" novalidate>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="Email"
+          autocomplete="email"
+          inputmode="email"
+          required
+        />
+        <button type="submit">Join the waitilist</button>
+      </form>
+    </div>
+
+    <script>
+      const FORM_ENDPOINT = "https://formspree.io/f/xzdnledz";
+      const BUTTON_LABEL = "Join the waitilist";
+      const SUCCESS_PLACEHOLDER = "You're on the waitlist";
+
+      const form = document.getElementById("waitlist-form");
+      const email = document.getElementById("email");
+      const button = form.querySelector("button");
+
+      form.action = FORM_ENDPOINT;
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        if (!FORM_ENDPOINT || FORM_ENDPOINT.includes("YOUR_FORM_ID")) {
+          alert(
+            "Replace FORM_ENDPOINT in gallica/index.html with your form URL."
+          );
+          return;
+        }
+
+        if (!email.reportValidity()) {
+          return;
+        }
+
+        button.disabled = true;
+        button.textContent = "Joining...";
+
+        try {
+          const response = await fetch(FORM_ENDPOINT, {
+            method: "POST",
+            headers: {
+              Accept: "application/json",
+            },
+            body: new FormData(form),
+          });
+
+          if (!response.ok) {
+            throw new Error("Signup failed");
+          }
+
+          form.reset();
+          email.placeholder = SUCCESS_PLACEHOLDER;
+          button.textContent = "Joined";
+        } catch (error) {
+          button.disabled = false;
+          button.textContent = BUTTON_LABEL;
+          alert("Signup failed. Check the endpoint and try again.");
+        }
+      });
+    </script>
+  </body>
+</html>
