@@ -1,65 +1,676 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gallica</title>
-    <link rel="stylesheet" href="/info/info.css" />
+    <link rel="preconnect" href="https://gallica.bnf.fr" crossorigin />
+    <link rel="preconnect" href="https://gallica-rag.vercel.app" crossorigin />
+    <link rel="dns-prefetch" href="//gallica.bnf.fr" />
+    <title>Hanoi Maps | Gallica Search</title>
     <style>
-      .container {
-        max-width: 480px;
-        margin: 0 auto;
+      :root {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        color: #ffffff;
+        font-size: 14px;
       }
 
-      a {
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-      }
-
-      #waitlist-form {
-        display: grid;
-        gap: 12px;
-        margin-top: 24px;
-      }
-
-      #email,
-      button {
-        width: 100%;
+      * {
         box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        overflow: auto;
+        background: #222222;
+      }
+
+      .app {
+        display: flex;
+        flex-direction: column;
+        width: min(100%, 680px);
+        margin: 0 auto;
+        padding: 32px;
+      }
+
+      .home-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 2px;
+        width: fit-content;
+        padding: 8px 0;
+        font-size: 16px;
+        color: #ffffff;
+        text-decoration: none;
+      }
+
+      h1 {
+        margin: 8px 0 12px;
+        color: #ffffff;
+      }
+
+      .gallica-word {
+        font-family: -apple-system-serif, "New York", Georgia, serif;
+      }
+
+      #title-selector {
+        padding: 0;
+        border: 0;
+        background: transparent;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E");
+        background-position: right center;
+        background-repeat: no-repeat;
+        color: inherit;
+        font: inherit;
+        font-weight: 400;
+        padding-right: 18px;
+        -webkit-appearance: none;
+        appearance: none;
+      }
+
+      .query-summary {
+        margin: 0 0 24px;
+        padding: 16px;
+        border-radius: 16px;
+        background: #2a2a2a;
+        line-height: 19px;
+      }
+
+      .query-summary strong {
+        color: #ffffff;
+      }
+
+      .query-summary[hidden] {
+        display: none;
+      }
+
+      .search-form {
+        position: relative;
+        margin-bottom: 24px;
+      }
+
+      .search-input {
+        width: 100%;
         padding: 10px 14px;
-        border: 1px solid rgba(255, 255, 255, 0.88);
+        border: 1px solid rgb(255 255 255 / 88%);
         border-radius: 999px;
+        outline: 0;
+        background: transparent;
+        color: #ffffff;
+        font: inherit;
+        font-size: 16px;
+      }
+
+      .search-input::placeholder {
+        color: rgb(255 255 255 / 68%);
+      }
+
+      .search-input:focus {
+        box-shadow: 0 0 0 1px #ffffff;
+      }
+
+      .results {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .result-card {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid rgb(255 255 255 / 18%);
+      }
+
+      .thumbnail-button,
+      .publication-button,
+      .summary-toggle,
+      .modal-close,
+      .carousel-button,
+      .zoom-button,
+      .pan-button,
+      .load-more {
+        border: 0;
+        background: transparent;
+        font: inherit;
+        cursor: pointer;
+      }
+
+      .thumbnail-button {
+        flex: 0 0 50px;
+        width: 50px;
+        height: 70px;
+        padding: 0;
+      }
+
+      .thumbnail {
+        display: block;
+        width: 50px;
+        height: 70px;
+        border-radius: 2px;
+        object-fit: cover;
+      }
+
+      .result-copy {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        min-width: 0;
+      }
+
+      .result-meta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+
+      .publication-button {
+        padding: 0;
+        color: #ffffff;
+        font-family: -apple-system-serif, "New York", Georgia, serif;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: left;
+      }
+
+      .issue-date {
+        color: rgb(255 255 255 / 68%);
+        line-height: 20px;
+      }
+
+      .summary {
+        position: relative;
+        margin: 8px 0 0;
+        color: rgb(255 255 255 / 75%);
+        line-height: 19px;
+      }
+
+      .summary-text.collapsed {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+
+      .summary-toggle {
+        padding: 0;
+        color: #5eafff;
+        line-height: 19px;
+      }
+
+      .summary:not(.expanded) .summary-toggle {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding-left: 4px;
+        background: #222222;
+      }
+
+      .summary.expanded .summary-toggle {
+        display: block;
+        margin-top: 4px;
+      }
+
+      .detail-panel {
+        position: fixed;
+        inset: 0 0 0 auto;
+        display: none;
+        width: 50vw;
+        max-width: none;
+        height: 100dvh;
+        max-height: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        border: 0;
+        border-left: 1px solid rgb(255 255 255 / 18%);
+        border-radius: 8px 0 0 8px;
+        background: #222222;
+        color: #ffffff;
+        transform: translateX(100%);
+        transition: transform 220ms ease;
+      }
+
+      .detail-panel[open] {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .detail-panel.visible {
+        transform: translateX(0);
+      }
+
+      .detail-panel::backdrop {
+        background: rgb(0 0 0 / 35%);
+      }
+
+      .detail-media {
+        position: relative;
+        flex: 0 0 65%;
+        min-height: 0;
+        overflow: hidden;
+        background: #2a2a2a;
+      }
+
+      .page-stage {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 52px 28px;
+      }
+
+      .detail-image {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        cursor: zoom-in;
+        object-fit: contain;
+      }
+
+      .detail-image[hidden],
+      .image-loading[hidden] {
+        display: none;
+      }
+
+      .image-loading {
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: min(220px, 60%);
+        color: rgb(255 255 255 / 75%);
+        text-align: center;
+      }
+
+      .fetch-progress {
+        width: 100%;
+        height: 4px;
+        overflow: hidden;
+        border-radius: 2px;
+        background: rgb(255 255 255 / 18%);
+      }
+
+      .fetch-progress[hidden] {
+        display: none;
+      }
+
+      .fetch-progress span {
+        display: block;
+        width: 0;
+        height: 100%;
+        border-radius: inherit;
+        background: #5eafff;
+      }
+
+      .fetch-progress.indeterminate span {
+        width: 35%;
+        animation: fetch-progress 900ms ease-in-out infinite alternate;
+      }
+
+      @keyframes fetch-progress {
+        from {
+          transform: translateX(-100%);
+        }
+        to {
+          transform: translateX(285%);
+        }
+      }
+
+      .detail-image,
+      .box-overlay {
+        transform: translate(var(--pan-x, 0), var(--pan-y, 0))
+          scale(var(--page-zoom, 1));
+        transform-origin: var(--zoom-x, 50%) var(--zoom-y, 50%);
+        transition: transform 160ms ease;
+      }
+
+      .page-stage.reset-zoom .detail-image,
+      .page-stage.reset-zoom .box-overlay {
+        transition: none;
+      }
+
+      .box-overlay {
+        position: absolute;
+        pointer-events: none;
+      }
+
+      .box-overlay .box-rect {
+        fill: rgb(94 175 255 / 18%);
+        stroke: #5eafff;
+        stroke-width: 1px;
+        vector-effect: non-scaling-stroke;
+      }
+
+      .box-number-bg {
+        fill: #5eafff;
+      }
+
+      .box-number {
+        fill: #ffffff;
+        font-size: 48px;
+        font-weight: 700;
+        text-anchor: middle;
+        dominant-baseline: central;
+      }
+
+      .zoom-controls {
+        position: absolute;
+        z-index: 4;
+        top: 8px;
+        left: 8px;
+        display: flex;
+        gap: 4px;
+      }
+
+      .zoom-button {
+        display: grid;
+        place-items: center;
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        border-radius: 4px;
+        background: rgb(0 0 0 / 55%);
+        color: #ffffff;
+      }
+
+      .zoom-button:disabled {
+        opacity: 0.28;
+      }
+
+      .pan-controls {
+        position: absolute;
+        z-index: 4;
+        right: 8px;
+        bottom: 8px;
+        display: grid;
+        grid-template-columns: repeat(3, 32px);
+        grid-template-rows: repeat(2, 32px);
+        gap: 4px;
+      }
+
+      .pan-controls[hidden] {
+        display: none;
+      }
+
+      .pan-button {
+        display: grid;
+        place-items: center;
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        border-radius: 4px;
+        background: rgb(0 0 0 / 55%);
+        color: #ffffff;
+      }
+
+      .pan-button:disabled {
+        opacity: 0.28;
+      }
+      .pan-up {
+        grid-column: 2;
+      }
+      .pan-left {
+        grid-row: 2;
+        grid-column: 1;
+      }
+      .pan-down {
+        grid-row: 2;
+        grid-column: 2;
+      }
+      .pan-right {
+        grid-row: 2;
+        grid-column: 3;
+      }
+
+      .carousel-button {
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        display: grid;
+        place-items: center;
+        width: 36px;
+        height: 36px;
+        padding: 0;
+        border-radius: 50%;
+        background: rgb(0 0 0 / 45%);
+        color: #ffffff;
+        transform: translateY(-50%);
+      }
+
+      .carousel-button:disabled {
+        opacity: 0.28;
+      }
+      .carousel-button[hidden] {
+        display: none;
+      }
+
+      .carousel-prev {
+        left: 10px;
+      }
+      .carousel-next {
+        right: 10px;
+      }
+
+      .page-counter {
+        position: absolute;
+        z-index: 3;
+        right: 12px;
+        bottom: 8px;
+        left: 12px;
+        margin: 0;
+        color: rgb(255 255 255 / 75%);
+        text-align: center;
+      }
+
+      .modal-close {
+        position: absolute;
+        z-index: 4;
+        top: 8px;
+        right: 8px;
+        display: grid;
+        place-items: center;
+        width: 36px;
+        height: 36px;
+        padding: 0;
+        border-radius: 50%;
+        background: rgb(0 0 0 / 45%);
+        color: #ffffff;
+      }
+
+      .icon {
+        width: 20px;
+        height: 20px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .detail-content {
+        flex: 1;
+        min-height: 0;
+        padding: 32px;
+        overflow-y: auto;
+      }
+
+      .detail-title {
+        margin: 0 0 8px;
+        color: #ffffff;
+        font-family: -apple-system-serif, "New York", Georgia, serif;
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      .detail-meta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 6px;
+        margin: 0 0 16px;
+        color: rgb(255 255 255 / 68%);
+        line-height: 19px;
+      }
+
+      .meta-dot {
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background: currentColor;
+      }
+
+      .about-button {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 0;
+        border: 0;
         background: transparent;
         color: inherit;
         font: inherit;
-        font-size: 16px;
-        outline: none;
-      }
-
-      #email::placeholder {
-        color: rgba(255, 255, 255, 0.68);
-      }
-
-      button {
         cursor: pointer;
-        line-height: 1.35;
+      }
+
+      .about-chevron {
+        width: 16px;
+        height: 16px;
+        transition: transform 140ms ease;
+      }
+
+      .about-button[aria-expanded="true"] .about-chevron {
+        transform: rotate(90deg);
+      }
+
+      .about-description {
+        min-height: 19px;
+        margin: 0 0 16px;
+        padding: 16px;
+        border-radius: 8px;
+        background: #2a2a2a;
+        line-height: 19px;
+      }
+
+      .about-description[hidden] {
+        display: none;
+      }
+
+      .publication-description-text {
+        white-space: pre-wrap;
+      }
+
+      .detail-summary,
+      .detail-text {
+        margin: 0;
+        color: rgb(255 255 255 / 75%);
+        line-height: 19px;
+      }
+
+      .detail-text {
+        white-space: pre-wrap;
+      }
+
+      .detail-summary {
+        width: 100%;
+        margin-bottom: 8px;
+        padding-left: 0;
+        text-align: left;
+      }
+
+      .detail-summary strong {
+        color: #ffffff;
+      }
+
+      .detail-text-title {
+        margin: 0 0 8px;
+        font-size: 14px;
+      }
+
+      .publication-link,
+      .page-link {
+        color: #5eafff;
+        text-decoration: none;
+      }
+
+      .publication-link {
+        display: inline-block;
+        margin-top: 12px;
+      }
+
+      .page-link {
+        display: block;
+        margin: 0 0 20px;
+        padding-bottom: 32px;
+        border-bottom: 1px solid rgb(255 255 255 / 18%);
+      }
+
+      .status {
+        min-height: 20px;
+        margin: 0 0 16px;
+        line-height: 19px;
+      }
+
+      .load-more {
+        align-self: center;
+        margin: 20px auto 0;
+        padding: 10px 14px;
+        border: 1px solid rgb(255 255 255 / 88%);
+        border-radius: 999px;
+        background: transparent;
+        color: #ffffff;
+        font-size: 16px;
+      }
+
+      .load-more:disabled {
+        opacity: 0.55;
+      }
+
+      @media (min-width: 769px) {
+        .publication-button {
+          font-size: 1.25rem;
+          line-height: 1.5rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .detail-panel {
+          inset: auto 0 0;
+          width: 100%;
+          height: min(100dvh, calc(85dvh + 60px));
+          border: 0;
+          border-top: 1px solid rgb(255 255 255 / 18%);
+          border-radius: 8px 8px 0 0;
+          transform: translateY(100%);
+        }
+
+        .detail-panel.visible {
+          transform: translateY(0);
+        }
+        .app,
+        .detail-content {
+          padding: 16px;
+        }
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <a href="/">
+    <main class="app">
+      <a class="home-link" href="/">
         <svg
-          width="20"
-          height="20"
+          width="16"
+          height="16"
           viewBox="0 0 16 16"
           fill="none"
-          style="margin-right: 2px; margin-bottom: 0.5px"
-          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
         >
           <path
-            d="M10 12L6 8L10 4"
+            d="M10 12 6 8l4-4"
             stroke="currentColor"
             stroke-width="2"
             stroke-linecap="round"
@@ -68,69 +679,887 @@
         </svg>
         Home
       </a>
-      <form id="waitlist-form" method="post" novalidate>
+      <h1>
+        <span class="gallica-word">Gallica</span>
+        <select id="title-selector" aria-label="Gallica mode">
+          <option>Search</option>
+          <option>Query</option>
+        </select>
+      </h1>
+      <form class="search-form" id="search-form" role="search">
         <input
-          id="email"
-          name="email"
-          type="email"
-          placeholder="Email"
-          autocomplete="email"
-          inputmode="email"
-          required
+          class="search-input"
+          id="search-input"
+          type="text"
+          placeholder="Search keywords..."
+          aria-label="Search Gallica"
+          autocomplete="off"
         />
-        <button type="submit">Join the waitilist</button>
       </form>
-    </div>
+      <div class="query-summary" id="query-summary" hidden>
+        <strong id="query-answer-label" hidden>Answer:</strong>
+        <span id="query-summary-text"></span>
+      </div>
+      <p class="status" id="status"></p>
+      <section class="results" id="results" aria-live="polite"></section>
+      <button class="load-more" id="load-more" type="button" hidden>
+        Load more
+      </button>
+    </main>
+    <dialog
+      class="detail-panel"
+      id="detail-modal"
+      aria-label="Publication details"
+    >
+      <section class="detail-media">
+        <button class="modal-close" type="button" aria-label="Close details">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <div class="zoom-controls">
+          <button
+            class="zoom-button zoom-out"
+            type="button"
+            aria-label="Zoom out"
+          >
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </button>
+          <button
+            class="zoom-button zoom-in"
+            type="button"
+            aria-label="Zoom in"
+          >
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </button>
+        </div>
+        <div class="pan-controls" hidden>
+          <button class="pan-button pan-up" type="button" aria-label="Pan up">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+          </button>
+          <button
+            class="pan-button pan-left"
+            type="button"
+            aria-label="Pan left"
+          >
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button
+            class="pan-button pan-down"
+            type="button"
+            aria-label="Pan down"
+          >
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <button
+            class="pan-button pan-right"
+            type="button"
+            aria-label="Pan right"
+          >
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+        <button
+          class="carousel-button carousel-prev"
+          type="button"
+          aria-label="Previous page"
+        >
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <div class="page-stage">
+          <div class="image-loading" id="image-loading">
+            <span id="image-loading-text">Fetching page image...</span>
+            <div
+              class="fetch-progress indeterminate"
+              id="fetch-progress"
+              role="progressbar"
+              aria-label="Fetching page image"
+            >
+              <span></span>
+            </div>
+          </div>
+          <img class="detail-image" id="detail-image" alt="" hidden />
+          <svg class="box-overlay" id="box-overlay" aria-hidden="true"></svg>
+        </div>
+        <button
+          class="carousel-button carousel-next"
+          type="button"
+          aria-label="Next page"
+        >
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+        <p class="page-counter" id="page-counter"></p>
+      </section>
+      <section class="detail-content">
+        <h2 class="detail-title" id="detail-title"></h2>
+        <p class="detail-meta">
+          <span id="detail-date"></span>
+          <span class="meta-dot" aria-hidden="true"></span>
+          <button
+            class="about-button"
+            id="about-publication"
+            type="button"
+            aria-expanded="false"
+            aria-controls="about-description"
+          >
+            About
+            <svg
+              class="icon about-chevron"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </p>
+        <div class="about-description" id="about-description" hidden>
+          <div
+            class="publication-description-text"
+            id="publication-description"
+          ></div>
+          <a
+            class="publication-link"
+            id="publication-link"
+            target="_blank"
+            rel="noopener"
+            >View publication on Gallica</a
+          >
+        </div>
+        <p class="detail-summary">
+          <strong>Summary:</strong> <span id="detail-summary"></span>
+        </p>
+        <a class="page-link" id="page-link" target="_blank" rel="noopener"
+          >View page on Gallica</a
+        >
+        <h3 class="detail-text-title">Extracted text</h3>
+        <p class="detail-text" id="detail-text"></p>
+      </section>
+    </dialog>
 
     <script>
-      const FORM_ENDPOINT = "https://formspree.io/f/xzdnledz";
-      const BUTTON_LABEL = "Join the waitilist";
-      const SUCCESS_PLACEHOLDER = "You're on the waitlist";
+      const resultsElement = document.querySelector("#results");
+      const searchForm = document.querySelector("#search-form");
+      const searchInput = document.querySelector("#search-input");
+      const titleSelector = document.querySelector("#title-selector");
+      const querySummary = document.querySelector("#query-summary");
+      const queryAnswerLabel = document.querySelector("#query-answer-label");
+      const querySummaryText = document.querySelector("#query-summary-text");
+      const statusElement = document.querySelector("#status");
+      const loadMoreButton = document.querySelector("#load-more");
+      const modal = document.querySelector("#detail-modal");
+      const detailContent = document.querySelector(".detail-content");
+      const closeModalButton = document.querySelector(".modal-close");
+      const zoomInButton = document.querySelector(".zoom-in");
+      const zoomOutButton = document.querySelector(".zoom-out");
+      const panControls = document.querySelector(".pan-controls");
+      const panUpButton = document.querySelector(".pan-up");
+      const panLeftButton = document.querySelector(".pan-left");
+      const panDownButton = document.querySelector(".pan-down");
+      const panRightButton = document.querySelector(".pan-right");
+      const previousPageButton = document.querySelector(".carousel-prev");
+      const nextPageButton = document.querySelector(".carousel-next");
+      const detailImage = document.querySelector("#detail-image");
+      const imageLoading = document.querySelector("#image-loading");
+      const imageLoadingText = document.querySelector("#image-loading-text");
+      const fetchProgress = document.querySelector("#fetch-progress");
+      const boxOverlay = document.querySelector("#box-overlay");
+      const pageCounter = document.querySelector("#page-counter");
+      const detailTitle = document.querySelector("#detail-title");
+      const detailDate = document.querySelector("#detail-date");
+      const aboutPublication = document.querySelector("#about-publication");
+      const aboutDescription = document.querySelector("#about-description");
+      const publicationDescription = document.querySelector(
+        "#publication-description"
+      );
+      const publicationLink = document.querySelector("#publication-link");
+      const detailSummary = document.querySelector("#detail-summary");
+      const detailText = document.querySelector("#detail-text");
+      const pageLink = document.querySelector("#page-link");
+      let currentQuery = "";
+      let summaryRequest = 0;
+      let offset = 0;
+      let detail = null;
+      let detailPageIndex = 0;
+      let detailRequest = 0;
+      let imageRequest = 0;
+      const apiCache = new Map();
+      const imageCache = new Map();
+      const imageLoads = new Map();
+      const API_CACHE_SIZE = 40;
+      const IMAGE_CACHE_SIZE = 8;
+      const API_BASE = "https://gallica-rag.vercel.app";
+      let zoomIndex = 0;
+      let zoomOriginX = 50;
+      let zoomOriginY = 50;
+      let panX = 0;
+      let panY = 0;
+      const OCR_COORDINATE_SCALE = 1.1;
+      const ZOOM_LEVELS = [1, 1.5, 2, 3, 4, 5];
+      const PAN_STEP = 80;
 
-      const form = document.getElementById("waitlist-form");
-      const email = document.getElementById("email");
-      const button = form.querySelector("button");
+      async function fetchJson(url, fallbackError) {
+        if (apiCache.has(url)) {
+          const cached = apiCache.get(url);
+          apiCache.delete(url);
+          apiCache.set(url, cached);
+          return cached;
+        }
 
-      form.action = FORM_ENDPOINT;
+        const request = fetch(`${API_BASE}${url}`).then(async (response) => {
+          const data = await response.json();
+          if (!response.ok)
+            throw new Error(
+              data.error || `${fallbackError} (HTTP ${response.status})`
+            );
+          return data;
+        });
+        apiCache.set(url, request);
+        while (apiCache.size > API_CACHE_SIZE)
+          apiCache.delete(apiCache.keys().next().value);
+        try {
+          return await request;
+        } catch (error) {
+          if (apiCache.get(url) === request) apiCache.delete(url);
+          throw error;
+        }
+      }
 
-      form.addEventListener("submit", async (event) => {
-        event.preventDefault();
+      function rememberImage(url, objectUrl) {
+        imageCache.set(url, objectUrl);
+        while (imageCache.size > IMAGE_CACHE_SIZE) {
+          const oldest = imageCache.keys().next().value;
+          URL.revokeObjectURL(imageCache.get(oldest));
+          imageCache.delete(oldest);
+        }
+        return objectUrl;
+      }
 
-        if (!FORM_ENDPOINT || FORM_ENDPOINT.includes("YOUR_FORM_ID")) {
-          alert(
-            "Replace FORM_ENDPOINT in gallica/index.html with your form URL."
+      async function fetchPageImage(url, onProgress) {
+        if (imageCache.has(url)) {
+          const objectUrl = imageCache.get(url);
+          imageCache.delete(url);
+          imageCache.set(url, objectUrl);
+          return objectUrl;
+        }
+        if (imageLoads.has(url)) return imageLoads.get(url);
+
+        const request = (async () => {
+          const response = await fetch(url, { cache: "force-cache" });
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          const total = Number(response.headers.get("content-length")) || 0;
+          const reader = response.body?.getReader();
+          if (!reader)
+            return rememberImage(
+              url,
+              URL.createObjectURL(await response.blob())
+            );
+
+          const chunks = [];
+          let loaded = 0;
+          while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            chunks.push(value);
+            loaded += value.byteLength;
+            onProgress?.(loaded, total);
+          }
+          return rememberImage(
+            url,
+            URL.createObjectURL(
+              new Blob(chunks, {
+                type: response.headers.get("content-type") || "image/jpeg",
+              })
+            )
           );
+        })();
+        imageLoads.set(url, request);
+        try {
+          return await request;
+        } finally {
+          if (imageLoads.get(url) === request) imageLoads.delete(url);
+        }
+      }
+
+      titleSelector.addEventListener("change", () => {
+        summaryRequest += 1;
+        searchInput.placeholder =
+          titleSelector.value === "Query"
+            ? "Prompt questions..."
+            : "Search keywords...";
+        if (titleSelector.value === "Search") querySummary.hidden = true;
+        titleSelector.blur();
+      });
+
+      document.addEventListener("click", (event) => {
+        if (event.target.closest("button, a")) {
+          setTimeout(() => document.activeElement?.blur());
+        }
+      });
+
+      function pageLabel(sequence) {
+        return sequence.page_start === sequence.page_end
+          ? `Page ${sequence.page_start}`
+          : `Pages ${sequence.page_start}-${sequence.page_end}`;
+      }
+
+      function scaleBoxLabels() {
+        const zoom = ZOOM_LEVELS[zoomIndex];
+        const pixelsPerUnit =
+          boxOverlay.clientWidth / boxOverlay.viewBox.baseVal.width;
+        const basePixels = 64 * pixelsPerUnit;
+        const mobileTarget = basePixels + ((14 - basePixels) * (zoom - 1)) / 4;
+        const scale =
+          matchMedia("(max-width: 768px)").matches && zoom > 1
+            ? mobileTarget / (64 * pixelsPerUnit * zoom)
+            : 1 / zoom;
+        boxOverlay.querySelectorAll(".box-label").forEach((group) => {
+          const x = group.dataset.x;
+          const y = group.dataset.y;
+          group.setAttribute(
+            "transform",
+            `translate(${x} ${y}) scale(${scale}) translate(0 -64)`
+          );
+        });
+      }
+
+      function drawBoxes() {
+        boxOverlay.replaceChildren();
+        if (!detail || !detailImage.complete || !detailImage.naturalWidth)
+          return;
+
+        const page = detail.pages[detailPageIndex];
+        const imageRect = detailImage.getBoundingClientRect();
+        const stageRect = detailImage.parentElement.getBoundingClientRect();
+        const zoom = ZOOM_LEVELS[zoomIndex];
+        const width = imageRect.width / zoom;
+        const height = imageRect.height / zoom;
+        const left =
+          imageRect.left -
+          stageRect.left -
+          panX -
+          (zoomOriginX / 100) * width * (1 - zoom);
+        const top =
+          imageRect.top -
+          stageRect.top -
+          panY -
+          (zoomOriginY / 100) * height * (1 - zoom);
+        boxOverlay.style.left = `${left}px`;
+        boxOverlay.style.top = `${top}px`;
+        boxOverlay.style.width = `${width}px`;
+        boxOverlay.style.height = `${height}px`;
+        boxOverlay.setAttribute(
+          "viewBox",
+          `0 0 ${page.width * OCR_COORDINATE_SCALE} ${
+            page.height * OCR_COORDINATE_SCALE
+          }`
+        );
+
+        page.boxes.forEach((box) => {
+          const [x0, y0, x1, y1] = box.coords;
+          const rectangle = document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "rect"
+          );
+          rectangle.classList.add("box-rect");
+          rectangle.setAttribute("x", x0);
+          rectangle.setAttribute("y", y0);
+          rectangle.setAttribute("width", x1 - x0);
+          rectangle.setAttribute("height", y1 - y0);
+          rectangle.setAttribute("rx", 2);
+          rectangle.setAttribute("ry", 2);
+
+          const labelGroup = document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "g"
+          );
+          labelGroup.classList.add("box-label");
+          labelGroup.dataset.x = x0;
+          labelGroup.dataset.y = Math.max(64 / zoom, y0);
+          const labelBackground = document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "rect"
+          );
+          labelBackground.classList.add("box-number-bg");
+          labelBackground.setAttribute("width", 64);
+          labelBackground.setAttribute("height", 64);
+          labelBackground.setAttribute("rx", 2);
+          labelBackground.setAttribute("ry", 2);
+
+          const label = document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "text"
+          );
+          label.classList.add("box-number");
+          label.setAttribute("x", 32);
+          label.setAttribute("y", 32);
+          label.textContent = box.reading_order;
+          labelGroup.append(labelBackground, label);
+          boxOverlay.append(rectangle, labelGroup);
+        });
+        scaleBoxLabels();
+      }
+
+      function panBounds() {
+        const zoomExtra = ZOOM_LEVELS[zoomIndex] - 1;
+        const width = parseFloat(getComputedStyle(detailImage).width) || 0;
+        const height = parseFloat(getComputedStyle(detailImage).height) || 0;
+        return {
+          minX: (-(100 - zoomOriginX) / 100) * width * zoomExtra,
+          maxX: (zoomOriginX / 100) * width * zoomExtra,
+          minY: (-(100 - zoomOriginY) / 100) * height * zoomExtra,
+          maxY: (zoomOriginY / 100) * height * zoomExtra,
+        };
+      }
+
+      function applyPan() {
+        const stage = detailImage.parentElement;
+        stage.style.setProperty("--pan-x", `${panX}px`);
+        stage.style.setProperty("--pan-y", `${panY}px`);
+        const bounds = panBounds();
+        panLeftButton.disabled = panX >= bounds.maxX - 0.5;
+        panRightButton.disabled = panX <= bounds.minX + 0.5;
+        panUpButton.disabled = panY >= bounds.maxY - 0.5;
+        panDownButton.disabled = panY <= bounds.minY + 0.5;
+      }
+
+      function panBy(x, y) {
+        const bounds = panBounds();
+        panX = Math.min(bounds.maxX, Math.max(bounds.minX, panX + x));
+        panY = Math.min(bounds.maxY, Math.max(bounds.minY, panY + y));
+        applyPan();
+      }
+
+      function applyZoom() {
+        const bounds = panBounds();
+        panX = Math.min(bounds.maxX, Math.max(bounds.minX, panX));
+        panY = Math.min(bounds.maxY, Math.max(bounds.minY, panY));
+        detailImage.parentElement.style.setProperty(
+          "--page-zoom",
+          ZOOM_LEVELS[zoomIndex]
+        );
+        zoomOutButton.disabled = zoomIndex === 0;
+        zoomInButton.disabled = zoomIndex === ZOOM_LEVELS.length - 1;
+        panControls.hidden = zoomIndex === 0;
+        applyPan();
+        scaleBoxLabels();
+      }
+
+      function resetZoom(instant = false) {
+        zoomIndex = 0;
+        zoomOriginX = 50;
+        zoomOriginY = 50;
+        panX = 0;
+        panY = 0;
+        const stage = detailImage.parentElement;
+        if (instant) stage.classList.add("reset-zoom");
+        stage.style.setProperty("--zoom-x", `${zoomOriginX}%`);
+        stage.style.setProperty("--zoom-y", `${zoomOriginY}%`);
+        applyZoom();
+        if (instant)
+          requestAnimationFrame(() => stage.classList.remove("reset-zoom"));
+      }
+
+      function zoomIn(event) {
+        if (zoomIndex === ZOOM_LEVELS.length - 1) {
+          resetZoom();
           return;
         }
-
-        if (!email.reportValidity()) {
-          return;
+        if (event && zoomIndex === 0) {
+          const rect = detailImage.getBoundingClientRect();
+          const stage = detailImage.parentElement;
+          zoomOriginX = ((event.clientX - rect.left) / rect.width) * 100;
+          zoomOriginY = ((event.clientY - rect.top) / rect.height) * 100;
+          stage.style.setProperty("--zoom-x", `${zoomOriginX}%`);
+          stage.style.setProperty("--zoom-y", `${zoomOriginY}%`);
         }
+        zoomIndex += 1;
+        applyZoom();
+      }
 
-        button.disabled = true;
-        button.textContent = "Joining...";
+      function zoomOut() {
+        if (zoomIndex === 0) return;
+        zoomIndex -= 1;
+        if (zoomIndex === 0) resetZoom();
+        else applyZoom();
+      }
+
+      function resetDetailScroll() {
+        detailContent.scrollTo(0, 0);
+      }
+
+      function preloadImages(pages, currentPage) {
+        const index = pages.indexOf(currentPage);
+        [pages[index - 1], pages[index + 1]]
+          .filter(Boolean)
+          .forEach((page) => fetchPageImage(page.image_url).catch(() => {}));
+      }
+
+      async function loadDetailImage(page) {
+        const request = ++imageRequest;
+        detailImage.hidden = true;
+        detailImage.removeAttribute("src");
+        boxOverlay.replaceChildren();
+        imageLoadingText.textContent = "Fetching page image...";
+        imageLoading.hidden = false;
+        fetchProgress.hidden = false;
+        fetchProgress.classList.add("indeterminate");
+        fetchProgress.firstElementChild.style.width = "";
+        fetchProgress.removeAttribute("aria-valuenow");
 
         try {
-          const response = await fetch(FORM_ENDPOINT, {
-            method: "POST",
-            headers: {
-              Accept: "application/json",
-            },
-            body: new FormData(form),
-          });
+          const imageUrl = await fetchPageImage(
+            page.image_url,
+            (loaded, total) => {
+              imageLoadingText.textContent = total
+                ? `Fetching page image... ${Math.round(
+                    (loaded / total) * 100
+                  )}%`
+                : `Fetching page image... ${Math.round(loaded / 1024)} KB`;
+              if (total) {
+                const percentage = Math.min(100, (loaded / total) * 100);
+                fetchProgress.classList.remove("indeterminate");
+                fetchProgress.firstElementChild.style.width = `${percentage}%`;
+                fetchProgress.setAttribute(
+                  "aria-valuenow",
+                  Math.round(percentage)
+                );
+              }
+            }
+          );
+          if (request !== imageRequest) return;
 
-          if (!response.ok) {
-            throw new Error("Signup failed");
-          }
-
-          form.reset();
-          email.placeholder = SUCCESS_PLACEHOLDER;
-          button.textContent = "Joined";
+          detailImage.onload = () => {
+            if (request !== imageRequest) return;
+            detailImage.hidden = false;
+            imageLoading.hidden = true;
+            requestAnimationFrame(drawBoxes);
+          };
+          detailImage.onerror = () => {
+            if (request !== imageRequest) return;
+            imageLoadingText.textContent =
+              'Cannot fetch image. Try "View page on Gallica" or check your network connection.';
+            fetchProgress.hidden = true;
+          };
+          detailImage.src = imageUrl;
         } catch (error) {
-          button.disabled = false;
-          button.textContent = BUTTON_LABEL;
-          alert("Signup failed. Check the endpoint and try again.");
+          if (request !== imageRequest) return;
+          imageLoadingText.textContent =
+            'Cannot fetch image. Try "View page on Gallica" or check your network connection.';
+          fetchProgress.hidden = true;
         }
+      }
+
+      function renderDetailPage() {
+        const page = detail.pages[detailPageIndex];
+        resetZoom(true);
+        detailText.textContent = page.boxes.length
+          ? page.boxes
+              .map((box) => `[${box.reading_order}] ${box.text}`)
+              .join("\n\n")
+          : "No extracted text for this page.";
+        pageCounter.textContent = `Page ${page.page} · ${
+          detailPageIndex + 1
+        } of ${detail.pages.length}`;
+        pageLink.href = page.url;
+        detailImage.alt = `${detail.publication.name}, page ${page.page}`;
+        loadDetailImage(page);
+        preloadImages(detail.pages, page);
+        previousPageButton.hidden = detail.pages.length === 1;
+        nextPageButton.hidden = detail.pages.length === 1;
+        previousPageButton.disabled = detailPageIndex === 0;
+        nextPageButton.disabled = detailPageIndex === detail.pages.length - 1;
+        resetDetailScroll();
+        drawBoxes();
+      }
+
+      async function openModal(result) {
+        const request = ++detailRequest;
+        detail = null;
+        resetDetailScroll();
+        detailTitle.textContent = result.publication.name;
+        detailDate.textContent = result.issue.date;
+        aboutPublication.setAttribute("aria-expanded", "false");
+        aboutDescription.hidden = true;
+        publicationDescription.textContent =
+          result.publication.description || "";
+        publicationLink.href = `https://gallica.bnf.fr/ark:/12148/${result.publication.ark}`;
+        detailSummary.textContent = result.sequence.summary;
+        detailText.textContent = "Loading...";
+        imageRequest += 1;
+        detailImage.hidden = true;
+        detailImage.removeAttribute("src");
+        boxOverlay.replaceChildren();
+        imageLoadingText.textContent = "Fetching page image...";
+        fetchProgress.hidden = false;
+        fetchProgress.classList.add("indeterminate");
+        fetchProgress.firstElementChild.style.width = "";
+        imageLoading.hidden = false;
+        pageCounter.textContent = "";
+        pageLink.removeAttribute("href");
+        previousPageButton.hidden = true;
+        nextPageButton.hidden = true;
+
+        if (!modal.open) modal.showModal();
+        requestAnimationFrame(() => modal.classList.add("visible"));
+
+        try {
+          const data = await fetchJson(
+            `/api/unit?id=${encodeURIComponent(result.sequence.id)}`,
+            "Unable to load details."
+          );
+          if (request !== detailRequest) return;
+          detail = data;
+          detailPageIndex = 0;
+          publicationDescription.textContent =
+            data.publication.description || "";
+          renderDetailPage();
+        } catch (error) {
+          if (request !== detailRequest) return;
+          detailText.textContent = error.message;
+        }
+      }
+
+      function closeModal() {
+        detailRequest += 1;
+        imageRequest += 1;
+        modal.classList.remove("visible");
+      }
+
+      function createResultCard(result) {
+        const card = document.createElement("article");
+        card.className = "result-card";
+
+        const thumbnailButton = document.createElement("button");
+        thumbnailButton.className = "thumbnail-button";
+        thumbnailButton.type = "button";
+        thumbnailButton.setAttribute(
+          "aria-label",
+          `Open ${result.publication.name}`
+        );
+        thumbnailButton.addEventListener("click", () => openModal(result));
+
+        const thumbnail = document.createElement("img");
+        thumbnail.className = "thumbnail";
+        // GitHub Pages only hosts this HTML file; fetch the issue thumbnail from Gallica.
+        thumbnail.src = `https://gallica.bnf.fr/iiif/ark:/12148/${result.issue.ark}/f1/full/160,/0/native.jpg`;
+        thumbnail.loading = "lazy";
+        thumbnail.decoding = "async";
+        thumbnail.alt = "";
+        thumbnailButton.append(thumbnail);
+
+        const copy = document.createElement("div");
+        copy.className = "result-copy";
+
+        const meta = document.createElement("div");
+        meta.className = "result-meta";
+
+        const publicationButton = document.createElement("button");
+        publicationButton.className = "publication-button";
+        publicationButton.type = "button";
+        publicationButton.textContent = result.publication.name;
+        publicationButton.addEventListener("click", () => openModal(result));
+
+        const date = document.createElement("span");
+        date.className = "issue-date";
+        date.textContent = result.issue.date;
+        meta.append(publicationButton, date);
+
+        const summary = document.createElement("div");
+        summary.className = "summary";
+
+        const summaryText = document.createElement("span");
+        summaryText.className = "summary-text collapsed";
+        summaryText.textContent = `[${pageLabel(result.sequence)}] ${
+          result.sequence.summary
+        }`;
+
+        const toggle = document.createElement("button");
+        toggle.className = "summary-toggle";
+        toggle.type = "button";
+        toggle.textContent = "view more";
+        toggle.hidden = true;
+        toggle.setAttribute("aria-expanded", "false");
+
+        const updateToggle = () => {
+          if (summary.classList.contains("expanded")) {
+            toggle.hidden = false;
+            return;
+          }
+          toggle.hidden =
+            summaryText.scrollHeight <= summaryText.clientHeight + 1;
+        };
+
+        toggle.addEventListener("click", () => {
+          const isExpanded = summary.classList.toggle("expanded");
+          summaryText.classList.toggle("collapsed", !isExpanded);
+          toggle.textContent = isExpanded ? "show less" : "view more";
+          toggle.setAttribute("aria-expanded", String(isExpanded));
+          requestAnimationFrame(updateToggle);
+        });
+
+        new ResizeObserver(updateToggle).observe(summaryText);
+
+        summary.append(summaryText, toggle);
+        copy.append(meta, summary);
+        card.append(thumbnailButton, copy);
+        return card;
+      }
+
+      async function search(append = false) {
+        if (!currentQuery) return;
+        loadMoreButton.disabled = true;
+        statusElement.textContent = append ? "Loading more..." : "Searching...";
+        if (!append) {
+          offset = 0;
+          resultsElement.replaceChildren();
+          if (titleSelector.value === "Query") querySummary.hidden = true;
+        }
+
+        try {
+          const params = new URLSearchParams({ q: currentQuery, offset });
+          const data = await fetchJson(
+            `/api/search?${params}`,
+            "Search failed."
+          );
+
+          data.results.forEach((result) =>
+            resultsElement.append(createResultCard(result))
+          );
+          offset += data.results.length;
+          statusElement.textContent = resultsElement.children.length
+            ? `${resultsElement.children.length} results shown`
+            : "No results found.";
+          loadMoreButton.hidden = !data.has_more;
+          if (!append && titleSelector.value === "Query") {
+            if (data.results.length) loadQuerySummary();
+            else {
+              queryAnswerLabel.hidden = false;
+              querySummaryText.textContent = "No results for summary";
+              querySummary.hidden = false;
+            }
+          }
+        } catch (error) {
+          statusElement.textContent = error.message;
+          loadMoreButton.hidden = true;
+        } finally {
+          loadMoreButton.disabled = false;
+        }
+      }
+
+      async function loadQuerySummary() {
+        const request = ++summaryRequest;
+        queryAnswerLabel.hidden = true;
+        querySummaryText.textContent = "Generating answer...";
+        querySummary.hidden = false;
+        try {
+          const data = await fetchJson(
+            `/api/summary?q=${encodeURIComponent(currentQuery)}`,
+            "Summary request failed."
+          );
+          if (data.summary_error) {
+            console.error("Summary generation failed:", data.summary_error);
+            throw new Error(data.summary_error);
+          }
+          if (request !== summaryRequest) return;
+          if (data.results?.length) {
+            resultsElement.replaceChildren(
+              ...data.results.map(createResultCard)
+            );
+            offset = data.results.length;
+            statusElement.textContent = `${offset} results shown`;
+            loadMoreButton.hidden = true;
+          }
+          queryAnswerLabel.hidden = false;
+          querySummaryText.textContent = data.summary || "No answer available.";
+        } catch (error) {
+          console.error("Summary request error:", error);
+          if (request === summaryRequest) {
+            queryAnswerLabel.hidden = true;
+            querySummaryText.textContent =
+              "Cannot generate answer, please try again.";
+          }
+        }
+      }
+
+      searchForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        currentQuery = searchInput.value.trim();
+        if (currentQuery) search();
+      });
+
+      searchInput.addEventListener("keydown", (event) => {
+        if (event.key !== "Enter") return;
+        event.preventDefault();
+        currentQuery = searchInput.value.trim();
+        if (currentQuery) search();
+      });
+
+      loadMoreButton.addEventListener("click", () => search(true));
+
+      aboutPublication.addEventListener("click", () => {
+        const expanded =
+          aboutPublication.getAttribute("aria-expanded") !== "true";
+        aboutPublication.setAttribute("aria-expanded", String(expanded));
+        aboutDescription.hidden = !expanded;
+      });
+
+      previousPageButton.addEventListener("click", () => {
+        if (detailPageIndex === 0) return;
+        detailPageIndex -= 1;
+        renderDetailPage();
+      });
+
+      nextPageButton.addEventListener("click", () => {
+        if (!detail || detailPageIndex === detail.pages.length - 1) return;
+        detailPageIndex += 1;
+        renderDetailPage();
+      });
+
+      detailImage.addEventListener("click", zoomIn);
+      zoomInButton.addEventListener("click", () => zoomIn());
+      zoomOutButton.addEventListener("click", zoomOut);
+      panUpButton.addEventListener("click", () => panBy(0, PAN_STEP));
+      panLeftButton.addEventListener("click", () => panBy(PAN_STEP, 0));
+      panDownButton.addEventListener("click", () => panBy(0, -PAN_STEP));
+      panRightButton.addEventListener("click", () => panBy(-PAN_STEP, 0));
+
+      detailImage.addEventListener("load", drawBoxes);
+      new ResizeObserver(drawBoxes).observe(detailImage.parentElement);
+
+      closeModalButton.addEventListener("click", closeModal);
+      modal.addEventListener("cancel", (event) => {
+        event.preventDefault();
+        closeModal();
+      });
+      modal.addEventListener("transitionend", (event) => {
+        if (
+          event.target === modal &&
+          !modal.classList.contains("visible") &&
+          modal.open
+        ) {
+          modal.close();
+        }
+      });
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) closeModal();
       });
     </script>
   </body>
