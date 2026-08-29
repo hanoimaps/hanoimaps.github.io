@@ -7,26 +7,25 @@
     <link rel="preconnect" href="https://gallica.bnf.fr" crossorigin />
     <link rel="preconnect" href="https://gallica-rag.vercel.app" crossorigin />
     <link rel="dns-prefetch" href="//gallica.bnf.fr" />
-    <link rel="stylesheet" href="/shared.css" />
     <title>Hanoi Maps | Gallica Search</title>
     <style>
       :root {
-        --panel: #2a2a2a;
-        --line: rgb(255 255 255 / 18%);
-        --muted: rgb(255 255 255 / 68%);
-        --copy: rgb(255 255 255 / 75%);
-        --link: #5eafff;
-        color: #fff;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        color: #ffffff;
         font-size: 14px;
       }
+
       * {
         box-sizing: border-box;
       }
-      html,
+
       body {
-        height: auto;
+        margin: 0;
         overflow: auto;
+        background: #222222;
       }
+
       .app {
         display: flex;
         flex-direction: column;
@@ -34,129 +33,123 @@
         margin: 0 auto;
         padding: 32px;
       }
+
       .home-link {
         display: inline-flex;
         align-items: center;
         gap: 2px;
         width: fit-content;
         padding: 8px 0;
-        color: #fff;
         font-size: 16px;
+        color: #ffffff;
         text-decoration: none;
       }
+
       h1 {
         margin: 8px 0 12px;
-        color: #fff;
+        color: #ffffff;
       }
-      .gallica-word,
-      .intro h2,
-      .publication-button,
-      .detail-title {
+
+      .gallica-word {
         font-family: -apple-system-serif, "New York", Georgia, serif;
       }
+
       #title-selector {
-        padding: 0 18px 0 0;
+        padding: 0;
         border: 0;
-        appearance: none;
-        background: transparent
-          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E")
-          right center no-repeat;
+        background: transparent;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E");
+        background-position: right center;
+        background-repeat: no-repeat;
         color: inherit;
         font: inherit;
         font-weight: 400;
+        padding-right: 18px;
+        -webkit-appearance: none;
+        appearance: none;
       }
+
       .query-summary,
       .intro {
         margin: 0 0 24px;
         padding: 16px;
         border-radius: 16px;
-        background: var(--panel);
+        background: #2a2a2a;
       }
+
       .intro {
         margin-top: clamp(64px, 12vh, 120px);
       }
-      .query-summary {
-        line-height: 19px;
-      }
-      .query-summary strong,
-      .detail-summary strong {
-        color: #fff;
-      }
-      [hidden],
-      .query-summary[hidden],
-      .about-description[hidden],
-      .pan-controls[hidden],
-      .carousel-button[hidden] {
-        display: none;
-      }
-      .search-form {
-        position: relative;
-        margin-bottom: 24px;
-      }
+
       .intro h2 {
         margin: 0 0 4px;
         font-size: 16px;
         font-weight: 400;
         line-height: 20px;
       }
+
       .intro p {
         margin: 0 0 12px;
-        color: var(--muted);
+        color: rgb(255 255 255 / 68%);
         font-size: 12px;
         line-height: 17px;
       }
-      .intro a,
-      .publication-link,
-      .page-link {
-        color: var(--link);
+
+      .intro a {
+        color: #5eafff;
         text-decoration: none;
       }
-      .intro a:hover {
-        text-decoration: underline;
-      }
+
       .intro ul {
         max-height: 240px;
         margin: 0;
         padding: 0;
         overflow-y: auto;
         list-style: none;
-        scrollbar-color: transparent transparent;
-        scrollbar-width: thin;
       }
-      .intro ul.scrolling {
-        scrollbar-color: var(--line) transparent;
-      }
-      .intro ul::-webkit-scrollbar {
-        width: 6px;
-      }
-      .intro ul::-webkit-scrollbar-thumb {
-        border-radius: 3px;
-        background: transparent;
-      }
-      .intro ul.scrolling::-webkit-scrollbar-thumb {
-        background: var(--line);
-      }
+
       .intro li {
         display: grid;
         grid-template-columns: 14px minmax(0, 1fr) auto;
         gap: 8px;
         padding: 8px 0;
-        border-bottom: 1px solid var(--line);
+        border-bottom: 1px solid rgb(255 255 255 / 18%);
         font-size: 13px;
         line-height: 17px;
       }
+
       .intro li:last-child {
         border: 0;
       }
+
       .intro li > :first-child {
         color: rgb(255 255 255 / 55%);
         text-align: center;
       }
+
       .intro small {
-        color: var(--muted);
+        color: rgb(255 255 255 / 68%);
         font: inherit;
         white-space: nowrap;
       }
+
+      .query-summary {
+        line-height: 19px;
+      }
+
+      .query-summary strong {
+        color: #ffffff;
+      }
+
+      .query-summary[hidden] {
+        display: none;
+      }
+
+      .search-form {
+        position: relative;
+        margin-bottom: 24px;
+      }
+
       .search-input {
         width: 100%;
         padding: 10px 14px;
@@ -164,28 +157,33 @@
         border-radius: 999px;
         outline: 0;
         background: transparent;
-        color: #fff;
+        color: #ffffff;
         font: inherit;
         font-size: 16px;
       }
+
       .search-input::placeholder {
-        color: var(--muted);
+        color: rgb(255 255 255 / 68%);
       }
+
       .search-input:focus {
-        box-shadow: 0 0 0 1px #fff;
+        box-shadow: 0 0 0 1px #ffffff;
       }
+
       .results {
         display: flex;
         flex-direction: column;
         gap: 12px;
       }
+
       .result-card {
         display: flex;
         align-items: flex-start;
         gap: 12px;
         padding-bottom: 12px;
-        border-bottom: 1px solid var(--line);
+        border-bottom: 1px solid rgb(255 255 255 / 18%);
       }
+
       .thumbnail-button,
       .publication-button,
       .summary-toggle,
@@ -199,12 +197,14 @@
         font: inherit;
         cursor: pointer;
       }
+
       .thumbnail-button {
         flex: 0 0 50px;
         width: 50px;
         height: 70px;
         padding: 0;
       }
+
       .thumbnail {
         display: block;
         width: 50px;
@@ -212,57 +212,68 @@
         border-radius: 2px;
         object-fit: cover;
       }
+
       .result-copy {
         display: flex;
         flex: 1;
         flex-direction: column;
         min-width: 0;
       }
+
       .result-meta {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 4px;
       }
+
       .publication-button {
         padding: 0;
-        color: #fff;
+        color: #ffffff;
+        font-family: -apple-system-serif, "New York", Georgia, serif;
         font-size: 16px;
         line-height: 20px;
         text-align: left;
       }
+
       .issue-date {
-        color: var(--muted);
+        color: rgb(255 255 255 / 68%);
         line-height: 20px;
       }
+
       .summary {
         position: relative;
         margin: 8px 0 0;
-        color: var(--copy);
+        color: rgb(255 255 255 / 75%);
         line-height: 19px;
       }
+
       .summary-text.collapsed {
         display: -webkit-box;
         overflow: hidden;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
       }
+
       .summary-toggle {
         padding: 0;
-        color: var(--link);
+        color: #5eafff;
         line-height: 19px;
       }
+
       .summary:not(.expanded) .summary-toggle {
         position: absolute;
         right: 0;
         bottom: 0;
         padding-left: 4px;
-        background: #222;
+        background: #222222;
       }
+
       .summary.expanded .summary-toggle {
         display: block;
         margin-top: 4px;
       }
+
       .detail-panel {
         position: fixed;
         inset: 0 0 0 auto;
@@ -275,30 +286,35 @@
         padding: 0;
         overflow: hidden;
         border: 0;
-        border-left: 1px solid var(--line);
+        border-left: 1px solid rgb(255 255 255 / 18%);
         border-radius: 8px 0 0 8px;
-        background: #222;
-        color: #fff;
+        background: #222222;
+        color: #ffffff;
         transform: translateX(100%);
         transition: transform 220ms ease;
       }
+
       .detail-panel[open] {
         display: flex;
         flex-direction: column;
       }
+
       .detail-panel.visible {
         transform: translateX(0);
       }
+
       .detail-panel::backdrop {
         background: rgb(0 0 0 / 35%);
       }
+
       .detail-media {
         position: relative;
         flex: 0 0 65%;
         min-height: 0;
         overflow: hidden;
-        background: var(--panel);
+        background: #2a2a2a;
       }
+
       .page-stage {
         position: relative;
         display: flex;
@@ -308,6 +324,7 @@
         justify-content: center;
         padding: 12px 52px 28px;
       }
+
       .detail-image {
         display: block;
         max-width: 100%;
@@ -315,6 +332,12 @@
         cursor: zoom-in;
         object-fit: contain;
       }
+
+      .detail-image[hidden],
+      .image-loading[hidden] {
+        display: none;
+      }
+
       .image-loading {
         position: absolute;
         z-index: 2;
@@ -322,27 +345,35 @@
         flex-direction: column;
         gap: 8px;
         width: min(220px, 60%);
-        color: var(--copy);
+        color: rgb(255 255 255 / 75%);
         text-align: center;
       }
+
       .fetch-progress {
         width: 100%;
         height: 4px;
         overflow: hidden;
         border-radius: 2px;
-        background: var(--line);
+        background: rgb(255 255 255 / 18%);
       }
+
+      .fetch-progress[hidden] {
+        display: none;
+      }
+
       .fetch-progress span {
         display: block;
         width: 0;
         height: 100%;
         border-radius: inherit;
-        background: var(--link);
+        background: #5eafff;
       }
+
       .fetch-progress.indeterminate span {
         width: 35%;
         animation: fetch-progress 900ms ease-in-out infinite alternate;
       }
+
       @keyframes fetch-progress {
         from {
           transform: translateX(-100%);
@@ -351,6 +382,7 @@
           transform: translateX(285%);
         }
       }
+
       .detail-image,
       .box-overlay {
         transform: translate(var(--pan-x, 0), var(--pan-y, 0))
@@ -358,30 +390,36 @@
         transform-origin: var(--zoom-x, 50%) var(--zoom-y, 50%);
         transition: transform 160ms ease;
       }
+
       .page-stage.reset-zoom .detail-image,
       .page-stage.reset-zoom .box-overlay {
         transition: none;
       }
+
       .box-overlay {
         position: absolute;
         pointer-events: none;
       }
+
       .box-overlay .box-rect {
         fill: rgb(94 175 255 / 18%);
-        stroke: var(--link);
+        stroke: #5eafff;
         stroke-width: 1px;
         vector-effect: non-scaling-stroke;
       }
+
       .box-number-bg {
-        fill: var(--link);
+        fill: #5eafff;
       }
+
       .box-number {
-        fill: #fff;
+        fill: #ffffff;
         font-size: 48px;
         font-weight: 700;
         text-anchor: middle;
         dominant-baseline: central;
       }
+
       .zoom-controls {
         position: absolute;
         z-index: 4;
@@ -390,7 +428,37 @@
         display: flex;
         gap: 4px;
       }
-      .zoom-button,
+
+      .zoom-button {
+        display: grid;
+        place-items: center;
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        border-radius: 4px;
+        background: rgb(0 0 0 / 55%);
+        color: #ffffff;
+      }
+
+      .zoom-button:disabled {
+        opacity: 0.28;
+      }
+
+      .pan-controls {
+        position: absolute;
+        z-index: 4;
+        right: 8px;
+        bottom: 8px;
+        display: grid;
+        grid-template-columns: repeat(3, 32px);
+        grid-template-rows: repeat(2, 32px);
+        gap: 4px;
+      }
+
+      .pan-controls[hidden] {
+        display: none;
+      }
+
       .pan-button {
         display: grid;
         place-items: center;
@@ -399,34 +467,28 @@
         padding: 0;
         border-radius: 4px;
         background: rgb(0 0 0 / 55%);
-        color: #fff;
+        color: #ffffff;
       }
-      .zoom-button:disabled,
-      .pan-button:disabled,
-      .carousel-button:disabled {
+
+      .pan-button:disabled {
         opacity: 0.28;
-      }
-      .pan-controls {
-        position: absolute;
-        z-index: 4;
-        right: 8px;
-        bottom: 8px;
-        display: grid;
-        grid-template: repeat(2, 32px) / repeat(3, 32px);
-        gap: 4px;
       }
       .pan-up {
         grid-column: 2;
       }
       .pan-left {
-        grid-area: 2 / 1;
+        grid-row: 2;
+        grid-column: 1;
       }
       .pan-down {
-        grid-area: 2 / 2;
+        grid-row: 2;
+        grid-column: 2;
       }
       .pan-right {
-        grid-area: 2 / 3;
+        grid-row: 2;
+        grid-column: 3;
       }
+
       .carousel-button {
         position: absolute;
         z-index: 3;
@@ -438,15 +500,24 @@
         padding: 0;
         border-radius: 50%;
         background: rgb(0 0 0 / 45%);
-        color: #fff;
+        color: #ffffff;
         transform: translateY(-50%);
       }
+
+      .carousel-button:disabled {
+        opacity: 0.28;
+      }
+      .carousel-button[hidden] {
+        display: none;
+      }
+
       .carousel-prev {
         left: 10px;
       }
       .carousel-next {
         right: 10px;
       }
+
       .page-counter {
         position: absolute;
         z-index: 3;
@@ -454,9 +525,10 @@
         bottom: 8px;
         left: 12px;
         margin: 0;
-        color: var(--copy);
+        color: rgb(255 255 255 / 75%);
         text-align: center;
       }
+
       .modal-close {
         position: absolute;
         z-index: 4;
@@ -469,8 +541,9 @@
         padding: 0;
         border-radius: 50%;
         background: rgb(0 0 0 / 45%);
-        color: #fff;
+        color: #ffffff;
       }
+
       .icon {
         width: 20px;
         height: 20px;
@@ -480,33 +553,39 @@
         stroke-linecap: round;
         stroke-linejoin: round;
       }
+
       .detail-content {
         flex: 1;
         min-height: 0;
         padding: 32px;
         overflow-y: auto;
       }
+
       .detail-title {
         margin: 0 0 8px;
-        color: #fff;
+        color: #ffffff;
+        font-family: -apple-system-serif, "New York", Georgia, serif;
         font-size: 18px;
         line-height: 24px;
       }
+
       .detail-meta {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         gap: 6px;
         margin: 0 0 16px;
-        color: var(--muted);
+        color: rgb(255 255 255 / 68%);
         line-height: 19px;
       }
+
       .meta-dot {
         width: 3px;
         height: 3px;
         border-radius: 50%;
         background: currentColor;
       }
+
       .about-button {
         display: flex;
         align-items: center;
@@ -518,57 +597,85 @@
         font: inherit;
         cursor: pointer;
       }
+
       .about-chevron {
         width: 16px;
         height: 16px;
         transition: transform 140ms ease;
       }
+
       .about-button[aria-expanded="true"] .about-chevron {
         transform: rotate(90deg);
       }
+
       .about-description {
         min-height: 19px;
         margin: 0 0 16px;
         padding: 16px;
         border-radius: 8px;
-        background: var(--panel);
+        background: #2a2a2a;
         line-height: 19px;
       }
-      .publication-description-text,
-      .detail-text {
+
+      .about-description[hidden] {
+        display: none;
+      }
+
+      .publication-description-text {
         white-space: pre-wrap;
       }
+
       .detail-summary,
       .detail-text {
         margin: 0;
-        color: var(--copy);
+        color: rgb(255 255 255 / 75%);
         line-height: 19px;
       }
+
+      .detail-text {
+        white-space: pre-wrap;
+      }
+
       .detail-summary {
         width: 100%;
         margin-bottom: 8px;
         padding-left: 0;
         text-align: left;
       }
+
+      .detail-summary strong {
+        color: #ffffff;
+      }
+
       .detail-text-title {
         margin: 0 0 8px;
         font-size: 14px;
       }
+
+      .publication-link,
+      .page-link {
+        color: #5eafff;
+        text-decoration: none;
+      }
+
       .publication-link {
         display: inline-block;
         margin-top: 12px;
       }
+
       .page-link {
         display: block;
         margin: 0 0 20px;
         padding-bottom: 32px;
-        border-bottom: 1px solid var(--line);
+        border-bottom: 1px solid rgb(255 255 255 / 18%);
       }
+
       .status {
         min-height: 20px;
         margin: 0 0 16px;
         line-height: 19px;
       }
+
       .load-more {
         align-self: center;
         margin: 20px auto 0;
@@ -576,28 +683,32 @@
         border: 1px solid rgb(255 255 255 / 88%);
         border-radius: 999px;
         background: transparent;
-        color: #fff;
+        color: #ffffff;
         font-size: 16px;
       }
+
       .load-more:disabled {
         opacity: 0.55;
       }
+
       @media (min-width: 769px) {
         .publication-button {
           font-size: 1.25rem;
           line-height: 1.5rem;
         }
       }
+
       @media (max-width: 768px) {
         .detail-panel {
           inset: auto 0 0;
           width: 100%;
           height: min(100dvh, calc(85dvh + 60px));
           border: 0;
-          border-top: 1px solid var(--line);
+          border-top: 1px solid rgb(255 255 255 / 18%);
           border-radius: 8px 8px 0 0;
           transform: translateY(100%);
         }
+
         .detail-panel.visible {
           transform: translateY(0);
         }
@@ -645,15 +756,62 @@
           autocomplete="off"
         />
       </form>
-      <section class="intro" aria-labelledby="intro-title">
-        <h2 id="intro-title">A smarter search for Indochina archives</h2>
+      <section class="intro" id="intro" aria-labelledby="intro-title">
+        <h2 class="gallica-word" id="intro-title">
+          A smarter search for Indochina archives on Gallica
+        </h2>
         <p>
-          10 publications, 194 issues and 8895 pages processed.
-          <!-- <a href="https://google.com" target="_blank" rel="noopener"
-            >Donate me</a
-          > -->
+          194 issues and 8895 pages processed so far.
+          <a href="https://google.com" target="_blank" rel="noopener">Donate me</a>
         </p>
-        <ul id="intro-list"></ul>
+        <ul>
+          <li><span aria-label="Processed">✓</span><span>Bulletin officiel du Commissariat de la République Française au Tonkin</span><small>1948-1949</small></li>
+          <li><span aria-label="Processed">✓</span><span>L'Association amicale fonctionnaires Indochine</span><small>1925-1931</small></li>
+          <li><span aria-label="Processed">✓</span><span>Moniteur du protectorat de l'Annam et du Tonkin</span><small>1886-1888</small></li>
+          <li><span aria-label="Processed">✓</span><span>Bulletin de la Société des études indochinoises</span><small>1884-1929</small></li>
+          <li><span aria-label="Processed">✓</span><span>L'Exposition de Hanoï</span><small>1902-1903</small></li>
+          <li><span aria-label="Processed">✓</span><span>L'Avant-garde</span><small>1929-1929</small></li>
+          <li><span aria-label="Processed">✓</span><span>Saïgon-potins</span><small>1929-1929</small></li>
+          <li><span aria-label="Processed">✓</span><span>La Plume indochinoise</span><small>1912-1913</small></li>
+          <li><span aria-label="Processed">✓</span><span>L'Oeuvre</span><small>1936-1937</small></li>
+          <li><span aria-label="Processed">✓</span><span>Chantecler revue</span><small>1934-1934</small></li>
+          <li><span aria-label="In progress">○</span><span>Bulletin officiel du Commissariat de la République Française en Annam</span><small>1947-1949</small></li>
+          <li><span aria-label="In progress">○</span><span>Annuaire général de l'Indochine</span><small>1900-1925</small></li>
+          <li><span aria-label="In progress">○</span><span>Journal officiel de l'Indo-Chine française</span><small>1893-1901</small></li>
+          <li><span aria-label="In progress">○</span><span>Bulletin officiel de l'Indochine française</span><small>1889-1913</small></li>
+          <li><span aria-label="In progress">○</span><span>L'Indochine (Paris)</span><small>1928-1934</small></li>
+          <li><span aria-label="In progress">○</span><span>Bulletin officiel du Haut-commissariat France Indochine</span><small>1952-1954</small></li>
+          <li><span aria-label="In progress">○</span><span>Bulletin économique de l'Indochine</span><small>1898-1944</small></li>
+          <li><span aria-label="In progress">○</span><span>Ville de Hanoï : bulletin municipal</span><small>1922-1936</small></li>
+          <li><span aria-label="In progress">○</span><span>Bulletin financier et économique de l'Indochine</span><small>1925-1925</small></li>
+          <li><span aria-label="In progress">○</span><span>Bulletin de l'Agence économique de l'Indochine</span><small>1928-1937</small></li>
+          <li><span aria-label="In progress">○</span><span>Bulletin administratif du Tonkin</span><small>1902-1944</small></li>
+          <li><span aria-label="In progress">○</span><span>Bulletin de la Société d'enseignement mutuel du Tonkin</span><small>1922-1938</small></li>
+          <li><span aria-label="In progress">○</span><span>Bulletin de la Chambre de commerce de Hanoï</span><small>1920-1937</small></li>
+          <li><span aria-label="In progress">○</span><span>Bulletin officiel du Commissariat de la République française dans le Centre Viet-Nam</span><small>1949-1952</small></li>
+          <li><span aria-label="In progress">○</span><span>L'Extrême-Orient (Hanoï)</span><small>1894-1899</small></li>
+          <li><span aria-label="In progress">○</span><span>L'Éveil économique de l'Indochine bulletin hebdomadaire</span><small>1918-1935</small></li>
+          <li><span aria-label="In progress">○</span><span>Bulletin officiel de l'Annam et du Tonkin</span><small>1873-1900</small></li>
+          <li><span aria-label="In progress">○</span><span>Compte administratif du budget local du Tonkin</span><small>1900-1941</small></li>
+          <li><span aria-label="In progress">○</span><span>Bulletin officiel de l'Expédition de Cochinchine</span><small>1861-1887</small></li>
+          <li><span aria-label="In progress">○</span><span>Journal judiciaire de l'Indochine française</span><small>1890-1953</small></li>
+          <li><span aria-label="In progress">○</span><span>Bulletin officiel du Ministère des colonies</span><small>1894-1942</small></li>
+          <li><span aria-label="In progress">○</span><span>Bulletin administratif de l'Annam</span><small>1902-1944</small></li>
+          <li><span aria-label="In progress">○</span><span>Le Journal de Saïgon</span><small>1945-1947</small></li>
+          <li><span aria-label="In progress">○</span><span>L'Avenir du Tonkin</span><small>1884-1941</small></li>
+          <li><span aria-label="In progress">○</span><span>Les Affiches saïgonnaises</span><small>1918-1923</small></li>
+          <li><span aria-label="In progress">○</span><span>L'Écho annamite</span><small>1920-1944</small></li>
+          <li><span aria-label="In progress">○</span><span>L'Ère nouvelle</span><small>1926-1929</small></li>
+          <li><span aria-label="In progress">○</span><span>Tân-Văn</span><small>1934-1936</small></li>
+          <li><span aria-label="In progress">○</span><span>Tin-Điền</span><small>1946-1946</small></li>
+          <li><span aria-label="In progress">○</span><span>Thời thế</span><small>1940-1941</small></li>
+          <li><span aria-label="In progress">○</span><span>Saïgon républicain</span><small>1888-1889</small></li>
+          <li><span aria-label="In progress">○</span><span>Radio-Saïgon</span><small>1931-1932</small></li>
+          <li><span aria-label="In progress">○</span><span>Le Nouvelliste d'Indochine</span><small>1936-1942</small></li>
+          <li><span aria-label="In progress">○</span><span>La Nouvelle revue indochinoise</span><small>1936-1940</small></li>
+          <li><span aria-label="In progress">○</span><span>Achats et ventes</span><small>1927-1929</small></li>
+          <li><span aria-label="In progress">○</span><span>Chantecler</span><small>1932-1939</small></li>
+        </ul>
       </section>
       <div class="query-summary" id="query-summary" hidden>
         <strong id="query-answer-label" hidden>Answer:</strong>
@@ -665,30 +823,6 @@
         Load more
       </button>
     </main>
-    <template id="result-template">
-      <article class="result-card">
-        <button class="thumbnail-button" type="button">
-          <img class="thumbnail" loading="lazy" decoding="async" alt="" />
-        </button>
-        <div class="result-copy">
-          <div class="result-meta">
-            <button class="publication-button" type="button"></button
-            ><span class="issue-date"></span>
-          </div>
-          <div class="summary">
-            <span class="summary-text collapsed"></span
-            ><button
-              class="summary-toggle"
-              type="button"
-              aria-expanded="false"
-              hidden
-            >
-              view more
-            </button>
-          </div>
-        </div>
-      </article>
-    </template>
     <dialog
       class="detail-panel"
       id="detail-modal"
@@ -697,7 +831,8 @@
       <section class="detail-media">
         <button class="modal-close" type="button" aria-label="Close details">
           <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M18 6 6 18M6 6l12 12" />
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
         </button>
         <div class="zoom-controls">
@@ -707,7 +842,7 @@
             aria-label="Zoom out"
           >
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M5 12h14" />
+              <line x1="5" y1="12" x2="19" y2="12"></line>
             </svg>
           </button>
           <button
@@ -716,14 +851,15 @@
             aria-label="Zoom in"
           >
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 5v14M5 12h14" />
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
             </svg>
           </button>
         </div>
         <div class="pan-controls" hidden>
           <button class="pan-button pan-up" type="button" aria-label="Pan up">
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-              <polyline points="18 15 12 9 6 15" />
+              <polyline points="18 15 12 9 6 15"></polyline>
             </svg>
           </button>
           <button
@@ -732,7 +868,7 @@
             aria-label="Pan left"
           >
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-              <polyline points="15 18 9 12 15 6" />
+              <polyline points="15 18 9 12 15 6"></polyline>
             </svg>
           </button>
           <button
@@ -741,7 +877,7 @@
             aria-label="Pan down"
           >
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-              <polyline points="6 9 12 15 18 9" />
+              <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
           </button>
           <button
@@ -750,7 +886,7 @@
             aria-label="Pan right"
           >
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-              <polyline points="9 18 15 12 9 6" />
+              <polyline points="9 18 15 12 9 6"></polyline>
             </svg>
           </button>
         </div>
@@ -760,7 +896,7 @@
           aria-label="Previous page"
         >
           <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-            <polyline points="15 18 9 12 15 6" />
+            <polyline points="15 18 9 12 15 6"></polyline>
           </svg>
         </button>
         <div class="page-stage">
@@ -784,7 +920,7 @@
           aria-label="Next page"
         >
           <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-            <polyline points="9 18 15 12 9 6" />
+            <polyline points="9 18 15 12 9 6"></polyline>
           </svg>
         </button>
         <p class="page-counter" id="page-counter"></p>
@@ -792,8 +928,8 @@
       <section class="detail-content">
         <h2 class="detail-title" id="detail-title"></h2>
         <p class="detail-meta">
-          <span id="detail-date"></span
-          ><span class="meta-dot" aria-hidden="true"></span>
+          <span id="detail-date"></span>
+          <span class="meta-dot" aria-hidden="true"></span>
           <button
             class="about-button"
             id="about-publication"
@@ -807,7 +943,7 @@
               viewBox="0 0 24 24"
               aria-hidden="true"
             >
-              <polyline points="9 18 15 12 9 6" />
+              <polyline points="9 18 15 12 9 6"></polyline>
             </svg>
           </button>
         </p>
@@ -836,138 +972,66 @@
     </dialog>
 
     <script>
-      const $ = (selector) => document.querySelector(selector);
-      const resultsElement = $("#results"),
-        searchForm = $("#search-form"),
-        searchInput = $("#search-input"),
-        titleSelector = $("#title-selector");
-      const intro = $(".intro"),
-        introList = $("#intro-list"),
-        querySummary = $("#query-summary"),
-        queryAnswerLabel = $("#query-answer-label"),
-        querySummaryText = $("#query-summary-text");
-      const statusElement = $("#status"),
-        loadMoreButton = $("#load-more"),
-        resultTemplate = $("#result-template"),
-        modal = $("#detail-modal");
-      const detailContent = $(".detail-content"),
-        closeModalButton = $(".modal-close"),
-        zoomInButton = $(".zoom-in"),
-        zoomOutButton = $(".zoom-out");
-      const panControls = $(".pan-controls"),
-        panUpButton = $(".pan-up"),
-        panLeftButton = $(".pan-left"),
-        panDownButton = $(".pan-down"),
-        panRightButton = $(".pan-right");
-      const previousPageButton = $(".carousel-prev"),
-        nextPageButton = $(".carousel-next"),
-        detailImage = $("#detail-image"),
-        imageLoading = $("#image-loading");
-      const imageLoadingText = $("#image-loading-text"),
-        fetchProgress = $("#fetch-progress"),
-        boxOverlay = $("#box-overlay"),
-        pageCounter = $("#page-counter");
-      const detailTitle = $("#detail-title"),
-        detailDate = $("#detail-date"),
-        aboutPublication = $("#about-publication"),
-        aboutDescription = $("#about-description");
-      const publicationDescription = $("#publication-description"),
-        publicationLink = $("#publication-link"),
-        detailSummary = $("#detail-summary"),
-        detailText = $("#detail-text"),
-        pageLink = $("#page-link");
-      const apiCache = new Map(),
-        imageCache = new Map(),
-        imageLoads = new Map();
-      const API_BASE = "https://gallica-rag.vercel.app",
-        API_CACHE_SIZE = 40,
-        IMAGE_CACHE_SIZE = 8,
-        OCR_COORDINATE_SCALE = 1.1,
-        ZOOM_LEVELS = [1, 1.5, 2, 3, 4, 5],
-        PAN_STEP = 80;
-      let currentQuery = "",
-        summaryRequest = 0,
-        offset = 0,
-        detail = null,
-        detailPageIndex = 0,
-        detailRequest = 0,
-        imageRequest = 0;
-      let zoomIndex = 0,
-        zoomOriginX = 50,
-        zoomOriginY = 50,
-        panX = 0,
-        panY = 0;
-
-      const publications = `
-✓|Bulletin officiel du Commissariat de la République Française au Tonkin|1948-1949
-✓|L'Association amicale fonctionnaires Indochine|1925-1931
-✓|Moniteur du protectorat de l'Annam et du Tonkin|1886-1888
-✓|Bulletin de la Société des études indochinoises|1884-1929
-✓|L'Exposition de Hanoï|1902-1903
-✓|L'Avant-garde|1929-1929
-✓|Saïgon-potins|1929-1929
-✓|La Plume indochinoise|1912-1913
-✓|L'Oeuvre|1936-1937
-✓|Chantecler revue|1934-1934
-○|Bulletin officiel du Commissariat de la République Française en Annam|1947-1949
-○|Annuaire général de l'Indochine|1900-1925
-○|Journal officiel de l'Indo-Chine française|1893-1901
-○|Bulletin officiel de l'Indochine française|1889-1913
-○|L'Indochine (Paris)|1928-1934
-○|Bulletin officiel du Haut-commissariat France Indochine|1952-1954
-○|Bulletin économique de l'Indochine|1898-1944
-○|Ville de Hanoï : bulletin municipal|1922-1936
-○|Bulletin financier et économique de l'Indochine|1925-1925
-○|Bulletin de l'Agence économique de l'Indochine|1928-1937
-○|Bulletin administratif du Tonkin|1902-1944
-○|Bulletin de la Société d'enseignement mutuel du Tonkin|1922-1938
-○|Bulletin de la Chambre de commerce de Hanoï|1920-1937
-○|Bulletin officiel du Commissariat de la République française dans le Centre Viet-Nam|1949-1952
-○|L'Extrême-Orient (Hanoï)|1894-1899
-○|L'Éveil économique de l'Indochine bulletin hebdomadaire|1918-1935
-○|Bulletin officiel de l'Annam et du Tonkin|1873-1900
-○|Compte administratif du budget local du Tonkin|1900-1941
-○|Bulletin officiel de l'Expédition de Cochinchine|1861-1887
-○|Journal judiciaire de l'Indochine française|1890-1953
-○|Bulletin officiel du Ministère des colonies|1894-1942
-○|Bulletin administratif de l'Annam|1902-1944
-○|Le Journal de Saïgon|1945-1947
-○|L'Avenir du Tonkin|1884-1941
-○|Les Affiches saïgonnaises|1918-1923
-○|L'Écho annamite|1920-1944
-○|L'Ère nouvelle|1926-1929
-○|Tân-Văn|1934-1936
-○|Tin-Điền|1946-1946
-○|Thời thế|1940-1941
-○|Saïgon républicain|1888-1889
-○|Radio-Saïgon|1931-1932
-○|Le Nouvelliste d'Indochine|1936-1942
-○|La Nouvelle revue indochinoise|1936-1940
-○|Achats et ventes|1927-1929
-○|Chantecler|1932-1939`;
-      introList.innerHTML = publications
-        .trim()
-        .split("\n")
-        .map((row) => {
-          const [mark, name, years] = row.split("|");
-          const status = mark === "✓" ? "Processed" : "In progress";
-          return `<li><span aria-label="${status}">${mark}</span><span>${name}</span><small>${years}</small></li>`;
-        })
-        .join("");
-
-      let introScrollTimer;
-      introList.addEventListener(
-        "scroll",
-        () => {
-          introList.classList.add("scrolling");
-          clearTimeout(introScrollTimer);
-          introScrollTimer = setTimeout(
-            () => introList.classList.remove("scrolling"),
-            500
-          );
-        },
-        { passive: true }
+      const resultsElement = document.querySelector("#results");
+      const searchForm = document.querySelector("#search-form");
+      const searchInput = document.querySelector("#search-input");
+      const titleSelector = document.querySelector("#title-selector");
+      const intro = document.querySelector("#intro");
+      const querySummary = document.querySelector("#query-summary");
+      const queryAnswerLabel = document.querySelector("#query-answer-label");
+      const querySummaryText = document.querySelector("#query-summary-text");
+      const statusElement = document.querySelector("#status");
+      const loadMoreButton = document.querySelector("#load-more");
+      const modal = document.querySelector("#detail-modal");
+      const detailContent = document.querySelector(".detail-content");
+      const closeModalButton = document.querySelector(".modal-close");
+      const zoomInButton = document.querySelector(".zoom-in");
+      const zoomOutButton = document.querySelector(".zoom-out");
+      const panControls = document.querySelector(".pan-controls");
+      const panUpButton = document.querySelector(".pan-up");
+      const panLeftButton = document.querySelector(".pan-left");
+      const panDownButton = document.querySelector(".pan-down");
+      const panRightButton = document.querySelector(".pan-right");
+      const previousPageButton = document.querySelector(".carousel-prev");
+      const nextPageButton = document.querySelector(".carousel-next");
+      const detailImage = document.querySelector("#detail-image");
+      const imageLoading = document.querySelector("#image-loading");
+      const imageLoadingText = document.querySelector("#image-loading-text");
+      const fetchProgress = document.querySelector("#fetch-progress");
+      const boxOverlay = document.querySelector("#box-overlay");
+      const pageCounter = document.querySelector("#page-counter");
+      const detailTitle = document.querySelector("#detail-title");
+      const detailDate = document.querySelector("#detail-date");
+      const aboutPublication = document.querySelector("#about-publication");
+      const aboutDescription = document.querySelector("#about-description");
+      const publicationDescription = document.querySelector(
+        "#publication-description"
       );
+      const publicationLink = document.querySelector("#publication-link");
+      const detailSummary = document.querySelector("#detail-summary");
+      const detailText = document.querySelector("#detail-text");
+      const pageLink = document.querySelector("#page-link");
+      let currentQuery = "";
+      let summaryRequest = 0;
+      let offset = 0;
+      let detail = null;
+      let detailPageIndex = 0;
+      let detailRequest = 0;
+      let imageRequest = 0;
+      const apiCache = new Map();
+      const imageCache = new Map();
+      const imageLoads = new Map();
+      const API_CACHE_SIZE = 40;
+      const IMAGE_CACHE_SIZE = 8;
+      const API_BASE = "https://gallica-rag.vercel.app";
+      let zoomIndex = 0;
+      let zoomOriginX = 50;
+      let zoomOriginY = 50;
+      let panX = 0;
+      let panY = 0;
+      const OCR_COORDINATE_SCALE = 1.1;
+      const ZOOM_LEVELS = [1, 1.5, 2, 3, 4, 5];
+      const PAN_STEP = 80;
 
       async function fetchJson(url, fallbackError) {
         if (apiCache.has(url)) {
@@ -1094,18 +1158,6 @@
         });
       }
 
-      function svg(tag, className, attributes = {}) {
-        const element = document.createElementNS(
-          "http://www.w3.org/2000/svg",
-          tag
-        );
-        element.classList.add(className);
-        Object.entries(attributes).forEach(([name, value]) =>
-          element.setAttribute(name, value)
-        );
-        return element;
-      }
-
       function drawBoxes() {
         boxOverlay.replaceChildren();
         if (!detail || !detailImage.complete || !detailImage.naturalWidth)
@@ -1140,24 +1192,42 @@
 
         page.boxes.forEach((box) => {
           const [x0, y0, x1, y1] = box.coords;
-          const rectangle = svg("rect", "box-rect", {
-            x: x0,
-            y: y0,
-            width: x1 - x0,
-            height: y1 - y0,
-            rx: 2,
-            ry: 2,
-          });
-          const labelGroup = svg("g", "box-label");
+          const rectangle = document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "rect"
+          );
+          rectangle.classList.add("box-rect");
+          rectangle.setAttribute("x", x0);
+          rectangle.setAttribute("y", y0);
+          rectangle.setAttribute("width", x1 - x0);
+          rectangle.setAttribute("height", y1 - y0);
+          rectangle.setAttribute("rx", 2);
+          rectangle.setAttribute("ry", 2);
+
+          const labelGroup = document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "g"
+          );
+          labelGroup.classList.add("box-label");
           labelGroup.dataset.x = x0;
           labelGroup.dataset.y = Math.max(64 / zoom, y0);
-          const labelBackground = svg("rect", "box-number-bg", {
-            width: 64,
-            height: 64,
-            rx: 2,
-            ry: 2,
-          });
-          const label = svg("text", "box-number", { x: 32, y: 32 });
+          const labelBackground = document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "rect"
+          );
+          labelBackground.classList.add("box-number-bg");
+          labelBackground.setAttribute("width", 64);
+          labelBackground.setAttribute("height", 64);
+          labelBackground.setAttribute("rx", 2);
+          labelBackground.setAttribute("ry", 2);
+
+          const label = document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "text"
+          );
+          label.classList.add("box-number");
+          label.setAttribute("x", 32);
+          label.setAttribute("y", 32);
           label.textContent = box.reading_order;
           labelGroup.append(labelBackground, label);
           boxOverlay.append(rectangle, labelGroup);
@@ -1392,26 +1462,59 @@
       }
 
       function createResultCard(result) {
-        const card = resultTemplate.content.firstElementChild.cloneNode(true);
-        const thumbnailButton = card.querySelector(".thumbnail-button");
-        const thumbnail = card.querySelector(".thumbnail");
-        const publicationButton = card.querySelector(".publication-button");
-        const date = card.querySelector(".issue-date");
-        const summary = card.querySelector(".summary");
-        const summaryText = card.querySelector(".summary-text");
-        const toggle = card.querySelector(".summary-toggle");
+        const card = document.createElement("article");
+        card.className = "result-card";
+
+        const thumbnailButton = document.createElement("button");
+        thumbnailButton.className = "thumbnail-button";
+        thumbnailButton.type = "button";
         thumbnailButton.setAttribute(
           "aria-label",
           `Open ${result.publication.name}`
         );
         thumbnailButton.addEventListener("click", () => openModal(result));
+
+        const thumbnail = document.createElement("img");
+        thumbnail.className = "thumbnail";
+        // GitHub Pages only hosts this HTML file; fetch the issue thumbnail from Gallica.
         thumbnail.src = `https://gallica.bnf.fr/iiif/ark:/12148/${result.issue.ark}/f1/full/160,/0/native.jpg`;
+        thumbnail.loading = "lazy";
+        thumbnail.decoding = "async";
+        thumbnail.alt = "";
+        thumbnailButton.append(thumbnail);
+
+        const copy = document.createElement("div");
+        copy.className = "result-copy";
+
+        const meta = document.createElement("div");
+        meta.className = "result-meta";
+
+        const publicationButton = document.createElement("button");
+        publicationButton.className = "publication-button";
+        publicationButton.type = "button";
         publicationButton.textContent = result.publication.name;
         publicationButton.addEventListener("click", () => openModal(result));
+
+        const date = document.createElement("span");
+        date.className = "issue-date";
         date.textContent = result.issue.date;
+        meta.append(publicationButton, date);
+
+        const summary = document.createElement("div");
+        summary.className = "summary";
+
+        const summaryText = document.createElement("span");
+        summaryText.className = "summary-text collapsed";
         summaryText.textContent = `[${pageLabel(result.sequence)}] ${
           result.sequence.summary
         }`;
+
+        const toggle = document.createElement("button");
+        toggle.className = "summary-toggle";
+        toggle.type = "button";
+        toggle.textContent = "view more";
+        toggle.hidden = true;
+        toggle.setAttribute("aria-expanded", "false");
 
         const updateToggle = () => {
           if (summary.classList.contains("expanded")) {
@@ -1431,6 +1534,10 @@
         });
 
         new ResizeObserver(updateToggle).observe(summaryText);
+
+        summary.append(summaryText, toggle);
+        copy.append(meta, summary);
+        card.append(thumbnailButton, copy);
         return card;
       }
 
