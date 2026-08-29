@@ -172,7 +172,7 @@ export function createSiteNavPanel(activeKey = "maps") {
     { key: "maps", href: "/", label: "Maps" },
     { key: "news", href: "/news/", label: "News" },
     { key: "villas", href: "/villas/", label: "Villas" },
-    { key: "tomey", href: "/tomey/", label: "Tomey" },
+    { key: "gallica", href: "/gallica/", label: "Gallica" },
   ];
 
   const panel = document.createElement("nav");
@@ -663,7 +663,9 @@ export async function findLocalStreetMatch(query, streetData) {
     if (!props) continue;
 
     const nameNorm = normalize(props.name);
-    const frenchNorm = expandHistoricalStreetTerms(normalize(props.french_name));
+    const frenchNorm = expandHistoricalStreetTerms(
+      normalize(props.french_name)
+    );
     const descNorm = expandHistoricalStreetTerms(
       normalize(stripHtml(props.description || ""))
     );
@@ -685,9 +687,7 @@ export async function findLocalStreetMatch(query, streetData) {
       if (fuzzyContains(text, q) || (qCore && fuzzyContains(text, qCore)))
         return Math.max(best, 2);
       // match when a query word appears inside the text
-      if (
-        q.split(/\s+/).some((word) => word.length > 2 && text.includes(word))
-      )
+      if (q.split(/\s+/).some((word) => word.length > 2 && text.includes(word)))
         return Math.max(best, 1);
       return best;
     }, 0);
@@ -705,7 +705,9 @@ export async function findLocalStreetMatch(query, streetData) {
       _lookupTable = await res.json();
     }
     for (const entry of _lookupTable.mappings) {
-      const oldNameNorm = expandHistoricalStreetTerms(normalize(entry.old_name));
+      const oldNameNorm = expandHistoricalStreetTerms(
+        normalize(entry.old_name)
+      );
       if (
         fuzzyContains(oldNameNorm, q) ||
         oldNameNorm.includes(q) ||
