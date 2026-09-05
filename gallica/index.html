@@ -4,10 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/shared.css" />
     <link rel="preconnect" href="https://gallica.bnf.fr" crossorigin />
     <link rel="preconnect" href="https://gallica-rag.vercel.app" crossorigin />
     <link rel="dns-prefetch" href="//gallica.bnf.fr" />
-    <title>Hanoi Maps | Gallica Search</title>
+    <title>Gallica Search</title>
     <style>
       :root {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -53,6 +54,79 @@
       h1 {
         margin: 8px 0 12px;
         color: #ffffff;
+      }
+
+      .temporarily-disabled {
+        display: none;
+      }
+
+      .intro,
+      .search-controls,
+      .query-summary,
+      .results,
+      .detail-panel {
+        display: none !important;
+      }
+
+      #waitlist-form {
+        display: grid;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      #email,
+      #suggestion {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px 14px;
+        border: 1px solid rgb(255 255 255 / 68%);
+        border-radius: 8px;
+        outline: 0;
+        background: transparent;
+        color: inherit;
+        font: inherit;
+        font-size: 16px;
+        transition: border-color 140ms ease, color 140ms ease;
+      }
+
+      #suggestion {
+        min-height: 96px;
+        resize: vertical;
+      }
+
+      #email::placeholder,
+      #suggestion::placeholder {
+        color: rgb(255 255 255 / 68%);
+      }
+
+      #email:focus,
+      #suggestion:focus {
+        border-color: #ffffff;
+        color: #ffffff;
+      }
+
+      #waitlist-success {
+        margin: 24px 0 0;
+        font-size: 16px;
+      }
+
+      #waitlist-form[hidden],
+      #waitlist-success[hidden] {
+        display: none;
+      }
+
+      #waitlist-form button {
+        width: fit-content;
+        justify-self: start;
+        padding: 10px 14px;
+        border: 1px solid rgb(255 255 255 / 88%);
+        border-radius: 999px;
+        background: transparent;
+        color: inherit;
+        cursor: pointer;
+        font: inherit;
+        font-size: 16px;
+        line-height: 1.35;
       }
 
       .gallica-word {
@@ -150,21 +224,28 @@
         display: none;
       }
 
-      .search-form {
-        position: relative;
+      .search-controls {
+        display: flex;
+        gap: 8px;
         margin-bottom: 24px;
+      }
+
+      .search-form {
+        flex: 1;
+        min-width: 0;
       }
 
       .search-input {
         width: 100%;
         padding: 10px 14px;
-        border: 1px solid rgb(255 255 255 / 88%);
+        border: 1px solid rgb(255 255 255 / 42%);
         border-radius: 999px;
         outline: 0;
         background: transparent;
         color: #ffffff;
         font: inherit;
         font-size: 16px;
+        transition: border-color 140ms ease;
       }
 
       .search-input::placeholder {
@@ -172,7 +253,141 @@
       }
 
       .search-input:focus {
-        box-shadow: 0 0 0 1px #ffffff;
+        border-color: #ffffff;
+      }
+
+      .publication-filter {
+        position: relative;
+        flex: 0 0 auto;
+      }
+
+      .publication-filter summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 36px;
+        padding: 7px 12px;
+        border: 1px solid rgb(255 255 255 / 42%);
+        border-radius: 999px;
+        color: rgb(255 255 255 / 68%);
+        cursor: pointer;
+        font-size: 14px;
+        list-style: none;
+        white-space: nowrap;
+      }
+
+      .publication-filter summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .publication-filter-chevron {
+        flex: 0 0 14px;
+        width: 14px;
+        height: 14px;
+        margin-left: 8px;
+        fill: none;
+        stroke: currentColor;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.25;
+        transition: transform 140ms ease;
+      }
+
+      .publication-filter[open] .publication-filter-chevron {
+        transform: rotate(180deg);
+      }
+
+      .publication-filter-menu {
+        position: absolute;
+        z-index: 5;
+        top: calc(100% + 4px);
+        right: 0;
+        width: min(360px, calc(100vw - 32px));
+        padding: 8px;
+        border: 1px solid rgb(255 255 255 / 14%);
+        border-radius: 14px;
+        background: #262626;
+        box-shadow: 0 8px 20px rgb(0 0 0 / 20%);
+      }
+
+      .publication-filter-search {
+        width: 100%;
+        padding: 6px 9px;
+        border: 1px solid rgb(255 255 255 / 42%);
+        border-radius: 999px;
+        outline: 0;
+        background: transparent;
+        color: #ffffff;
+        font: inherit;
+        font-size: 13px;
+        transition: border-color 140ms ease;
+      }
+
+      .publication-filter-search::placeholder {
+        color: rgb(255 255 255 / 55%);
+      }
+
+      .publication-filter-search:focus {
+        border-color: #ffffff;
+      }
+
+      .publication-filter-search::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+        appearance: none;
+      }
+
+      .publication-options {
+        display: flex;
+        flex-direction: column;
+        max-height: 196px;
+        margin-top: 6px;
+        overflow-y: auto;
+      }
+
+      .publication-option {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 6px 2px;
+        border: 0;
+        background: transparent;
+        color: rgb(255 255 255 / 68%);
+        font: inherit;
+        text-align: left;
+        cursor: pointer;
+        font-size: 13px;
+        line-height: 17px;
+      }
+
+      .publication-option[hidden] {
+        display: none;
+      }
+
+      .publication-option::after {
+        content: "✓";
+        color: inherit;
+        font-weight: 400;
+        font-size: 14px;
+        opacity: 0;
+      }
+
+      .publication-option.selected::after {
+        opacity: 1;
+      }
+
+      .publication-option.selected {
+        color: #ffffff;
+      }
+
+      .publication-option:focus-visible {
+        outline: 1px solid #ffffff;
+        outline-offset: 2px;
+      }
+
+      .publication-option:disabled {
+        cursor: default;
+        opacity: 0.4;
       }
 
       .results {
@@ -744,6 +959,8 @@
         </svg>
         Home
       </a>
+      <h1><span class="gallica-word">Gallica</span> Search</h1>
+      <!-- Original title selector temporarily disabled while the backend is down:
       <h1>
         <span class="gallica-word">Gallica</span>
         <select id="title-selector" aria-label="Gallica mode">
@@ -751,16 +968,70 @@
           <option>Query</option>
         </select>
       </h1>
-      <form class="search-form" id="search-form" role="search">
+      -->
+      <p>
+        I am upgrading the site! To be notified, you may enter your email and
+        share your suggestion below 🤗
+      </p>
+      <form id="waitlist-form" method="post" novalidate>
         <input
-          class="search-input"
-          id="search-input"
-          type="text"
-          placeholder="Search keywords..."
-          aria-label="Search Gallica"
-          autocomplete="off"
+          id="email"
+          name="email"
+          type="email"
+          placeholder="Email"
+          autocomplete="email"
+          inputmode="email"
+          required
         />
+        <textarea
+          id="suggestion"
+          name="suggestion"
+          placeholder="Share your suggestion (optional)"
+          aria-label="Share your suggestion"
+        ></textarea>
+        <button type="submit">Notify me</button>
       </form>
+      <p id="waitlist-success" hidden>Thank you for your submission!</p>
+      <div class="search-controls">
+        <form class="search-form" id="search-form" role="search">
+          <input
+            class="search-input"
+            id="search-input"
+            type="text"
+            placeholder="Search keywords..."
+            aria-label="Search Gallica"
+            autocomplete="off"
+          />
+        </form>
+        <details class="publication-filter" id="publication-filter">
+          <summary>
+            <span id="publication-filter-summary">Select</span>
+            <!-- Original accordion chevron temporarily disabled:
+            <svg
+              class="publication-filter-chevron"
+              viewBox="0 0 16 16"
+              aria-hidden="true"
+            >
+              <path d="m4 6 4 4 4-4" />
+            </svg>
+            -->
+          </summary>
+          <div class="publication-filter-menu">
+            <input
+              class="publication-filter-search"
+              id="publication-filter-search"
+              type="search"
+              placeholder="Find a publication..."
+              aria-label="Find a publication"
+            />
+            <div
+              class="publication-options"
+              id="publication-options"
+              aria-label="Filter by publication"
+            ></div>
+          </div>
+        </details>
+      </div>
       <section class="intro" id="intro" aria-labelledby="intro-title">
         <h2 class="gallica-word" id="intro-title">
           A smarter search for Indochina archives
@@ -770,49 +1041,49 @@
           <!-- <a href="https://google.com" target="_blank" rel="noopener">Donate me</a> -->
         </p>
         <ul>
-          <li>
+          <li hidden>
             <span aria-label="Processed">✓</span
             ><span
               >Bulletin officiel du Commissariat de la République Française au
               Tonkin</span
             ><small>1948-1949</small>
           </li>
-          <li>
+          <li hidden>
             <span aria-label="Processed">✓</span
             ><span>L'Association amicale fonctionnaires Indochine</span
             ><small>1925-1931</small>
           </li>
-          <li>
+          <li hidden>
             <span aria-label="Processed">✓</span
             ><span>Moniteur du protectorat de l'Annam et du Tonkin</span
             ><small>1886-1888</small>
           </li>
-          <li>
+          <li hidden>
             <span aria-label="Processed">✓</span
             ><span>Bulletin de la Société des études indochinoises</span
             ><small>1884-1929</small>
           </li>
-          <li>
+          <li hidden>
             <span aria-label="Processed">✓</span
             ><span>L'Exposition de Hanoï</span><small>1902-1903</small>
           </li>
-          <li>
+          <li hidden>
             <span aria-label="Processed">✓</span><span>L'Avant-garde</span
             ><small>1929-1929</small>
           </li>
-          <li>
+          <li hidden>
             <span aria-label="Processed">✓</span><span>Saïgon-potins</span
             ><small>1929-1929</small>
           </li>
-          <li>
+          <li hidden>
             <span aria-label="Processed">✓</span
             ><span>La Plume indochinoise</span><small>1912-1913</small>
           </li>
-          <li>
+          <li hidden>
             <span aria-label="Processed">✓</span><span>L'Oeuvre</span
             ><small>1936-1937</small>
           </li>
-          <li>
+          <li hidden>
             <span aria-label="Processed">✓</span><span>Chantecler revue</span
             ><small>1934-1934</small>
           </li>
@@ -1145,9 +1416,44 @@
     </dialog>
 
     <script>
+      const waitlistForm = document.querySelector("#waitlist-form");
+      const waitlistEmail = document.querySelector("#email");
+      const waitlistButton = waitlistForm.querySelector("button");
+      const waitlistEndpoint = "https://formspree.io/f/xzdnledz";
+
+      waitlistForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        if (!waitlistEmail.reportValidity()) return;
+        waitlistButton.disabled = true;
+        try {
+          const response = await fetch(waitlistEndpoint, {
+            method: "POST",
+            headers: { Accept: "application/json" },
+            body: new FormData(waitlistForm),
+          });
+          if (!response.ok) throw new Error("Signup failed");
+          waitlistForm.hidden = true;
+          document.querySelector("#waitlist-success").hidden = false;
+        } catch {
+          waitlistButton.disabled = false;
+          waitlistButton.textContent = "Notify me";
+          alert("Signup failed. Check the endpoint and try again.");
+        }
+      });
+    </script>
+
+    <script>
       const resultsElement = document.querySelector("#results");
       const searchForm = document.querySelector("#search-form");
       const searchInput = document.querySelector("#search-input");
+      const publicationFilter = document.querySelector("#publication-filter");
+      const publicationFilterSummary = document.querySelector(
+        "#publication-filter-summary"
+      );
+      const publicationFilterSearch = document.querySelector(
+        "#publication-filter-search"
+      );
+      const publicationOptions = document.querySelector("#publication-options");
       const titleSelector = document.querySelector("#title-selector");
       const intro = document.querySelector("#intro");
       const querySummary = document.querySelector("#query-summary");
@@ -1185,6 +1491,16 @@
       const detailText = document.querySelector("#detail-text");
       const pageLink = document.querySelector("#page-link");
       let currentQuery = "";
+      const selectedPublications = new Set();
+      const publications = [...intro.querySelectorAll("li")]
+        .filter((item) => item.firstElementChild?.ariaLabel === "Processed")
+        .map((item, index) => ({
+          id: `p${index + 1}`,
+          name: item.children[1].textContent.replace(/\s+/g, " ").trim(),
+        }));
+      const publicationById = new Map(
+        publications.map((publication) => [publication.id, publication])
+      );
       let summaryRequest = 0;
       let offset = 0;
       let detail = null;
@@ -1205,6 +1521,83 @@
       const OCR_COORDINATE_SCALE = 1.1;
       const ZOOM_LEVELS = [1, 1.5, 2, 3, 4, 5];
       const PAN_STEP = 80;
+
+      function selectedPublicationIds() {
+        return publications
+          .filter(({ id }) => selectedPublications.has(id))
+          .map(({ id }) => id);
+      }
+
+      function syncSearchUrl() {
+        const params = new URLSearchParams();
+        const ids = selectedPublicationIds();
+        if (currentQuery) params.set("q", currentQuery);
+        if (ids.length) params.set("p", ids.join(","));
+        history.replaceState(
+          null,
+          "",
+          params.size ? `/s?${params}` : "/gallica/"
+        );
+      }
+
+      function updatePublicationFilter() {
+        const count = selectedPublications.size;
+        publicationFilterSummary.textContent = count
+          ? `${count} selected`
+          : "Select";
+        publicationOptions.querySelectorAll("button").forEach((option) => {
+          const selected = selectedPublications.has(
+            option.dataset.publicationId
+          );
+          option.classList.toggle("selected", selected);
+          option.setAttribute("aria-pressed", String(selected));
+          option.disabled = !selected && count === publications.length - 1;
+        });
+      }
+
+      for (const { id, name } of publications) {
+        const option = document.createElement("button");
+        option.type = "button";
+        option.className = "publication-option";
+        option.dataset.publicationId = id;
+        option.textContent = name;
+        option.addEventListener("click", () => {
+          selectedPublications.has(id)
+            ? selectedPublications.delete(id)
+            : selectedPublications.add(id);
+          updatePublicationFilter();
+          syncSearchUrl();
+          if (currentQuery) search();
+        });
+        publicationOptions.append(option);
+      }
+
+      const sharedSearch = new URLSearchParams(location.search);
+      currentQuery = sharedSearch.get("q")?.trim() || "";
+      searchInput.value = currentQuery;
+      for (const id of (sharedSearch.get("p") || "").split(",")) {
+        if (
+          publicationById.has(id) &&
+          selectedPublications.size < publications.length - 1
+        )
+          selectedPublications.add(id);
+      }
+      updatePublicationFilter();
+      syncSearchUrl();
+      if (currentQuery) search();
+
+      publicationFilter.addEventListener("toggle", () => {
+        if (publicationFilter.open) publicationFilterSearch.focus();
+      });
+
+      publicationFilterSearch.addEventListener("input", () => {
+        const query = publicationFilterSearch.value.trim().toLocaleLowerCase();
+        publicationOptions.querySelectorAll("button").forEach((option) => {
+          option.hidden = !option.textContent
+            .toLocaleLowerCase()
+            .includes(query);
+        });
+      });
 
       async function fetchJson(url, fallbackError) {
         if (apiCache.has(url)) {
@@ -1720,6 +2113,7 @@
         loadMoreButton.disabled = true;
         statusElement.textContent = append ? "Loading more..." : "Searching...";
         if (!append) {
+          summaryRequest += 1;
           offset = 0;
           resultsElement.replaceChildren();
           if (titleSelector.value === "Query") querySummary.hidden = true;
@@ -1727,6 +2121,9 @@
 
         try {
           const params = new URLSearchParams({ q: currentQuery, offset });
+          selectedPublicationIds().forEach((id) =>
+            params.append("publication", publicationById.get(id).name)
+          );
           const data = await fetchJson(
             `/api/search?${params}`,
             "Search failed."
@@ -1762,8 +2159,12 @@
         querySummaryText.textContent = "Generating answer...";
         querySummary.hidden = false;
         try {
+          const params = new URLSearchParams({ q: currentQuery });
+          selectedPublicationIds().forEach((id) =>
+            params.append("publication", publicationById.get(id).name)
+          );
           const data = await fetchJson(
-            `/api/summary?q=${encodeURIComponent(currentQuery)}`,
+            `/api/summary?${params}`,
             "Summary request failed."
           );
           if (data.summary_error) {
@@ -1794,6 +2195,7 @@
       searchForm.addEventListener("submit", (event) => {
         event.preventDefault();
         currentQuery = searchInput.value.trim();
+        syncSearchUrl();
         if (currentQuery) search();
       });
 
@@ -1801,6 +2203,7 @@
         if (event.key !== "Enter") return;
         event.preventDefault();
         currentQuery = searchInput.value.trim();
+        syncSearchUrl();
         if (currentQuery) search();
       });
 
