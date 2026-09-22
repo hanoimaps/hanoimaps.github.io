@@ -6,6 +6,7 @@ const urlsToCache = [
   "/app.js",
   "/shared.js",
   "/favicon.ico",
+  "/og-image.png",
   "https://unpkg.com/maplibre-gl@^5.9.0/dist/maplibre-gl.css",
   "https://unpkg.com/maplibre-gl@^5.9.0/dist/maplibre-gl.js",
 ];
