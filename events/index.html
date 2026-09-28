@@ -599,9 +599,14 @@
 
       function addInteractivityForLayer(map) {
         map.on("click", EVENT_LAYER_ID, (e) => {
-          const features = map.queryRenderedFeatures(e.point, {
-            layers: [EVENT_LAYER_ID],
-          });
+          const features = map
+            .queryRenderedFeatures(e.point, { layers: [EVENT_LAYER_ID] })
+            // ponytail: map order isn't guaranteed; YYYY-MM-DD sorts lexicographically
+            .sort((a, b) =>
+              (a.properties.from_date || "").localeCompare(
+                b.properties.from_date || ""
+              )
+            );
 
           if (!features.length) return;
 
@@ -807,8 +812,14 @@
       function toTitleCase(s) {
         return (s || "")
           .toLowerCase()
-          .replace(/(^[\s\-–—/("']*)([a-zà-ỹ])/gu, (m, pre, ch) => pre + ch.toUpperCase())
-          .replace(/([\s\-–—/("']+)([a-zà-ỹ])/gu, (m, pre, ch) => pre + ch.toUpperCase());
+          .replace(
+            /(^[\s\-–—/("']*)([a-zà-ỹ])/gu,
+            (m, pre, ch) => pre + ch.toUpperCase()
+          )
+          .replace(
+            /([\s\-–—/("']+)([a-zà-ỹ])/gu,
+            (m, pre, ch) => pre + ch.toUpperCase()
+          );
       }
 
       function generatePaginatedPopupContent(features, index) {
@@ -827,8 +838,11 @@
           person:
             '<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg>',
           pin: '<svg viewBox="0 0 24 24"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>',
+          clock:
+            '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
         };
-        const row = (icon, inner) => `<div class="row">${ICON[icon]}<div>${inner}</div></div>`;
+        const row = (icon, inner) =>
+          `<div class="row">${ICON[icon]}<div>${inner}</div></div>`;
 
         let dateHtml = "";
         const fromDateFormatted = formatDate(props.from_date);
@@ -844,13 +858,16 @@
         }
         // Nếu là sự kiện nhiều ngày
         else {
-          dateHtml = row("cal", `<p>${fromDateFormatted} -> ${toDateFormatted}</p>`);
+          dateHtml = row(
+            "cal",
+            `<p>${fromDateFormatted} -> ${toDateFormatted}</p>`
+          );
         }
 
         // Thêm thời lượng (nếu có)
         const durationHtml =
           props.time && props.time !== "N/A"
-            ? `<p>Thời lượng: ${props.time}</p>`
+            ? row("clock", `<p>Thời lượng: ${props.time}</p>`)
             : "";
 
         // const encodedQuery = encodeURIComponent(
@@ -872,7 +889,9 @@
         const hasEventUrl = props.event_url && props.event_url !== "N/A";
         const hasHostUrl = props.host_url && props.host_url !== "N/A";
         const hasHostName = props.host_name && props.host_name !== "N/A";
-        const hostLabel = hasHostName ? props.host_name : hostLabelFromUrl(props.host_url);
+        const hostLabel = hasHostName
+          ? props.host_name
+          : hostLabelFromUrl(props.host_url);
         const hostInner =
           hasHostUrl || hasHostName
             ? hasHostUrl
