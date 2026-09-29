@@ -19,7 +19,8 @@
         "address_url": "https://www.google.com/maps/place/Ho+Guom+Opera/@21.022074,105.8521728,17z/data=!3m1!4b1!4m6!3m5!1s0x3135aba6d28cec17:0xd95a19476bb83395!8m2!3d21.022074!4d105.8521728!16s%2Fg%2F11tsf8y_2c?entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D",
         "event_url": "https://hoguomopera.vn/en/chuong-trinh-bieu-dien/khuc-hoan-ca-2063",
         "host_name": "Nhà hát Hồ Gươm",
-        "host_url": "https://www.facebook.com/nhahathoguom"
+        "host_url": "https://www.facebook.com/nhahathoguom",
+        "image_url": "thumbs/4.jpg"
       }
     },
     {
@@ -40,7 +41,8 @@
         "address_url": "https://www.google.com/maps/place/Ho+Guom+Opera/@21.022074,105.8521728,17z/data=!3m1!4b1!4m6!3m5!1s0x3135aba6d28cec17:0xd95a19476bb83395!8m2!3d21.022074!4d105.8521728!16s%2Fg%2F11tsf8y_2c?entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D",
         "event_url": "https://hoguomopera.vn/en/chuong-trinh-bieu-dien/vietnam-airlines-classic-hanoi-concert-2058",
         "host_name": "Nhà hát Hồ Gươm",
-        "host_url": "https://www.facebook.com/nhahathoguom"
+        "host_url": "https://www.facebook.com/nhahathoguom",
+        "image_url": "thumbs/5.jpg"
       }
     },
     {
@@ -61,28 +63,8 @@
         "address": "Creative Square. 1 Lương Yên, Bạch Đằng, Hai Bà Trưng, Hanoi, Vietnam 10000",
         "address_url": "https://www.google.com/maps/search/Creative+Square,+1+Ph%E1%BB%91+L%C6%B0%C6%A1ng+Y%C3%AAn,+Ph%C6%B0%E1%BB%9Dng+B%E1%BA%A1ch+%C4%90%E1%BA%B1ng,+Qu%E1%BA%ADn+Hai+B%C3%A0+Tr%C6%B0ng,+H%C3%A0+N%E1%BB%99i/@21.0117044,105.8632863,17z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D",
         "host_name": "APD Center for Art Patronage and Development",
-        "host_url": "https://www.facebook.com/apdcenter.vn"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "7",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [105.85238, 21.03613]
-      },
-      "properties": {
-        "name_vn": "Triễn lãm “Lưu Trăng”- Tết Trung Thu 2026",
-        "from_date": "2026-08-28",
-        "to_date": "2026-09-27",
-        "start_time": "08:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/langxaVietNam/posts/tri%E1%BB%83n-l%C3%A3m-l%C6%B0u-tr%C4%83ng-n%C6%A1i-trung-thu-x%C6%B0a-tr%E1%BB%9F-l%E1%BA%A1i-gi%E1%BB%AFa-l%C3%B2ng-ph%E1%BB%91-c%E1%BB%95c%C3%B3-nh%E1%BB%AFng-k%C3%BD-%E1%BB%A9c-ch%E1%BB%89/1555238879981503/",
-        "address": "Trung tâm Văn Hoá & Nghệ Thuật- 22 Hàng Buồm, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/22+Hang+Buom+Culture+and+Arts+Center/@21.0361276,105.8523753,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abc1fa899227:0xd09ca63132b759d4!8m2!3d21.0361276!4d105.8523753!16s%2Fg%2F11sgz08tv7",
-        "host_name": "N/A",
-        "host_url": "https://www.facebook.com/langxaVietNam"
+        "host_url": "https://www.facebook.com/apdcenter.vn",
+        "image_url": "thumbs/6.jpg"
       }
     },
     {
@@ -103,7 +85,8 @@
         "address": "58 Phố Nguyễn Thái Học, Quận Ba Đình, Hanoi, Vietnam 100000",
         "address_url": "https://www.google.com/maps/place/58+P.+Nguy%E1%BB%85n+Th%C3%A1i+H%E1%BB%8Dc,+Ba+%C4%90%C3%ACnh,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0302003,105.8376495,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab98f4536bfb:0x62d5bdf856832371!8m2!3d21.0302003!4d105.8376495!16s%2Fg%2F11y333h0_p",
         "host_name": "Goethe-Institut Hanoi",
-        "host_url": "https://www.facebook.com/Goethe.Institut.Hanoi"
+        "host_url": "https://www.facebook.com/Goethe.Institut.Hanoi",
+        "image_url": "thumbs/13.jpg"
       }
     },
     {
@@ -124,7 +107,8 @@
         "address": "Viện Pháp tại Hà Nội, 15 Thiền Quang, Hai Bà Trưng, Hà Nội, Hanoi, Vietnam 100000",
         "address_url": "https://www.google.com/maps/place/Vi%E1%BB%87n+Ph%C3%A1p+H%C3%A0+N%E1%BB%99i/@21.0196506,105.8425559,17z/data=!3m1!4b1!4m6!3m5!1s0x3135aba53be38637:0xf1e61a9e6619afb9!8m2!3d21.0196506!4d105.8425559!16s%2Fg%2F11tcyd9px8",
         "host_name": "Viện Pháp tại Việt Nam - Hà Nội",
-        "host_url": "https://www.facebook.com/IFVHanoi"
+        "host_url": "https://www.facebook.com/IFVHanoi",
+        "image_url": "thumbs/14.jpg"
       }
     },
     {
@@ -145,7 +129,8 @@
         "address": "Shop house 09 Park 1, Times City, 458 Minh Khai, quận Hai Bà Trưng, Hà Nội , Hanoi, Vietnam",
         "address_url": "https://www.google.com/maps/search/Shop+house+09+Park+1,+Times+City,+458+Minh+Khai,+qu%E1%BA%ADn+Hai+B%C3%A0+Tr%C6%B0ng,+H%C3%A0+N%E1%BB%99i+,+Hanoi,+Vietnam/@20.9942366,105.8680007,17z/data=!3m1!4b1",
         "host_name": "Cà phê Thứ Bảy Hà Nội",
-        "host_url": "https://www.facebook.com/100063618098892"
+        "host_url": "https://www.facebook.com/100063618098892",
+        "image_url": "thumbs/16.jpg"
       }
     },
     {
@@ -166,7 +151,8 @@
         "address": "Shop house 09 Park 1, Times City, 458 Minh Khai, quận Hai Bà Trưng, Hà Nội , Hanoi, Vietnam",
         "address_url": "https://www.google.com/maps/search/Shop+house+09+Park+1,+Times+City,+458+Minh+Khai,+qu%E1%BA%ADn+Hai+B%C3%A0+Tr%C6%B0ng,+H%C3%A0+N%E1%BB%99i+,+Hanoi,+Vietnam/@20.9942366,105.8680007,17z/data=!3m1!4b1",
         "host_name": "Cà phê Thứ Bảy Hà Nội",
-        "host_url": "https://www.facebook.com/100063618098892"
+        "host_url": "https://www.facebook.com/100063618098892",
+        "image_url": "thumbs/17.jpg"
       }
     },
     {
@@ -187,7 +173,8 @@
         "address": "Shop house 09 Park 1, Times City, 458 Minh Khai, quận Hai Bà Trưng, Hà Nội , Hanoi, Vietnam",
         "address_url": "https://maps.app.goo.gl/sTR55BHccWfP3Jr36",
         "host_name": "Cà phê Thứ Bảy Hà Nội",
-        "host_url": "https://www.facebook.com/100063618098892"
+        "host_url": "https://www.facebook.com/100063618098892",
+        "image_url": "thumbs/18.jpg"
       }
     },
     {
@@ -208,7 +195,8 @@
         "address": "29 ngách 31 ngõ 167 Tây Sơn, Hanoi, Vietnam 100000",
         "address_url": "https://www.google.com/maps/place/Complex+01/@21.0105641,105.8267223,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab68dd1984e5:0x3d307d4682570ec7!8m2!3d21.0105641!4d105.8267223!16s%2Fg%2F11fvc4fcl3",
         "host_name": "COMPLEX 01",
-        "host_url": "https://www.facebook.com/complex01.vn"
+        "host_url": "https://www.facebook.com/complex01.vn",
+        "image_url": "thumbs/31.jpg"
       }
     },
     {
@@ -229,7 +217,8 @@
         "address": "Sân tập thể ngõ 27 Đặng Dung (cạnh trường mầm non Kidsland), Hanoi, Vietnam",
         "address_url": "https://www.google.com/maps/place/Kidsland+Kindergarten/@21.0420568,105.8413841,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbab688eaad:0x5926255bb3cbf307!8m2!3d21.0420568!4d105.8413841!16s%2Fg%2F12mjyh97y",
         "host_name": "Tổ Chim Xanh - Bluebirds' Nest",
-        "host_url": "https://www.facebook.com/tochimxanh.bluebirdsnest"
+        "host_url": "https://www.facebook.com/tochimxanh.bluebirdsnest",
+        "image_url": "thumbs/41.jpg"
       }
     },
     {
@@ -250,7 +239,8 @@
         "address": "Sân tập thể ngõ 27 Đặng Dung (cạnh trường mầm non Kidsland), Hanoi, Vietnam",
         "address_url": "https://www.google.com/maps/place/Kidsland+Kindergarten/@21.0420568,105.8413841,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbab688eaad:0x5926255bb3cbf307!8m2!3d21.0420568!4d105.8413841!16s%2Fg%2F12mjyh97y",
         "host_name": "Tổ Chim Xanh - Bluebirds' Nest",
-        "host_url": "https://www.facebook.com/tochimxanh.bluebirdsnest"
+        "host_url": "https://www.facebook.com/tochimxanh.bluebirdsnest",
+        "image_url": "thumbs/43.jpg"
       }
     },
     {
@@ -271,28 +261,8 @@
         "address": "Tổ Chim Xanh - Bluebirds' Nest",
         "address_url": "https://www.google.com/maps/place/Bluebirds'+Nest/@21.0419391,105.8414268,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbab0d6c891:0xe7cd99fe7b59ab75!8m2!3d21.0419391!4d105.8414268!16s%2Fg%2F11bwh5rpc1",
         "host_name": "Nhà xuất bản Phụ nữ Việt Nam",
-        "host_url": "https://www.facebook.com/tochimxanh.bluebirdsnest"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "54",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [105.85217, 21.02207]
-      },
-      "properties": {
-        "name_vn": "Vở opera Tosca",
-        "from_date": "2026-09-26",
-        "to_date": "2026-09-27",
-        "start_time": "N/A",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "N/A",
-        "address": "Nhà hát Hồ Gươm",
-        "address_url": "https://www.google.com/maps/place/Ho+Guom+Opera/@21.022074,105.8521728,17z/data=!3m1!4b1!4m6!3m5!1s0x3135aba6d28cec17:0xd95a19476bb83395!8m2!3d21.022074!4d105.8521728!16s%2Fg%2F11tsf8y_2c",
-        "host_name": "Nhà hát Hồ Gươm",
-        "host_url": "https://www.facebook.com/nhahathoguom"
+        "host_url": "https://www.facebook.com/tochimxanh.bluebirdsnest",
+        "image_url": "thumbs/42.jpg"
       }
     },
     {
@@ -313,28 +283,8 @@
         "address": "Hồ Hoàn Kiếm",
         "address_url": "https://www.google.com/maps/place/H%E1%BB%93+G%C6%B0%C6%A1m/@21.0296746,105.8533199,19.12z/data=!4m6!3m5!1s0x3135ab0039be9a19:0x9e619c7cfd76f00f!8m2!3d21.0293862!4d105.8537!16s%2Fg%2F11zcnmzxz4?entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D",
         "host_name": "Nhà xuất bản Phụ nữ Việt Nam",
-        "host_url": "https://www.facebook.com/nxbphunu"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "69",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [105.78285, 21.03574]
-      },
-      "properties": {
-        "name_vn": "HỘI SÁCH THÁI HÀ BOOKS | 24/9 - 27/9/2026 TẠI HÀ NỘI",
-        "from_date": "2026-09-24",
-        "to_date": "2026-09-27",
-        "start_time": "N/A",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "N/A",
-        "address": "The Loop Shopping Center (IPH)",
-        "address_url": "https://www.google.com/maps/place/BLOOM+The+Loop+Shopping+Centre/@21.0357417,105.782847,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abe4f0c9d5eb:0x25bc6cf8d8648a19!8m2!3d21.0357417!4d105.782847!16s%2Fg%2F11v0v8t_lp",
-        "host_name": "The Loop Shopping Center",
-        "host_url": "https://www.facebook.com/TheLoopShoppingCenter"
+        "host_url": "https://www.facebook.com/nxbphunu",
+        "image_url": "thumbs/68.jpg"
       }
     },
     {
@@ -355,7 +305,8 @@
         "address": "Sân tập thể ngõ 27 Đặng Dung (cạnh trường mầm non Kidsland), Hanoi, Vietnam",
         "address_url": "https://www.google.com/maps/place/Kidsland+Kindergarten/@21.0420568,105.8413841,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbab688eaad:0x5926255bb3cbf307!8m2!3d21.0420568!4d105.8413841!16s%2Fg%2F12mjyh97y",
         "host_name": "Tổ Chim Xanh - Bluebirds' Nest",
-        "host_url": "https://www.facebook.com/tochimxanh.bluebirdsnest"
+        "host_url": "https://www.facebook.com/tochimxanh.bluebirdsnest",
+        "image_url": "thumbs/85.jpg"
       }
     },
     {
@@ -376,7 +327,8 @@
         "address": "Phòng hòa nhạc Lớn VNAM, 77 Hào Nam, Ô Chợ Dừa, Hà Nội",
         "address_url": "https://www.google.com/maps/place/Vietnam_National_Academy_of_Music/@21.0227907,105.8262187,17z",
         "host_name": "VNSO - Dàn nhạc Giao hưởng Việt Nam",
-        "host_url": "https://www.vnso.org.vn"
+        "host_url": "https://www.vnso.org.vn",
+        "image_url": "thumbs/86.jpg"
       }
     },
     {
@@ -397,7 +349,8 @@
         "address": "Phòng hòa nhạc Lớn VNAM, 77 Hào Nam, Ô Chợ Dừa, Hà Nội",
         "address_url": "https://www.google.com/maps/place/Vietnam_National_Academy_of_Music/@21.0227907,105.8262187,17z",
         "host_name": "VNSO - Dàn nhạc Giao hưởng Việt Nam",
-        "host_url": "https://www.vnso.org.vn"
+        "host_url": "https://www.vnso.org.vn",
+        "image_url": "thumbs/87.jpg"
       }
     },
     {
@@ -418,7 +371,8 @@
         "address": "Phòng hòa nhạc Lớn VNAM, 77 Hào Nam, Ô Chợ Dừa, Hà Nội",
         "address_url": "https://www.google.com/maps/place/Vietnam_National_Academy_of_Music/@21.0227907,105.8262187,17z",
         "host_name": "VNSO - Dàn nhạc Giao hưởng Việt Nam",
-        "host_url": "https://www.vnso.org.vn"
+        "host_url": "https://www.vnso.org.vn",
+        "image_url": "thumbs/88.jpg"
       }
     },
     {
@@ -439,7 +393,8 @@
         "address": "Phòng hòa nhạc Lớn VNAM, 77 Hào Nam, Ô Chợ Dừa, Hà Nội",
         "address_url": "https://www.google.com/maps/place/Vietnam_National_Academy_of_Music/@21.0227907,105.8262187,17z",
         "host_name": "VNSO - Dàn nhạc Giao hưởng Việt Nam",
-        "host_url": "https://www.vnso.org.vn"
+        "host_url": "https://www.vnso.org.vn",
+        "image_url": "thumbs/89.jpg"
       }
     },
     {
@@ -460,7 +415,8 @@
         "address": "Phòng hòa nhạc Lớn VNAM, 77 Hào Nam, Ô Chợ Dừa, Hà Nội",
         "address_url": "https://www.google.com/maps/place/Vietnam_National_Academy_of_Music/@21.0227907,105.8262187,17z",
         "host_name": "VNSO - Dàn nhạc Giao hưởng Việt Nam",
-        "host_url": "https://www.vnso.org.vn"
+        "host_url": "https://www.vnso.org.vn",
+        "image_url": "thumbs/90.jpg"
       }
     },
     {
@@ -481,7 +437,8 @@
         "address": "Phòng hòa nhạc Lớn VNAM, 77 Hào Nam, Ô Chợ Dừa, Hà Nội",
         "address_url": "https://www.google.com/maps/place/Vietnam_National_Academy_of_Music/@21.0227907,105.8262187,17z",
         "host_name": "VNSO - Dàn nhạc Giao hưởng Việt Nam",
-        "host_url": "https://www.vnso.org.vn"
+        "host_url": "https://www.vnso.org.vn",
+        "image_url": "thumbs/91.jpg"
       }
     },
     {
@@ -502,7 +459,8 @@
         "address": "Nhà hát Hồ Gươm, Hà Nội",
         "address_url": "https://www.google.com/maps/place/Ho+Guom+Opera/@21.022074,105.8521728,17z/data=!3m1!4b1!4m6!3m5!1s0x3135aba6d28cec17:0xd95a19476bb83395!8m2!3d21.022074!4d105.8521728!16s%2Fg%2F11tsf8y_2c",
         "host_name": "VNSO - Dàn nhạc Giao hưởng Việt Nam",
-        "host_url": "https://www.vnso.org.vn"
+        "host_url": "https://www.vnso.org.vn",
+        "image_url": "thumbs/92.jpg"
       }
     },
     {
@@ -523,7 +481,8 @@
         "address": "Nhà hát Hồ Gươm, Hà Nội",
         "address_url": "https://www.google.com/maps/place/Ho+Guom+Opera/@21.022074,105.8521728,17z/data=!3m1!4b1!4m6!3m5!1s0x3135aba6d28cec17:0xd95a19476bb83395!8m2!3d21.022074!4d105.8521728!16s%2Fg%2F11tsf8y_2c",
         "host_name": "VNSO - Dàn nhạc Giao hưởng Việt Nam",
-        "host_url": "https://www.vnso.org.vn"
+        "host_url": "https://www.vnso.org.vn",
+        "image_url": "thumbs/93.jpg"
       }
     },
     {
@@ -544,7 +503,8 @@
         "address": "Khách sạn Metropole, Hà Nội",
         "address_url": "https://www.google.com/maps/place/Sofitel+Legend+Metropole+Hanoi/@21.0254125,105.856375,17z/data=!4m9!3m8!1s0x3135abeb98f8b54d:0x90d6982234a65f25!5m2!4m1!1i2!8m2!3d21.0254125!4d105.856375!16zL20vMGdzX2Nk",
         "host_name": "VNSO - Dàn nhạc Giao hưởng Việt Nam",
-        "host_url": "https://www.vnso.org.vn"
+        "host_url": "https://www.vnso.org.vn",
+        "image_url": "thumbs/94.jpg"
       }
     },
     {
@@ -565,7 +525,8 @@
         "address": "Nhà thờ lớn Hà Nội, Hà Nội",
         "address_url": "https://www.google.com/maps/place/St.+Joseph+Cathedral/@21.0260738,105.8385783,14.83z/data=!4m6!3m5!1s0x3135ab945034b945:0x90b57620787fd98e!8m2!3d21.0285957!4d105.8488606!16s%2Fm%2F02rwkq5?entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D",
         "host_name": "VNSO - Dàn nhạc Giao hưởng Việt Nam",
-        "host_url": "https://www.vnso.org.vn"
+        "host_url": "https://www.vnso.org.vn",
+        "image_url": "thumbs/95.jpg"
       }
     },
     {
@@ -586,7 +547,8 @@
         "address": "Nhà hát Hồ Gươm, Hà Nội",
         "address_url": "https://www.google.com/maps/place/Ho+Guom+Opera/@21.022074,105.8521728,17z/data=!3m1!4b1!4m6!3m5!1s0x3135aba6d28cec17:0xd95a19476bb83395!8m2!3d21.022074!4d105.8521728!16s%2Fg%2F11tsf8y_2c",
         "host_name": "VNSO - Dàn nhạc Giao hưởng Việt Nam",
-        "host_url": "https://www.vnso.org.vn"
+        "host_url": "https://www.vnso.org.vn",
+        "image_url": "thumbs/96.jpg"
       }
     },
     {
@@ -607,7 +569,8 @@
         "address": "Common Room/Complex Square, Complex 01, số 29 ngách 31 ngõ 167 Tây Sơn, Kim Liên, Hà Nội",
         "address_url": "https://www.google.com/maps/place/Complex+01/@21.0105641,105.8267223,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab68dd1984e5:0x3d307d4682570ec7!8m2!3d21.0105641!4d105.8267223!16s%2Fg%2F11fvc4fcl3",
         "host_name": "APD Center for Art Patronage and Development",
-        "host_url": "https://www.facebook.com/apdcenter.vn"
+        "host_url": "https://www.facebook.com/apdcenter.vn",
+        "image_url": "thumbs/97.jpg"
       }
     },
     {
@@ -628,7 +591,8 @@
         "address": "51 Phan Bội Châu, Cửa Nam, Hà Nội",
         "address_url": "https://www.google.com/maps/place/51%20Phan%20B%E1%BB%99i%20Ch%C3%A2u%2C%20C%E1%BB%ADa%20Nam%2C%20H%C3%A0%20N%E1%BB%99i/@21.026484203649638,105.84360346198082,17z",
         "host_name": "APD Center for Art Patronage and Development",
-        "host_url": "https://www.facebook.com/apdcenter.vn"
+        "host_url": "https://www.facebook.com/apdcenter.vn",
+        "image_url": "thumbs/98.jpg"
       }
     },
     {
@@ -649,7 +613,8 @@
         "address": "Tầng 3, Tòa nhà IPH, 241 Xuân Thủy, Cầu Giấy, Hà Nội",
         "address_url": "https://www.google.com/maps/search/T%E1%BA%A7ng+3,+T%C3%B2a+nh%C3%A0+IPH,+241+Xu%C3%A2n+Th%E1%BB%A7y,+C%E1%BA%A7u+Gi%E1%BA%A5y,+H%C3%A0+N%E1%BB%99i/@21.0358845,105.782584,17z/data=!3m1!4b1",
         "host_name": "APD Center for Art Patronage and Development",
-        "host_url": "https://www.facebook.com/apdcenter.vn"
+        "host_url": "https://www.facebook.com/apdcenter.vn",
+        "image_url": "thumbs/99.jpg"
       }
     },
     {
@@ -670,7 +635,8 @@
         "address": "Tầng 4, Tòa nhà N01-T4, Khu Đoàn Ngoại giao, Hoàng Minh Thảo, Xuân Đỉnh, Hà Nội",
         "address_url": "https://www.google.com/maps/search/T%E1%BA%A7ng+4,+T%C3%B2a+nh%C3%A0+N01-T4,+Khu+%C4%90o%C3%A0n+Ngo%E1%BA%A1i+giao,+Ho%C3%A0ng+Minh+Th%E1%BA%A3o,+Xu%C3%A2n+%C4%90%E1%BB%89nh,+H%C3%A0+N%E1%BB%99i/@21.0630033,105.7951646,17z/data=!3m1!4b1",
         "host_name": "APD Center for Art Patronage and Development",
-        "host_url": "https://www.facebook.com/apdcenter.vn"
+        "host_url": "https://www.facebook.com/apdcenter.vn",
+        "image_url": "thumbs/100.jpg"
       }
     },
     {
@@ -691,7 +657,8 @@
         "address": "Tầng 2, Tòa nhà 25T2, Trần Duy Hưng, Yên Hòa, Hà Nội",
         "address_url": "https://www.google.com/maps/search/T%E1%BA%A7ng+2,+T%C3%B2a+nh%C3%A0+25T2,+Tr%E1%BA%A7n+Duy+H%C6%B0ng,+Y%C3%AAn+H%C3%B2a,+H%C3%A0+N%E1%BB%99i/@21.0067138,105.8014862,17z/data=!3m1!4b1",
         "host_name": "APD Center for Art Patronage and Development",
-        "host_url": "https://www.facebook.com/apdcenter.vn"
+        "host_url": "https://www.facebook.com/apdcenter.vn",
+        "image_url": "thumbs/101.jpg"
       }
     },
     {
@@ -712,7 +679,8 @@
         "address": "Tầng 1, Tòa nhà Golden Palace, 54 Lê Văn Lương, Yên Hòa, Hà Nội",
         "address_url": "https://www.google.com/maps/place/Golden+Palace/@21.0042968,105.8024339,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ad1a2bcfabb5:0x79e15326bae83e53!8m2!3d21.0042968!4d105.8024339!16s%2Fg%2F11h71k_x9n",
         "host_name": "APD Center for Art Patronage and Development",
-        "host_url": "https://www.facebook.com/apdcenter.vn"
+        "host_url": "https://www.facebook.com/apdcenter.vn",
+        "image_url": "thumbs/102.jpg"
       }
     },
     {
@@ -733,7 +701,8 @@
         "address": "Viện Pháp tại Hà Nội, 15 Thiền Quang, Hai Bà Trưng, Hà Nội, Hanoi, Vietnam 100000",
         "address_url": "https://www.google.com/maps/place/Vi%E1%BB%87n+Ph%C3%A1p+H%C3%A0+N%E1%BB%99i/@21.0196506,105.8425559,17z/data=!3m1!4b1!4m6!3m5!1s0x3135aba53be38637:0xf1e61a9e6619afb9!8m2!3d21.0196506!4d105.8425559!16s%2Fg%2F11tcyd9px8",
         "host_name": "Viện Pháp tại Việt Nam - Hà Nội",
-        "host_url": "https://www.facebook.com/IFVHanoi"
+        "host_url": "https://www.facebook.com/IFVHanoi",
+        "image_url": "thumbs/103.jpg"
       }
     },
     {
@@ -754,7 +723,8 @@
         "address": "Long Waits a modest jazz club",
         "address_url": "https://www.google.com/maps/place/Long+Waits+Jazz/@21.0325127,105.845655,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab91b177a19b:0xba95e28c7996e582!8m2!3d21.0325127!4d105.845655!16s%2Fg%2F11stkl46t1",
         "host_name": "Long Waits a modest jazz club",
-        "host_url": "https://www.facebook.com/Longwaitsjazz"
+        "host_url": "https://www.facebook.com/Longwaitsjazz",
+        "image_url": "thumbs/104.jpg"
       }
     },
     {
@@ -775,28 +745,8 @@
         "address": "Long Waits a modest jazz club",
         "address_url": "https://www.google.com/maps/place/Long+Waits+Jazz/@21.0325127,105.845655,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab91b177a19b:0xba95e28c7996e582!8m2!3d21.0325127!4d105.845655!16s%2Fg%2F11stkl46t1",
         "host_name": "Long Waits a modest jazz club",
-        "host_url": "https://www.facebook.com/Longwaitsjazz"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "106",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [105.8437, 21.01901]
-      },
-      "properties": {
-        "name_vn": "*OPEN MIC* VUI CA TỰ DO * số 78",
-        "from_date": "2026-09-28",
-        "to_date": "2026-09-28",
-        "start_time": "N/A",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/1074515188726460/",
-        "address": "Gác 3 - 6 Nguyễn Thượng Hiền, Nguyễn Du, Hai Bà Trưng, Hanoi, Vietnam 10000",
-        "address_url": "https://www.google.com/maps/search/G%C3%A1c+3+-+6+Nguy%E1%BB%85n+Th%C6%B0%E1%BB%A3ng+Hi%E1%BB%81n,+Nguy%E1%BB%85n+Du,+Hai+B%C3%A0+Tr%C6%B0ng,+Hanoi,+Vietnam+10000/@21.019014,105.8437019,17z/data=!3m1!4b1",
-        "host_name": "Quán Cầm",
-        "host_url": "https://www.facebook.com/quannhaccam"
+        "host_url": "https://www.facebook.com/Longwaitsjazz",
+        "image_url": "thumbs/105.jpg"
       }
     },
     {
@@ -817,7 +767,96 @@
         "address": "Văn Miếu - Quốc Tử Giám",
         "address_url": "https://www.google.com/maps/place/Temple+Of+Literature/@21.0281175,105.8356692,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab9926e7bd67:0x580e078874d5df1e!8m2!3d21.0281175!4d105.8356692!16zL20vMGI5aGp6",
         "host_name": "Nguyen Art Gallery",
-        "host_url": "https://www.facebook.com/NguyenArtGalleryVietnam"
+        "host_url": "https://www.facebook.com/NguyenArtGalleryVietnam",
+        "image_url": "thumbs/107.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "108",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.89117, 21.05909]
+      },
+      "properties": {
+        "name_vn": "Điểm Rìa bên Ảo Cảnh | At the Chimeric Edge",
+        "from_date": "2026-09-29",
+        "to_date": "2026-09-29",
+        "start_time": "N/A",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1070667798896555/",
+        "address": "Ngõ 59 Ngô Gia Tự, Long Biên, Hà Nội (cuối ngõ rẽ phải, đi thêm 500m), Hanoi, Vietnam",
+        "address_url": "https://www.google.com/maps/search/Ng%C3%B5+59+Ng%C3%B4+Gia+T%E1%BB%B1,+Long+Bi%C3%AAn,+H%C3%A0+N%E1%BB%99i+(cu%E1%BB%91i+ng%C3%B5+r%E1%BA%BD+ph%E1%BA%A3i,+%C4%91i+th%C3%AAm+500m),+Hanoi,+Vietnam/@21.059092,105.8911736,18z/data=!3m1!4b1",
+        "host_name": "Á Space",
+        "host_url": "https://www.facebook.com/a.experimental.art",
+        "image_url": "thumbs/108.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "109",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.84935, 21.02473]
+      },
+      "properties": {
+        "name_vn": "Hà Nội ảnh phim in trên giấy Dó",
+        "from_date": "2026-10-04",
+        "to_date": "2026-10-04",
+        "start_time": "10:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1559220849292314/",
+        "address": "66 Hàng Trống, Hà Nội",
+        "address_url": "https://www.google.com/maps/search/66+H%C3%A0ng+Tr%E1%BB%91ng,+H%C3%A0+N%E1%BB%99i/@21.0247342,105.84935,15z/data=!3m1!4b1",
+        "host_name": "Zó Project",
+        "host_url": "https://www.facebook.com/zoproject",
+        "image_url": "thumbs/109.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "110",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.8352, 21.01026]
+      },
+      "properties": {
+        "name_vn": "Ai ai cũng có quyền được HÁT - KoFi Open Mic (since 2019)",
+        "from_date": "2026-09-29",
+        "to_date": "2026-09-29",
+        "start_time": "N/A",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1972877639927657/",
+        "address": "Đối diện số 22A Ngách 2 ngõ 46A Phạm Ngọc Thạch, Hà Nội, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/KoFi/@21.0102647,105.8352015,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab874911796f:0xdb7f758eb6b2ca88!8m2!3d21.0102647!4d105.8352015!16s%2Fg%2F11h54z6yxz",
+        "host_name": "KoFi",
+        "host_url": "https://www.facebook.com/KoFi.vn",
+        "image_url": "thumbs/110.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "111",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.82676, 21.01073]
+      },
+      "properties": {
+        "name_vn": "47th Hanoi Enthusiastic Music Festival-第47回河内熱饗音楽祭",
+        "from_date": "2026-10-04",
+        "to_date": "2026-10-04",
+        "start_time": "13:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/4651833831767124/",
+        "address": "Polygon Musik",
+        "address_url": "https://www.google.com/maps/place/Polygon+Musik/@21.0107252,105.8267593,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab738413016f:0xffed87703bbbd9c8!8m2!3d21.0107252!4d105.8267593!16s%2Fg%2F1jkvvyd2s",
+        "host_name": "河内熱饗音楽隊　Hanoi Enthusiastic Club Band",
+        "host_url": "https://www.facebook.com/polygon.cafe",
+        "image_url": "thumbs/111.jpg"
       }
     }
   ]

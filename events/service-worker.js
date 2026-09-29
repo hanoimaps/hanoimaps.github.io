@@ -1,9 +1,5 @@
-const CACHE_NAME = "hanoi-event-map";
-const urlsToCache = [
-  "/",
-  "/index.html",
-  "/calendar.js",
-  "/favicon.ico",
+const CACHE_NAME = "hanoi-main-map-cache-v12";
+const LIB_URLS = [
   "https://unpkg.com/maplibre-gl@^5.9.0/dist/maplibre-gl.css",
   "https://unpkg.com/maplibre-gl@^5.9.0/dist/maplibre-gl.js",
 ];
@@ -13,7 +9,7 @@ self.addEventListener("install", (event) => {
   console.log("Main Service Worker: Installing assets...");
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(urlsToCache).catch((error) => {
+      return cache.addAll(LIB_URLS).catch((error) => {
         console.error("Failed to pre-cache some assets:", error);
       });
     })
@@ -41,7 +37,10 @@ self.addEventListener("activate", (event) => {
   return self.clients.claim();
 });
 
-// --- 3. Fetch Handler (Cache-First & Tile Caching) ---
+// --- 3. Fetch Handler ---
+// Tiles + versioned lib: cache-first (the heavy stuff). Everything else —
+// index.html, calendar.js, events.json — goes to network so updates and new
+// events reach users on the next visit, no hard reload needed.
 self.addEventListener("fetch", (event) => {
   const requestUrl = new URL(event.request.url);
 
@@ -49,25 +48,7 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // A. Cache-First for local precached assets (index.html, etc.)
-  if (
-    urlsToCache.some(
-      (url) => requestUrl.pathname === url || requestUrl.pathname === "/"
-    ) ||
-    requestUrl.href.includes("unpkg.com") // Ensure external libraries are cache-first
-  ) {
-    event.respondWith(
-      caches.match(event.request).then((response) => {
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      })
-    );
-    return;
-  }
-
-  // B. Cache-and-Update for Map Tiles (MapTiler Base Map & Historic Tiles)
+  // A. Cache-First for Map Tiles (MapTiler Base Map & Historic Tiles)
   if (
     requestUrl.hostname.includes("api.maptiler.com") ||
     requestUrl.pathname.startsWith("/maps-tiles/")
@@ -96,5 +77,37 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  event.respondWith(fetch(event.request));
+  // B. Cache-First for the unpkg maplibre lib (pinned version)
+  if (requestUrl.href.includes("unpkg.com")) {
+    event.respondWith(
+      caches
+        .match(event.request)
+        .then((response) => response || fetch(event.request))
+    );
+    return;
+  }
+
+  // C. App shell: network-first, cache only as offline fallback
+  if (
+    requestUrl.pathname === "/" ||
+    requestUrl.pathname === "/index.html" ||
+    requestUrl.pathname === "/calendar.js"
+  ) {
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          if (response.ok) {
+            const clone = response.clone();
+            caches
+              .open(CACHE_NAME)
+              .then((cache) => cache.put(event.request, clone));
+          }
+          return response;
+        })
+        .catch(() => caches.match(event.request))
+    );
+    return;
+  }
+
+  // D. everything else (events.json, ...): straight network — always fresh
 });

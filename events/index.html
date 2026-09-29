@@ -43,10 +43,10 @@
         color: #1a1a1a;
         display: flex;
         flex-direction: column;
-        border-radius: 8px;
+        border-radius: 16px;
         padding: 16px 18px 22px;
         gap: 4px;
-        width: 200px;
+        width: 236px;
         overflow-y: auto;
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
       }
@@ -55,39 +55,90 @@
       }
       .popup-title {
         font-family: Georgia, Charter, "Times New Roman", serif;
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 700;
-        margin: 0;
-        color: #333;
+        margin: 0 0 8px;
+        color: #222;
       }
       .popup {
         display: flex;
         flex-direction: column;
-        gap: 13px;
       }
-      .popup p,
-      .popup a {
-        margin: 0;
-        font-size: 14px;
-        font-weight: 400;
-        color: #1a1a1a;
-        text-decoration: none;
+      .popup-thumb {
+        display: block;
+        width: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        margin: -16px -18px 10px;
+        background: #f2f2f2;
       }
-      .popup .row {
+      .popup-host {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 5px;
+        max-width: 100%;
+        color: #777;
+        font-size: 14px;
+        margin-bottom: 14px;
+        text-decoration: none;
       }
-      .popup .row svg {
+      .popup-host span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .popup-host b {
+        font-size: 17px;
+        font-weight: 400;
+      }
+      .popup-time {
+        font-size: 14px;
+        margin-bottom: 22px;
+        color: #1a1a1a;
+      }
+      .popup-actions {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .popup-map {
         flex: none;
-        display: block;
+        width: 36px;
+        height: 36px;
+        border: 1px solid #d5d5d5;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: #fff;
+      }
+      .popup-map svg {
         width: 18px;
         height: 18px;
-        stroke: #6b7280;
+        stroke: #707784;
         fill: none;
-        stroke-width: 1.75;
+        stroke-width: 1.8;
         stroke-linecap: round;
         stroke-linejoin: round;
+      }
+      .popup .popup-detail {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 36px;
+        padding: 0 16px;
+        border: 1px solid #d5d5d5;
+        border-radius: 999px;
+        background: transparent;
+        color: #777;
+        font-size: 14px;
+        transition: 0.15s;
+      }
+      .popup a {
+        text-decoration: none;
+        transition: 0.15s;
+      }
+      .popup a:hover {
+        opacity: 0.75;
       }
 
       /* PAGINATION */
@@ -510,7 +561,8 @@
 
       async function loadEvents(geoJsonUrl) {
         try {
-          const response = await fetch(geoJsonUrl);
+          // no-cache = always revalidate (304 if unchanged): fresh events, one cheap request
+          const response = await fetch(geoJsonUrl, { cache: "no-cache" });
           if (!response.ok)
             throw new Error(`HTTP error! status: ${response.status}`);
           geojsonData = await response.json();
@@ -695,7 +747,7 @@
             duration: 900,
             curve: 1.42,
             essential: true,
-            offset: [0, 180],
+            offset: [0, 200],
           });
 
           setTimeout(() => {
@@ -778,10 +830,21 @@
       function formatDate(dateString) {
         if (!dateString || dateString.length < 10) return "";
         const parts = dateString.split("-");
-        const dm = `${parts[2]}/${parts[1]}`;
+        const dm = `${+parts[2]}/${+parts[1]}`; // + strips leading zeros: 04/10 -> 4/10
         return parts[0] === String(new Date().getFullYear())
           ? dm
           : `${dm}/${parts[0]}`;
+      }
+
+      // "90'" / "1h30" -> "90 phút" / "1 giờ 30 phút"
+      function fmtDuration(t) {
+        const nums = ((t || "").match(/\d+/g) || []).map(Number);
+        if (!nums.length) return t;
+        const [h, m] = nums.length > 1 ? nums : [0, nums[0]];
+        const parts = [];
+        if (h) parts.push(`${h} giờ`);
+        if (m) parts.push(`${m} phút`);
+        return parts.join(" ") || t;
       }
 
       // Readable owner label when host_name is missing: fb slug or domain
@@ -831,94 +894,55 @@
         const prevDisabled = index === 0 ? "disabled" : "";
         const nextDisabled = index === total - 1 ? "disabled" : "";
 
-        // ponytail: one shared stroke-icon set — single 1.5px outline, no fills
         const ICON = {
-          cal: '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg>',
-          link: '<svg viewBox="0 0 24 24"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1.5 1.5"/><path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1.5-1.5"/></svg>',
-          person:
-            '<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg>',
           pin: '<svg viewBox="0 0 24 24"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>',
-          clock:
-            '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
         };
-        const row = (icon, inner) =>
-          `<div class="row">${ICON[icon]}<div>${inner}</div></div>`;
 
-        let dateHtml = "";
         const fromDateFormatted = formatDate(props.from_date);
         const toDateFormatted = formatDate(props.to_date);
+        const dText =
+          props.from_date === props.to_date
+            ? fromDateFormatted
+            : `${fromDateFormatted}-${toDateFormatted}`;
+        const bits = [];
+        if (props.start_time && props.start_time !== "N/A")
+          bits.push(`lúc ${props.start_time}`);
+        if (props.time && props.time !== "N/A")
+          bits.push(fmtDuration(props.time));
+        const dateHtml = `<div class="popup-time">${dText}${
+          bits.length ? ` (${bits.join(", ")})` : ""
+        }</div>`;
 
-        // Kiểm tra nếu là sự kiện 1 ngày (hide time when none posted)
-        if (props.from_date === props.to_date) {
-          const atTime =
-            props.start_time && props.start_time !== "N/A"
-              ? ` (lúc ${props.start_time})`
-              : "";
-          dateHtml = row("cal", `<p>${fromDateFormatted}${atTime}</p>`);
-        }
-        // Nếu là sự kiện nhiều ngày
-        else {
-          dateHtml = row(
-            "cal",
-            `<p>${fromDateFormatted} -> ${toDateFormatted}</p>`
-          );
-        }
-
-        // Thêm thời lượng (nếu có)
-        const durationHtml =
-          props.time && props.time !== "N/A"
-            ? row("clock", `<p>Thời lượng: ${props.time}</p>`)
+        const thumbHtml =
+          props.image_url && props.image_url !== "N/A"
+            ? `<img class="popup-thumb" src="${props.image_url}" alt="" loading="lazy" onerror="this.remove()">`
             : "";
 
-        // const encodedQuery = encodeURIComponent(
-        //   `site:facebook.com/hello.photohanoi "${props.name_vn}"`
-        // );
-        // const searchUrl = `https://www.google.com/search?q=${encodedQuery}`;
-        // const eventLinkHtml = `
-        //   <br>
-        //   <a
-        //       href="${searchUrl}"
-        //       target="_blank"
-        //       rel="noopener noreferrer"
-        //       class="marker-btn">
-        //       Link sự kiện
-        //   </a>
-        // `;
-
-        // 1. HTML cho chi tiết sự kiện (giữ nguyên style của bạn)
         const hasEventUrl = props.event_url && props.event_url !== "N/A";
         const hasHostUrl = props.host_url && props.host_url !== "N/A";
         const hasHostName = props.host_name && props.host_name !== "N/A";
         const hostLabel = hasHostName
           ? props.host_name
           : hostLabelFromUrl(props.host_url);
-        const hostInner =
-          hasHostUrl || hasHostName
-            ? hasHostUrl
-              ? `<a href="${props.host_url}" target="_blank" rel="noopener noreferrer">${hostLabel}</a>`
-              : `<p>${hostLabel}</p>`
+        const hostHtml = hasHostUrl
+          ? `<a class="popup-host" href="${props.host_url}" target="_blank" rel="noopener noreferrer"><span>${hostLabel}</span><b>›</b></a>`
+          : hasHostName
+          ? `<div class="popup-host"><span>${hostLabel}</span></div>`
+          : "";
+        const mapHtml =
+          props.address_url && props.address_url !== "N/A"
+            ? `<a class="popup-map" href="${props.address_url}" target="_blank" rel="noopener noreferrer" aria-label="Google Maps">${ICON.pin}</a>`
             : "";
-        const hostHtml = hostInner ? row("person", hostInner) : "";
+        const detailHtml = hasEventUrl
+          ? `<a class="popup-detail" href="${props.event_url}" target="_blank" rel="noopener noreferrer">Xem chi tiết</a>`
+          : "";
         const eventHtml = `
           <div class="popup">
+              ${thumbHtml}
               <h3 class="popup-title">${toTitleCase(props.name_vn)}</h3>
-              ${dateHtml}
               ${hostHtml}
-              ${durationHtml}
-              ${
-                hasEventUrl
-                  ? row(
-                      "link",
-                      `<a href="${props.event_url}" target="_blank" rel="noopener noreferrer">Xem chi tiết</a>`
-                    )
-                  : ""
-              }
-              ${row(
-                "pin",
-                props.address_url
-                  ? `<a href="${props.address_url}" target="_blank" rel="noopener noreferrer">${props.address}</a>`
-                  : `<p>${props.address}</p>`
-              )}
+              ${dateHtml}
+              <div class="popup-actions">${mapHtml}${detailHtml}</div>
           </div>
         `;
 
