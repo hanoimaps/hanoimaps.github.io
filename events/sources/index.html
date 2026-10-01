@@ -111,7 +111,7 @@
       </a>
       <a
         class="src"
-        href="https://www.instagram.com/p/DbiqKDrhf5A/"
+        href="https://www.instagram.com/art.meetsmusic/"
         target="_blank"
         rel="noopener"
         >Art Meets Music Academy
@@ -254,7 +254,7 @@
         href="https://www.facebook.com/61576156922737/events"
         target="_blank"
         rel="noopener"
-        >Facebook
+        >The Boom Box Nightclub
       </a>
       <a
         class="src"
@@ -772,7 +772,8 @@
         href="https://www.facebook.com/dnghvn.vnso/events"
         target="_blank"
         rel="noopener"
-        >VNSO - Dàn nhạc Giao hưởng Việt Nam - Vietnam National Symphony Orchestra
+        >VNSO - Dàn nhạc Giao hưởng Việt Nam - Vietnam National Symphony
+        Orchestra
       </a>
       <a
         class="src"
@@ -824,5 +825,13 @@
         >Ở đây.Nhà TÔI
       </a>
     </div>
+    <script>
+      const box = document.querySelector(".container");
+      [...box.querySelectorAll("a.src")]
+        .sort((a, b) =>
+          a.textContent.trim().localeCompare(b.textContent.trim(), "vi")
+        )
+        .forEach((a) => box.append(a));
+    </script>
   </body>
 </html>
