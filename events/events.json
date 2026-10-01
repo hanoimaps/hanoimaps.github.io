@@ -1363,6 +1363,28 @@
         "host_url": "https://www.facebook.com/61557430405207",
         "image_url": "thumbs/134.jpg"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "135",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.84792, 21.03231]
+      },
+      "properties": {
+        "name_vn": "Stage Design - Workshop (free entrance)",
+        "from_date": "2026-10-03",
+        "to_date": "2026-10-03",
+        "start_time": "09:30",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1701721660889986/",
+        "address": "13 Hàng Bông, Hàng Trống, Hoàn Kiếm, Hanoi, Vietnam 100000",
+        "address_url": "https://www.google.com/maps/search/13+H%C3%A0ng+B%C3%B4ng,+H%C3%A0ng+Tr%E1%BB%91ng,+Ho%C3%A0n+Ki%E1%BA%BFm,+Hanoi,+Vietnam+100000/@21.032307,105.8479207,17z/data=!3m1!4b1",
+        "host_name": "Studio 13",
+        "host_url": "https://www.facebook.com/studio13culturehub",
+        "image_url": "thumbs/135.jpg"
+      }
     }
   ]
 }
