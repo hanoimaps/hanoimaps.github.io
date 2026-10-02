@@ -125,6 +125,13 @@
       </a>
       <a
         class="src"
+        href="https://www.facebook.com/ATHTheatre/events"
+        target="_blank"
+        rel="noopener"
+        >ATH Theatre
+      </a>
+      <a
+        class="src"
         href="https://www.facebook.com/jazzvietnam/events"
         target="_blank"
         rel="noopener"
@@ -826,6 +833,7 @@
       </a>
     </div>
     <script>
+      // display order is always A-Z by link text, whatever the markup order
       const box = document.querySelector(".container");
       [...box.querySelectorAll("a.src")]
         .sort((a, b) =>
