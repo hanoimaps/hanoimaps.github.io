@@ -1599,6 +1599,56 @@
         "host_url": "https://www.facebook.com/ATHTheatre",
         "image_url": "thumbs/136.jpg"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "137",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.79294,
+          21.04092
+        ]
+      },
+      "properties": {
+        "name_vn": "Đêm Nhạc Tình Ca: VỀ LẠI PHỐ XƯA",
+        "from_date": "2026-10-02",
+        "to_date": "2026-10-02",
+        "start_time": "20:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1454075539985263/",
+        "address": "Phòng Trà Trịnh Ca",
+        "address_url": "https://www.google.com/maps/place/Ph%C3%B2ng+tr%C3%A0+Tr%E1%BB%8Bnh+Ca/@21.0409161,105.7929395,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab3744f6b1e3:0xaf99021346668b56!8m2!3d21.0409161!4d105.7929395!16s%2Fg%2F1hm4c08vb",
+        "host_name": "Phòng Trà Trịnh Ca",
+        "host_url": "https://www.facebook.com/PhongTraTrinhCa",
+        "image_url": "thumbs/137.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "138",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.84558,
+          21.03813
+        ]
+      },
+      "properties": {
+        "name_vn": "ĐIỆP SA | WORKSHOP SÁNG TẠO VẬT PHẨM TRANG TRÍ",
+        "from_date": "2026-10-04",
+        "to_date": "2026-10-04",
+        "start_time": "14:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/983942264727761/",
+        "address": "Tầng 4, Số 7, ngõ 12A Lý Nam Đế, Hanoi, Vietnam 10000",
+        "address_url": "https://www.google.com/maps/place/T%E1%BA%A7ng+4,+12A%2F7+P.+L%C3%BD+Nam+%C4%90%E1%BA%BF,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+10000,+Vietnam/@21.0381334,105.8455814,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbbe97a5b67:0x35704433087594da!8m2!3d21.0381334!4d105.8455814!16s%2Fg%2F11z8mdqkzx",
+        "host_name": "Thanh Di",
+        "host_url": "https://www.facebook.com/thanhdiary",
+        "image_url": "thumbs/138.jpg"
+      }
     }
   ]
 }

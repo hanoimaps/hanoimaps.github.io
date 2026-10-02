@@ -258,13 +258,6 @@
       </a>
       <a
         class="src"
-        href="https://www.facebook.com/61576156922737/events"
-        target="_blank"
-        rel="noopener"
-        >The Boom Box Nightclub
-      </a>
-      <a
-        class="src"
         href="https://www.facebook.com/FairmontHanoi/events"
         target="_blank"
         rel="noopener"
@@ -608,6 +601,13 @@
       </a>
       <a
         class="src"
+        href="https://www.facebook.com/PhongTraTrinhCa/events"
+        target="_blank"
+        rel="noopener"
+        >Phòng Trà Trịnh Ca
+      </a>
+      <a
+        class="src"
         href="https://www.facebook.com/polygon.cafe/events"
         target="_blank"
         rel="noopener"
@@ -661,6 +661,20 @@
         target="_blank"
         rel="noopener"
         >TERRA - Café &amp; Workshops
+      </a>
+      <a
+        class="src"
+        href="https://www.facebook.com/thanhdiary/events"
+        target="_blank"
+        rel="noopener"
+        >Thanh Di
+      </a>
+      <a
+        class="src"
+        href="https://www.facebook.com/61576156922737/events"
+        target="_blank"
+        rel="noopener"
+        >The Boom Box Nightclub
       </a>
       <a
         class="src"
@@ -779,8 +793,7 @@
         href="https://www.facebook.com/dnghvn.vnso/events"
         target="_blank"
         rel="noopener"
-        >VNSO - Dàn nhạc Giao hưởng Việt Nam - Vietnam National Symphony
-        Orchestra
+        >VNSO - Dàn nhạc Giao hưởng Việt Nam - Vietnam National Symphony Orchestra
       </a>
       <a
         class="src"
@@ -836,9 +849,7 @@
       // display order is always A-Z by link text, whatever the markup order
       const box = document.querySelector(".container");
       [...box.querySelectorAll("a.src")]
-        .sort((a, b) =>
-          a.textContent.trim().localeCompare(b.textContent.trim(), "vi")
-        )
+        .sort((a, b) => a.textContent.trim().localeCompare(b.textContent.trim(), "vi"))
         .forEach((a) => box.append(a));
     </script>
   </body>
