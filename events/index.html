@@ -840,6 +840,8 @@
           /* style still loading — layer filter applies on next load */
         }
       }
+      window.filterByDate = filterByDate;
+      window.popup = popup;
 
       // DD/MM, or DD/MM/YYYY only when the year is not the current one
       function formatDate(dateString) {
