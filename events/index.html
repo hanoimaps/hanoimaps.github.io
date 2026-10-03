@@ -8,6 +8,8 @@
     viewport-fit=cover"
     />
     <title>Hanoi Maps | Events</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/shared.css" />
     <link
       href="https://unpkg.com/maplibre-gl@^5.9.0/dist/maplibre-gl.css"
       rel="stylesheet"
@@ -401,7 +403,17 @@
       </button>
     </div>
     <script src="calendar.js" defer></script>
-    <script defer>
+    <script type="module">
+      import {
+        ExpandableMenuControl,
+        addCompassControl,
+        createSiteNavPanel,
+      } from "../shared.js";
+
+      const siteMenuControl = new ExpandableMenuControl(
+        createSiteNavPanel("events")
+      );
+
       // --- 0. CORE FLOW ---
       window.onload = async function () {
         const isDataLoaded = await loadEvents("events.json");
@@ -528,7 +540,8 @@
           ],
           attributionControl: false,
         });
-        map.addControl(new maplibregl.NavigationControl(), "top-left");
+        map.addControl(siteMenuControl, "top-left");
+        map.on("click", () => siteMenuControl.close());
         map.addControl(
           new maplibregl.GeolocateControl({
             positionOptions: { enableHighAccuracy: true },
@@ -543,6 +556,7 @@
           }),
           "top-left"
         );
+        addCompassControl(map, "top-left");
         map.addControl(
           new maplibregl.AttributionControl({
             customAttribution:
