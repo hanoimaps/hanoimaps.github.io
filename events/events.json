@@ -1724,6 +1724,31 @@
         "host_url": "https://www.facebook.com/vudantanmuseum",
         "image_url": "thumbs/141.jpg"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "142",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.80591,
+          21.03831
+        ]
+      },
+      "properties": {
+        "name_vn": "HUBLLOWEEN '26!",
+        "from_date": "2026-10-31",
+        "to_date": "2026-10-31",
+        "start_time": "19:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1124937143546348/",
+        "address": "277 Quan Hoa, Cầu Giấy, Hà Nội, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/Ng.+277+P.+Quan+Hoa,+Ngh%C4%A9a+%C4%90%C3%B4,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.0383079,105.8059077,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab15867e228f:0x817d1c2476e0c3fe!8m2!3d21.0383079!4d105.8059077!16s%2Fg%2F11b6_ccbrs",
+        "host_name": "HUB Venue",
+        "host_url": "https://www.facebook.com/hubartclub",
+        "image_url": "thumbs/142.jpg"
+      }
     }
   ]
 }
