@@ -1649,6 +1649,56 @@
         "host_url": "https://www.facebook.com/thanhdiary",
         "image_url": "thumbs/138.jpg"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "139",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.84877,
+          21.0218
+        ]
+      },
+      "properties": {
+        "name_vn": "Triển lãm Huyễn Sắc Xoay Vần | Spinning Ghost Colors của Kito",
+        "from_date": "2026-10-10",
+        "to_date": "2026-10-14",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/2499486973795017/",
+        "address": "27 P. Quang Trung, Cửa Nam, Hà Nội, Hanoi, Vietnam",
+        "address_url": "https://www.google.com/maps/place/27+P.+Quang+Trung,+C%E1%BB%ADa+Nam,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.021802,105.848772,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab93a5056113:0x3a581698e96ec427!8m2!3d21.0217869!4d105.8487997!16s%2Fg%2F11c2dks0nc",
+        "host_name": "The Japan Foundation Center for Cultural Exchange in Vietnam",
+        "host_url": "https://www.facebook.com/japanfoundation.vietnam",
+        "image_url": "thumbs/139.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "140",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.84877,
+          21.0218
+        ]
+      },
+      "properties": {
+        "name_vn": "Khai mạc và Art Tour/Artist Talk Triển lãm Huyễn Sắc Xoay Vần | Spinning Ghost Colors của Kito",
+        "from_date": "2026-10-09",
+        "to_date": "2026-10-09",
+        "start_time": "10:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/4378425645624292/",
+        "address": "27 P. Quang Trung, Cửa Nam, Hà Nội, Hanoi, Vietnam",
+        "address_url": "https://www.google.com/maps/place/27+P.+Quang+Trung,+C%E1%BB%ADa+Nam,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.021802,105.848772,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab93a5056113:0x3a581698e96ec427!8m2!3d21.0217869!4d105.8487997!16s%2Fg%2F11c2dks0nc",
+        "host_name": "The Japan Foundation Center for Cultural Exchange in Vietnam",
+        "host_url": "https://www.facebook.com/japanfoundation.vietnam",
+        "image_url": "thumbs/140.jpg"
+      }
     }
   ]
 }
