@@ -1699,6 +1699,31 @@
         "host_url": "https://www.facebook.com/japanfoundation.vietnam",
         "image_url": "thumbs/140.jpg"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "141",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8657,
+          21.06361
+        ]
+      },
+      "properties": {
+        "name_vn": "Mở xưởng “Vũ Dân Tân. Gỡ mặt nạ nhà văn: Một trò chơi ký ức văn chương”",
+        "from_date": "2026-10-03",
+        "to_date": "2026-10-09",
+        "start_time": "17:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1460165449361333/",
+        "address": "Vu Dan Tan Museum",
+        "address_url": "https://www.google.com/maps/place/Vu+Dan+Tan+Museum/@21.0636089,105.8656963,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab79b27c3c77:0xdb9e8870faaf21d3!8m2!3d21.0636089!4d105.8656963!16s%2Fg%2F11ykkm5ct3",
+        "host_name": "Vu Dan Tan Museum",
+        "host_url": "https://www.facebook.com/vudantanmuseum",
+        "image_url": "thumbs/141.jpg"
+      }
     }
   ]
 }
