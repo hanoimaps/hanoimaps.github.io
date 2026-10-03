@@ -1774,6 +1774,31 @@
         "host_url": "https://www.facebook.com/KendamaVN",
         "image_url": "thumbs/143.jpg"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "144",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.84618,
+          21.05162
+        ]
+      },
+      "properties": {
+        "name_vn": "TRIỂN LÃM TÂM LÝ NGHỆ THUẬT \"TRẠM CẢM XÚC III\": SOI MÌNH TRONG NHỮNG MẢNH VỠ & ƯỚC MƠ XANH",
+        "from_date": "2026-10-03",
+        "to_date": "2026-10-03",
+        "start_time": "N/A",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/977525344875521/",
+        "address": "67 đường 9, tập thể F361, ngõ 32 phố An Dương, Tây Hồ, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/67+%C4%90.+9,+H%E1%BB%93ng+H%C3%A0,+H%C3%A0+N%E1%BB%99i+110000,+Vietnam/@21.0516193,105.8461794,17z/data=!3m1!4b1!4m6!3m5!1s0x3135aba67780378b:0xc5ec874e851cec13!8m2!3d21.0516193!4d105.8461794!16s%2Fg%2F11sk4r7ds8",
+        "host_name": "Không gian tâm lý - nghệ thuật Bảo Sang",
+        "host_url": "https://www.facebook.com/BaoSangPSY",
+        "image_url": "thumbs/144.jpg"
+      }
     }
   ]
 }
