@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hanoi Maps | Publications</title>
+    <title>Hanoi Maps | News</title>
     <link rel="preconnect" href="https://baochi-tvqg.vercel.app" />
     <link rel="stylesheet" href="/info/info.css" />
     <style>
@@ -231,7 +231,8 @@
           image.alt = item.title || "News image";
           image.decoding = "async";
           image.loading = index < 8 && currentOffset === 0 ? "eager" : "lazy";
-          image.fetchPriority = index < 8 && currentOffset === 0 ? "high" : "low";
+          image.fetchPriority =
+            index < 8 && currentOffset === 0 ? "high" : "low";
           image.sizes = item.image_sizes || "(max-width: 768px) 50vw, 240px";
           if (item.image_srcset) {
             image.srcset = item.image_srcset;

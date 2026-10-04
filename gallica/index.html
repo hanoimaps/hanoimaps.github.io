@@ -60,10 +60,12 @@
         display: none;
       }
 
+      /* WAITLIST MODE (on): hides search UI */
       .intro,
       .search-controls,
-      .query-summary,
+      .status,
       .results,
+      #load-more,
       .detail-panel {
         display: none !important;
       }
@@ -133,22 +135,6 @@
         font-family: -apple-system-serif, "New York", Georgia, serif;
       }
 
-      #title-selector {
-        padding: 0;
-        border: 0;
-        background: transparent;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E");
-        background-position: right center;
-        background-repeat: no-repeat;
-        color: inherit;
-        font: inherit;
-        font-weight: 400;
-        padding-right: 18px;
-        -webkit-appearance: none;
-        appearance: none;
-      }
-
-      .query-summary,
       .intro {
         margin: 0 0 24px;
         padding: 16px;
@@ -210,18 +196,6 @@
         color: rgb(255 255 255 / 68%);
         font: inherit;
         white-space: nowrap;
-      }
-
-      .query-summary {
-        line-height: 19px;
-      }
-
-      .query-summary strong {
-        color: #ffffff;
-      }
-
-      .query-summary[hidden] {
-        display: none;
       }
 
       .search-controls {
@@ -960,15 +934,7 @@
         Home
       </a>
       <h1><span class="gallica-word">Gallica</span> Search</h1>
-      <!-- Original title selector temporarily disabled while the backend is down:
-      <h1>
-        <span class="gallica-word">Gallica</span>
-        <select id="title-selector" aria-label="Gallica mode">
-          <option>Search</option>
-          <option>Query</option>
-        </select>
-      </h1>
-      -->
+      <!-- WAITLIST MODE: form below is active; search UI hidden via CSS above -->
       <p>
         I am upgrading the site! To be notified, you may enter your email and
         share your suggestion below 🤗
@@ -1006,7 +972,6 @@
         <details class="publication-filter" id="publication-filter">
           <summary>
             <span id="publication-filter-summary">Select</span>
-            <!-- Original accordion chevron temporarily disabled:
             <svg
               class="publication-filter-chevron"
               viewBox="0 0 16 16"
@@ -1014,7 +979,6 @@
             >
               <path d="m4 6 4 4 4-4" />
             </svg>
-            -->
           </summary>
           <div class="publication-filter-menu">
             <input
@@ -1040,227 +1004,8 @@
           10 publications, 194 issues and 8895 pages processed.
           <!-- <a href="https://google.com" target="_blank" rel="noopener">Donate me</a> -->
         </p>
-        <ul>
-          <li hidden>
-            <span aria-label="Processed">✓</span
-            ><span
-              >Bulletin officiel du Commissariat de la République Française au
-              Tonkin</span
-            ><small>1948-1949</small>
-          </li>
-          <li hidden>
-            <span aria-label="Processed">✓</span
-            ><span>L'Association amicale fonctionnaires Indochine</span
-            ><small>1925-1931</small>
-          </li>
-          <li hidden>
-            <span aria-label="Processed">✓</span
-            ><span>Moniteur du protectorat de l'Annam et du Tonkin</span
-            ><small>1886-1888</small>
-          </li>
-          <li hidden>
-            <span aria-label="Processed">✓</span
-            ><span>Bulletin de la Société des études indochinoises</span
-            ><small>1884-1929</small>
-          </li>
-          <li hidden>
-            <span aria-label="Processed">✓</span
-            ><span>L'Exposition de Hanoï</span><small>1902-1903</small>
-          </li>
-          <li hidden>
-            <span aria-label="Processed">✓</span><span>L'Avant-garde</span
-            ><small>1929-1929</small>
-          </li>
-          <li hidden>
-            <span aria-label="Processed">✓</span><span>Saïgon-potins</span
-            ><small>1929-1929</small>
-          </li>
-          <li hidden>
-            <span aria-label="Processed">✓</span
-            ><span>La Plume indochinoise</span><small>1912-1913</small>
-          </li>
-          <li hidden>
-            <span aria-label="Processed">✓</span><span>L'Oeuvre</span
-            ><small>1936-1937</small>
-          </li>
-          <li hidden>
-            <span aria-label="Processed">✓</span><span>Chantecler revue</span
-            ><small>1934-1934</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span
-            ><span
-              >Bulletin officiel du Commissariat de la République Française en
-              Annam</span
-            ><small>1947-1949</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span
-            ><span>Annuaire général de l'Indochine</span
-            ><small>1900-1925</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span
-            ><span>Journal officiel de l'Indo-Chine française</span
-            ><small>1893-1901</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span
-            ><span>Bulletin officiel de l'Indochine française</span
-            ><small>1889-1913</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span
-            ><span>L'Indochine (Paris)</span><small>1928-1934</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span
-            ><span>Bulletin officiel du Haut-commissariat France Indochine</span
-            ><small>1952-1954</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span
-            ><span>Bulletin économique de l'Indochine</span
-            ><small>1898-1944</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span
-            ><span>Ville de Hanoï : bulletin municipal</span
-            ><small>1922-1936</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span
-            ><span>Bulletin financier et économique de l'Indochine</span
-            ><small>1925-1925</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span
-            ><span>Bulletin de l'Agence économique de l'Indochine</span
-            ><small>1928-1937</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span
-            ><span>Bulletin administratif du Tonkin</span
-            ><small>1902-1944</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span
-            ><span>Bulletin de la Société d'enseignement mutuel du Tonkin</span
-            ><small>1922-1938</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span
-            ><span>Bulletin de la Chambre de commerce de Hanoï</span
-            ><small>1920-1937</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span
-            ><span
-              >Bulletin officiel du Commissariat de la République française dans
-              le Centre Viet-Nam</span
-            ><small>1949-1952</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span
-            ><span>L'Extrême-Orient (Hanoï)</span><small>1894-1899</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span
-            ><span>L'Éveil économique de l'Indochine bulletin hebdomadaire</span
-            ><small>1918-1935</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span
-            ><span>Bulletin officiel de l'Annam et du Tonkin</span
-            ><small>1873-1900</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span
-            ><span>Compte administratif du budget local du Tonkin</span
-            ><small>1900-1941</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span
-            ><span>Bulletin officiel de l'Expédition de Cochinchine</span
-            ><small>1861-1887</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span
-            ><span>Journal judiciaire de l'Indochine française</span
-            ><small>1890-1953</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span
-            ><span>Bulletin officiel du Ministère des colonies</span
-            ><small>1894-1942</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span
-            ><span>Bulletin administratif de l'Annam</span
-            ><small>1902-1944</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span
-            ><span>Le Journal de Saïgon</span><small>1945-1947</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span
-            ><span>L'Avenir du Tonkin</span><small>1884-1941</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span
-            ><span>Les Affiches saïgonnaises</span><small>1918-1923</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span><span>L'Écho annamite</span
-            ><small>1920-1944</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span><span>L'Ère nouvelle</span
-            ><small>1926-1929</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span><span>Tân-Văn</span
-            ><small>1934-1936</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span><span>Tin-Điền</span
-            ><small>1946-1946</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span><span>Thời thế</span
-            ><small>1940-1941</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span
-            ><span>Saïgon républicain</span><small>1888-1889</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span><span>Radio-Saïgon</span
-            ><small>1931-1932</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span
-            ><span>Le Nouvelliste d'Indochine</span><small>1936-1942</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span
-            ><span>La Nouvelle revue indochinoise</span><small>1936-1940</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span><span>Achats et ventes</span
-            ><small>1927-1929</small>
-          </li>
-          <li>
-            <span aria-label="In progress">○</span><span>Chantecler</span
-            ><small>1932-1939</small>
-          </li>
-        </ul>
+        <ul id="publications-list"></ul>
       </section>
-      <div class="query-summary" id="query-summary" hidden>
-        <strong id="query-answer-label" hidden>Answer:</strong>
-        <span id="query-summary-text"></span>
-      </div>
       <p class="status" id="status"></p>
       <section class="results" id="results" aria-live="polite"></section>
       <button class="load-more" id="load-more" type="button" hidden>
@@ -1416,6 +1161,70 @@
     </dialog>
 
     <script>
+      // Single source of truth for publications; rendered into #publications-list.
+      // status: "processed" (✓) or "in-progress" (○).
+      const PUBLICATIONS = [
+        { name: "Bulletin officiel du Commissariat de la République Française au Tonkin", years: "1948-1949", status: "processed" },
+        { name: "L'Association amicale fonctionnaires Indochine", years: "1925-1931", status: "processed" },
+        { name: "Moniteur du protectorat de l'Annam et du Tonkin", years: "1886-1888", status: "processed" },
+        { name: "Bulletin de la Société des études indochinoises", years: "1884-1929", status: "processed" },
+        { name: "L'Exposition de Hanoï", years: "1902-1903", status: "processed" },
+        { name: "L'Avant-garde", years: "1929-1929", status: "processed" },
+        { name: "Saïgon-potins", years: "1929-1929", status: "processed" },
+        { name: "La Plume indochinoise", years: "1912-1913", status: "processed" },
+        { name: "L'Oeuvre", years: "1936-1937", status: "processed" },
+        { name: "Chantecler revue", years: "1934-1934", status: "processed" },
+        { name: "Bulletin officiel du Commissariat de la République Française en Annam", years: "1947-1949", status: "in-progress" },
+        { name: "Annuaire général de l'Indochine", years: "1900-1925", status: "in-progress" },
+        { name: "Journal officiel de l'Indo-Chine française", years: "1893-1901", status: "in-progress" },
+        { name: "Bulletin officiel de l'Indochine française", years: "1889-1913", status: "in-progress" },
+        { name: "L'Indochine (Paris)", years: "1928-1934", status: "in-progress" },
+        { name: "Bulletin officiel du Haut-commissariat France Indochine", years: "1952-1954", status: "in-progress" },
+        { name: "Bulletin économique de l'Indochine", years: "1898-1944", status: "in-progress" },
+        { name: "Ville de Hanoï : bulletin municipal", years: "1922-1936", status: "in-progress" },
+        { name: "Bulletin financier et économique de l'Indochine", years: "1925-1925", status: "in-progress" },
+        { name: "Bulletin de l'Agence économique de l'Indochine", years: "1928-1937", status: "in-progress" },
+        { name: "Bulletin administratif du Tonkin", years: "1902-1944", status: "in-progress" },
+        { name: "Bulletin de la Société d'enseignement mutuel du Tonkin", years: "1922-1938", status: "in-progress" },
+        { name: "Bulletin de la Chambre de commerce de Hanoï", years: "1920-1937", status: "in-progress" },
+        { name: "Bulletin officiel du Commissariat de la République française dans le Centre Viet-Nam", years: "1949-1952", status: "in-progress" },
+        { name: "L'Extrême-Orient (Hanoï)", years: "1894-1899", status: "in-progress" },
+        { name: "L'Éveil économique de l'Indochine bulletin hebdomadaire", years: "1918-1935", status: "in-progress" },
+        { name: "Bulletin officiel de l'Annam et du Tonkin", years: "1873-1900", status: "in-progress" },
+        { name: "Compte administratif du budget local du Tonkin", years: "1900-1941", status: "in-progress" },
+        { name: "Bulletin officiel de l'Expédition de Cochinchine", years: "1861-1887", status: "in-progress" },
+        { name: "Journal judiciaire de l'Indochine française", years: "1890-1953", status: "in-progress" },
+        { name: "Bulletin officiel du Ministère des colonies", years: "1894-1942", status: "in-progress" },
+        { name: "Bulletin administratif de l'Annam", years: "1902-1944", status: "in-progress" },
+        { name: "Le Journal de Saïgon", years: "1945-1947", status: "in-progress" },
+        { name: "L'Avenir du Tonkin", years: "1884-1941", status: "in-progress" },
+        { name: "Les Affiches saïgonnaises", years: "1918-1923", status: "in-progress" },
+        { name: "L'Écho annamite", years: "1920-1944", status: "in-progress" },
+        { name: "L'Ère nouvelle", years: "1926-1929", status: "in-progress" },
+        { name: "Tân-Văn", years: "1934-1936", status: "in-progress" },
+        { name: "Tin-Điền", years: "1946-1946", status: "in-progress" },
+        { name: "Thời thế", years: "1940-1941", status: "in-progress" },
+        { name: "Saïgon républicain", years: "1888-1889", status: "in-progress" },
+        { name: "Radio-Saïgon", years: "1931-1932", status: "in-progress" },
+        { name: "Le Nouvelliste d'Indochine", years: "1936-1942", status: "in-progress" },
+        { name: "La Nouvelle revue indochinoise", years: "1936-1940", status: "in-progress" },
+        { name: "Achats et ventes", years: "1927-1929", status: "in-progress" },
+        { name: "Chantecler", years: "1932-1939", status: "in-progress" },
+      ];
+
+      const publicationsList = document.querySelector("#publications-list");
+      publicationsList.innerHTML = PUBLICATIONS.map(
+        (p) =>
+          `<li><span aria-label="${
+            p.status === "processed" ? "Processed" : "In progress"
+          }">${p.status === "processed" ? "✓" : "○"}</span><span>${
+            p.name
+          }</span><small>${p.years}</small></li>`
+      ).join("");
+    </script>
+
+    <!-- WAITLIST MODE: form submit handler -->
+    <script>
       const waitlistForm = document.querySelector("#waitlist-form");
       const waitlistEmail = document.querySelector("#email");
       const waitlistButton = waitlistForm.querySelector("button");
@@ -1454,11 +1263,7 @@
         "#publication-filter-search"
       );
       const publicationOptions = document.querySelector("#publication-options");
-      const titleSelector = document.querySelector("#title-selector");
       const intro = document.querySelector("#intro");
-      const querySummary = document.querySelector("#query-summary");
-      const queryAnswerLabel = document.querySelector("#query-answer-label");
-      const querySummaryText = document.querySelector("#query-summary-text");
       const statusElement = document.querySelector("#status");
       const loadMoreButton = document.querySelector("#load-more");
       const modal = document.querySelector("#detail-modal");
@@ -1492,16 +1297,12 @@
       const pageLink = document.querySelector("#page-link");
       let currentQuery = "";
       const selectedPublications = new Set();
-      const publications = [...intro.querySelectorAll("li")]
-        .filter((item) => item.firstElementChild?.ariaLabel === "Processed")
-        .map((item, index) => ({
-          id: `p${index + 1}`,
-          name: item.children[1].textContent.replace(/\s+/g, " ").trim(),
-        }));
+      const publications = PUBLICATIONS.filter(
+        ({ status }) => status === "processed"
+      ).map(({ name }, index) => ({ id: `p${index + 1}`, name }));
       const publicationById = new Map(
         publications.map((publication) => [publication.id, publication])
       );
-      let summaryRequest = 0;
       let offset = 0;
       let detail = null;
       let detailPageIndex = 0;
@@ -1533,11 +1334,8 @@
         const ids = selectedPublicationIds();
         if (currentQuery) params.set("q", currentQuery);
         if (ids.length) params.set("p", ids.join(","));
-        history.replaceState(
-          null,
-          "",
-          params.size ? `/s?${params}` : "/gallica/"
-        );
+        const base = location.pathname.replace(/[^/]*$/, "");
+        history.replaceState(null, "", params.size ? `${base}s?${params}` : base);
       }
 
       function updatePublicationFilter() {
@@ -1590,6 +1388,14 @@
         if (publicationFilter.open) publicationFilterSearch.focus();
       });
 
+      document.addEventListener("click", (event) => {
+        if (
+          publicationFilter.open &&
+          !event.target.closest("#publication-filter")
+        )
+          publicationFilter.open = false;
+      });
+
       publicationFilterSearch.addEventListener("input", () => {
         const query = publicationFilterSearch.value.trim().toLocaleLowerCase();
         publicationOptions.querySelectorAll("button").forEach((option) => {
@@ -1609,10 +1415,15 @@
 
         const request = fetch(`${API_BASE}${url}`).then(async (response) => {
           const data = await response.json();
-          if (!response.ok)
+          if (!response.ok) {
+            const message =
+              data.error || `${fallbackError} (HTTP ${response.status})`;
             throw new Error(
-              data.error || `${fallbackError} (HTTP ${response.status})`
+              /blocked|hrana|upgrade your plan/i.test(message)
+                ? "Database is currently not available. Please try later."
+                : message
             );
+          }
           return data;
         });
         apiCache.set(url, request);
@@ -1681,16 +1492,6 @@
           if (imageLoads.get(url) === request) imageLoads.delete(url);
         }
       }
-
-      titleSelector.addEventListener("change", () => {
-        summaryRequest += 1;
-        searchInput.placeholder =
-          titleSelector.value === "Query"
-            ? "Prompt questions..."
-            : "Search keywords...";
-        if (titleSelector.value === "Search") querySummary.hidden = true;
-        titleSelector.blur();
-      });
 
       document.addEventListener("click", (event) => {
         if (event.target.closest("button, a")) {
@@ -2113,10 +1914,8 @@
         loadMoreButton.disabled = true;
         statusElement.textContent = append ? "Loading more..." : "Searching...";
         if (!append) {
-          summaryRequest += 1;
           offset = 0;
           resultsElement.replaceChildren();
-          if (titleSelector.value === "Query") querySummary.hidden = true;
         }
 
         try {
@@ -2137,58 +1936,11 @@
             ? `${resultsElement.children.length} results shown`
             : "No results found.";
           loadMoreButton.hidden = !data.has_more;
-          if (!append && titleSelector.value === "Query") {
-            if (data.results.length) loadQuerySummary();
-            else {
-              queryAnswerLabel.hidden = false;
-              querySummaryText.textContent = "No results for summary";
-              querySummary.hidden = false;
-            }
-          }
         } catch (error) {
           statusElement.textContent = error.message;
           loadMoreButton.hidden = true;
         } finally {
           loadMoreButton.disabled = false;
-        }
-      }
-
-      async function loadQuerySummary() {
-        const request = ++summaryRequest;
-        queryAnswerLabel.hidden = true;
-        querySummaryText.textContent = "Generating answer...";
-        querySummary.hidden = false;
-        try {
-          const params = new URLSearchParams({ q: currentQuery });
-          selectedPublicationIds().forEach((id) =>
-            params.append("publication", publicationById.get(id).name)
-          );
-          const data = await fetchJson(
-            `/api/summary?${params}`,
-            "Summary request failed."
-          );
-          if (data.summary_error) {
-            console.error("Summary generation failed:", data.summary_error);
-            throw new Error(data.summary_error);
-          }
-          if (request !== summaryRequest) return;
-          if (data.results?.length) {
-            resultsElement.replaceChildren(
-              ...data.results.map(createResultCard)
-            );
-            offset = data.results.length;
-            statusElement.textContent = `${offset} results shown`;
-            loadMoreButton.hidden = true;
-          }
-          queryAnswerLabel.hidden = false;
-          querySummaryText.textContent = data.summary || "No answer available.";
-        } catch (error) {
-          console.error("Summary request error:", error);
-          if (request === summaryRequest) {
-            queryAnswerLabel.hidden = true;
-            querySummaryText.textContent =
-              "Cannot generate answer, please try again.";
-          }
         }
       }
 

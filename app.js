@@ -449,8 +449,8 @@ const map = new maplibregl.Map({
   center: [105.8542, 21.0285],
   zoom: minZoomLevel,
   maxBounds: [
-    [105.6659884745061, 20.910896521037643],
-    [106.00332688523798, 21.138244129606704],
+    [105.5695, 20.8209],
+    [106.0998, 21.2282],
   ],
   attributionControl: false,
 });

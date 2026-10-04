@@ -2,3 +2,6 @@
 .env
 *.py
 *.sh
+*.txt
+.claude/
+.vscode/
