@@ -67,7 +67,8 @@ self.addEventListener("fetch", (event) => {
   // Strategy B: Cache-Only/Cache-and-Update for dynamic external content (Map Tiles)
   // This caches tiles as the user views them for later offline use.
   // It uses a generic cache strategy to grab and store any successful network request.
-  if (requestUrl.hostname.includes("api.maptiler.com")) {
+  // ponytail: tiles now come via the maptiler proxy (key in its env)
+  if (requestUrl.pathname.startsWith("/api/maptiler/")) {
     event.respondWith(
       caches.match(event.request).then((response) => {
         // Return cached version if available

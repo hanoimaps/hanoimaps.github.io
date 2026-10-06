@@ -1,6 +1,7 @@
-export const apiKey = "MHw6EW88bsf5GT6b30MK";
+// ponytail: key lives in the proxy repo's env (MAPTILER_KEY) — same pattern as news /api/search. Rotate the old public keys in the MapTiler dashboard.
+export const MAP_PROXY = "https://maptiler-zeta.vercel.app/api/maptiler";
 
-export const STREETS_STYLE = `https://api.maptiler.com/maps/streets-v2/style.json?key=${apiKey}`;
+export const STREETS_STYLE = `${MAP_PROXY}/maps/streets-v2/style.json`;
 export const SATELLITE_HYBRID_STYLE = {
   version: 8,
   metadata: {
@@ -17,10 +18,10 @@ export const SATELLITE_HYBRID_STYLE = {
     },
     "maptiler-streets": {
       type: "vector",
-      url: `https://api.maptiler.com/tiles/v3/tiles.json?key=${apiKey}`,
+      url: `${MAP_PROXY}/tiles/v3/tiles.json`,
     },
   },
-  glyphs: `https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=${apiKey}`,
+  glyphs: `${MAP_PROXY}/fonts/{fontstack}/{range}.pbf`,
   center: [105.8542, 21.0285],
   zoom: 12,
   layers: [

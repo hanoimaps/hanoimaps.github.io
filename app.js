@@ -1,5 +1,5 @@
 import {
-  apiKey,
+  MAP_PROXY,
   STREETS_STYLE,
   SATELLITE_HYBRID_STYLE,
   ExpandableMenuControl,
@@ -274,9 +274,9 @@ class SearchControl {
 
     // ── Try MapTiler geocoding first ──
     try {
-      const url = `https://api.maptiler.com/geocoding/${encodeURIComponent(
+      const url = `${MAP_PROXY}/geocoding/${encodeURIComponent(
         query
-      )}.json?key=${apiKey}&language=vi&limit=5&bbox=${SEARCH_BBOX_PARAM}`;
+      )}.json?language=vi&limit=5&bbox=${SEARCH_BBOX_PARAM}`;
       const res = await fetch(url);
       const data = await res.json();
       if (data.features && data.features.length > 0) {
@@ -323,9 +323,9 @@ class SearchControl {
       if (addressParts.number && localMatch.properties?.name) {
         try {
           const modernAddress = `${addressParts.number} ${localMatch.properties.name}`;
-          const url = `https://api.maptiler.com/geocoding/${encodeURIComponent(
+          const url = `${MAP_PROXY}/geocoding/${encodeURIComponent(
             modernAddress
-          )}.json?key=${apiKey}&language=vi&limit=5&bbox=${SEARCH_BBOX_PARAM}`;
+          )}.json?language=vi&limit=5&bbox=${SEARCH_BBOX_PARAM}`;
           const res = await fetch(url);
           const data = await res.json();
           if (data.features && data.features.length > 0) {

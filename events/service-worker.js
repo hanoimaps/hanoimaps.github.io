@@ -48,9 +48,9 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // A. Cache-First for Map Tiles (MapTiler Base Map & Historic Tiles)
+  // A. Cache-First for Map Tiles (Proxied MapTiler Base Map & Historic Tiles)
   if (
-    requestUrl.hostname.includes("api.maptiler.com") ||
+    requestUrl.pathname.startsWith("/api/maptiler/") ||
     requestUrl.pathname.startsWith("/maps-tiles/")
   ) {
     event.respondWith(
