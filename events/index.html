@@ -408,6 +408,7 @@
         ExpandableMenuControl,
         addCompassControl,
         createSiteNavPanel,
+        apiKey,
       } from "../shared.js";
 
       const siteMenuControl = new ExpandableMenuControl(
@@ -443,7 +444,6 @@
         offset: 15,
         anchor: "bottom",
       });
-      const apiKey = "yirfoVznNRHBz863QlU2";
       const STREETS_STYLE = `https://api.maptiler.com/maps/streets-v2/style.json?key=${apiKey}`;
       const SATELLITE_HYBRID_STYLE = {
         version: 8,
