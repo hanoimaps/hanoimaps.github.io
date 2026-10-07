@@ -18,7 +18,7 @@ import {
 const GEOJSON_PATH = "bio_streets.geojson";
 // const BUILDINGS_GEOJSON_PATH = "bio_houses.geojson";
 
-const SEARCH_BBOX = [105.8124, 21.0069, 105.8691, 21.0470];
+const SEARCH_BBOX = [105.8124, 21.0069, 105.8691, 21.047];
 const SEARCH_BBOX_PARAM = SEARCH_BBOX.join(",");
 
 let streetData = null;
@@ -184,6 +184,14 @@ const mapData = [
     extent: [11780196.139688, 2392283.311738, 11785605.082601, 2399324.539199],
   },
   {
+    year: "1955",
+    title: "1955",
+    extent: [
+      105.82239865672824, 20.99986227652158, 105.87168491902177,
+      21.05939582054588,
+    ],
+  },
+  {
     year: "1968",
     title: "1968",
     extent: [11776833.551, 2386957.026, 11791978.082, 2398934.007],
@@ -265,7 +273,9 @@ class SearchControl {
     if (!query.trim()) return;
 
     const addressParts = parseAddressQuery(query);
-    const preferLocalStreet = isLikelyHistoricalStreetQuery(addressParts.street);
+    const preferLocalStreet = isLikelyHistoricalStreetQuery(
+      addressParts.street
+    );
 
     if (preferLocalStreet || !addressParts.number) {
       const handled = await this.searchLocalStreetAddress(query, addressParts);
@@ -286,10 +296,16 @@ class SearchControl {
         if (!feature) throw new Error("No MapTiler result inside search bbox");
         const [lng, lat] = feature.center;
 
-    if (preferLocalStreet || this.isSuspiciousMapTilerStreetResult(feature, query)) {
-      const handled = await this.searchLocalStreetAddress(query, addressParts);
-      if (handled) return;
-    }
+        if (
+          preferLocalStreet ||
+          this.isSuspiciousMapTilerStreetResult(feature, query)
+        ) {
+          const handled = await this.searchLocalStreetAddress(
+            query,
+            addressParts
+          );
+          if (handled) return;
+        }
 
         const address = feature.place_name || feature.text || query;
 
@@ -314,7 +330,10 @@ class SearchControl {
     await this.searchLocalStreetAddress(query, addressParts);
   }
 
-  async searchLocalStreetAddress(query, addressParts = parseAddressQuery(query)) {
+  async searchLocalStreetAddress(
+    query,
+    addressParts = parseAddressQuery(query)
+  ) {
     const localMatch = await findLocalStreetMatch(
       addressParts.street || query,
       streetData
@@ -332,7 +351,8 @@ class SearchControl {
             const feature = data.features.find((item) =>
               isLngLatInSearchBbox(item.center)
             );
-            if (!feature) throw new Error("No MapTiler result inside search bbox");
+            if (!feature)
+              throw new Error("No MapTiler result inside search bbox");
             const [lng, lat] = feature.center;
             const address = feature.place_name || modernAddress;
 
@@ -381,7 +401,10 @@ class SearchControl {
     const queryWords = normalize(query)
       .split(/\s+/)
       .filter((word) => word.length > 2 && !/^\d/.test(word));
-    return queryWords.length > 0 && !queryWords.every((word) => resultText.includes(word));
+    return (
+      queryWords.length > 0 &&
+      !queryWords.every((word) => resultText.includes(word))
+    );
   }
 
   addSearchMarker(lngLat, title, address, matchKey = lngLat) {
