@@ -988,8 +988,8 @@
       },
       "properties": {
         "name_vn": "Triển lãm 'Thiên Hà Lam' | Azure Galaxy",
-        "from_date": "2026-10-06",
-        "to_date": "2026-10-12",
+        "from_date": "2026-10-10",
+        "to_date": "2026-10-16",
         "start_time": "10:00",
         "time": "N/A",
         "isRegister": "No",
@@ -1587,7 +1587,7 @@
       },
       "properties": {
         "name_vn": "JULIET & ROMEO",
-        "from_date": "2026-10-09",
+        "from_date": "2026-10-10",
         "to_date": "2026-10-11",
         "start_time": "20:00",
         "time": "N/A",
@@ -1663,7 +1663,7 @@
       "properties": {
         "name_vn": "Triển lãm Huyễn Sắc Xoay Vần | Spinning Ghost Colors của Kito",
         "from_date": "2026-10-10",
-        "to_date": "2026-10-14",
+        "to_date": "2026-10-16",
         "start_time": "09:00",
         "time": "N/A",
         "isRegister": "No",
@@ -1712,8 +1712,8 @@
       },
       "properties": {
         "name_vn": "Mở xưởng “Vũ Dân Tân. Gỡ mặt nạ nhà văn: Một trò chơi ký ức văn chương”",
-        "from_date": "2026-10-07",
-        "to_date": "2026-10-10",
+        "from_date": "2026-10-10",
+        "to_date": "2026-10-15",
         "start_time": "17:00",
         "time": "N/A",
         "isRegister": "No",
@@ -1987,7 +1987,7 @@
       },
       "properties": {
         "name_vn": "Oktoberfest 2026",
-        "from_date": "2026-10-08",
+        "from_date": "2026-10-10",
         "to_date": "2026-10-10",
         "start_time": "00:00",
         "time": "N/A",
@@ -2562,8 +2562,8 @@
       },
       "properties": {
         "name_vn": "NƠI BÓNG TỐI THỞ | Where Shadows Breathe",
-        "from_date": "2026-10-06",
-        "to_date": "2026-10-13",
+        "from_date": "2026-10-11",
+        "to_date": "2026-10-16",
         "start_time": "09:00",
         "time": "N/A",
         "isRegister": "No",
@@ -2663,7 +2663,7 @@
       "properties": {
         "name_vn": "HANOI SWING OUT in OCTOBER",
         "from_date": "2026-10-14",
-        "to_date": "2026-10-21",
+        "to_date": "2026-10-14",
         "start_time": "19:30",
         "time": "N/A",
         "isRegister": "No",
@@ -2712,7 +2712,7 @@
       },
       "properties": {
         "name_vn": "LIVE CONCERT CROSSOVER JAZZ 26: FROM STANDARDS TO CONTEMPORARY JAZZ",
-        "from_date": "2026-10-09",
+        "from_date": "2026-10-10",
         "to_date": "2026-10-10",
         "start_time": "21:00",
         "time": "N/A",
@@ -2887,8 +2887,8 @@
       },
       "properties": {
         "name_vn": "FRENCH CINEMA RENDEZ-VOUS (ĐIỂM HẸN ĐIỆN ẢNH PHÁP) 10/2026",
-        "from_date": "2026-10-07",
-        "to_date": "2026-10-25",
+        "from_date": "2026-10-14",
+        "to_date": "2026-10-17",
         "start_time": "19:00",
         "time": "N/A",
         "isRegister": "No",
@@ -3673,6 +3673,756 @@
         "host_name": "Jambox Riverside",
         "host_url": "https://www.facebook.com/profile.phpid61557430405207",
         "image_url": "thumbs/219.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "220",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.86329,
+          21.01189
+        ]
+      },
+      "properties": {
+        "name_vn": "TRÌNH CHIẾU KỲ #2 - FETA 2026 / VIDEO ART SỔNG CHUỒNG",
+        "from_date": "2026-10-10",
+        "to_date": "2026-10-16",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/2498449534011903/",
+        "address": "Creative Square. 1 Lương Yên, Bạch Đằng, Hai Bà Trưng, Hanoi, Vietnam 10000",
+        "address_url": "https://www.google.com/maps/search/Creative+Square.+1+L%C6%B0%C6%A1ng+Y%C3%AAn,+B%E1%BA%A1ch+%C4%90%E1%BA%B1ng,+Hai+B%C3%A0+Tr%C6%B0ng,+Hanoi,+Vietnam+10000/@21.0118893,105.8632863,17z/data=!3m1!4b1",
+        "host_name": "APD Center for Art Patronage and Development",
+        "host_url": "https://www.facebook.com/apdcenter.vn",
+        "image_url": "thumbs/220.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "221",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.83768,
+          21.03014
+        ]
+      },
+      "properties": {
+        "name_vn": "Hợp Ca Hy Vọng - Trình diễn âm nhạc",
+        "from_date": "2026-10-22",
+        "to_date": "2026-10-22",
+        "start_time": "19:30",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1802057147658798/",
+        "address": "58 Phố Nguyễn Thái Học, Quận Ba Đình, Hanoi, Vietnam 100000",
+        "address_url": "https://www.google.com/maps/place/Vi%E1%BB%87n+Goethe+H%C3%A0+N%E1%BB%99i/@21.0301388,105.8376811,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb1135589cb:0x4459b378ddf89500!8m2!3d21.0301388!4d105.8376811!16s%2Fg%2F11nntzgvns",
+        "host_name": "Goethe-Institut Hanoi",
+        "host_url": "https://www.facebook.com/Goethe.Institut.Hanoi",
+        "image_url": "thumbs/221.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "222",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8126,
+          21.02123
+        ]
+      },
+      "properties": {
+        "name_vn": "HOAT ĐỘNG TẠI THƯ VIỆN VIỆN PHÁP TẠI VIỆT NAM - HÀ NỘI | THÁNG 10.2026",
+        "from_date": "2026-10-17",
+        "to_date": "2026-10-17",
+        "start_time": "10:30",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1365733978661881/",
+        "address": "Viện Pháp tại Hà Nội / Institut français de Hanoi",
+        "address_url": "https://www.google.com/maps/search/Vi%E1%BB%87n+Ph%C3%A1p+t%E1%BA%A1i+H%C3%A0+N%E1%BB%99i+%2F+Institut+fran%C3%A7ais+de+Hanoi/@21.0212325,105.8126047,14z/data=!3m1!4b1",
+        "host_name": "Viện Pháp tại Việt Nam - Hà Nội",
+        "host_url": "https://www.facebook.com/IFVHanoi",
+        "image_url": "thumbs/222.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "223",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.85087,
+          21.02821
+        ]
+      },
+      "properties": {
+        "name_vn": "Trò chuyện nghệ thuật: NHỮNG GÌ TA MANG THEO",
+        "from_date": "2026-10-10",
+        "to_date": "2026-10-10",
+        "start_time": "10:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1622679069260941/",
+        "address": "136 Hàng Trống, Hoàn Kiếm, Hanoi, Vietnam",
+        "address_url": "https://www.google.com/maps/place/Apricot+Hotel/@21.0282089,105.8508662,17z/data=!3m1!4b1!4m9!3m8!1s0x3135ab952308667b:0xdb99ed2e3e265856!5m2!4m1!1i2!8m2!3d21.0282089!4d105.8508662!16s%2Fg%2F11b6hwdfsv",
+        "host_name": "Mo Art Space",
+        "host_url": "https://www.facebook.com/moartspacehn",
+        "image_url": "thumbs/223.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "224",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.86798,
+          20.99424
+        ]
+      },
+      "properties": {
+        "name_vn": "CP GG&ĐT: NĂNG LỰC NGHIÊN CỨU CỦA AI HIỆN NAY CÓ THAY THẾ VAI TRÒ CỦA NHÀ KHOA HỌC KHÔNG?",
+        "from_date": "2026-10-10",
+        "to_date": "2026-10-10",
+        "start_time": "15:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1079914371326427/",
+        "address": "Shop house 09 Park 1, Times City, 458 Minh Khai, quận Hai Bà Trưng, Hà Nội , Hanoi, Vietnam",
+        "address_url": "https://www.google.com/maps/search/Shop+house+09+Park+1,+Times+City,+458+Minh+Khai,+qu%E1%BA%ADn+Hai+B%C3%A0+Tr%C6%B0ng,+H%C3%A0+N%E1%BB%99i+,+Hanoi,+Vietnam/@20.9942366,105.8679776,17z/data=!3m1!4b1",
+        "host_name": "Cà phê Thứ Bảy Hà Nội",
+        "host_url": "https://www.facebook.com/100063618098892",
+        "image_url": "thumbs/224.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "225",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.86798,
+          20.99424
+        ]
+      },
+      "properties": {
+        "name_vn": "CP GG & ĐT: LÀNG VĂN HIẾN BÊN SÔNG TÔ TRONG ĐÔ THỊ HIỆN ĐẠI",
+        "from_date": "2026-10-24",
+        "to_date": "2026-10-24",
+        "start_time": "14:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1058694043540541/",
+        "address": "Shop house 09 Park 1, Times City, 458 Minh Khai, quận Hai Bà Trưng, Hà Nội , Hanoi, Vietnam",
+        "address_url": "https://www.google.com/maps/search/Shop+house+09+Park+1,+Times+City,+458+Minh+Khai,+qu%E1%BA%ADn+Hai+B%C3%A0+Tr%C6%B0ng,+H%C3%A0+N%E1%BB%99i+,+Hanoi,+Vietnam/@20.9942366,105.8679776,17z/data=!3m1!4b1",
+        "host_name": "Cà phê Thứ Bảy Hà Nội",
+        "host_url": "https://www.facebook.com/100063618098892",
+        "image_url": "thumbs/225.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "226",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.82672,
+          21.01056
+        ]
+      },
+      "properties": {
+        "name_vn": "TÌM LẠI - MICROWAVE (18/10/2026)",
+        "from_date": "2026-10-18",
+        "to_date": "2026-10-18",
+        "start_time": "20:45",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1653606309700954/",
+        "address": "29, Ngách 31, Ngõ 167 Tây Sơn , Hanoi, Vietnam 100000",
+        "address_url": "https://www.google.com/maps/place/Complex+01/@21.0105641,105.8267223,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab68dd1984e5:0x3d307d4682570ec7!8m2!3d21.0105641!4d105.8267223!16s%2Fg%2F11fvc4fcl3",
+        "host_name": "Polygon Musik",
+        "host_url": "https://www.facebook.com/complex01.vn",
+        "image_url": "thumbs/226.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "227",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.84143,
+          21.04194
+        ]
+      },
+      "properties": {
+        "name_vn": "Một giờ đọc sâu: Phụ nữ tùng thư (Tủ sách Giới và Phát triển)",
+        "from_date": "2026-10-17",
+        "to_date": "2026-10-17",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/875325738909129/",
+        "address": "Tổ Chim Xanh - Bluebirds' Nest",
+        "address_url": "https://www.google.com/maps/place/Bluebirds'+Nest/@21.0419391,105.8414268,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbab0d6c891:0xe7cd99fe7b59ab75!8m2!3d21.0419391!4d105.8414268!16s%2Fg%2F11bwh5rpc1",
+        "host_name": "Nhà xuất bản Phụ nữ Việt Nam",
+        "host_url": "https://www.facebook.com/tochimxanh.bluebirdsnest",
+        "image_url": "thumbs/227.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "228",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.75131,
+          20.98956
+        ]
+      },
+      "properties": {
+        "name_vn": "Lễ Hội Bánh Mì",
+        "from_date": "2026-10-10",
+        "to_date": "2026-10-10",
+        "start_time": "N/A",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1650649606689257/",
+        "address": "Aeon Mall Hà Đông",
+        "address_url": "https://www.google.com/maps/place/Aeon+Mall+H%C3%A0+%C4%90%C3%B4ng/@20.9895625,105.7513125,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab7bee9f7757:0x4ebf8ccfc24ec4ae!8m2!3d20.9895625!4d105.7513125!16s%2Fg%2F11hyt9z552",
+        "host_name": "AEON MALL Ha Dong",
+        "host_url": "https://www.facebook.com/aeonmallhadong.hn",
+        "image_url": "thumbs/228.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "229",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.85697,
+          21.02545
+        ]
+      },
+      "properties": {
+        "name_vn": "Ra mắt sách \"Đợi một nụ cười\" - Trò chuyện cùng tác giả về hành trình hoà nhập của người cháu tự kỷ",
+        "from_date": "2026-10-18",
+        "to_date": "2026-10-18",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1774108783918781/",
+        "address": "Press Club Hanoi",
+        "address_url": "https://www.google.com/maps/place/La+Table+Hanoia+(Press+Club)/@21.0254471,105.8569652,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abeb94d83a21:0x866b33e8c992dccc!8m2!3d21.0254471!4d105.8569652!16s%2Fg%2F1v1v9nxm",
+        "host_name": "Nhã Nam",
+        "host_url": "https://www.facebook.com/nhanampublishing",
+        "image_url": "thumbs/229.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "230",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.84143,
+          21.04194
+        ]
+      },
+      "properties": {
+        "name_vn": "Tập-thể-đọc: Phụ nữ tùng thư (Tủ sách Giới và Phát triển)",
+        "from_date": "2026-10-17",
+        "to_date": "2026-10-17",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1113365914369111/",
+        "address": "Tổ Chim Xanh - Bluebirds' Nest",
+        "address_url": "https://www.google.com/maps/place/Bluebirds'+Nest/@21.0419391,105.8414268,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbab0d6c891:0xe7cd99fe7b59ab75!8m2!3d21.0419391!4d105.8414268!16s%2Fg%2F11bwh5rpc1",
+        "host_name": "Nhà xuất bản Phụ nữ Việt Nam",
+        "host_url": "https://www.facebook.com/nxbphunu",
+        "image_url": "thumbs/230.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "231",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.82672,
+          21.01056
+        ]
+      },
+      "properties": {
+        "name_vn": "CHIẾU PHIM / SCREENING ➤ CON KỂ BA NGHE - LET ME TELL YOU DAD (2026)",
+        "from_date": "2026-10-20",
+        "to_date": "2026-10-20",
+        "start_time": "19:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/2549811502170942/",
+        "address": "COMPLEX 01, số 29 ngách 31 ngõ 167 Tây Sơn, Đống Đa, Hà Nội, Hanoi, Vietnam 100000",
+        "address_url": "https://www.google.com/maps/place/Complex+01/@21.0105641,105.8267223,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab68dd1984e5:0x3d307d4682570ec7!8m2!3d21.0105641!4d105.8267223!16s%2Fg%2F11fvc4fcl3",
+        "host_name": "White Light Cinéhub",
+        "host_url": "https://www.facebook.com/whitelightcinehub",
+        "image_url": "thumbs/231.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "232",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8352,
+          21.01026
+        ]
+      },
+      "properties": {
+        "name_vn": "Ai ai cũng có quyền được HÁT - KoFi Open Mic (since 2019)",
+        "from_date": "2026-10-10",
+        "to_date": "2026-10-10",
+        "start_time": "N/A",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1972877639927657/",
+        "address": "Đối diện số 22A Ngách 2 ngõ 46A Phạm Ngọc Thạch, Hà Nội, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/KoFi/@21.0102647,105.8352015,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab874911796f:0xdb7f758eb6b2ca88!8m2!3d21.0102647!4d105.8352015!16s%2Fg%2F11h54z6yxz",
+        "host_name": "KoFi",
+        "host_url": "https://www.facebook.com/KoFi.vn",
+        "image_url": "thumbs/232.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "233",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.81137,
+          21.09026
+        ]
+      },
+      "properties": {
+        "name_vn": "Sunday Sunset Jams at JamBox, Hanoi",
+        "from_date": "2026-10-18",
+        "to_date": "2026-10-18",
+        "start_time": "18:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1616720153146119/",
+        "address": "142 An Duong Vuong, Tay Ho, Vietnam 1000",
+        "address_url": "https://www.google.com/maps/place/Nh%C3%A0+H%C3%A0ng+Tre+Place/@21.0902617,105.8113694,17z/data=!3m1!4b1!4m6!3m5!1s0x3135aa90dd9d8ebb:0xdc16dd386f390263!8m2!3d21.0902617!4d105.8113694!16s%2Fg%2F1tfsqbnp",
+        "host_name": "JamBox",
+        "host_url": "https://www.facebook.com/61557430405207",
+        "image_url": "thumbs/233.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "234",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.81137,
+          21.09026
+        ]
+      },
+      "properties": {
+        "name_vn": "Open Mic Friday's at JamBox - 8pm till late",
+        "from_date": "2026-10-23",
+        "to_date": "2026-10-23",
+        "start_time": "20:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1652613583200148/",
+        "address": "142 An Duong Vuong, Tay Ho, Vietnam 1000",
+        "address_url": "https://www.google.com/maps/place/Nh%C3%A0+H%C3%A0ng+Tre+Place/@21.0902617,105.8113694,17z/data=!3m1!4b1!4m6!3m5!1s0x3135aa90dd9d8ebb:0xdc16dd386f390263!8m2!3d21.0902617!4d105.8113694!16s%2Fg%2F1tfsqbnp",
+        "host_name": "JamBox",
+        "host_url": "https://www.facebook.com/61557430405207",
+        "image_url": "thumbs/234.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "235",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.84773,
+          21.03011
+        ]
+      },
+      "properties": {
+        "name_vn": "No-Solo Open Mic Night",
+        "from_date": "2026-10-10",
+        "to_date": "2026-10-10",
+        "start_time": "20:30",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1541272801139788/",
+        "address": "13 Hàng Bông, Hàng Trống, Hoàn Kiếm, Hanoi, Vietnam 100000",
+        "address_url": "https://www.google.com/maps/search/13+H%C3%A0ng+B%C3%B4ng,+H%C3%A0ng+Tr%E1%BB%91ng,+Ho%C3%A0n+Ki%E1%BA%BFm,+Hanoi,+Vietnam+100000/@21.0301128,105.8477301,17z/data=!3m1!4b1",
+        "host_name": "Studio 13",
+        "host_url": "https://www.facebook.com/studio13culturehub",
+        "image_url": "thumbs/235.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "236",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.80591,
+          21.03831
+        ]
+      },
+      "properties": {
+        "name_vn": "CHÀ BÁ HEO TÔM",
+        "from_date": "2026-11-06",
+        "to_date": "2026-11-06",
+        "start_time": "20:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1120760560605617/",
+        "address": "277 Quan Hoa, Cầu Giấy, Hà Nội, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/Ng.+277+P.+Quan+Hoa,+Ngh%C4%A9a+%C4%90%C3%B4,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.0383079,105.8059077,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab15867e228f:0x817d1c2476e0c3fe!8m2!3d21.0383079!4d105.8059077!16s%2Fg%2F11b6_ccbrs",
+        "host_name": "HUB Venue",
+        "host_url": "https://www.facebook.com/hubartclub",
+        "image_url": "thumbs/236.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "237",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8401,
+          21.04658
+        ]
+      },
+      "properties": {
+        "name_vn": "Min Theo",
+        "from_date": "2026-10-11",
+        "to_date": "2026-10-11",
+        "start_time": "21:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/s/min-theo-live-music-showcase-s/2226922508164868/",
+        "address": "The Boombox, Hà Nội",
+        "address_url": "https://www.google.com/maps/search/The+Boombox,+H%C3%A0+N%E1%BB%99i/@21.0465832,105.8401,14z/data=!3m1!4b1",
+        "host_name": "The Boombox",
+        "host_url": "https://www.facebook.com/profile.phpid61576156922737",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "238",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.85474,
+          21.03449
+        ]
+      },
+      "properties": {
+        "name_vn": "Purple Blues Open Mic",
+        "from_date": "2026-10-12",
+        "to_date": "2026-10-12",
+        "start_time": "21:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/PurpleBluesBar",
+        "address": "Purple Blues, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/Purple+Blues+Bar+-+07+H%C3%A0ng+Mu%E1%BB%91i/@21.0344925,105.8547428,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abd5676dfc41:0x7f7090a824144849!8m2!3d21.0344925!4d105.8547428!16s%2Fg%2F11s_w310bv",
+        "host_name": "Purple Blues",
+        "host_url": "https://www.facebook.com/PurpleBluesBar",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "239",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8455,
+          21.0325
+        ]
+      },
+      "properties": {
+        "name_vn": "Tranquil Acoustic Open Mic",
+        "from_date": "2026-10-13",
+        "to_date": "2026-10-13",
+        "start_time": "20:30",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/cafetranquil",
+        "address": "Tranquil Cafe Nguyễn Quang Bích, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/Tranquil%20Cafe%20Nguy%E1%BB%85n%20Quang%20B%C3%ADch%2C%20H%C3%A0%20N%E1%BB%99i/@21.0325038,105.8454955,17z",
+        "host_name": "Tranquil Cafe Nguyễn Quang Bích",
+        "host_url": "https://www.facebook.com/cafetranquil",
+        "image_url": "thumbs/239.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "240",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.85647,
+          21.01955
+        ]
+      },
+      "properties": {
+        "name_vn": "Tranquil Acoustic Open Mic",
+        "from_date": "2026-10-14",
+        "to_date": "2026-10-14",
+        "start_time": "20:30",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/cafetranquil",
+        "address": "Tranquil Cafe Trần Hưng Đạo, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/Tranquil%20Cafe%20Tr%E1%BA%A7n%20H%C6%B0ng%20%C4%90%E1%BA%A1o%2C%20H%C3%A0%20N%E1%BB%99i/@21.0195462,105.8564684,17z",
+        "host_name": "Tranquil Cafe Trần Hưng Đạo",
+        "host_url": "https://www.facebook.com/cafetranquil",
+        "image_url": "thumbs/240.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "241",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8401,
+          21.04658
+        ]
+      },
+      "properties": {
+        "name_vn": "Boombox Open Mic",
+        "from_date": "2026-10-14",
+        "to_date": "2026-10-14",
+        "start_time": "21:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/profile.phpid61576156922737",
+        "address": "The Boombox, Hà Nội",
+        "address_url": "https://www.google.com/maps/search/The+Boombox,+H%C3%A0+N%E1%BB%99i/@21.0465832,105.8401,14z/data=!3m1!4b1",
+        "host_name": "The Boombox",
+        "host_url": "https://www.facebook.com/profile.phpid61576156922737",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "242",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.83346,
+          21.01116
+        ]
+      },
+      "properties": {
+        "name_vn": "Bui Rock Open Mic",
+        "from_date": "2026-10-15",
+        "to_date": "2026-10-15",
+        "start_time": "20:00",
+        "time": "N/A",
+        "isRegister": "Yes",
+        "event_url": "https://www.facebook.com/events/942079147452967/942243414103207/",
+        "address": "Bui Rock",
+        "address_url": "https://www.google.com/maps/place/B%E1%BB%A4I+ROCK+(+Rock+cafe+-+Rock+store+-+Rock+band+tee)/@21.011162,105.8334554,17z/data=!3m1!4b1!4m6!3m5!1s0x3135adf33e0622a1:0xdede35254ee5bcd8!8m2!3d21.011162!4d105.8334554!16s%2Fg%2F11frp9bfd9",
+        "host_name": "Bui Rock",
+        "host_url": "https://www.facebook.com/buirock888",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "243",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.82122,
+          21.044
+        ]
+      },
+      "properties": {
+        "name_vn": "Hideout Open Mic",
+        "from_date": "2026-10-15",
+        "to_date": "2026-10-15",
+        "start_time": "21:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/TheHideoutCafeGastroBar",
+        "address": "Hideout, Hà Nội",
+        "address_url": "https://www.google.com/maps/search/Hideout,+H%C3%A0+N%E1%BB%99i/@21.0439965,105.8212192,14z/data=!3m1!4b1",
+        "host_name": "Hideout",
+        "host_url": "https://www.facebook.com/TheHideoutCafeGastroBar",
+        "image_url": "thumbs/243.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "244",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.84668,
+          21.01594
+        ]
+      },
+      "properties": {
+        "name_vn": "Culture Cafe Open Mic",
+        "from_date": "2026-10-16",
+        "to_date": "2026-10-16",
+        "start_time": "21:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/culturecafe.hn",
+        "address": "Culture Cafe, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/Culture%20Cafe%2C%20H%C3%A0%20N%E1%BB%99i/@21.0159436,105.846684,17z",
+        "host_name": "Culture Cafe",
+        "host_url": "https://www.facebook.com/culturecafe.hn",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "245",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8401,
+          21.04658
+        ]
+      },
+      "properties": {
+        "name_vn": "Echoes and Strings #3",
+        "from_date": "2026-10-16",
+        "to_date": "2026-10-16",
+        "start_time": "21:00",
+        "time": "N/A",
+        "isRegister": "Yes",
+        "event_url": "https://www.facebook.com/events/2326985918074472/",
+        "address": "The Boombox, Hà Nội",
+        "address_url": "https://www.google.com/maps/search/The+Boombox,+H%C3%A0+N%E1%BB%99i/@21.0465832,105.8401,14z/data=!3m1!4b1",
+        "host_name": "The Boombox",
+        "host_url": "https://www.facebook.com/profile.phpid61576156922737",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "246",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.84619,
+          21.02915
+        ]
+      },
+      "properties": {
+        "name_vn": "Electric Sheep Sessions",
+        "from_date": "2026-10-17",
+        "to_date": "2026-10-17",
+        "start_time": "20:30",
+        "time": "N/A",
+        "isRegister": "Yes",
+        "event_url": "https://www.facebook.com/events/1370690634850102/",
+        "address": "Hanoi Social Club, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/Hanoi%20Social%20Club%2C%20H%C3%A0%20N%E1%BB%99i/@21.0291515,105.8461905,17z",
+        "host_name": "Hanoi Social Club",
+        "host_url": "https://www.facebook.com/TheHanoiSocialClub/",
+        "image_url": "thumbs/246.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "247",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8401,
+          21.04658
+        ]
+      },
+      "properties": {
+        "name_vn": "THE GET BÁCH BAND / NAM / WHISKEY MYSTICS",
+        "from_date": "2026-10-17",
+        "to_date": "2026-10-17",
+        "start_time": "21:00",
+        "time": "N/A",
+        "isRegister": "Yes",
+        "event_url": "https://www.facebook.com/events/2287768372067188/",
+        "address": "The Boombox, Hà Nội",
+        "address_url": "https://www.google.com/maps/search/The+Boombox,+H%C3%A0+N%E1%BB%99i/@21.0465832,105.8401,14z/data=!3m1!4b1",
+        "host_name": "The Boombox",
+        "host_url": "https://www.facebook.com/profile.phpid61576156922737",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "248",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.80607,
+          21.03826
+        ]
+      },
+      "properties": {
+        "name_vn": "OZZY / SABBATH / HALESTORM",
+        "from_date": "2026-11-06",
+        "to_date": "2026-11-06",
+        "start_time": "21:00",
+        "time": "N/A",
+        "isRegister": "Yes",
+        "event_url": "https://www.facebook.com/events/1120760560605617",
+        "address": "HUB Venue, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/HUB+Venue+Quan+Hoa/@21.0382567,105.8060653,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab78382b7279:0xb36411e6e055bf18!8m2!3d21.0382567!4d105.8060653!16s%2Fg%2F11ckxwwdw9",
+        "host_name": "HUB Venue",
+        "host_url": "https://www.facebook.com/hubartclub",
+        "image_url": "thumbs/248.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "249",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.80607,
+          21.03826
+        ]
+      },
+      "properties": {
+        "name_vn": "Jobless Dads / The Most Romantic Man in Hanoi / Orchidolls",
+        "from_date": "2026-11-10",
+        "to_date": "2026-11-10",
+        "start_time": "21:00",
+        "time": "N/A",
+        "isRegister": "Yes",
+        "event_url": "https://www.facebook.com/hubartclub",
+        "address": "HUB Venue, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/HUB+Venue+Quan+Hoa/@21.0382567,105.8060653,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab78382b7279:0xb36411e6e055bf18!8m2!3d21.0382567!4d105.8060653!16s%2Fg%2F11ckxwwdw9",
+        "host_name": "HUB Venue",
+        "host_url": "https://www.facebook.com/hubartclub",
+        "image_url": "thumbs/249.jpg"
       }
     }
   ]
