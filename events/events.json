@@ -4424,6 +4424,31 @@
         "host_url": "https://www.facebook.com/hubartclub",
         "image_url": "thumbs/249.jpg"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "250",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.82672,
+          21.01056
+        ]
+      },
+      "properties": {
+        "name_vn": "HỘI CHỢ ĐÌNH ĐÁM: Mời bạn tới chơi!! — 🏡Địa điểm",
+        "from_date": "2026-10-17",
+        "to_date": "2026-10-18",
+        "start_time": "10:30",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1160051519680168/",
+        "address": "COMPLEX 01, số 29/31 Ngõ 167 Tây Sơn, Kim Liên, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/Complex+01/@21.0105641,105.8267223,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab68dd1984e5:0x3d307d4682570ec7!8m2!3d21.0105641!4d105.8267223!16s%2Fg%2F11fvc4fcl3",
+        "host_name": "Đīnh Collective",
+        "host_url": "https://www.facebook.com/dinh.collective",
+        "image_url": "thumbs/250.jpg"
+      }
     }
   ]
 }
