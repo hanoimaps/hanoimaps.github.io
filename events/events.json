@@ -4836,8 +4836,8 @@
       },
       "properties": {
         "name_vn": "Triển lãm Huyễn Sắc Xoay Vần | Spinning Ghost Colors của Kito",
-        "from_date": "2026-10-18",
-        "to_date": "2026-10-24",
+        "from_date": "2026-10-19",
+        "to_date": "2026-10-25",
         "start_time": "09:00",
         "time": "N/A",
         "isRegister": "No",
@@ -5872,6 +5872,81 @@
         "host_name": "Polygon",
         "host_url": "https://www.facebook.com/polygon.cafe",
         "image_url": "thumbs/307.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "308",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.81563,
+          21.01682
+        ]
+      },
+      "properties": {
+        "name_vn": "CHIẾU PHIM: \"GIOIA MIA | NGƯỜI YÊU DẤU\"",
+        "from_date": "2026-10-30",
+        "to_date": "2026-10-30",
+        "start_time": "19:30",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1624895242345534/",
+        "address": "Trung tâm Chiếu phim Quốc gia",
+        "address_url": "https://www.google.com/maps/place/National+Cinema+Center/@21.016816,105.8156311,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab9ef82fed13:0x1ee04aa292e377a2!8m2!3d21.016816!4d105.8156311!16s%2Fg%2F11f08fxfdq",
+        "host_name": "Italian Film Week in Vietnam",
+        "host_url": "https://www.facebook.com/hanoigrapevine",
+        "image_url": "thumbs/308.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "309",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.81563,
+          21.01682
+        ]
+      },
+      "properties": {
+        "name_vn": "CHIẾU PHIM: \"LE CITTÀ DI PIANURA | LY CUỐI\"",
+        "from_date": "2026-10-31",
+        "to_date": "2026-10-31",
+        "start_time": "19:30",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1817724315943630/",
+        "address": "Trung tâm Chiếu phim Quốc gia",
+        "address_url": "https://www.google.com/maps/place/National+Cinema+Center/@21.016816,105.8156311,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab9ef82fed13:0x1ee04aa292e377a2!8m2!3d21.016816!4d105.8156311!16s%2Fg%2F11f08fxfdq",
+        "host_name": "Italian Film Week in Vietnam",
+        "host_url": "https://www.facebook.com/hanoigrapevine",
+        "image_url": "thumbs/309.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "310",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.81563,
+          21.01682
+        ]
+      },
+      "properties": {
+        "name_vn": "CHIẾU PHIM: \"DIAMANTI | NHỮNG VIÊN KIM CƯƠNG\" / BẾ MẠC TUẦN PHIM ITALIA TẠI VIỆT NAM 2026",
+        "from_date": "2026-11-01",
+        "to_date": "2026-11-01",
+        "start_time": "19:30",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1390779939937851/",
+        "address": "Trung tâm Chiếu phim Quốc gia",
+        "address_url": "https://www.google.com/maps/place/National+Cinema+Center/@21.016816,105.8156311,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab9ef82fed13:0x1ee04aa292e377a2!8m2!3d21.016816!4d105.8156311!16s%2Fg%2F11f08fxfdq",
+        "host_name": "Italian Film Week in Vietnam",
+        "host_url": "https://www.facebook.com/hanoigrapevine",
+        "image_url": "thumbs/310.jpg"
       }
     }
   ]
