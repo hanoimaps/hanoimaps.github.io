@@ -188,13 +188,6 @@
       </a>
       <a
         class="src"
-        href="https://www.instagram.com/atelier51.hanoi/"
-        target="_blank"
-        rel="noopener"
-        >Atelier 51.Hanoi
-      </a>
-      <a
-        class="src"
         href="https://www.facebook.com/camby8/events"
         target="_blank"
         rel="noopener"
@@ -863,8 +856,7 @@
         href="https://www.facebook.com/dnghvn.vnso/events"
         target="_blank"
         rel="noopener"
-        >VNSO - Dàn nhạc Giao hưởng Việt Nam - Vietnam National Symphony
-        Orchestra
+        >VNSO - Dàn nhạc Giao hưởng Việt Nam - Vietnam National Symphony Orchestra
       </a>
       <a
         class="src"
@@ -941,9 +933,7 @@
       // display order is always A-Z by link text, whatever the markup order
       const box = document.querySelector(".container");
       [...box.querySelectorAll("a.src")]
-        .sort((a, b) =>
-          a.textContent.trim().localeCompare(b.textContent.trim(), "vi")
-        )
+        .sort((a, b) => a.textContent.trim().localeCompare(b.textContent.trim(), "vi"))
         .forEach((a) => box.append(a));
     </script>
   </body>
