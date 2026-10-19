@@ -448,18 +448,18 @@
     <script src="calendar.js" defer></script>
     <script type="module">
       import {
-        ExpandableMenuControl,
+        // ExpandableMenuControl,
         addCompassControl,
-        createSiteNavPanel,
+        // createSiteNavPanel,
         STREETS_STYLE,
         SATELLITE_HYBRID_STYLE,
         StyleSwitcherControl,
         modifyBaseStyle,
       } from "../shared.js";
 
-      const siteMenuControl = new ExpandableMenuControl(
-        createSiteNavPanel("events")
-      );
+      // const siteMenuControl = new ExpandableMenuControl(
+      //   createSiteNavPanel("events")
+      // );
 
       // --- 0. CORE FLOW ---
       window.onload = async function () {
@@ -506,8 +506,9 @@
           ],
           attributionControl: false,
         });
-        map.addControl(siteMenuControl, "top-left");
-        map.on("click", () => siteMenuControl.close());
+        // Menu icon intentionally disabled on the events page.
+        // map.addControl(siteMenuControl, "top-left");
+        // map.on("click", () => siteMenuControl.close());
         map.addControl(
           new maplibregl.GeolocateControl({
             positionOptions: { enableHighAccuracy: true },
@@ -759,11 +760,33 @@
         const features = (geojsonData.features || [])
           .filter((f) => !selectedDate || (f.properties.from_date <= selectedDate && selectedDate <= f.properties.to_date))
           .filter((f) => f.properties.from_date <= end && f.properties.to_date >= start)
-          .sort((a, b) => (b.properties.from_date + (b.properties.start_time || "")).localeCompare(a.properties.from_date + (a.properties.start_time || "")));
+          .sort(compareListEvents);
         if (!features.length) { box.innerHTML = '<div class="list-empty">Không có sự kiện.</div>'; return; }
         const columns = [[], []];
         features.forEach((feature, index) => columns[index % 2].push(`<article class="event-card">${generatePaginatedPopupContent([feature], 0)}</article>`));
         box.innerHTML = columns.map((cards) => `<div class="event-column">${cards.join("")}</div>`).join("");
+      }
+
+      function compareListEvents(a, b) {
+        const now = new Date();
+        const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+        const ap = a.properties;
+        const bp = b.properties;
+        const status = (p) =>
+          p.from_date <= today && today <= p.to_date
+            ? 0
+            : p.from_date > today
+              ? 1
+              : 2;
+        const statusDiff = status(ap) - status(bp);
+        if (statusDiff) return statusDiff;
+
+        const aDate = status(ap) === 2 ? ap.to_date : ap.from_date;
+        const bDate = status(bp) === 2 ? bp.to_date : bp.from_date;
+        const dateDiff = aDate.localeCompare(bDate);
+        if (dateDiff) return status(ap) === 2 ? -dateDiff : dateDiff;
+
+        return (ap.start_time || "").localeCompare(bp.start_time || "");
       }
       window.filterByDate = filterByDate;
       window.popup = popup;

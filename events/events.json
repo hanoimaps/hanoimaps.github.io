@@ -927,28 +927,6 @@
     },
     {
       "type": "Feature",
-      "id": "175",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [105.85087, 21.02821]
-      },
-      "properties": {
-        "name_vn": "NƠI BÓNG TỐI THỞ | Where Shadows Breathe",
-        "from_date": "2026-10-11",
-        "to_date": "2026-10-16",
-        "start_time": "09:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/1422292860007465/",
-        "address": "136 Hàng Trống, Hoàn Kiếm, Hanoi, Vietnam",
-        "address_url": "https://www.google.com/maps/place/Apricot+Hotel/@21.0282089,105.8508662,17z/data=!4m9!3m8!1s0x3135ab952308667b:0xdb99ed2e3e265856!5m2!4m1!1i2!8m2!3d21.0282089!4d105.8508662!16s%2Fg%2F11b6hwdfsv",
-        "host_name": "Mo Art Space",
-        "host_url": "https://www.facebook.com/moartspacehn",
-        "image_url": "thumbs/175.jpg"
-      }
-    },
-    {
-      "type": "Feature",
       "id": "178",
       "geometry": {
         "type": "Point",
@@ -1791,7 +1769,7 @@
         "coordinates": [105.85073, 21.02812]
       },
       "properties": {
-        "name_vn": "NƠI BÓNG TỐI THỞ | Where Shadows Breathe — – Địa điểm",
+        "name_vn": "NƠI BÓNG TỐI THỞ | Where Shadows Breathe",
         "from_date": "2026-10-04",
         "to_date": "2026-11-15",
         "start_time": "09:00",
@@ -1803,50 +1781,6 @@
         "host_name": "Mo Art Space",
         "host_url": "https://www.facebook.com/moartspacehn",
         "image_url": "thumbs/253.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "254",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [105.65274, 20.97485]
-      },
-      "properties": {
-        "name_vn": "NƠI BÓNG TỐI THỞ | Where Shadows Breathe — Thông tin triển lãm:",
-        "from_date": "2026-10-04",
-        "to_date": "2026-11-15",
-        "start_time": "09:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/1422292860007465/",
-        "address": "Iris Sa (Phuong Nguyen, b.1998) is an artist based in Hanoi, Vietnam. Iris Sa explores the intersection of magical realism and the world of dreams. Her works share a core interest in the subconscious, dreaming, and the creation of new worlds through an ongoing inquiry into our sleeping unconsciousness. While dreams may not resolve the fundamental questions of life, we nevertheless find ourselves questioning whether a thread truly connects the dream to the waking reality. In this unconscious state, notions of space and time often blur, yet it is precisely when boundless creativity emerges.",
-        "address_url": "https://www.google.com/maps/search/Iris+Sa+(Phuong+Nguyen,+b.1998)+is+an+artist+based+in+Hanoi,+Vietnam.+Iris+Sa+explores+the+intersection+of+magical+realism+and+the+world+of+dreams.+Her+works+share+a+core+interest+in+the+subconscious,+dreaming,+and+the+creation+of+new+worlds+through+an+ongoing+inquiry+into+our+sleeping+unconsciousness.+While+dreams+may+not+resolve+the+fundamental+questions+of+life,+we+nevertheless+find+ourselves+questioning+whether+a+thread+truly+connects+the+dream+to+the+waking+reality.+In+this+unconscious+state,+notions+of+space+and+time+often+blur,+yet+it+is+precisely+when+boundless+creativity+emerges./@20.974852,105.65274,10z/data=!3m1!4b1",
-        "host_name": "Mo Art Space",
-        "host_url": "https://www.facebook.com/moartspacehn",
-        "image_url": "thumbs/254.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "255",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [105.85073, 21.02812]
-      },
-      "properties": {
-        "name_vn": "NƠI BÓNG TỐI THỞ | Where Shadows Breathe — – Venue",
-        "from_date": "2026-10-04",
-        "to_date": "2026-11-15",
-        "start_time": "09:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/1422292860007465/",
-        "address": "Mo Art Space, Basement B3, 136 Hang Trong, Hoan Kiem, Hanoi",
-        "address_url": "https://www.google.com/maps/place/M%C6%A1+Art+Space/@21.028123,105.8507264,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abf9fd962c83:0x707435eb8f0b494!8m2!3d21.028123!4d105.8507264!16s%2Fg%2F11lky0xhmz",
-        "host_name": "Mo Art Space",
-        "host_url": "https://www.facebook.com/moartspacehn",
-        "image_url": "thumbs/255.jpg"
       }
     },
     {
@@ -2110,72 +2044,6 @@
         "host_name": "Nhã Nam",
         "host_url": "https://www.facebook.com/nhanampublishing",
         "image_url": "thumbs/267.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "268",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [105.7883, 21.0674]
-      },
-      "properties": {
-        "name_vn": "Chủ Nhật, 18 Tháng 10 2026",
-        "from_date": "2026-12-08",
-        "to_date": "2026-12-08",
-        "start_time": "N/A",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://hoangthanhthanglong.vn/tin-tuc-su-kien/su-kien/page/2/",
-        "address": "Trong dịp Tết Nguyên đán Bính Ngọ 2026, Hà Nội tiếp tục miễn phí tham quan 17 di tích do...",
-        "address_url": "https://www.google.com/maps/search/Trong+d%E1%BB%8Bp+T%E1%BA%BFt+Nguy%C3%AAn+%C4%91%C3%A1n+B%C3%ADnh+Ng%E1%BB%8D+2026,+H%C3%A0+N%E1%BB%99i+ti%E1%BA%BFp+t%E1%BB%A5c+mi%E1%BB%85n+ph%C3%AD+tham+quan+17+di+t%C3%ADch+do.../@21.0674017,105.7883003,17z/data=!3m1!4b1",
-        "host_name": "hoangthanhthanglong.vn",
-        "host_url": "https://hoangthanhthanglong.vn/tin-tuc-su-kien/su-kien/",
-        "image_url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "269",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [105.84026, 21.03522]
-      },
-      "properties": {
-        "name_vn": "Hội thảo quốc tế - Hoàng thành Thăng Long",
-        "from_date": "2026-12-08",
-        "to_date": "2026-12-08",
-        "start_time": "N/A",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://hoangthanhthanglong.vn/tin-tuc-su-kien/hoi-thao-quoc-te/",
-        "address": "Ngày 12/8/2026, tại Khu di sản Hoàng Thành Thăng Long, UBND thành phố Hà Nội, Trung tâm Bảo tồn Di...",
-        "address_url": "https://www.google.com/maps/search/Ng%C3%A0y+12%2F8%2F2026,+t%E1%BA%A1i+Khu+di+s%E1%BA%A3n+Ho%C3%A0ng+Th%C3%A0nh+Th%C4%83ng+Long,+UBND+th%C3%A0nh+ph%E1%BB%91+H%C3%A0+N%E1%BB%99i,+Trung+t%C3%A2m+B%E1%BA%A3o+t%E1%BB%93n+Di.../@21.0352231,105.8402594,17z/data=!3m1!4b1",
-        "host_name": "hoangthanhthanglong.vn",
-        "host_url": "https://hoangthanhthanglong.vn/tin-tuc-su-kien/su-kien/",
-        "image_url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "270",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [105.83977, 21.03592]
-      },
-      "properties": {
-        "name_vn": "Tin tức - Hoàng thành Thăng Long",
-        "from_date": "2026-12-08",
-        "to_date": "2026-12-08",
-        "start_time": "N/A",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://hoangthanhthanglong.vn/tin-tuc-su-kien/tin-tuc/",
-        "address": "Sáng 29/9/2026, tại Di sản thế giới Hoàng thành Thăng Long, số 9 Hoàng Diệu, Ba Đình, Hà Nội, Thành...",
-        "address_url": "https://www.google.com/maps/search/S%C3%A1ng+29%2F9%2F2026,+t%E1%BA%A1i+Di+s%E1%BA%A3n+th%E1%BA%BF+gi%E1%BB%9Bi+Ho%C3%A0ng+th%C3%A0nh+Th%C4%83ng+Long,+s%E1%BB%91+9+Ho%C3%A0ng+Di%E1%BB%87u,+Ba+%C4%90%C3%ACnh,+H%C3%A0+N%E1%BB%99i,+Th%C3%A0nh.../@21.0359233,105.8397747,17z/data=!3m1!4b1",
-        "host_name": "hoangthanhthanglong.vn",
-        "host_url": "https://hoangthanhthanglong.vn/tin-tuc-su-kien/su-kien/",
-        "image_url": ""
       }
     },
     {
@@ -3063,10 +2931,7 @@
       "id": "311",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.8530438,
-          21.0319511
-        ]
+        "coordinates": [105.8530438, 21.0319511]
       },
       "properties": {
         "name_vn": "Tiếng Vĩ Cầm Trong Căn Nhà Cổ #2",
@@ -3088,10 +2953,7 @@
       "id": "312",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.84565,
-          21.03251
-        ]
+        "coordinates": [105.84565, 21.03251]
       },
       "properties": {
         "name_vn": "VOCAL JAZZ TRIO 106 - \"FROM SORROW TO HOPE\" THUY BUI AND SONGS OF FREEDOM",
@@ -3113,10 +2975,7 @@
       "id": "313",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.84565,
-          21.03251
-        ]
+        "coordinates": [105.84565, 21.03251]
       },
       "properties": {
         "name_vn": "LIVE CONCERT CROSSOVER JAZZ 27: FROM STANDARDS TO CONTEMPORARY JAZZ",
@@ -3138,10 +2997,7 @@
       "id": "314",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.84138,
-          21.04206
-        ]
+        "coordinates": [105.84138, 21.04206]
       },
       "properties": {
         "name_vn": "Địa ngục môn | Gate of Hell (1953) | Weekly Movie Gathering | 27/10/2026",
@@ -3163,10 +3019,7 @@
       "id": "315",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.8437,
-          21.01901
-        ]
+        "coordinates": [105.8437, 21.01901]
       },
       "properties": {
         "name_vn": "*OPEN MIC* VUI CA TỰ DO * số 81",
@@ -3188,10 +3041,7 @@
       "id": "316",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.82622,
-          21.02279
-        ]
+        "coordinates": [105.82622, 21.02279]
       },
       "properties": {
         "name_vn": "VYMI Family Concert",
@@ -3213,10 +3063,7 @@
       "id": "317",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.8352,
-          21.01026
-        ]
+        "coordinates": [105.8352, 21.01026]
       },
       "properties": {
         "name_vn": "Ai ai cũng có quyền được HÁT - KoFi Open Mic (since 2019)",
@@ -3238,10 +3085,7 @@
       "id": "318",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.81137,
-          21.09026
-        ]
+        "coordinates": [105.81137, 21.09026]
       },
       "properties": {
         "name_vn": "Sunday Sunset Jams at JamBox, Hanoi",
@@ -3263,10 +3107,7 @@
       "id": "319",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.81841,
-          21.05046
-        ]
+        "coordinates": [105.81841, 21.05046]
       },
       "properties": {
         "name_vn": "Sunday Jam",
@@ -3288,10 +3129,7 @@
       "id": "320",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.82122,
-          21.044
-        ]
+        "coordinates": [105.82122, 21.044]
       },
       "properties": {
         "name_vn": "Puddles and Atomic Không",
@@ -3306,6 +3144,28 @@
         "host_name": "Hideout",
         "host_url": "https://www.facebook.com/TheHideoutCafeGastroBar",
         "image_url": "thumbs/320.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "321",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.8484808, 21.033754]
+      },
+      "properties": {
+        "name_vn": "Triển lãm nghệ thuật tương tác Miền Mộng",
+        "from_date": "2026-10-24",
+        "to_date": "2026-10-25",
+        "start_time": "08:30",
+        "time": "N/A",
+        "isRegister": "Yes",
+        "event_url": "https://www.facebook.com/mienmong2026/posts/pfbid02dtJEjxUetM1Smpr6n8Ubp1ddvn8JR4RTTsphszYyJNybXWwU6vSVbXZDrVsNrHX5l",
+        "address": "Area 75 - Art & Auction",
+        "address_url": "https://www.google.com/maps/place/Area+75+-+Art+%26+Auction/@21.033754,105.8459059,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab3d617851a5:0xddd1897f33dc1881!8m2!3d21.033754!4d105.8484808!16s%2Fg%2F11vdhlyxfm!5m1!1e2?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+        "host_name": "Miền Mộng",
+        "host_url": "https://www.facebook.com/mienmong2026",
+        "image_url": "thumbs/321.jpg"
       }
     }
   ]
