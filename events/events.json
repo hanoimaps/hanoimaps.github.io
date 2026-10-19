@@ -6,10 +6,7 @@
       "id": "4",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.852173,
-          21.022074
-        ]
+        "coordinates": [105.852173, 21.022074]
       },
       "properties": {
         "name_vn": "HOÀ NHẠC \"KHÚC HOAN CA\"",
@@ -31,10 +28,7 @@
       "id": "17",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.868,
-          20.99424
-        ]
+        "coordinates": [105.868, 20.99424]
       },
       "properties": {
         "name_vn": "GG & ĐT : LÀNG VĂN HIẾN VEN SÔNG TRONG ĐÔ THỊ HIỆN ĐẠI",
@@ -56,10 +50,7 @@
       "id": "18",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.868,
-          20.99424
-        ]
+        "coordinates": [105.868, 20.99424]
       },
       "properties": {
         "name_vn": "CP GG&ĐT: CHÁNH NIỆM SINH THÁI: TIẾP CẬN PHẬT GIÁO TRONG BẢO VỆ MÔI TRƯỜNG",
@@ -81,10 +72,7 @@
       "id": "43",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.84138,
-          21.04206
-        ]
+        "coordinates": [105.84138, 21.04206]
       },
       "properties": {
         "name_vn": "Đêm đọc Người Nằm Mộng",
@@ -106,10 +94,7 @@
       "id": "86",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.82622,
-          21.02279
-        ]
+        "coordinates": [105.82622, 21.02279]
       },
       "properties": {
         "name_vn": "Hòa nhạc đặt vé trước số 187",
@@ -131,10 +116,7 @@
       "id": "87",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.82622,
-          21.02279
-        ]
+        "coordinates": [105.82622, 21.02279]
       },
       "properties": {
         "name_vn": "Hòa nhạc đặt vé trước số 188",
@@ -156,10 +138,7 @@
       "id": "88",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.82622,
-          21.02279
-        ]
+        "coordinates": [105.82622, 21.02279]
       },
       "properties": {
         "name_vn": "Hòa nhạc đặt vé trước số 189",
@@ -181,10 +160,7 @@
       "id": "89",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.82622,
-          21.02279
-        ]
+        "coordinates": [105.82622, 21.02279]
       },
       "properties": {
         "name_vn": "VYMI Family Concert",
@@ -206,10 +182,7 @@
       "id": "90",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.82622,
-          21.02279
-        ]
+        "coordinates": [105.82622, 21.02279]
       },
       "properties": {
         "name_vn": "Chùm tác phẩm Haydn",
@@ -231,10 +204,7 @@
       "id": "91",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.82622,
-          21.02279
-        ]
+        "coordinates": [105.82622, 21.02279]
       },
       "properties": {
         "name_vn": "Chùm tác phẩm Tchaikovsky",
@@ -256,10 +226,7 @@
       "id": "92",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.85217,
-          21.02207
-        ]
+        "coordinates": [105.85217, 21.02207]
       },
       "properties": {
         "name_vn": "Hòa nhạc Vietcombank",
@@ -281,10 +248,7 @@
       "id": "93",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.85217,
-          21.02207
-        ]
+        "coordinates": [105.85217, 21.02207]
       },
       "properties": {
         "name_vn": "Hòa nhạc cổ điển SM tại VIệt Nam",
@@ -306,10 +270,7 @@
       "id": "94",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.85637,
-          21.02541
-        ]
+        "coordinates": [105.85637, 21.02541]
       },
       "properties": {
         "name_vn": "Hòa nhạc kỷ niệm 125 năm khách sạn Metropole: Những tác phẩm Mozart vượt thời gian cùng VNSO",
@@ -331,10 +292,7 @@
       "id": "95",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.848506,
-          21.0286768
-        ]
+        "coordinates": [105.848506, 21.0286768]
       },
       "properties": {
         "name_vn": "Hòa nhạc từ thiện giáng sinh",
@@ -356,10 +314,7 @@
       "id": "96",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.85217,
-          21.02207
-        ]
+        "coordinates": [105.85217, 21.02207]
       },
       "properties": {
         "name_vn": "Chuỗi hòa nhạc \"Âm nhạc từ thành viên\" I",
@@ -381,10 +336,7 @@
       "id": "97",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.82672,
-          21.01056
-        ]
+        "coordinates": [105.82672, 21.01056]
       },
       "properties": {
         "name_vn": "TRÌNH CHIẾU KỲ #2 - FETA 2026 / VIDEO ART SỔNG CHUỒNG — Complex 01",
@@ -406,10 +358,7 @@
       "id": "98",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.8436,
-          21.02648
-        ]
+        "coordinates": [105.8436, 21.02648]
       },
       "properties": {
         "name_vn": "TRÌNH CHIẾU KỲ #2 - FETA 2026 / VIDEO ART SỔNG CHUỒNG — Toong Phan Bội Châu",
@@ -431,10 +380,7 @@
       "id": "99",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.78258,
-          21.03588
-        ]
+        "coordinates": [105.78258, 21.03588]
       },
       "properties": {
         "name_vn": "TRÌNH CHIẾU KỲ #2 - FETA 2026 / VIDEO ART SỔNG CHUỒNG — Toong IPH",
@@ -456,10 +402,7 @@
       "id": "100",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.79516,
-          21.063
-        ]
+        "coordinates": [105.79516, 21.063]
       },
       "properties": {
         "name_vn": "TRÌNH CHIẾU KỲ #2 - FETA 2026 / VIDEO ART SỔNG CHUỒNG — Toong Embassy",
@@ -481,10 +424,7 @@
       "id": "101",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.80149,
-          21.00671
-        ]
+        "coordinates": [105.80149, 21.00671]
       },
       "properties": {
         "name_vn": "TRÌNH CHIẾU KỲ #2 - FETA 2026 / VIDEO ART SỔNG CHUỒNG — Toong Hoàng Đạo Thúy",
@@ -506,10 +446,7 @@
       "id": "102",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.80243,
-          21.0043
-        ]
+        "coordinates": [105.80243, 21.0043]
       },
       "properties": {
         "name_vn": "TRÌNH CHIẾU KỲ #2 - FETA 2026 / VIDEO ART SỔNG CHUỒNG — Flow Haus – Ideation Space",
@@ -531,10 +468,7 @@
       "id": "112",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.81481,
-          21.00315
-        ]
+        "coordinates": [105.81481, 21.00315]
       },
       "properties": {
         "name_vn": "Triển lãm 'Thiên Hà Lam' | Azure Galaxy",
@@ -556,10 +490,7 @@
       "id": "120",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.85217,
-          21.02207
-        ]
+        "coordinates": [105.85217, 21.02207]
       },
       "properties": {
         "name_vn": "BÁN VÉ LIVESHOW ĐÊM NHẠC PHÚ QUANG – CÒN MÃI MỘT TÌNH YÊU NGÀY 12/10/2026 TẠI HÀ NỘI – VÉ ĐẸP TỪ BAN",
@@ -581,10 +512,7 @@
       "id": "121",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.85217,
-          21.02207
-        ]
+        "coordinates": [105.85217, 21.02207]
       },
       "properties": {
         "name_vn": "BÁN VÉ LIVESHOW TRỊNH CÔNG SƠN, VĂN CAO - TỪ THIÊN THAI ĐẾN Ở TRỌ, 14/10 - VÉ ĐẸP TỪ BAN TỔ CHỨC",
@@ -606,10 +534,7 @@
       "id": "122",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.84397,
-          21.02198
-        ]
+        "coordinates": [105.84397, 21.02198]
       },
       "properties": {
         "name_vn": "BÁN VÉ ĐÊM NHẠC LIVESHOW TRUNG QUÂN IDOL – NGÀY 18/10/2026 TẠI HÀ NỘI – VÉ ĐẸP TỪ BAN TỔ CHỨC",
@@ -631,10 +556,7 @@
       "id": "123",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.78761,
-          21.00563
-        ]
+        "coordinates": [105.78761, 21.00563]
       },
       "properties": {
         "name_vn": "Bán Vé Liveshow Đêm Nhạc – Liveconcert Người Tình 9 – Lệ Quyên, Phan Mạnh Quỳnh 20/10/2026",
@@ -656,10 +578,7 @@
       "id": "139",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.84877,
-          21.0218
-        ]
+        "coordinates": [105.84877, 21.0218]
       },
       "properties": {
         "name_vn": "Triển lãm Huyễn Sắc Xoay Vần | Spinning Ghost Colors của Kito",
@@ -681,10 +600,7 @@
       "id": "141",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.8657,
-          21.06361
-        ]
+        "coordinates": [105.8657, 21.06361]
       },
       "properties": {
         "name_vn": "Mở xưởng “Vũ Dân Tân. Gỡ mặt nạ nhà văn: Một trò chơi ký ức văn chương”",
@@ -706,10 +622,7 @@
       "id": "142",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.80591,
-          21.03831
-        ]
+        "coordinates": [105.80591, 21.03831]
       },
       "properties": {
         "name_vn": "HUBLLOWEEN '26!",
@@ -731,10 +644,7 @@
       "id": "159",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.85501,
-          21.05477
-        ]
+        "coordinates": [105.85501, 21.05477]
       },
       "properties": {
         "name_vn": "We Fest",
@@ -756,10 +666,7 @@
       "id": "160",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.85217,
-          21.02207
-        ]
+        "coordinates": [105.85217, 21.02207]
       },
       "properties": {
         "name_vn": "The Kyushu Symphony Orchestra",
@@ -781,10 +688,7 @@
       "id": "161",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.82895,
-          21.06777
-        ]
+        "coordinates": [105.82895, 21.06777]
       },
       "properties": {
         "name_vn": "International Latino Fest Vol. 7",
@@ -806,10 +710,7 @@
       "id": "162",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.82122,
-          21.044
-        ]
+        "coordinates": [105.82122, 21.044]
       },
       "properties": {
         "name_vn": "\"31st Trick\" - Halloween Warmup",
@@ -831,10 +732,7 @@
       "id": "163",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.83912,
-          21.05079
-        ]
+        "coordinates": [105.83912, 21.05079]
       },
       "properties": {
         "name_vn": "\"OTTOber Treat\"",
@@ -856,10 +754,7 @@
       "id": "164",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.83186,
-          21.07292
-        ]
+        "coordinates": [105.83186, 21.07292]
       },
       "properties": {
         "name_vn": "🎃 Noise Hanoi: The Resurrection 🎃",
@@ -881,10 +776,7 @@
       "id": "165",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.81228,
-          21.01845
-        ]
+        "coordinates": [105.81228, 21.01845]
       },
       "properties": {
         "name_vn": "The Brothers",
@@ -906,10 +798,7 @@
       "id": "166",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.83103,
-          21.07195
-        ]
+        "coordinates": [105.83103, 21.07195]
       },
       "properties": {
         "name_vn": "Back From the Dead III",
@@ -931,10 +820,7 @@
       "id": "167",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.78761,
-          21.00563
-        ]
+        "coordinates": [105.78761, 21.00563]
       },
       "properties": {
         "name_vn": "Mr Siro: Everyone Harbors An Iceberg Within",
@@ -956,10 +842,7 @@
       "id": "168",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.82622,
-          21.02279
-        ]
+        "coordinates": [105.82622, 21.02279]
       },
       "properties": {
         "name_vn": "Chopin Dreams",
@@ -981,10 +864,7 @@
       "id": "169",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.83708,
-          21.03078
-        ]
+        "coordinates": [105.83708, 21.03078]
       },
       "properties": {
         "name_vn": "Chuyên đề đặc biệt: Hoạ sĩ, liệt sĩ Tô Ngọc Vân (1906 – 1954)",
@@ -1006,10 +886,7 @@
       "id": "170",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.84528,
-          21.04181
-        ]
+        "coordinates": [105.84528, 21.04181]
       },
       "properties": {
         "name_vn": "Mở xưởng: dư cảnh",
@@ -1031,10 +908,7 @@
       "id": "173",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.84256,
-          21.01965
-        ]
+        "coordinates": [105.84256, 21.01965]
       },
       "properties": {
         "name_vn": "SÁNG TÁC BẰNG TIẾNG PHÁP – CÂU CHUYỆN VỀ NGÔN NGỮ, HÀNH TRÌNH CỦA NGÔN TỪ",
@@ -1056,10 +930,7 @@
       "id": "175",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.85087,
-          21.02821
-        ]
+        "coordinates": [105.85087, 21.02821]
       },
       "properties": {
         "name_vn": "NƠI BÓNG TỐI THỞ | Where Shadows Breathe",
@@ -1081,10 +952,7 @@
       "id": "178",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.86798,
-          20.99424
-        ]
+        "coordinates": [105.86798, 20.99424]
       },
       "properties": {
         "name_vn": "CP GG&ĐT: CHÁNH NIỆM SINH THÁI: TIẾP CẬN PHẬT GIÁO TRONG BẢO VỆ MÔI TRƯỜNG",
@@ -1106,10 +974,7 @@
       "id": "179",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.82672,
-          21.01056
-        ]
+        "coordinates": [105.82672, 21.01056]
       },
       "properties": {
         "name_vn": "HANOI SWING OUT in OCTOBER",
@@ -1131,10 +996,7 @@
       "id": "188",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.82674,
-          21.01064
-        ]
+        "coordinates": [105.82674, 21.01064]
       },
       "properties": {
         "name_vn": "FRENCH CINEMA RENDEZ-VOUS (ĐIỂM HẸN ĐIỆN ẢNH PHÁP) 10/2026",
@@ -1156,10 +1018,7 @@
       "id": "192",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.82676,
-          21.01073
-        ]
+        "coordinates": [105.82676, 21.01073]
       },
       "properties": {
         "name_vn": "THE BLACK PARADE XX: HALLOWEEN MARCH",
@@ -1181,10 +1040,7 @@
       "id": "195",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.81137,
-          21.09026
-        ]
+        "coordinates": [105.81137, 21.09026]
       },
       "properties": {
         "name_vn": "Open Mic Friday's at JamBox - 8pm till late",
@@ -1206,10 +1062,7 @@
       "id": "198",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.81137,
-          21.09026
-        ]
+        "coordinates": [105.81137, 21.09026]
       },
       "properties": {
         "name_vn": "Hot Ones the Spicy Challenge",
@@ -1231,10 +1084,7 @@
       "id": "215",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.84619,
-          21.02915
-        ]
+        "coordinates": [105.84619, 21.02915]
       },
       "properties": {
         "name_vn": "Tiny Music Club: Torantes",
@@ -1256,10 +1106,7 @@
       "id": "216",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.80607,
-          21.03826
-        ]
+        "coordinates": [105.80607, 21.03826]
       },
       "properties": {
         "name_vn": "Tan - Mini Rock Concert",
@@ -1281,10 +1128,7 @@
       "id": "217",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.8401,
-          21.04658
-        ]
+        "coordinates": [105.8401, 21.04658]
       },
       "properties": {
         "name_vn": "Atomic Không + Furr Cough",
@@ -1306,10 +1150,7 @@
       "id": "218",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.76393,
-          21.0205
-        ]
+        "coordinates": [105.76393, 21.0205]
       },
       "properties": {
         "name_vn": "Bigbang",
@@ -1331,10 +1172,7 @@
       "id": "219",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.81841,
-          21.05046
-        ]
+        "coordinates": [105.81841, 21.05046]
       },
       "properties": {
         "name_vn": "Sunday Bluegrass Jam",
@@ -1356,10 +1194,7 @@
       "id": "220",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.86329,
-          21.01189
-        ]
+        "coordinates": [105.86329, 21.01189]
       },
       "properties": {
         "name_vn": "TRÌNH CHIẾU KỲ #2 - FETA 2026 / VIDEO ART SỔNG CHUỒNG",
@@ -1381,10 +1216,7 @@
       "id": "221",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.83768,
-          21.03014
-        ]
+        "coordinates": [105.83768, 21.03014]
       },
       "properties": {
         "name_vn": "Hợp Ca Hy Vọng - Trình diễn âm nhạc",
@@ -1406,10 +1238,7 @@
       "id": "222",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.8126,
-          21.02123
-        ]
+        "coordinates": [105.8126, 21.02123]
       },
       "properties": {
         "name_vn": "HOAT ĐỘNG TẠI THƯ VIỆN VIỆN PHÁP TẠI VIỆT NAM - HÀ NỘI | THÁNG 10.2026",
@@ -1431,10 +1260,7 @@
       "id": "225",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.86798,
-          20.99424
-        ]
+        "coordinates": [105.86798, 20.99424]
       },
       "properties": {
         "name_vn": "CP GG & ĐT: LÀNG VĂN HIẾN BÊN SÔNG TÔ TRONG ĐÔ THỊ HIỆN ĐẠI",
@@ -1456,10 +1282,7 @@
       "id": "226",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.82672,
-          21.01056
-        ]
+        "coordinates": [105.82672, 21.01056]
       },
       "properties": {
         "name_vn": "TÌM LẠI - MICROWAVE (18/10/2026)",
@@ -1481,10 +1304,7 @@
       "id": "227",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.84143,
-          21.04194
-        ]
+        "coordinates": [105.84143, 21.04194]
       },
       "properties": {
         "name_vn": "Một giờ đọc sâu: Phụ nữ tùng thư (Tủ sách Giới và Phát triển)",
@@ -1506,10 +1326,7 @@
       "id": "229",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.85697,
-          21.02545
-        ]
+        "coordinates": [105.85697, 21.02545]
       },
       "properties": {
         "name_vn": "Ra mắt sách \"Đợi một nụ cười\" - Trò chuyện cùng tác giả về hành trình hoà nhập của người cháu tự kỷ",
@@ -1531,10 +1348,7 @@
       "id": "230",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.84143,
-          21.04194
-        ]
+        "coordinates": [105.84143, 21.04194]
       },
       "properties": {
         "name_vn": "Tập-thể-đọc: Phụ nữ tùng thư (Tủ sách Giới và Phát triển)",
@@ -1556,10 +1370,7 @@
       "id": "231",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.82672,
-          21.01056
-        ]
+        "coordinates": [105.82672, 21.01056]
       },
       "properties": {
         "name_vn": "CHIẾU PHIM / SCREENING ➤ CON KỂ BA NGHE - LET ME TELL YOU DAD (2026)",
@@ -1581,10 +1392,7 @@
       "id": "233",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.81137,
-          21.09026
-        ]
+        "coordinates": [105.81137, 21.09026]
       },
       "properties": {
         "name_vn": "Sunday Sunset Jams at JamBox, Hanoi",
@@ -1606,10 +1414,7 @@
       "id": "234",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.81137,
-          21.09026
-        ]
+        "coordinates": [105.81137, 21.09026]
       },
       "properties": {
         "name_vn": "Open Mic Friday's at JamBox - 8pm till late",
@@ -1631,10 +1436,7 @@
       "id": "236",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.80591,
-          21.03831
-        ]
+        "coordinates": [105.80591, 21.03831]
       },
       "properties": {
         "name_vn": "CHÀ BÁ HEO TÔM",
@@ -1656,10 +1458,7 @@
       "id": "238",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.85474,
-          21.03449
-        ]
+        "coordinates": [105.85474, 21.03449]
       },
       "properties": {
         "name_vn": "Purple Blues Open Mic",
@@ -1681,10 +1480,7 @@
       "id": "239",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.8455,
-          21.0325
-        ]
+        "coordinates": [105.8455, 21.0325]
       },
       "properties": {
         "name_vn": "Tranquil Acoustic Open Mic",
@@ -1706,10 +1502,7 @@
       "id": "240",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.85647,
-          21.01955
-        ]
+        "coordinates": [105.85647, 21.01955]
       },
       "properties": {
         "name_vn": "Tranquil Acoustic Open Mic",
@@ -1731,10 +1524,7 @@
       "id": "241",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.8401,
-          21.04658
-        ]
+        "coordinates": [105.8401, 21.04658]
       },
       "properties": {
         "name_vn": "Boombox Open Mic",
@@ -1756,10 +1546,7 @@
       "id": "242",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.83346,
-          21.01116
-        ]
+        "coordinates": [105.83346, 21.01116]
       },
       "properties": {
         "name_vn": "Bui Rock Open Mic",
@@ -1781,10 +1568,7 @@
       "id": "243",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.82122,
-          21.044
-        ]
+        "coordinates": [105.82122, 21.044]
       },
       "properties": {
         "name_vn": "Hideout Open Mic",
@@ -1806,10 +1590,7 @@
       "id": "244",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.84668,
-          21.01594
-        ]
+        "coordinates": [105.84668, 21.01594]
       },
       "properties": {
         "name_vn": "Culture Cafe Open Mic",
@@ -1831,10 +1612,7 @@
       "id": "245",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.8401,
-          21.04658
-        ]
+        "coordinates": [105.8401, 21.04658]
       },
       "properties": {
         "name_vn": "Echoes and Strings #3",
@@ -1856,10 +1634,7 @@
       "id": "246",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.84619,
-          21.02915
-        ]
+        "coordinates": [105.84619, 21.02915]
       },
       "properties": {
         "name_vn": "Electric Sheep Sessions",
@@ -1881,10 +1656,7 @@
       "id": "247",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.8401,
-          21.04658
-        ]
+        "coordinates": [105.8401, 21.04658]
       },
       "properties": {
         "name_vn": "THE GET BÁCH BAND / NAM / WHISKEY MYSTICS",
@@ -1906,10 +1678,7 @@
       "id": "248",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.80607,
-          21.03826
-        ]
+        "coordinates": [105.80607, 21.03826]
       },
       "properties": {
         "name_vn": "OZZY / SABBATH / HALESTORM",
@@ -1931,10 +1700,7 @@
       "id": "249",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.80607,
-          21.03826
-        ]
+        "coordinates": [105.80607, 21.03826]
       },
       "properties": {
         "name_vn": "Jobless Dads / The Most Romantic Man in Hanoi / Orchidolls",
@@ -1956,10 +1722,7 @@
       "id": "250",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.82672,
-          21.01056
-        ]
+        "coordinates": [105.82672, 21.01056]
       },
       "properties": {
         "name_vn": "HỘI CHỢ ĐÌNH ĐÁM: Mời bạn tới chơi!! — 🏡Địa điểm",
@@ -1981,10 +1744,7 @@
       "id": "251",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.8152,
-          21.00214
-        ]
+        "coordinates": [105.8152, 21.00214]
       },
       "properties": {
         "name_vn": "TRIỂN LÃM “THIÊN HÀ LAM” | “AZURE GALAXY” — 🔵 Triển lãm mở cửa tự do",
@@ -2006,10 +1766,7 @@
       "id": "252",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.84553,
-          21.04139
-        ]
+        "coordinates": [105.84553, 21.04139]
       },
       "properties": {
         "name_vn": "23 - một tập hợp tác phẩm của | selected works by NGUYỄN NGỌC LINH",
@@ -2031,10 +1788,7 @@
       "id": "253",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.85073,
-          21.02812
-        ]
+        "coordinates": [105.85073, 21.02812]
       },
       "properties": {
         "name_vn": "NƠI BÓNG TỐI THỞ | Where Shadows Breathe — – Địa điểm",
@@ -2056,10 +1810,7 @@
       "id": "254",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.65274,
-          20.97485
-        ]
+        "coordinates": [105.65274, 20.97485]
       },
       "properties": {
         "name_vn": "NƠI BÓNG TỐI THỞ | Where Shadows Breathe — Thông tin triển lãm:",
@@ -2081,10 +1832,7 @@
       "id": "255",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.85073,
-          21.02812
-        ]
+        "coordinates": [105.85073, 21.02812]
       },
       "properties": {
         "name_vn": "NƠI BÓNG TỐI THỞ | Where Shadows Breathe — – Venue",
@@ -2106,10 +1854,7 @@
       "id": "256",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.65274,
-          20.97485
-        ]
+        "coordinates": [105.65274, 20.97485]
       },
       "properties": {
         "name_vn": "HOAT ĐỘNG TẠI THƯ VIỆN VIỆN PHÁP TẠI VIỆT NAM - HÀ NỘI | THÁNG 10.2026 — Si vous souhaitez percer ce grand mystère, venez à l'atelier « Voyage dans le temps",
@@ -2131,10 +1876,7 @@
       "id": "257",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.82673,
-          21.01063
-        ]
+        "coordinates": [105.82673, 21.01063]
       },
       "properties": {
         "name_vn": "FRENCH CINEMA RENDEZ-VOUS – OCTOBRE THÁNG 10.2026 — ➤ Lieu",
@@ -2156,10 +1898,7 @@
       "id": "258",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.80126,
-          20.992
-        ]
+        "coordinates": [105.80126, 20.992]
       },
       "properties": {
         "name_vn": "THUẬT NGỮ PHÁP–VIỆT VỀ KHOA HỌC NHÂN VĂN | GẶP GỠ VÀ TRAO ĐỔI NHÂN DỊP RA MẮT SÁCH — HÀ NỘI",
@@ -2181,10 +1920,7 @@
       "id": "259",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.80652,
-          21.0143
-        ]
+        "coordinates": [105.80652, 21.0143]
       },
       "properties": {
         "name_vn": "THUẬT NGỮ PHÁP–VIỆT VỀ KHOA HỌC NHÂN VĂN | GẶP GỠ VÀ TRAO ĐỔI NHÂN DỊP RA MẮT SÁCH — TP. HỒ CHÍ MINH",
@@ -2206,10 +1942,7 @@
       "id": "260",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.83768,
-          21.03014
-        ]
+        "coordinates": [105.83768, 21.03014]
       },
       "properties": {
         "name_vn": "Một đối thoại về nghệ thuật bao hàm",
@@ -2231,10 +1964,7 @@
       "id": "261",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.85216,
-          21.03402
-        ]
+        "coordinates": [105.85216, 21.03402]
       },
       "properties": {
         "name_vn": "(HẾT CHỖ) Lắng Nghe Điểm Chạm & Kỳ Quan - Trình diễn múa & sân khấu đương đại",
@@ -2256,10 +1986,7 @@
       "id": "262",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.83768,
-          21.03014
-        ]
+        "coordinates": [105.83768, 21.03014]
       },
       "properties": {
         "name_vn": "tiếng rơi… một hành trình cùng nghe lắng nhau - Trình diễn tương tác",
@@ -2280,10 +2007,7 @@
       "id": "263",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.86798,
-          20.9936
-        ]
+        "coordinates": [105.86798, 20.9936]
       },
       "properties": {
         "name_vn": "CP Giáo dục: HỌC TOÁN ĐỂ LÀM GÌ TRONG KỶ NGUYÊN AI?",
@@ -2305,10 +2029,7 @@
       "id": "264",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.84138,
-          21.04206
-        ]
+        "coordinates": [105.84138, 21.04206]
       },
       "properties": {
         "name_vn": "Địa ngục môn | Gate of Hell (1953) | Weekly Movie Gathering | 20/10/2026",
@@ -2330,10 +2051,7 @@
       "id": "265",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.83595,
-          21.02885
-        ]
+        "coordinates": [105.83595, 21.02885]
       },
       "properties": {
         "name_vn": "Sắc Tâm 2026 - Triển lãm Sơn mài & Trầm hương  — ✤ Địa điểm",
@@ -2355,10 +2073,7 @@
       "id": "266",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.84877,
-          21.0218
-        ]
+        "coordinates": [105.84877, 21.0218]
       },
       "properties": {
         "name_vn": "Triển lãm Huyễn Sắc Xoay Vần | Spinning Ghost Colors của Kito",
@@ -2380,10 +2095,7 @@
       "id": "267",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.85697,
-          21.02545
-        ]
+        "coordinates": [105.85697, 21.02545]
       },
       "properties": {
         "name_vn": "Ra mắt sách \"Đợi một nụ cười\" - Trò chuyện cùng tác giả về hành trình hoà nhập của người cháu tự kỷ — 📍Địa điểm",
@@ -2405,10 +2117,7 @@
       "id": "268",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.7883,
-          21.0674
-        ]
+        "coordinates": [105.7883, 21.0674]
       },
       "properties": {
         "name_vn": "Chủ Nhật, 18 Tháng 10 2026",
@@ -2430,10 +2139,7 @@
       "id": "269",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.84026,
-          21.03522
-        ]
+        "coordinates": [105.84026, 21.03522]
       },
       "properties": {
         "name_vn": "Hội thảo quốc tế - Hoàng thành Thăng Long",
@@ -2455,10 +2161,7 @@
       "id": "270",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.83977,
-          21.03592
-        ]
+        "coordinates": [105.83977, 21.03592]
       },
       "properties": {
         "name_vn": "Tin tức - Hoàng thành Thăng Long",
@@ -2480,10 +2183,7 @@
       "id": "271",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.89252,
-          21.06071
-        ]
+        "coordinates": [105.89252, 21.06071]
       },
       "properties": {
         "name_vn": "Điểm Rìa bên Ảo Cảnh | At the Chimeric Edge — 📍 Địa điểm",
@@ -2505,10 +2205,7 @@
       "id": "272",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.89252,
-          21.06071
-        ]
+        "coordinates": [105.89252, 21.06071]
       },
       "properties": {
         "name_vn": "Điểm Rìa bên Ảo Cảnh | At the Chimeric Edge — 📍 Venue",
@@ -2530,10 +2227,7 @@
       "id": "273",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.81563,
-          21.01682
-        ]
+        "coordinates": [105.81563, 21.01682]
       },
       "properties": {
         "name_vn": "CHIẾU PHIM: \"LA GRAZIA | ÂN XÁ\" / KHAI MẠC TUẦN PHIM ITALIA TẠI VIỆT NAM 2026",
@@ -2555,10 +2249,7 @@
       "id": "274",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.81563,
-          21.01682
-        ]
+        "coordinates": [105.81563, 21.01682]
       },
       "properties": {
         "name_vn": "CHIẾU PHIM: \"IL MAESTRO | BẬC THẦY QUẦN VỢT\"",
@@ -2580,10 +2271,7 @@
       "id": "275",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.81563,
-          21.01682
-        ]
+        "coordinates": [105.81563, 21.01682]
       },
       "properties": {
         "name_vn": "CHIẾU PHIM: \"PRIMAVERA | MÙA XUÂN\"",
@@ -2605,10 +2293,7 @@
       "id": "276",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.82677,
-          21.01065
-        ]
+        "coordinates": [105.82677, 21.01065]
       },
       "properties": {
         "name_vn": "FRENCH CINEMA RENDEZ-VOUS (ĐIỂM HẸN ĐIỆN ẢNH PHÁP) 10/2026",
@@ -2630,10 +2315,7 @@
       "id": "277",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.8352,
-          21.01026
-        ]
+        "coordinates": [105.8352, 21.01026]
       },
       "properties": {
         "name_vn": "Ai ai cũng có quyền được HÁT - KoFi Open Mic (since 2019)",
@@ -2655,10 +2337,7 @@
       "id": "278",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.82672,
-          21.01056
-        ]
+        "coordinates": [105.82672, 21.01056]
       },
       "properties": {
         "name_vn": "WILD ROCK N' ROLL NIGHT - Guitarist Vinh Xiêm và Đại Bàng Trắng Band (25/10/2026)",
@@ -2680,10 +2359,7 @@
       "id": "279",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.82627,
-          21.02273
-        ]
+        "coordinates": [105.82627, 21.02273]
       },
       "properties": {
         "name_vn": "[một cuộc chơi][cùng nhau] #4",
@@ -2705,10 +2381,7 @@
       "id": "280",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.81137,
-          21.09026
-        ]
+        "coordinates": [105.81137, 21.09026]
       },
       "properties": {
         "name_vn": "Sunday Sunset Jams at JamBox, Hanoi",
@@ -2730,10 +2403,7 @@
       "id": "281",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.81137,
-          21.09026
-        ]
+        "coordinates": [105.81137, 21.09026]
       },
       "properties": {
         "name_vn": "Open Mic Friday's at JamBox - 8pm till late",
@@ -2755,10 +2425,7 @@
       "id": "282",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.81137,
-          21.09026
-        ]
+        "coordinates": [105.81137, 21.09026]
       },
       "properties": {
         "name_vn": "Hot Ones the Spicy Challenge",
@@ -2780,10 +2447,7 @@
       "id": "283",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.81337,
-          21.0899
-        ]
+        "coordinates": [105.81337, 21.0899]
       },
       "properties": {
         "name_vn": "Hanoi Bluegrass Jam Session #4 at JamBox",
@@ -2805,10 +2469,7 @@
       "id": "284",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.84022,
-          21.04697
-        ]
+        "coordinates": [105.84022, 21.04697]
       },
       "properties": {
         "name_vn": "Strictly Vinyl Vol. #255 feat. Scott Towers a.k.a. Chopper Reeds [Fat Freddy's Drop]",
@@ -2830,10 +2491,7 @@
       "id": "285",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.81841,
-          21.05046
-        ]
+        "coordinates": [105.81841, 21.05046]
       },
       "properties": {
         "name_vn": "Sunday Jam",
@@ -2855,10 +2513,7 @@
       "id": "286",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.85428,
-          21.03308
-        ]
+        "coordinates": [105.85428, 21.03308]
       },
       "properties": {
         "name_vn": "Her Own Kind of Beautiful",
@@ -2880,10 +2535,7 @@
       "id": "287",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.8401,
-          21.04658
-        ]
+        "coordinates": [105.8401, 21.04658]
       },
       "properties": {
         "name_vn": "Ol' Scotty Two Cans",
@@ -2905,10 +2557,7 @@
       "id": "288",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.83058,
-          21.07069
-        ]
+        "coordinates": [105.83058, 21.07069]
       },
       "properties": {
         "name_vn": "Mikey's Open Mic",
@@ -2930,10 +2579,7 @@
       "id": "289",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.85474,
-          21.03449
-        ]
+        "coordinates": [105.85474, 21.03449]
       },
       "properties": {
         "name_vn": "Purple Blues Open Mic",
@@ -2955,10 +2601,7 @@
       "id": "290",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.8455,
-          21.0325
-        ]
+        "coordinates": [105.8455, 21.0325]
       },
       "properties": {
         "name_vn": "Tranquil Acoustic Open Mic",
@@ -2980,10 +2623,7 @@
       "id": "291",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.84619,
-          21.02915
-        ]
+        "coordinates": [105.84619, 21.02915]
       },
       "properties": {
         "name_vn": "Xóm Nhạc: Linh Đan",
@@ -3005,10 +2645,7 @@
       "id": "292",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.8401,
-          21.04658
-        ]
+        "coordinates": [105.8401, 21.04658]
       },
       "properties": {
         "name_vn": "Free Thoughts Open Mic",
@@ -3030,10 +2667,7 @@
       "id": "293",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.52476,
-          20.99001
-        ]
+        "coordinates": [105.52476, 20.99001]
       },
       "properties": {
         "name_vn": "KoFi Acoustic Open Mic",
@@ -3055,10 +2689,7 @@
       "id": "294",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.85647,
-          21.01955
-        ]
+        "coordinates": [105.85647, 21.01955]
       },
       "properties": {
         "name_vn": "Tranquil Acoustic Open Mic",
@@ -3080,10 +2711,7 @@
       "id": "295",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.8401,
-          21.04658
-        ]
+        "coordinates": [105.8401, 21.04658]
       },
       "properties": {
         "name_vn": "Boombox Open Mic",
@@ -3105,10 +2733,7 @@
       "id": "296",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.909,
-          20.77605
-        ]
+        "coordinates": [105.909, 20.77605]
       },
       "properties": {
         "name_vn": "Bui Rock Open Mic",
@@ -3130,10 +2755,7 @@
       "id": "297",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.82122,
-          21.044
-        ]
+        "coordinates": [105.82122, 21.044]
       },
       "properties": {
         "name_vn": "Hideout Open Mic",
@@ -3155,10 +2777,7 @@
       "id": "298",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.81423,
-          21.08249
-        ]
+        "coordinates": [105.81423, 21.08249]
       },
       "properties": {
         "name_vn": "Re-Cycle: One More Night",
@@ -3180,10 +2799,7 @@
       "id": "299",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.84668,
-          21.01594
-        ]
+        "coordinates": [105.84668, 21.01594]
       },
       "properties": {
         "name_vn": "Culture Cafe Open Mic",
@@ -3205,10 +2821,7 @@
       "id": "300",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.81841,
-          21.05046
-        ]
+        "coordinates": [105.81841, 21.05046]
       },
       "properties": {
         "name_vn": "Jambox Open Mic",
@@ -3230,10 +2843,7 @@
       "id": "301",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.8401,
-          21.04658
-        ]
+        "coordinates": [105.8401, 21.04658]
       },
       "properties": {
         "name_vn": "Easy Flow Hip Hop Show",
@@ -3255,10 +2865,7 @@
       "id": "302",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.81423,
-          21.08249
-        ]
+        "coordinates": [105.81423, 21.08249]
       },
       "properties": {
         "name_vn": "White Eagles",
@@ -3280,10 +2887,7 @@
       "id": "303",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.83058,
-          21.07069
-        ]
+        "coordinates": [105.83058, 21.07069]
       },
       "properties": {
         "name_vn": "Sunaba and Friends: Hanoian Park",
@@ -3305,10 +2909,7 @@
       "id": "304",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.84619,
-          21.02915
-        ]
+        "coordinates": [105.84619, 21.02915]
       },
       "properties": {
         "name_vn": "Xóm Nhạc: Mayverie",
@@ -3330,10 +2931,7 @@
       "id": "305",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.84619,
-          21.02915
-        ]
+        "coordinates": [105.84619, 21.02915]
       },
       "properties": {
         "name_vn": "Tiny Music Club: Peter Miller",
@@ -3355,10 +2953,7 @@
       "id": "306",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.81105,
-          21.05721
-        ]
+        "coordinates": [105.81105, 21.05721]
       },
       "properties": {
         "name_vn": "502 OCEAN: MỘT LÁ THƯ TAY",
@@ -3380,10 +2975,7 @@
       "id": "307",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.81423,
-          21.08249
-        ]
+        "coordinates": [105.81423, 21.08249]
       },
       "properties": {
         "name_vn": "Twenty One More Songs",
@@ -3405,10 +2997,7 @@
       "id": "308",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.81563,
-          21.01682
-        ]
+        "coordinates": [105.81563, 21.01682]
       },
       "properties": {
         "name_vn": "CHIẾU PHIM: \"GIOIA MIA | NGƯỜI YÊU DẤU\"",
@@ -3430,10 +3019,7 @@
       "id": "309",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.81563,
-          21.01682
-        ]
+        "coordinates": [105.81563, 21.01682]
       },
       "properties": {
         "name_vn": "CHIẾU PHIM: \"LE CITTÀ DI PIANURA | LY CUỐI\"",
@@ -3455,10 +3041,7 @@
       "id": "310",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          105.81563,
-          21.01682
-        ]
+        "coordinates": [105.81563, 21.01682]
       },
       "properties": {
         "name_vn": "CHIẾU PHIM: \"DIAMANTI | NHỮNG VIÊN KIM CƯƠNG\" / BẾ MẠC TUẦN PHIM ITALIA TẠI VIỆT NAM 2026",
