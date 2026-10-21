@@ -3167,6 +3167,28 @@
         "host_url": "https://www.facebook.com/mienmong2026",
         "image_url": "thumbs/321.jpg"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "322",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.7807194, 21.0250718]
+      },
+      "properties": {
+        "name_vn": "LIVESHOW QUE SERA, SERA 2026",
+        "from_date": "2026-12-26",
+        "to_date": "2026-12-26",
+        "start_time": "N/A",
+        "time": "N/A",
+        "isRegister": "Yes",
+        "event_url": "https://www.facebook.com/theherahallhanoi/posts/pfbid0isvdiMrRsau5GueEgxMWhYZSwXvgyTov58baCxDQqWacEbYSdjfdZ7WVWif5tK9zl",
+        "address": "Cung Thiếu Nhi Hà Nội",
+        "address_url": "https://www.google.com/maps/place/Cung+Thi%E1%BA%BFu+Nhi+H%C3%A0+N%E1%BB%99i/@21.0250718,105.7807194,17z/data=!4m6!3m5!1s0x313455001e049043:0xbb8abb0fa2453106!8m2!3d21.0250718!4d105.7807194!16s%2Fg%2F11y4q92zwc!5m1!1e2?entry=ttu&g_ep=EgoyMDI2MTAxOC4wIKXMDSoASAFQAw%3D%3D",
+        "host_name": "The Hera Hall Hanoi",
+        "host_url": "https://www.facebook.com/theherahallhanoi",
+        "image_url": "thumbs/322.jpg"
+      }
     }
   ]
 }

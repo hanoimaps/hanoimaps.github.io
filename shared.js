@@ -305,6 +305,16 @@ export function modifyBaseStyle(map) {
   applyProperty(layersToHide, "layout", "visibility", "none");
   applyProperty(pathsToRecolor, "paint", "line-color", "#efeeef");
 
+  map
+    .getStyle()
+    ?.layers?.filter(
+      (layer) =>
+        layer.type === "symbol" &&
+        (layer.id === "road_label" ||
+          layer["source-layer"] === "transportation_name")
+    )
+    .forEach((layer) => map.setLayerZoomRange(layer.id, 0, 24));
+
   if (map.getLayer("Building") || map.getLayer("Building 3D")) {
     map.setLayerZoomRange("Building", 14, 24);
     map.setLayerZoomRange("Building 3D", 14, 24);
