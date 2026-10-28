@@ -912,6 +912,7 @@
         }
       }
     </style>
+    <script src="https://www.paypal.com/sdk/js?client-id=BAAL-0ueOoXPbAZGxvT_Z0kmEoXI4PYr3bMxStnBSDQgRc3vBzNtvB8vFnuDpMgYF3Km4QW_9ICjYhztqY&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
   </head>
   <body>
     <main class="app">
@@ -936,8 +937,7 @@
       <h1><span class="gallica-word">Gallica</span> Search</h1>
       <!-- WAITLIST MODE: form below is active; search UI hidden via CSS above -->
       <p>
-        I am upgrading the site! To be notified, you may enter your email and
-        share your suggestion below 🤗
+        I am upgrading the site! Share your suggestion and I will notify you 🤗
       </p>
       <form id="waitlist-form" method="post" novalidate>
         <input
@@ -958,6 +958,16 @@
         <button type="submit">Notify me</button>
       </form>
       <p id="waitlist-success" hidden>Thank you for your submission!</p>
+      <br /><br />
+      <p>Or:</p>
+      <div id="paypal-container-SMHQNJ2NC62HU"></div>
+      <script>
+        paypal
+          .HostedButtons({
+            hostedButtonId: "SMHQNJ2NC62HU",
+          })
+          .render("#paypal-container-SMHQNJ2NC62HU");
+      </script>
       <div class="search-controls">
         <form class="search-form" id="search-form" role="search">
           <input
@@ -1158,56 +1168,193 @@
         <h3 class="detail-text-title">Extracted text</h3>
         <p class="detail-text" id="detail-text"></p>
       </section>
+      <br />
     </dialog>
 
     <script>
       // Single source of truth for publications; rendered into #publications-list.
       // status: "processed" (✓) or "in-progress" (○).
       const PUBLICATIONS = [
-        { name: "Bulletin officiel du Commissariat de la République Française au Tonkin", years: "1948-1949", status: "processed" },
-        { name: "L'Association amicale fonctionnaires Indochine", years: "1925-1931", status: "processed" },
-        { name: "Moniteur du protectorat de l'Annam et du Tonkin", years: "1886-1888", status: "processed" },
-        { name: "Bulletin de la Société des études indochinoises", years: "1884-1929", status: "processed" },
-        { name: "L'Exposition de Hanoï", years: "1902-1903", status: "processed" },
+        {
+          name: "Bulletin officiel du Commissariat de la République Française au Tonkin",
+          years: "1948-1949",
+          status: "processed",
+        },
+        {
+          name: "L'Association amicale fonctionnaires Indochine",
+          years: "1925-1931",
+          status: "processed",
+        },
+        {
+          name: "Moniteur du protectorat de l'Annam et du Tonkin",
+          years: "1886-1888",
+          status: "processed",
+        },
+        {
+          name: "Bulletin de la Société des études indochinoises",
+          years: "1884-1929",
+          status: "processed",
+        },
+        {
+          name: "L'Exposition de Hanoï",
+          years: "1902-1903",
+          status: "processed",
+        },
         { name: "L'Avant-garde", years: "1929-1929", status: "processed" },
         { name: "Saïgon-potins", years: "1929-1929", status: "processed" },
-        { name: "La Plume indochinoise", years: "1912-1913", status: "processed" },
+        {
+          name: "La Plume indochinoise",
+          years: "1912-1913",
+          status: "processed",
+        },
         { name: "L'Oeuvre", years: "1936-1937", status: "processed" },
         { name: "Chantecler revue", years: "1934-1934", status: "processed" },
-        { name: "Bulletin officiel du Commissariat de la République Française en Annam", years: "1947-1949", status: "in-progress" },
-        { name: "Annuaire général de l'Indochine", years: "1900-1925", status: "in-progress" },
-        { name: "Journal officiel de l'Indo-Chine française", years: "1893-1901", status: "in-progress" },
-        { name: "Bulletin officiel de l'Indochine française", years: "1889-1913", status: "in-progress" },
-        { name: "L'Indochine (Paris)", years: "1928-1934", status: "in-progress" },
-        { name: "Bulletin officiel du Haut-commissariat France Indochine", years: "1952-1954", status: "in-progress" },
-        { name: "Bulletin économique de l'Indochine", years: "1898-1944", status: "in-progress" },
-        { name: "Ville de Hanoï : bulletin municipal", years: "1922-1936", status: "in-progress" },
-        { name: "Bulletin financier et économique de l'Indochine", years: "1925-1925", status: "in-progress" },
-        { name: "Bulletin de l'Agence économique de l'Indochine", years: "1928-1937", status: "in-progress" },
-        { name: "Bulletin administratif du Tonkin", years: "1902-1944", status: "in-progress" },
-        { name: "Bulletin de la Société d'enseignement mutuel du Tonkin", years: "1922-1938", status: "in-progress" },
-        { name: "Bulletin de la Chambre de commerce de Hanoï", years: "1920-1937", status: "in-progress" },
-        { name: "Bulletin officiel du Commissariat de la République française dans le Centre Viet-Nam", years: "1949-1952", status: "in-progress" },
-        { name: "L'Extrême-Orient (Hanoï)", years: "1894-1899", status: "in-progress" },
-        { name: "L'Éveil économique de l'Indochine bulletin hebdomadaire", years: "1918-1935", status: "in-progress" },
-        { name: "Bulletin officiel de l'Annam et du Tonkin", years: "1873-1900", status: "in-progress" },
-        { name: "Compte administratif du budget local du Tonkin", years: "1900-1941", status: "in-progress" },
-        { name: "Bulletin officiel de l'Expédition de Cochinchine", years: "1861-1887", status: "in-progress" },
-        { name: "Journal judiciaire de l'Indochine française", years: "1890-1953", status: "in-progress" },
-        { name: "Bulletin officiel du Ministère des colonies", years: "1894-1942", status: "in-progress" },
-        { name: "Bulletin administratif de l'Annam", years: "1902-1944", status: "in-progress" },
-        { name: "Le Journal de Saïgon", years: "1945-1947", status: "in-progress" },
-        { name: "L'Avenir du Tonkin", years: "1884-1941", status: "in-progress" },
-        { name: "Les Affiches saïgonnaises", years: "1918-1923", status: "in-progress" },
+        {
+          name: "Bulletin officiel du Commissariat de la République Française en Annam",
+          years: "1947-1949",
+          status: "in-progress",
+        },
+        {
+          name: "Annuaire général de l'Indochine",
+          years: "1900-1925",
+          status: "in-progress",
+        },
+        {
+          name: "Journal officiel de l'Indo-Chine française",
+          years: "1893-1901",
+          status: "in-progress",
+        },
+        {
+          name: "Bulletin officiel de l'Indochine française",
+          years: "1889-1913",
+          status: "in-progress",
+        },
+        {
+          name: "L'Indochine (Paris)",
+          years: "1928-1934",
+          status: "in-progress",
+        },
+        {
+          name: "Bulletin officiel du Haut-commissariat France Indochine",
+          years: "1952-1954",
+          status: "in-progress",
+        },
+        {
+          name: "Bulletin économique de l'Indochine",
+          years: "1898-1944",
+          status: "in-progress",
+        },
+        {
+          name: "Ville de Hanoï : bulletin municipal",
+          years: "1922-1936",
+          status: "in-progress",
+        },
+        {
+          name: "Bulletin financier et économique de l'Indochine",
+          years: "1925-1925",
+          status: "in-progress",
+        },
+        {
+          name: "Bulletin de l'Agence économique de l'Indochine",
+          years: "1928-1937",
+          status: "in-progress",
+        },
+        {
+          name: "Bulletin administratif du Tonkin",
+          years: "1902-1944",
+          status: "in-progress",
+        },
+        {
+          name: "Bulletin de la Société d'enseignement mutuel du Tonkin",
+          years: "1922-1938",
+          status: "in-progress",
+        },
+        {
+          name: "Bulletin de la Chambre de commerce de Hanoï",
+          years: "1920-1937",
+          status: "in-progress",
+        },
+        {
+          name: "Bulletin officiel du Commissariat de la République française dans le Centre Viet-Nam",
+          years: "1949-1952",
+          status: "in-progress",
+        },
+        {
+          name: "L'Extrême-Orient (Hanoï)",
+          years: "1894-1899",
+          status: "in-progress",
+        },
+        {
+          name: "L'Éveil économique de l'Indochine bulletin hebdomadaire",
+          years: "1918-1935",
+          status: "in-progress",
+        },
+        {
+          name: "Bulletin officiel de l'Annam et du Tonkin",
+          years: "1873-1900",
+          status: "in-progress",
+        },
+        {
+          name: "Compte administratif du budget local du Tonkin",
+          years: "1900-1941",
+          status: "in-progress",
+        },
+        {
+          name: "Bulletin officiel de l'Expédition de Cochinchine",
+          years: "1861-1887",
+          status: "in-progress",
+        },
+        {
+          name: "Journal judiciaire de l'Indochine française",
+          years: "1890-1953",
+          status: "in-progress",
+        },
+        {
+          name: "Bulletin officiel du Ministère des colonies",
+          years: "1894-1942",
+          status: "in-progress",
+        },
+        {
+          name: "Bulletin administratif de l'Annam",
+          years: "1902-1944",
+          status: "in-progress",
+        },
+        {
+          name: "Le Journal de Saïgon",
+          years: "1945-1947",
+          status: "in-progress",
+        },
+        {
+          name: "L'Avenir du Tonkin",
+          years: "1884-1941",
+          status: "in-progress",
+        },
+        {
+          name: "Les Affiches saïgonnaises",
+          years: "1918-1923",
+          status: "in-progress",
+        },
         { name: "L'Écho annamite", years: "1920-1944", status: "in-progress" },
         { name: "L'Ère nouvelle", years: "1926-1929", status: "in-progress" },
         { name: "Tân-Văn", years: "1934-1936", status: "in-progress" },
         { name: "Tin-Điền", years: "1946-1946", status: "in-progress" },
         { name: "Thời thế", years: "1940-1941", status: "in-progress" },
-        { name: "Saïgon républicain", years: "1888-1889", status: "in-progress" },
+        {
+          name: "Saïgon républicain",
+          years: "1888-1889",
+          status: "in-progress",
+        },
         { name: "Radio-Saïgon", years: "1931-1932", status: "in-progress" },
-        { name: "Le Nouvelliste d'Indochine", years: "1936-1942", status: "in-progress" },
-        { name: "La Nouvelle revue indochinoise", years: "1936-1940", status: "in-progress" },
+        {
+          name: "Le Nouvelliste d'Indochine",
+          years: "1936-1942",
+          status: "in-progress",
+        },
+        {
+          name: "La Nouvelle revue indochinoise",
+          years: "1936-1940",
+          status: "in-progress",
+        },
         { name: "Achats et ventes", years: "1927-1929", status: "in-progress" },
         { name: "Chantecler", years: "1932-1939", status: "in-progress" },
       ];
@@ -1335,7 +1482,11 @@
         if (currentQuery) params.set("q", currentQuery);
         if (ids.length) params.set("p", ids.join(","));
         const base = location.pathname.replace(/[^/]*$/, "");
-        history.replaceState(null, "", params.size ? `${base}s?${params}` : base);
+        history.replaceState(
+          null,
+          "",
+          params.size ? `${base}s?${params}` : base
+        );
       }
 
       function updatePublicationFilter() {
