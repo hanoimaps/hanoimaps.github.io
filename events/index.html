@@ -39,42 +39,156 @@
       }
 
       /* MAP/LIST + MONTH FILTER */
-      #view-toggle, #month-toggle {
-        position: fixed; left: 50%; transform: translateX(-50%); display: flex;
-        padding: 3px; background: rgba(255,255,255,.92); border-radius: 999px;
-        box-shadow: 0 2px 12px rgba(0,0,0,.18); z-index: 10;
+      #view-toggle,
+      #month-toggle {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        padding: 3px;
+        background: rgba(255, 255, 255, 0.92);
+        border-radius: 999px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+        z-index: 10;
       }
-      #view-toggle { top: 12px; }
-      #month-toggle { top: 64px; }
-      #month-toggle[hidden], #list-view[hidden] { display: none; }
-      #view-toggle button, #month-toggle button {
-        border: 0; background: transparent; border-radius: 999px; font: inherit;
-        font-weight: 600; color: #555; cursor: pointer;
+      #view-toggle {
+        top: 12px;
       }
-      #view-toggle button { padding: 8px 18px; font-size: 14px; }
-      #month-toggle button { padding: 7px 14px; font-size: 13px; }
-      #view-toggle button.active, #month-toggle button.active { background: #1a1a1a; color: #fff; }
-      #list-view { position: fixed; inset: 0; overflow-y: auto; background: #222; z-index: 5; }
-      #list-view::before, #list-view::after { content: ""; position: fixed; left: 0; right: 0; z-index: 8; pointer-events: none; backdrop-filter: blur(7px); }
-      #list-view::before { top: 0; height: 116px; background: linear-gradient(#222 28%, rgba(34,34,34,.82) 68%, transparent); }
-      #list-view::after { bottom: 0; height: 92px; background: linear-gradient(transparent, rgba(34,34,34,.88) 70%, #222); }
-      #list-container { --card-gap: clamp(12px,4vw,20px); width: min(460px,calc(100% - 8px)); margin: 0 auto; padding: 148px 6px 180px; box-sizing: border-box; display: flex; gap: var(--card-gap); align-items: flex-start; }
-      .event-column { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: var(--card-gap); }
-      .event-card { width: 100%; }
-      .event-card > .popup { width: auto; padding: 0; background: transparent; box-shadow: none; }
-      .event-card > .popup > .popup { --card-pad-x: clamp(10px,3vw,14px); --card-pad-y: clamp(10px,2.5vw,12px); box-sizing: border-box; width: 100%; padding: var(--card-pad-y) var(--card-pad-x) clamp(14px,3.5vw,16px); border-radius: clamp(12px,3vw,14px); overflow: hidden; background: #fff; color: #1a1a1a; box-shadow: 0 4px 16px rgba(0,0,0,.12); }
-      .event-card .popup-title { font-size: clamp(14px,2.7vw,15px); margin-bottom: 6px; }
-      .event-card .popup-host { font-size: clamp(11px,2.2vw,12px); margin-bottom: 10px; }
-      .event-card .popup-time { font-size: clamp(11px,2.2vw,12px); margin-bottom: clamp(12px,3vw,14px); }
-      .event-card .popup-actions { gap: clamp(6px,2vw,8px); }
-      .event-card .popup-map { width: clamp(28px,7vw,30px); height: clamp(28px,7vw,30px); }
-      .event-card .popup .popup-detail { height: clamp(28px,7vw,30px); padding: 0 clamp(10px,3vw,12px); font-size: clamp(11px,2.2vw,12px); }
-      .event-card .popup-thumb { margin: calc(0px - var(--card-pad-y)) calc(0px - var(--card-pad-x)) 8px; width: calc(100% + var(--card-pad-x) + var(--card-pad-x)); }
+      #month-toggle {
+        top: 64px;
+      }
+      #month-toggle[hidden],
+      #list-view[hidden] {
+        display: none;
+      }
+      #view-toggle button,
+      #month-toggle button {
+        border: 0;
+        background: transparent;
+        border-radius: 999px;
+        font: inherit;
+        font-weight: 600;
+        color: #555;
+        cursor: pointer;
+      }
+      #view-toggle button {
+        padding: 8px 18px;
+        font-size: 14px;
+      }
+      #month-toggle button {
+        padding: 7px 14px;
+        font-size: 13px;
+      }
+      #view-toggle button.active,
+      #month-toggle button.active {
+        background: #1a1a1a;
+        color: #fff;
+      }
+      #list-view {
+        position: fixed;
+        inset: 0;
+        overflow-y: auto;
+        background: #222;
+        z-index: 5;
+      }
+      #list-view::before,
+      #list-view::after {
+        content: "";
+        position: fixed;
+        left: 0;
+        right: 0;
+        z-index: 8;
+        pointer-events: none;
+        backdrop-filter: blur(7px);
+      }
+      #list-view::before {
+        top: 0;
+        height: 116px;
+        background: linear-gradient(
+          #222 28%,
+          rgba(34, 34, 34, 0.82) 68%,
+          transparent
+        );
+      }
+      #list-view::after {
+        bottom: 0;
+        height: 92px;
+        background: linear-gradient(
+          transparent,
+          rgba(34, 34, 34, 0.88) 70%,
+          #222
+        );
+      }
+      #list-container {
+        --card-gap: clamp(12px, 4vw, 20px);
+        width: min(460px, calc(100% - 8px));
+        margin: 0 auto;
+        padding: 148px 6px 180px;
+        box-sizing: border-box;
+        display: flex;
+        gap: var(--card-gap);
+        align-items: flex-start;
+      }
+      .event-column {
+        flex: 1 1 0;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: var(--card-gap);
+      }
+      .event-card {
+        width: 100%;
+      }
+      .event-card > .popup {
+        width: auto;
+        padding: 0;
+        background: transparent;
+        box-shadow: none;
+      }
+      .event-card > .popup > .popup {
+        --card-pad-x: clamp(10px, 3vw, 14px);
+        --card-pad-y: clamp(10px, 2.5vw, 12px);
+        box-sizing: border-box;
+        width: 100%;
+        padding: var(--card-pad-y) var(--card-pad-x) clamp(14px, 3.5vw, 16px);
+        border-radius: clamp(12px, 3vw, 14px);
+        overflow: hidden;
+        background: #fff;
+        color: #1a1a1a;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+      }
+      .event-card .popup-title {
+        font-size: clamp(14px, 2.7vw, 15px);
+        margin-bottom: 6px;
+      }
+      .event-card .popup-host {
+        font-size: clamp(11px, 2.2vw, 12px);
+        margin-bottom: 10px;
+      }
+      .event-card .popup-time {
+        font-size: clamp(11px, 2.2vw, 12px);
+        margin-bottom: clamp(12px, 3vw, 14px);
+      }
+      .event-card .popup-actions {
+        gap: clamp(6px, 2vw, 8px);
+      }
+      .event-card .popup-map {
+        width: clamp(28px, 7vw, 30px);
+        height: clamp(28px, 7vw, 30px);
+      }
+      .event-card .popup .popup-detail {
+        height: clamp(28px, 7vw, 30px);
+        padding: 0 clamp(10px, 3vw, 12px);
+        font-size: clamp(11px, 2.2vw, 12px);
+      }
+      .event-card .popup-thumb {
+        margin: calc(0px - var(--card-pad-y)) calc(0px - var(--card-pad-x)) 8px;
+        width: calc(100% + var(--card-pad-x) + var(--card-pad-x));
+      }
 
       /* POPUP */
       .maplibregl-popup-content {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          "Helvetica Neue", Arial, sans-serif;
+        font-family: inherit;
         background-color: #ffffff;
         color: #1a1a1a;
         display: flex;
@@ -90,7 +204,7 @@
         border-top-color: #ffffff;
       }
       .popup-title {
-        font-family: Georgia, Charter, "Times New Roman", serif;
+        font-family: inherit;
         font-size: 18px;
         font-weight: 700;
         margin: 0 0 8px;
@@ -277,8 +391,7 @@
         box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
         z-index: 20;
         user-select: none;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          "Helvetica Neue", Arial, sans-serif;
+        font-family: inherit;
       }
       #calendar-popover[hidden] {
         display: none;
@@ -379,8 +492,18 @@
       <button type="button" data-month="12" role="tab">December</button>
     </div>
     <div id="view-toggle" role="tablist" aria-label="Chế độ xem">
-      <button type="button" data-view="map" class="active" role="tab" aria-selected="true">Maps</button>
-      <button type="button" data-view="list" role="tab" aria-selected="false">List</button>
+      <button
+        type="button"
+        data-view="map"
+        class="active"
+        role="tab"
+        aria-selected="true"
+      >
+        Maps
+      </button>
+      <button type="button" data-view="list" role="tab" aria-selected="false">
+        List
+      </button>
     </div>
     <div id="list-view" hidden><div id="list-container"></div></div>
     <div id="controls">
@@ -756,28 +879,52 @@
         if (!box || !geojsonData) return;
         const year = new Date().getFullYear();
         const start = `${year}-${selectedMonth}-01`;
-        const end = new Date(year, Number(selectedMonth), 0).toISOString().slice(0, 10);
+        const end = new Date(year, Number(selectedMonth), 0)
+          .toISOString()
+          .slice(0, 10);
         const features = (geojsonData.features || [])
-          .filter((f) => !selectedDate || (f.properties.from_date <= selectedDate && selectedDate <= f.properties.to_date))
-          .filter((f) => f.properties.from_date <= end && f.properties.to_date >= start)
+          .filter(
+            (f) =>
+              !selectedDate ||
+              (f.properties.from_date <= selectedDate &&
+                selectedDate <= f.properties.to_date)
+          )
+          .filter(
+            (f) =>
+              f.properties.from_date <= end && f.properties.to_date >= start
+          )
           .sort(compareListEvents);
-        if (!features.length) { box.innerHTML = '<div class="list-empty">Không có sự kiện.</div>'; return; }
+        if (!features.length) {
+          box.innerHTML = '<div class="list-empty">Không có sự kiện.</div>';
+          return;
+        }
         const columns = [[], []];
-        features.forEach((feature, index) => columns[index % 2].push(`<article class="event-card">${generatePaginatedPopupContent([feature], 0)}</article>`));
-        box.innerHTML = columns.map((cards) => `<div class="event-column">${cards.join("")}</div>`).join("");
+        features.forEach((feature, index) =>
+          columns[index % 2].push(
+            `<article class="event-card">${generatePaginatedPopupContent(
+              [feature],
+              0
+            )}</article>`
+          )
+        );
+        box.innerHTML = columns
+          .map((cards) => `<div class="event-column">${cards.join("")}</div>`)
+          .join("");
       }
 
       function compareListEvents(a, b) {
         const now = new Date();
-        const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+        const today = `${now.getFullYear()}-${String(
+          now.getMonth() + 1
+        ).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
         const ap = a.properties;
         const bp = b.properties;
         const status = (p) =>
           p.from_date <= today && today <= p.to_date
             ? 0
             : p.from_date > today
-              ? 1
-              : 2;
+            ? 1
+            : 2;
         const statusDiff = status(ap) - status(bp);
         if (statusDiff) return statusDiff;
 
@@ -927,9 +1074,11 @@
       }
 
       function setupEventListeners() {
-        document.querySelectorAll("#view-toggle button").forEach((button) =>
-          button.addEventListener("click", () => setView(button.dataset.view))
-        );
+        document
+          .querySelectorAll("#view-toggle button")
+          .forEach((button) =>
+            button.addEventListener("click", () => setView(button.dataset.view))
+          );
         document.querySelectorAll("#month-toggle button").forEach((button) => {
           const active = button.dataset.month === selectedMonth;
           button.classList.toggle("active", active);
