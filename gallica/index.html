@@ -60,7 +60,7 @@
         display: none;
       }
 
-      /* WAITLIST MODE (on): hides search UI */
+      /* WAITLIST MODE (on): hides search UI
       .intro,
       .search-controls,
       .status,
@@ -68,7 +68,7 @@
       #load-more,
       .detail-panel {
         display: none !important;
-      }
+      } */
 
       #waitlist-form {
         display: grid;
@@ -135,11 +135,25 @@
         font-family: -apple-system-serif, "New York", Georgia, serif;
       }
 
+      .gallica-word-link {
+        color: inherit;
+        text-decoration: none;
+      }
+
       .intro {
         margin: 0 0 24px;
         padding: 16px;
+        overflow: hidden;
         border-radius: 16px;
         background: #2a2a2a;
+      }
+
+      .intro-banner {
+        display: block;
+        width: calc(100% + 32px);
+        height: 200px;
+        margin: -16px -16px 16px;
+        object-fit: cover;
       }
 
       .intro {
@@ -632,6 +646,9 @@
         border-radius: 4px;
         background: rgb(0 0 0 / 55%);
         color: #ffffff;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-user-select: none;
+        user-select: none;
       }
 
       .zoom-button:disabled {
@@ -662,6 +679,9 @@
         border-radius: 4px;
         background: rgb(0 0 0 / 55%);
         color: #ffffff;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-user-select: none;
+        user-select: none;
       }
 
       .pan-button:disabled {
@@ -858,7 +878,7 @@
       }
 
       .page-link {
-        display: block;
+        display: inline-block;
         margin: 0 0 20px;
         padding-bottom: 32px;
         border-bottom: 1px solid rgb(255 255 255 / 18%);
@@ -912,7 +932,7 @@
         }
       }
     </style>
-    <script src="https://www.paypal.com/sdk/js?client-id=BAAL-0ueOoXPbAZGxvT_Z0kmEoXI4PYr3bMxStnBSDQgRc3vBzNtvB8vFnuDpMgYF3Km4QW_9ICjYhztqY&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
+    <!-- <script src="https://www.paypal.com/sdk/js?client-id=BAAL-0ueOoXPbAZGxvT_Z0kmEoXI4PYr3bMxStnBSDQgRc3vBzNtvB8vFnuDpMgYF3Km4QW_9ICjYhztqY&components=hosted-buttons&disable-funding=venmo&currency=USD"></script> -->
   </head>
   <body>
     <main class="app">
@@ -934,9 +954,12 @@
         </svg>
         Home
       </a>
-      <h1><span class="gallica-word">Gallica</span> Search</h1>
+      <h1>
+        <a class="gallica-word gallica-word-link" href="/gallica/">Gallica</a>
+        Search
+      </h1>
       <!-- WAITLIST MODE: form below is active; search UI hidden via CSS above -->
-      <p>
+      <!-- <p>
         I am upgrading the site! Share your suggestion and I will notify you 🤗
       </p>
       <form id="waitlist-form" method="post" novalidate>
@@ -967,7 +990,7 @@
             hostedButtonId: "SMHQNJ2NC62HU",
           })
           .render("#paypal-container-SMHQNJ2NC62HU");
-      </script>
+      </script> -->
       <div class="search-controls">
         <form class="search-form" id="search-form" role="search">
           <input
@@ -1007,11 +1030,13 @@
         </details>
       </div>
       <section class="intro" id="intro" aria-labelledby="intro-title">
+        <img class="intro-banner" src="/gallica/gallica.svg" alt="" />
         <h2 class="gallica-word" id="intro-title">
           A smarter search for Indochina archives
         </h2>
         <p>
-          10 publications, 194 issues and 8895 pages processed.
+          19 publications, 583 issues and 63582 pages processed. Scroll for
+          in-progress issues ↓
           <!-- <a href="https://google.com" target="_blank" rel="noopener">Donate me</a> -->
         </p>
         <ul id="publications-list"></ul>
@@ -1212,12 +1237,12 @@
         {
           name: "Bulletin officiel du Commissariat de la République Française en Annam",
           years: "1947-1949",
-          status: "in-progress",
+          status: "processed",
         },
         {
           name: "Annuaire général de l'Indochine",
           years: "1900-1925",
-          status: "in-progress",
+          status: "processed",
         },
         {
           name: "Journal officiel de l'Indo-Chine française",
@@ -1252,12 +1277,12 @@
         {
           name: "Bulletin financier et économique de l'Indochine",
           years: "1925-1925",
-          status: "in-progress",
+          status: "processed",
         },
         {
           name: "Bulletin de l'Agence économique de l'Indochine",
           years: "1928-1937",
-          status: "in-progress",
+          status: "processed",
         },
         {
           name: "Bulletin administratif du Tonkin",
@@ -1267,7 +1292,7 @@
         {
           name: "Bulletin de la Société d'enseignement mutuel du Tonkin",
           years: "1922-1938",
-          status: "in-progress",
+          status: "processed",
         },
         {
           name: "Bulletin de la Chambre de commerce de Hanoï",
@@ -1297,7 +1322,7 @@
         {
           name: "Compte administratif du budget local du Tonkin",
           years: "1900-1941",
-          status: "in-progress",
+          status: "processed",
         },
         {
           name: "Bulletin officiel de l'Expédition de Cochinchine",
@@ -1344,7 +1369,7 @@
           years: "1888-1889",
           status: "in-progress",
         },
-        { name: "Radio-Saïgon", years: "1931-1932", status: "in-progress" },
+        { name: "Radio-Saïgon", years: "1931-1932", status: "processed" },
         {
           name: "Le Nouvelliste d'Indochine",
           years: "1936-1942",
@@ -1353,25 +1378,32 @@
         {
           name: "La Nouvelle revue indochinoise",
           years: "1936-1940",
-          status: "in-progress",
+          status: "processed",
         },
-        { name: "Achats et ventes", years: "1927-1929", status: "in-progress" },
+        { name: "Achats et ventes", years: "1927-1929", status: "processed" },
         { name: "Chantecler", years: "1932-1939", status: "in-progress" },
       ];
 
       const publicationsList = document.querySelector("#publications-list");
-      publicationsList.innerHTML = PUBLICATIONS.map(
-        (p) =>
-          `<li><span aria-label="${
-            p.status === "processed" ? "Processed" : "In progress"
-          }">${p.status === "processed" ? "✓" : "○"}</span><span>${
-            p.name
-          }</span><small>${p.years}</small></li>`
-      ).join("");
+      publicationsList.innerHTML = [...PUBLICATIONS]
+        .sort(
+          (a, b) =>
+            (b.status === "processed") - (a.status === "processed") ||
+            a.name.localeCompare(b.name)
+        )
+        .map(
+          (p) =>
+            `<li><span aria-label="${
+              p.status === "processed" ? "Processed" : "In progress"
+            }">${p.status === "processed" ? "✓" : "○"}</span><span>${
+              p.name
+            }</span><small>${p.years}</small></li>`
+        )
+        .join("");
     </script>
 
     <!-- WAITLIST MODE: form submit handler -->
-    <script>
+    <!-- <script>
       const waitlistForm = document.querySelector("#waitlist-form");
       const waitlistEmail = document.querySelector("#email");
       const waitlistButton = waitlistForm.querySelector("button");
@@ -1396,7 +1428,7 @@
           alert("Signup failed. Check the endpoint and try again.");
         }
       });
-    </script>
+    </script> -->
 
     <script>
       const resultsElement = document.querySelector("#results");
@@ -1461,6 +1493,7 @@
       const API_CACHE_SIZE = 40;
       const IMAGE_CACHE_SIZE = 8;
       const API_BASE = "https://gallica-rag.vercel.app";
+      // const API_BASE = "http://localhost:8080";
       let zoomIndex = 0;
       let zoomOriginX = 50;
       let zoomOriginY = 50;
@@ -1504,7 +1537,9 @@
         });
       }
 
-      for (const { id, name } of publications) {
+      for (const { id, name } of [...publications].sort((a, b) =>
+        a.name.localeCompare(b.name)
+      )) {
         const option = document.createElement("button");
         option.type = "button";
         option.className = "publication-option";
