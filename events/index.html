@@ -10,11 +10,16 @@
     <title>Hanoi Maps | Events</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/shared.css" />
-    <link
+    <!-- <link
       href="https://unpkg.com/maplibre-gl@^5.9.0/dist/maplibre-gl.css"
       rel="stylesheet"
     />
-    <script src="https://unpkg.com/maplibre-gl@^5.9.0/dist/maplibre-gl.js"></script>
+    <script src="https://unpkg.com/maplibre-gl@^5.9.0/dist/maplibre-gl.js"></script> -->
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.js"></script>
     <style>
       html,
       body {
@@ -187,7 +192,8 @@
       }
 
       /* POPUP */
-      .maplibregl-popup-content {
+      /* .maplibregl-popup-content  */
+      .mapboxgl-popup-content {
         font-family: inherit;
         background-color: #ffffff;
         color: #1a1a1a;
@@ -200,7 +206,8 @@
         overflow-y: auto;
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
       }
-      .maplibregl-popup-anchor-bottom .maplibregl-popup-tip {
+      /* .maplibregl-popup-anchor-bottom .maplibregl-popup-tip  */
+      .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
         border-top-color: #ffffff;
       }
       .popup-title {
@@ -323,7 +330,7 @@
         color: #6b7280;
       }
       /* SWITCH MAP */
-      .maplibregl-ctrl-group .style-switcher-button {
+      .mapboxgl-ctrl-group .style-switcher-button {
         width: 29px;
         height: 29px;
         background-color: #fff;
@@ -335,16 +342,16 @@
         padding: 0;
         border-radius: 4px;
       }
-      .maplibregl-ctrl-group .style-switcher-button .style-switcher-icon {
+      .mapboxgl-ctrl-group .style-switcher-button .style-switcher-icon {
         width: 18px;
         height: 18px;
         filter: invert(0%);
         transition: filter 0.3s ease;
       }
-      .maplibregl-ctrl-group .style-switcher-button.is-satellite {
+      .mapboxgl-ctrl-group .style-switcher-button.is-satellite {
         background-color: rgba(30, 30, 30);
       }
-      .maplibregl-ctrl-group
+      .mapboxgl-ctrl-group
         .style-switcher-button.is-satellite
         .style-switcher-icon {
         filter: invert(100%);
@@ -572,13 +579,38 @@
     <script type="module">
       import {
         // ExpandableMenuControl,
-        addCompassControl,
+        // addCompassControl,
         // createSiteNavPanel,
-        STREETS_STYLE,
-        SATELLITE_HYBRID_STYLE,
+        // STREETS_STYLE,
+        // SATELLITE_HYBRID_STYLE,
         StyleSwitcherControl,
-        modifyBaseStyle,
+        // modifyBaseStyle,
       } from "../shared.js";
+
+      mapboxgl.accessToken =
+        "pk.eyJ1IjoidG9tdHJhbjMxMDI1MSIsImEiOiJjbW4wYmw3NGowaDN0MnNzZmc5bm80aHRwIn0.tTxyq25x1rRMPVxO8RJjNg";
+      const STREETS_STYLE = "mapbox://styles/mapbox/streets-v12";
+      const SATELLITE_HYBRID_STYLE =
+        "mapbox://styles/mapbox/satellite-streets-v12";
+
+      class MapboxStyleSwitcher extends StyleSwitcherControl {
+        onAdd(map) {
+          const el = super.onAdd(map);
+          el.className = "mapboxgl-ctrl mapboxgl-ctrl-group map-control-group";
+          return el;
+        }
+      }
+
+      function addCompassControl(map, position = "top-left") {
+        map.addControl(
+          new mapboxgl.NavigationControl({
+            showZoom: false,
+            showCompass: true,
+            visualizePitch: true,
+          }),
+          position
+        );
+      }
 
       // const siteMenuControl = new ExpandableMenuControl(
       //   createSiteNavPanel("events")
@@ -610,7 +642,7 @@
       if (!["10", "11", "12"].includes(selectedMonth)) selectedMonth = "10";
       const DATA_SOURCE_ID = "event-points-source";
       const EVENT_LAYER_ID = "event-circles";
-      const popup = new maplibregl.Popup({
+      const popup = new mapboxgl.Popup({
         closeButton: false,
         closeOnClick: true,
         offset: 15,
@@ -618,7 +650,7 @@
       });
       // ponytail: styles/switcher/labels come from ../shared.js (also used by tomey, villas)
       function initializeMap() {
-        map = new maplibregl.Map({
+        map = new mapboxgl.Map({
           container: "map",
           style: STREETS_STYLE,
           center: [105.8542, 21.0285],
@@ -627,20 +659,21 @@
             [105.5, 20.7],
             [106.1, 21.5],
           ],
+          language: "vi",
           attributionControl: false,
         });
         // Menu icon intentionally disabled on the events page.
         // map.addControl(siteMenuControl, "top-left");
         // map.on("click", () => siteMenuControl.close());
         map.addControl(
-          new maplibregl.GeolocateControl({
+          new mapboxgl.GeolocateControl({
             positionOptions: { enableHighAccuracy: true },
             trackUserLocation: true,
           }),
           "top-left"
         );
         map.addControl(
-          new StyleSwitcherControl({
+          new MapboxStyleSwitcher({
             streets: STREETS_STYLE,
             satellite: SATELLITE_HYBRID_STYLE,
           }),
@@ -648,7 +681,7 @@
         );
         addCompassControl(map, "top-left");
         map.addControl(
-          new maplibregl.AttributionControl({
+          new mapboxgl.AttributionControl({
             customAttribution:
               '<a href="https://hanoimaps.github.io/events/sources" target="_blank" style="text-decoration: underline">Sources</a>',
             compact: true,
@@ -656,11 +689,11 @@
           "top-right"
         );
         map.on("load", () => {
-          modifyBaseStyle(map);
+          // modifyBaseStyle(map);
           addDataLayer(map, geojsonData);
           // ponytail: styledata fires mid-load too; style.load only when a style is ready
           map.on("style.load", () => {
-            modifyBaseStyle(map);
+            // modifyBaseStyle(map);
             addDataLayer(map, geojsonData);
             if (selectedDate) filterByDate(selectedDate);
           });
