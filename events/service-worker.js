@@ -1,7 +1,7 @@
-const CACHE_NAME = "hanoi-main-map-cache-v12";
+const CACHE_NAME = "hanoi-main-map-cache-v13";
 const LIB_URLS = [
-  "https://unpkg.com/maplibre-gl@^5.9.0/dist/maplibre-gl.css",
-  "https://unpkg.com/maplibre-gl@^5.9.0/dist/maplibre-gl.js",
+  "https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.css",
+  "https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.js",
 ];
 
 // --- 1. Pre-cache static assets ---
