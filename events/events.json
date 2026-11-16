@@ -2113,7 +2113,6 @@
         "image_url": "thumbs/446.jpg"
       }
     },
-
     {
       "type": "Feature",
       "id": "448",
@@ -2156,6 +2155,1986 @@
         "host_name": "Trường Ca Kịch Viện",
         "host_url": "https://www.facebook.com/truongcakichvien",
         "image_url": "thumbs/449.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "450",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85004, 21.03814]
+      },
+      "properties": {
+        "name_vn": "Gala bế mạc \"Hà Nội Những Vang Động\"",
+        "from_date": "2026-11-28",
+        "to_date": "2026-11-28",
+        "start_time": "19:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/gala-be-mac-ha-noi-nhung-vang-dong-960468.html",
+        "address": "Chợ Đồng Xuân, số 1 Cầu Đông, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/%C4%90%E1%BB%93ng+Xu%C3%A2n+Market,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0381434,105.8500387,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb8e6c24487:0xd9def483e7f217e6!8m2!3d21.0381434!4d105.8500387!16s%2Fm%2F09v1r31",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "451",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.84871, 21.03543]
+      },
+      "properties": {
+        "name_vn": "Workshop \"Chợ phiên\" thuộc dự án \"Tò mò chuyện Trò\"",
+        "from_date": "2026-11-28",
+        "to_date": "2026-11-28",
+        "start_time": "08:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/workshop-cho-phien-thuoc-du-an-to-mo-chuyen-tro-944768.html",
+        "address": "Hội quán Phúc Kiến, 40 Lãn Ông, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/H%E1%BB%99i+Qu%C3%A1n+Ph%C3%BAc+Ki%E1%BA%BFn+%E7%A6%8F%E5%BB%BA%E6%9C%83%E9%A4%A8/@21.0354327,105.8487131,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab19088cdd5b:0xf42c0c2fe60a3e0a!8m2!3d21.0354327!4d105.8487131!16s%2Fg%2F11hj77y8y_",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "452",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.84397, 21.01427]
+      },
+      "properties": {
+        "name_vn": "No-phone Reading Party #05 \"KÉN MỚI\"",
+        "from_date": "2026-11-28",
+        "to_date": "2026-11-28",
+        "start_time": "06:30",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/no-phone-reading-party-05-ken-moi-945952.html",
+        "address": "Pavilion Kén, Công viên Thống Nhất, 354A Lê Duẩn, Hai Bà Trưng, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/Thong+Nhat+Park/@21.0142709,105.8439724,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab8ee6df247f:0xe6183d662696d2e9!8m2!3d21.0142709!4d105.8439724!16s%2Fg%2F1212gxkt",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "453",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85403, 21.03046]
+      },
+      "properties": {
+        "name_vn": "Trao đổi chuyên môn \"Nghề thiết kế trong kinh tế sáng tạo\"",
+        "from_date": "2026-11-27",
+        "to_date": "2026-11-27",
+        "start_time": "13:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trao-doi-chuyen-mon-nghe-thiet-ke-trong-kinh-te-sang-tao-992510.html",
+        "address": "Sở Văn hóa và Thể thao Hà Nội, 47 Hàng Dầu, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/S%E1%BB%9F+V%C4%83n+h%C3%B3a+v%C3%A0+Th%E1%BB%83+thao+H%C3%A0+N%E1%BB%99i/@21.0304566,105.8540318,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abc01ffcb023:0x78b042c9327341a3!8m2!3d21.0304566!4d105.8540318!16s%2Fg%2F11c2jf89pq",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "454",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.8522, 21.03404]
+      },
+      "properties": {
+        "name_vn": "Cải lương đương đại \"Vẫn vậy, mà khác\" (New Ideas Don't Exist, Only New Ways to Feel Them)",
+        "from_date": "2026-11-26",
+        "to_date": "2026-11-26",
+        "start_time": "20:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/cai-luong-duong-dai-van-vay-ma-khac-new-ideas-don-t-exist-only-new-ways-to-feel-them-617937.html",
+        "address": "Rạp Chuông Vàng, 72 Hàng Bạc, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/Nh%C3%A0+H%C3%A1t+C%E1%BA%A3i+L%C6%B0%C6%A1ng+H%C3%A0+N%E1%BB%99i/@21.03404,105.8522048,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abc0a288f9c5:0x4aa779c6ab932ec!8m2!3d21.03404!4d105.8522048!16s%2Fg%2F1thpz5n0",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "455",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85004, 21.03814]
+      },
+      "properties": {
+        "name_vn": "Lớp thực hành \"Nghe sâu\"",
+        "from_date": "2026-11-25",
+        "to_date": "2026-11-26",
+        "start_time": "17:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/lop-thuc-hanh-nghe-sau-429536.html",
+        "address": "Chợ Đồng Xuân, số 1 Cầu Đông, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/%C4%90%E1%BB%93ng+Xu%C3%A2n+Market,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0381434,105.8500387,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb8e6c24487:0xd9def483e7f217e6!8m2!3d21.0381434!4d105.8500387!16s%2Fm%2F09v1r31",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "456",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.82672, 21.01056]
+      },
+      "properties": {
+        "name_vn": "Ngày Di sản SIS 2026",
+        "from_date": "2026-11-24",
+        "to_date": "2026-11-24",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/ngay-di-san-sis-2026-750884.html",
+        "address": "Tổ hợp Cộng đồng COMPLEX 01, số 29 ngách 31 ngõ 167, phường Kim Liên",
+        "address_url": "https://www.google.com/maps/place/Complex+01/@21.0105641,105.8267223,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab68dd1984e5:0x3d307d4682570ec7!8m2!3d21.0105641!4d105.8267223!16s%2Fg%2F11fvc4fcl3",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "457",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.8522, 21.03404]
+      },
+      "properties": {
+        "name_vn": "Trình diễn âm thanh \"Truyện ở chân trời mờ, mơ sự kiện\"",
+        "from_date": "2026-11-23",
+        "to_date": "2026-11-23",
+        "start_time": "20:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trinh-dien-am-thanh-truyen-o-chan-troi-mo-mo-su-kien-452111.html",
+        "address": "Rạp Chuông Vàng, 72 Hàng Bạc, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/Nh%C3%A0+H%C3%A1t+C%E1%BA%A3i+L%C6%B0%C6%A1ng+H%C3%A0+N%E1%BB%99i/@21.03404,105.8522048,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abc0a288f9c5:0x4aa779c6ab932ec!8m2!3d21.03404!4d105.8522048!16s%2Fg%2F1thpz5n0",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "458",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.81241, 21.032]
+      },
+      "properties": {
+        "name_vn": "Street Jazz",
+        "from_date": "2026-11-22",
+        "to_date": "2026-11-29",
+        "start_time": "20:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/street-jazz-660804.html",
+        "address": "Quảng trường Lotte Center Hanoi, 54 Liễu Giai",
+        "address_url": "https://www.google.com/maps/place/Lotte+Center+Hanoi/@21.0319956,105.8124062,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab00280efb51:0xfbee1c80398d8394!8m2!3d21.0319956!4d105.8124062!16s%2Fg%2F11z804klpk",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "459",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85004, 21.03814]
+      },
+      "properties": {
+        "name_vn": "Trình diễn \"Dòng sông quá vãng\"",
+        "from_date": "2026-11-22",
+        "to_date": "2026-11-22",
+        "start_time": "11:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trinh-dien-dong-song-qua-vang-329923.html",
+        "address": "Chợ Đồng Xuân, số 1 Cầu Đông, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/%C4%90%E1%BB%93ng+Xu%C3%A2n+Market,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0381434,105.8500387,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb8e6c24487:0xd9def483e7f217e6!8m2!3d21.0381434!4d105.8500387!16s%2Fm%2F09v1r31",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "460",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85403, 21.03046]
+      },
+      "properties": {
+        "name_vn": "Trao đổi chuyên môn \"Trình diễn thơ - Vượt qua đường biên chữ\"",
+        "from_date": "2026-11-22",
+        "to_date": "2026-11-22",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trao-doi-chuyen-mon-trinh-dien-tho-vuot-qua-duong-bien-chu-284826.html",
+        "address": "Sở Văn hóa và Thể thao Hà Nội, 47 Hàng Dầu, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/S%E1%BB%9F+V%C4%83n+h%C3%B3a+v%C3%A0+Th%E1%BB%83+thao+H%C3%A0+N%E1%BB%99i/@21.0304566,105.8540318,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abc01ffcb023:0x78b042c9327341a3!8m2!3d21.0304566!4d105.8540318!16s%2Fg%2F11c2jf89pq",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "461",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.82672, 21.01056]
+      },
+      "properties": {
+        "name_vn": "Đêm nhạc Reggae cùng Best Friend Band",
+        "from_date": "2026-11-21",
+        "to_date": "2026-11-21",
+        "start_time": "21:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/dem-nhac-reggae-cung-best-friend-band-365100.html",
+        "address": "Tổ hợp Cộng đồng COMPLEX 01, số 29 ngách 31 ngõ 167, phường Kim Liên",
+        "address_url": "https://www.google.com/maps/place/Complex+01/@21.0105641,105.8267223,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab68dd1984e5:0x3d307d4682570ec7!8m2!3d21.0105641!4d105.8267223!16s%2Fg%2F11fvc4fcl3",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "462",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85004, 21.03814]
+      },
+      "properties": {
+        "name_vn": "Trình tương tác \"mười thương\"",
+        "from_date": "2026-11-21",
+        "to_date": "2026-11-22",
+        "start_time": "17:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/kich-tuong-tac-muoi-thuong-418554.html",
+        "address": "Chợ Đồng Xuân, số 1 Cầu Đông, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/%C4%90%E1%BB%93ng+Xu%C3%A2n+Market,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0381434,105.8500387,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb8e6c24487:0xd9def483e7f217e6!8m2!3d21.0381434!4d105.8500387!16s%2Fm%2F09v1r31",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "463",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.82672, 21.01056]
+      },
+      "properties": {
+        "name_vn": "Chiếu phim và Giao lưu về Nghệ thuật biểu diễn truyền thống",
+        "from_date": "2026-11-21",
+        "to_date": "2026-11-27",
+        "start_time": "15:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/chieu-phim-va-giao-luu-ve-nghe-thuat-bieu-dien-truyen-thong-520682.html",
+        "address": "Tổ hợp Cộng đồng COMPLEX 01, số 29 ngách 31 ngõ 167, phường Kim Liên",
+        "address_url": "https://www.google.com/maps/place/Complex+01/@21.0105641,105.8267223,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab68dd1984e5:0x3d307d4682570ec7!8m2!3d21.0105641!4d105.8267223!16s%2Fg%2F11fvc4fcl3",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "464",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85851, 21.01616]
+      },
+      "properties": {
+        "name_vn": "Talkshow kết hợp workshop \"Làm màu có lý\"",
+        "from_date": "2026-11-21",
+        "to_date": "2026-11-21",
+        "start_time": "14:30",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/talkshow-ket-hop-workshop-lam-mau-co-ly-543905.html",
+        "address": "Hội Kiến Trúc sư Việt Nam, 40 Tăng Bạt Hổ",
+        "address_url": "https://www.google.com/maps/place/Viet+Nam+Association+of+Architects+(VAA)/@21.0161625,105.8585053,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab9c02a0cbdf:0x657590cdc7fceaa8!8m2!3d21.0161625!4d105.8585053!16s%2Fg%2F11sb13gngt",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "465",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.82672, 21.01056]
+      },
+      "properties": {
+        "name_vn": "The HOP Spot: Bia thủ công và ẩm thực địa phương",
+        "from_date": "2026-11-21",
+        "to_date": "2026-11-22",
+        "start_time": "10:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/the-hop-spot-bia-thu-cong-va-am-thuc-dia-phuong-796371.html",
+        "address": "Tổ hợp Cộng đồng COMPLEX 01, số 29 ngách 31 ngõ 167, phường Kim Liên",
+        "address_url": "https://www.google.com/maps/place/Complex+01/@21.0105641,105.8267223,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab68dd1984e5:0x3d307d4682570ec7!8m2!3d21.0105641!4d105.8267223!16s%2Fg%2F11fvc4fcl3",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "466",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.82672, 21.01056]
+      },
+      "properties": {
+        "name_vn": "Nhiếp ảnh bảng ướt Pop-up Studio",
+        "from_date": "2026-11-21",
+        "to_date": "2026-11-27",
+        "start_time": "10:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/nhiep-anh-bang-uot-pop-up-studio-359484.html",
+        "address": "Tổ hợp Cộng đồng COMPLEX 01, số 29 ngách 31 ngõ 167, phường Kim Liên",
+        "address_url": "https://www.google.com/maps/place/Complex+01/@21.0105641,105.8267223,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab68dd1984e5:0x3d307d4682570ec7!8m2!3d21.0105641!4d105.8267223!16s%2Fg%2F11fvc4fcl3",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "467",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.82672, 21.01056]
+      },
+      "properties": {
+        "name_vn": "Nghề Nghệ Art Salon \"Màu xưa, Sắc nay\"",
+        "from_date": "2026-11-21",
+        "to_date": "2026-11-28",
+        "start_time": "10:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/nghe-nghe-art-salon-mau-xua-sac-nay-161866.html",
+        "address": "Tổ hợp Cộng đồng COMPLEX 01, số 29 ngách 31 ngõ 167, phường Kim Liên",
+        "address_url": "https://www.google.com/maps/place/Complex+01/@21.0105641,105.8267223,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab68dd1984e5:0x3d307d4682570ec7!8m2!3d21.0105641!4d105.8267223!16s%2Fg%2F11fvc4fcl3",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "468",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.82672, 21.01056]
+      },
+      "properties": {
+        "name_vn": "Workshop in ảnh Cyanotype",
+        "from_date": "2026-11-21",
+        "to_date": "2026-11-22",
+        "start_time": "09:30",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/workshop-in-anh-cyanotype-104077.html",
+        "address": "Tổ hợp Cộng đồng COMPLEX 01, số 29 ngách 31 ngõ 167, phường Kim Liên",
+        "address_url": "https://www.google.com/maps/place/Complex+01/@21.0105641,105.8267223,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab68dd1984e5:0x3d307d4682570ec7!8m2!3d21.0105641!4d105.8267223!16s%2Fg%2F11fvc4fcl3",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "469",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85082, 21.02896]
+      },
+      "properties": {
+        "name_vn": "Workshop in tranh Mộc Bản 12 con giáp",
+        "from_date": "2026-11-21",
+        "to_date": "2026-11-22",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/workshop-in-tranh-moc-ban-12-con-giap-780451.html",
+        "address": "Đình Nam Hương, 75 Hàng Trống, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+Nam+H%C6%B0%C6%A1ng/@21.0289588,105.8508192,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab9515be581f:0x736701d2b9c26ee0!8m2!3d21.0289588!4d105.8508192!16s%2Fg%2F1pzy4_1vm",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "470",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.8478, 21.03144]
+      },
+      "properties": {
+        "name_vn": "Workshop \"Vẽ tranh lụa truyền thống\"",
+        "from_date": "2026-11-21",
+        "to_date": "2026-11-22",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/workshop-ve-tranh-lua-truyen-thong-254690.html",
+        "address": "Đình Yên Thái, 8 Tạm Thương",
+        "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+Y%C3%AAn+Th%C3%A1i/@21.0314391,105.8477951,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbe141b886f:0x9b15e550eb996c3!8m2!3d21.0314391!4d105.8477951!16s%2Fg%2F11btrrmhyt",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "471",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.82672, 21.01056]
+      },
+      "properties": {
+        "name_vn": "Hà Nội Mở 2 \"Thành phố không lề\"",
+        "from_date": "2026-11-21",
+        "to_date": "2026-11-28",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/ha-noi-mo-2-thanh-pho-khong-le-451091.html",
+        "address": "Tổ hợp Cộng đồng COMPLEX 01, số 29 ngách 31 ngõ 167, phường Kim Liên",
+        "address_url": "https://www.google.com/maps/place/Complex+01/@21.0105641,105.8267223,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab68dd1984e5:0x3d307d4682570ec7!8m2!3d21.0105641!4d105.8267223!16s%2Fg%2F11fvc4fcl3",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "472",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.47068, 21.0373]
+      },
+      "properties": {
+        "name_vn": "Lễ hội xe và đam mê 2026",
+        "from_date": "2026-11-21",
+        "to_date": "2026-11-22",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/le-hoi-xe-va-dam-me-2026-362016.html",
+        "address": "Làng Văn hóa Du lịch các dân tộc Việt Nam, Đồng Mô, Sơn Tây",
+        "address_url": "https://www.google.com/maps/place/Vietnam+National+Village+for+Ethnic+Culture+and+Tourism,+C%E1%BB%95+%C4%90%C3%B4ng,+Ba+V%C3%AC,+Ha+Noi,+Vietnam/@21.0373017,105.4706811,14z/data=!3m1!4b1!4m6!3m5!1s0x31345c4822ff69d7:0x33e7af3fb92750e6!8m2!3d21.0372594!4d105.471249!16s%2Fg%2F11b5qh5ck_",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "473",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85082, 21.02896]
+      },
+      "properties": {
+        "name_vn": "Workshop 2 buổi \"Màu của lá\", Dự án giáo dục nghệ thuật PAI: The Living City",
+        "from_date": "2026-11-21",
+        "to_date": "2026-11-22",
+        "start_time": "08:30",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/workshop-2-buoi-mau-cua-la-du-an-giao-duc-nghe-thuat-pai-the-living-city-161838.html",
+        "address": "Đình Nam Hương, 75 Hàng Trống",
+        "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+Nam+H%C6%B0%C6%A1ng/@21.0289588,105.8508192,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab9515be581f:0x736701d2b9c26ee0!8m2!3d21.0289588!4d105.8508192!16s%2Fg%2F1pzy4_1vm",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "474",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.84707, 21.03143]
+      },
+      "properties": {
+        "name_vn": "Kịch múa đương đại \"Đối diện với vô cùng\"",
+        "from_date": "2026-11-20",
+        "to_date": "2026-11-20",
+        "start_time": "20:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/kich-mua-duong-dai-doi-dien-voi-vo-cung-751590.html",
+        "address": "Rạp Hồng Hà, 51 Đường Thành, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/Hong+Ha+Central+Traditional+Opera+Theatre/data=!4m7!3m6!1s0x3135abbddd4bb99d:0x9c4d4aa68beeba8c!8m2!3d21.0314255!4d105.8470738!16s%2Fg%2F1tfyb14x!19sChIJnblL3b2rNTERjLrui6ZKTZw",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "475",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.81241, 21.032]
+      },
+      "properties": {
+        "name_vn": "Lotte Art Week Gala và trình diễn: 'Thap:sang - Hoà Thanh | Violinist Nguyễn Thiện Minh và Fustic. Studio",
+        "from_date": "2026-11-20",
+        "to_date": "2026-11-20",
+        "start_time": "18:30",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/dem-re-imagine-x-fustic-782122.html",
+        "address": "Quảng trường Lotte Center Hanoi, 54 Liễu Giai, Ba Đình, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/Lotte+Center+Hanoi/@21.0319956,105.8124062,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab00280efb51:0xfbee1c80398d8394!8m2!3d21.0319956!4d105.8124062!16s%2Fg%2F11z804klpk",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "476",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85004, 21.03814]
+      },
+      "properties": {
+        "name_vn": "Trình diễn đương đại \"Trơn tru trong chiều chập choạng\"",
+        "from_date": "2026-11-20",
+        "to_date": "2026-11-20",
+        "start_time": "17:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trinh-dien-duong-dai-tron-tru-trong-chieu-chap-choang-415034.html",
+        "address": "Chợ Đồng Xuân, số 1 Cầu Đông, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/%C4%90%E1%BB%93ng+Xu%C3%A2n+Market,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0381434,105.8500387,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb8e6c24487:0xd9def483e7f217e6!8m2!3d21.0381434!4d105.8500387!16s%2Fm%2F09v1r31",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "477",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85082, 21.02896]
+      },
+      "properties": {
+        "name_vn": "Workshop \"Tranh Hàng Trống: Cắt & Ghép\"",
+        "from_date": "2026-11-20",
+        "to_date": "2026-11-27",
+        "start_time": "14:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/workshop-tranh-hang-trong-cat-ghep-647582.html",
+        "address": "Đình Nam Hương, 75 Hàng Trống, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+Nam+H%C6%B0%C6%A1ng/@21.0289588,105.8508192,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab9515be581f:0x736701d2b9c26ee0!8m2!3d21.0289588!4d105.8508192!16s%2Fg%2F1pzy4_1vm",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "478",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85196, 21.02078]
+      },
+      "properties": {
+        "name_vn": "Triển lãm \"Hà Nội qua nét vẽ: Những góc nhìn sáng tạo giao thoa\"",
+        "from_date": "2026-11-20",
+        "to_date": "2026-11-20",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-ha-noi-qua-net-ve-nhung-goc-nhin-sang-tao-giao-thoa-488823.html",
+        "address": "Biệt thự Di sản, 49 Trần Hưng Đạo, phường Cửa Nam",
+        "address_url": "https://www.google.com/maps/place/Bi%E1%BB%87t+th%E1%BB%B1+Di+s%E1%BA%A3n/@21.0207808,105.8519565,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab006034be29:0xc27202af9ae02e3c!8m2!3d21.0207808!4d105.8519565!16s%2Fg%2F11y3f2tkc7",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "479",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.84628, 21.01988]
+      },
+      "properties": {
+        "name_vn": "Triển lãm thơ \"Con chim từ núi lạ\"",
+        "from_date": "2026-11-20",
+        "to_date": "2026-11-28",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-tho-con-chim-tu-nui-la-935124.html",
+        "address": "Nương Náu Art Hub, 13B Nguyễn Gia Thiều, phường Cửa Nam",
+        "address_url": "https://www.google.com/maps/place/N%C6%B0%C6%A1ng+N%C3%A1u+Coffee/@21.0198824,105.8462795,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab002cc78281:0x46ef1238cf3eb6c1!8m2!3d21.0198824!4d105.8462795!16s%2Fg%2F11vqs8v36n",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "480",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85004, 21.03814]
+      },
+      "properties": {
+        "name_vn": "Trình diễn \"Hoa giấy đung đưa\"",
+        "from_date": "2026-11-20",
+        "to_date": "2026-11-20",
+        "start_time": "08:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trinh-dien-hoa-giay-dung-dua-513265.html",
+        "address": "Chợ Đồng Xuân, số 1 Cầu Đông, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/%C4%90%E1%BB%93ng+Xu%C3%A2n+Market,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0381434,105.8500387,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb8e6c24487:0xd9def483e7f217e6!8m2!3d21.0381434!4d105.8500387!16s%2Fm%2F09v1r31",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "481",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85491, 21.03011]
+      },
+      "properties": {
+        "name_vn": "Lớp thực hành \"Trình diễn đọc và nghe sâu\"",
+        "from_date": "2026-11-19",
+        "to_date": "2026-11-19",
+        "start_time": "14:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/lop-thuc-hanh-trinh-dien-doc-va-nghe-sau-977620.html",
+        "address": "Tòa nhà Di sản, 24 Lý Thái Tổ",
+        "address_url": "https://www.google.com/maps/place/To%C3%A0+Nh%C3%A0+Di+S%E1%BA%A3n/@21.0301117,105.8549124,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab0028a3e8d7:0x83702e2774d3c048!8m2!3d21.0301117!4d105.8549124!16s%2Fg%2F11p2tn4tsw",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "482",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85004, 21.03814]
+      },
+      "properties": {
+        "name_vn": "Múa đương đại \"Thu Hương\"",
+        "from_date": "2026-11-18",
+        "to_date": "2026-11-18",
+        "start_time": "20:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/mua-duong-dai-thu-huong-614879.html",
+        "address": "Chợ Đồng Xuân, số 1 Cầu Đông, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/%C4%90%E1%BB%93ng+Xu%C3%A2n+Market,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0381434,105.8500387,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb8e6c24487:0xd9def483e7f217e6!8m2!3d21.0381434!4d105.8500387!16s%2Fm%2F09v1r31",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "483",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.84397, 21.01427]
+      },
+      "properties": {
+        "name_vn": "Vẽ kí họa đa chất liệu cùng HWA",
+        "from_date": "2026-11-18",
+        "to_date": "2026-11-18",
+        "start_time": "14:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/ve-ki-hoa-da-chat-lieu-cung-hwa-501800.html",
+        "address": "Công viên Thống Nhất",
+        "address_url": "https://www.google.com/maps/place/Thong+Nhat+Park/@21.0142709,105.8439724,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab8ee6df247f:0xe6183d662696d2e9!8m2!3d21.0142709!4d105.8439724!16s%2Fg%2F1212gxkt",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "484",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85004, 21.03814]
+      },
+      "properties": {
+        "name_vn": "Lớp thực hành \"Nimamea'a Tuikakala: Nghệ thuật thiết kế hoa\"",
+        "from_date": "2026-11-18",
+        "to_date": "2026-11-18",
+        "start_time": "14:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/lop-thuc-hanh-nimamea-a-tuikakala-nghe-thuat-thiet-ke-hoa-433755.html",
+        "address": "Chợ Đồng Xuân, số 1 Cầu Đông, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/%C4%90%E1%BB%93ng+Xu%C3%A2n+Market,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0381434,105.8500387,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb8e6c24487:0xd9def483e7f217e6!8m2!3d21.0381434!4d105.8500387!16s%2Fm%2F09v1r31",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "485",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85279, 21.03559]
+      },
+      "properties": {
+        "name_vn": "Trao đổi chuyên môn \"Khao Khát Nguyên Bản\"",
+        "from_date": "2026-11-18",
+        "to_date": "2026-11-18",
+        "start_time": "14:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trao-doi-chuyen-mon-khao-khat-nguyen-ban-605010.html",
+        "address": "Trung tâm Giao lưu Văn hóa Phố cổ Hà Nội, 50 Đào Duy Từ, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/Cultural+Exchange+Center/@21.035588,105.85279,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abc754952f7f:0x79a5229a38d0387f!8m2!3d21.035588!4d105.85279!16s%2Fg%2F11bx1zg8j5",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "486",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85004, 21.03814]
+      },
+      "properties": {
+        "name_vn": "Trao đổi chuyên môn \"Chợ Đồng Xuân: Từ di sản Kẻ Chợ đến mô hình Tổ hợp kinh doanh sáng tạo\"",
+        "from_date": "2026-11-18",
+        "to_date": "2026-11-18",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trao-doi-chuyen-mon-cho-dong-xuan-tu-di-san-ke-cho-den-mo-hinh-to-hop-kinh-doanh-sang-tao-111460.html",
+        "address": "Hội trường tầng 3, chợ Đồng Xuân, số 1 Cầu Đông, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/%C4%90%E1%BB%93ng+Xu%C3%A2n+Market,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0381434,105.8500387,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb8e6c24487:0xd9def483e7f217e6!8m2!3d21.0381434!4d105.8500387!16s%2Fm%2F09v1r31",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "487",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85004, 21.03814]
+      },
+      "properties": {
+        "name_vn": "Lớp thực hành \"Lắng nghe sâu\"",
+        "from_date": "2026-11-17",
+        "to_date": "2026-11-17",
+        "start_time": "14:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/lop-thuc-hanh-thu-nghiem-am-thanh-390747.html",
+        "address": "Chợ Đồng Xuân, số 1 Cầu Đông, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/%C4%90%E1%BB%93ng+Xu%C3%A2n+Market,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0381434,105.8500387,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb8e6c24487:0xd9def483e7f217e6!8m2!3d21.0381434!4d105.8500387!16s%2Fm%2F09v1r31",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "488",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85196, 21.02078]
+      },
+      "properties": {
+        "name_vn": "Triển lãm \"Sống cùng dòng sông: Tuyến đường sinh thái sông Hồng\"",
+        "from_date": "2026-11-17",
+        "to_date": "2026-12-13",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-song-cung-dong-song-tuyen-duong-sinh-thai-song-hong-196974.html",
+        "address": "Biệt thự Di sản, số 49 Trần Hưng Đạo, phường Cửa Nam, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/Bi%E1%BB%87t+th%E1%BB%B1+Di+s%E1%BA%A3n/@21.0207808,105.8519565,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab006034be29:0xc27202af9ae02e3c!8m2!3d21.0207808!4d105.8519565!16s%2Fg%2F11y3f2tkc7",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "489",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85431, 21.02505]
+      },
+      "properties": {
+        "name_vn": "Triển lãm \"Nối miền Sáng tạo\"",
+        "from_date": "2026-11-17",
+        "to_date": "2026-11-28",
+        "start_time": "08:30",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-noi-mien-sang-tao-129346.html",
+        "address": "Nhà Thông tin Triển lãm, số 45 Tràng Tiền, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/Nh%C3%A0+tri%E1%BB%83n+l%C3%A3m/@21.0250493,105.8543129,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab52a3efcd81:0xb1b89f0635ec5b1f!8m2!3d21.0250493!4d105.8543129!16s%2Fg%2F11v42fpsh6",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "490",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85235, 21.03585]
+      },
+      "properties": {
+        "name_vn": "Tọa đàm: Nghệ thuật liên ngành – Kết nối thực hành sáng tạo với chiến lược đào tạo đương đại",
+        "from_date": "2026-11-16",
+        "to_date": "2026-11-16",
+        "start_time": "14:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trao-doi-chuyen-mon-ban-tron-nghe-thuat-lien-nganh-ket-noi-thuc-hanh-sang-tao-voi-chien-luoc-dao-tao-duong-dai-547986.html",
+        "address": "19 Hàng Buồm, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/H%E1%BB%99i+v%C4%83n+h%C3%B3a+ngh%E1%BB%87+thu%E1%BA%ADt+Hanoi+Vietnam,+19+P.+H%C3%A0ng+Bu%E1%BB%93m,+19,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.035847,105.8523466,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbf5662d90d:0xa7733a559551848c!8m2!3d21.035847!4d105.8523466!16s%2Fg%2F11vstrhc_6",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "491",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85851, 21.01616]
+      },
+      "properties": {
+        "name_vn": "Lễ trao giải Cuộc thi Thiết kế Không gian Sáng tạo 2026, chủ đề \"Hà Nội: Đánh thức không gian đô thị\"",
+        "from_date": "2026-11-16",
+        "to_date": "2026-11-16",
+        "start_time": "14:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/le-trao-giai-cuoc-thi-thiet-ke-khong-gian-sang-tao-2026-chu-de-ha-noi-danh-thuc-khong-gian-do-thi-265738.html",
+        "address": "Trụ sở Hội Kiến trúc sư Việt Nam, 40 Tăng Bạt Hổ",
+        "address_url": "https://www.google.com/maps/place/Viet+Nam+Association+of+Architects+(VAA)/@21.0161625,105.8585053,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab9c02a0cbdf:0x657590cdc7fceaa8!8m2!3d21.0161625!4d105.8585053!16s%2Fg%2F11sb13gngt",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "492",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.84871, 21.03543]
+      },
+      "properties": {
+        "name_vn": "Triển lãm \"Theo bước di sản cộng đồng 2026\"",
+        "from_date": "2026-11-16",
+        "to_date": "2026-11-28",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-theo-buoc-di-san-cong-dong-2026-414006.html",
+        "address": "Hội quán Phúc Kiến, 40 Lãn Ông",
+        "address_url": "https://www.google.com/maps/place/H%E1%BB%99i+Qu%C3%A1n+Ph%C3%BAc+Ki%E1%BA%BFn+%E7%A6%8F%E5%BB%BA%E6%9C%83%E9%A4%A8/@21.0354327,105.8487131,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab19088cdd5b:0xf42c0c2fe60a3e0a!8m2!3d21.0354327!4d105.8487131!16s%2Fg%2F11hj77y8y_",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "493",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.81241, 21.032]
+      },
+      "properties": {
+        "name_vn": "Chuỗi Culture Show: Xẩm, Ca trù",
+        "from_date": "2026-11-15",
+        "to_date": "2026-11-27",
+        "start_time": "20:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/chuoi-culture-show-xam-ca-tru-272870.html",
+        "address": "Không gian triển lãm Galerie du Futur, tầng 2 Lotte Department Store, 54 Liễu Giai",
+        "address_url": "https://www.google.com/maps/place/Lotte+Center+Hanoi/@21.0319956,105.8124062,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab00280efb51:0xfbee1c80398d8394!8m2!3d21.0319956!4d105.8124062!16s%2Fg%2F11z804klpk",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "494",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85004, 21.03814]
+      },
+      "properties": {
+        "name_vn": "Tác phẩm \"Chơi Chợ\"",
+        "from_date": "2026-11-15",
+        "to_date": "2026-11-15",
+        "start_time": "20:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/tac-pham-choi-cho-217529.html",
+        "address": "Chợ Đồng Xuân, số 1 Cầu Đông, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/%C4%90%E1%BB%93ng+Xu%C3%A2n+Market,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0381434,105.8500387,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb8e6c24487:0xd9def483e7f217e6!8m2!3d21.0381434!4d105.8500387!16s%2Fm%2F09v1r31",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "495",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85491, 21.03011]
+      },
+      "properties": {
+        "name_vn": "Chuỗi \"Gặp nghệ sĩ\" triển lãm \"Mạch sống vô hình\"",
+        "from_date": "2026-11-15",
+        "to_date": "2026-11-22",
+        "start_time": "14:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/chuoi-gap-nghe-si-trien-lam-mach-song-vo-hinh-775528.html",
+        "address": "Tòa nhà Di sản, 24 Lý Thái Tổ",
+        "address_url": "https://www.google.com/maps/place/To%C3%A0+Nh%C3%A0+Di+S%E1%BA%A3n/@21.0301117,105.8549124,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab0028a3e8d7:0x83702e2774d3c048!8m2!3d21.0301117!4d105.8549124!16s%2Fg%2F11p2tn4tsw",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "496",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85004, 21.03814]
+      },
+      "properties": {
+        "name_vn": "Lớp thực hành cắt giấy \"Thế giới Động thực vật Tương lai\"",
+        "from_date": "2026-11-15",
+        "to_date": "2026-11-15",
+        "start_time": "14:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/lop-thuc-hanh-cat-giay-the-gioi-dong-thuc-vat-tuong-lai-215839.html",
+        "address": "Chợ Đồng Xuân, số 1 Cầu Đông, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/%C4%90%E1%BB%93ng+Xu%C3%A2n+Market,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0381434,105.8500387,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb8e6c24487:0xd9def483e7f217e6!8m2!3d21.0381434!4d105.8500387!16s%2Fm%2F09v1r31",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "497",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85433, 21.02961]
+      },
+      "properties": {
+        "name_vn": "Trình diễn Âm nhạc Thiếu nhi \"Vũ Khúc Gieo Nhịp\"",
+        "from_date": "2026-11-15",
+        "to_date": "2026-11-15",
+        "start_time": "11:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trinh-dien-am-nhac-thieu-nhi-vu-khuc-gieo-nhip-580842.html",
+        "address": "Quảng trường Sáng tạo phía Đông hồ Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/Qu%E1%BA%A3ng+tr%C6%B0%E1%BB%9Dng+Ph%C3%ADa+%C4%91%C3%B4ng+H%E1%BB%93+Ho%C3%A0n+Ki%E1%BA%BFm/@21.0296143,105.8543303,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab0070b260af:0x22a013b213569781!8m2!3d21.0296143!4d105.8543303!16s%2Fg%2F11p2tnmz76",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "498",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85004, 21.03814]
+      },
+      "properties": {
+        "name_vn": "Tour Nghệ thuật \"Chạm Đồng Xuân\"",
+        "from_date": "2026-11-15",
+        "to_date": "2026-11-22",
+        "start_time": "10:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/tour-nghe-thuat-cham-dong-xuan-821797.html",
+        "address": "Chợ Đồng Xuân, số 1 Cầu Đông, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/%C4%90%E1%BB%93ng+Xu%C3%A2n+Market,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0381434,105.8500387,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb8e6c24487:0xd9def483e7f217e6!8m2!3d21.0381434!4d105.8500387!16s%2Fm%2F09v1r31",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "499",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.8478, 21.03144]
+      },
+      "properties": {
+        "name_vn": "Workshop nhuộm khăn lụa tơ tằm \"Màu của nắng\"",
+        "from_date": "2026-11-15",
+        "to_date": "2026-11-15",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/workshop-nhuom-khan-lua-to-tam-mau-cua-nang-804296.html",
+        "address": "Đình Yên Thái, 8 Tạm Thương",
+        "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+Y%C3%AAn+Th%C3%A1i/@21.0314391,105.8477951,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbe141b886f:0x9b15e550eb996c3!8m2!3d21.0314391!4d105.8477951!16s%2Fg%2F11btrrmhyt",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "500",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.84397, 21.01427]
+      },
+      "properties": {
+        "name_vn": "Chuỗi workshop \"Vẫn Ở Đây\"",
+        "from_date": "2026-11-15",
+        "to_date": "2026-11-22",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/chuoi-workshop-van-o-day-216426.html",
+        "address": "Công viên Thống Nhất, 354A Lê Duẩn, Hai Bà Trưng, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/Thong+Nhat+Park/@21.0142709,105.8439724,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab8ee6df247f:0xe6183d662696d2e9!8m2!3d21.0142709!4d105.8439724!16s%2Fg%2F1212gxkt",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "501",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85433, 21.02961]
+      },
+      "properties": {
+        "name_vn": "Lễ trao giải Giải thưởng Loa Thành 2026",
+        "from_date": "2026-11-15",
+        "to_date": "2026-11-15",
+        "start_time": "08:30",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/le-trao-giai-giai-thuong-loa-thanh-2026-336087.html",
+        "address": "Sân khấu e-Show, Quảng trường Sáng tạo phía Đông hồ Hoàn Kiếm",
+        "address_url": "https://www.google.com/maps/place/Qu%E1%BA%A3ng+tr%C6%B0%E1%BB%9Dng+Ph%C3%ADa+%C4%91%C3%B4ng+H%E1%BB%93+Ho%C3%A0n+Ki%E1%BA%BFm/@21.0296143,105.8543303,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab0070b260af:0x22a013b213569781!8m2!3d21.0296143!4d105.8543303!16s%2Fg%2F11p2tnmz76",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "502",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.8478, 21.03144]
+      },
+      "properties": {
+        "name_vn": "Trưng bày nghề dệt và sản phẩm lụa truyền thống",
+        "from_date": "2026-11-15",
+        "to_date": "2026-11-28",
+        "start_time": "08:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trung-bay-nghe-det-va-san-pham-lua-truyen-thong-611085.html",
+        "address": "Đình Yên Thái, 8 Tạm Thương",
+        "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+Y%C3%AAn+Th%C3%A1i/@21.0314391,105.8477951,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbe141b886f:0x9b15e550eb996c3!8m2!3d21.0314391!4d105.8477951!16s%2Fg%2F11btrrmhyt",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "503",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.84871, 21.03543]
+      },
+      "properties": {
+        "name_vn": "Triển lãm \"Vén Lớp Hoạ Điệp\"",
+        "from_date": "2026-11-15",
+        "to_date": "2026-11-28",
+        "start_time": "08:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-ven-lop-hoa-diep-698086.html",
+        "address": "Hội quán Phúc Kiến, 40 Lãn Ông, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/H%E1%BB%99i+Qu%C3%A1n+Ph%C3%BAc+Ki%E1%BA%BFn+%E7%A6%8F%E5%BB%BA%E6%9C%83%E9%A4%A8/@21.0354327,105.8487131,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab19088cdd5b:0xf42c0c2fe60a3e0a!8m2!3d21.0354327!4d105.8487131!16s%2Fg%2F11hj77y8y_",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "504",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85082, 21.02896]
+      },
+      "properties": {
+        "name_vn": "Workshop \"Trong vườn hoa Hàng Trống\"",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-22",
+        "start_time": "10:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/workshop-trong-vuon-hoa-hang-trong-496873.html",
+        "address": "Đình Nam Hương, 75 Hàng Trống, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+Nam+H%C6%B0%C6%A1ng/@21.0289588,105.8508192,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab9515be581f:0x736701d2b9c26ee0!8m2!3d21.0289588!4d105.8508192!16s%2Fg%2F1pzy4_1vm",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "505",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85004, 21.03814]
+      },
+      "properties": {
+        "name_vn": "Triển lãm nghệ thuật \"Chạm Đồng Xuân\"",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-28",
+        "start_time": "10:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-nghe-thuat-cham-dong-xuan-522612.html",
+        "address": "Chợ Đồng Xuân, Hà Nội.",
+        "address_url": "https://www.google.com/maps/place/%C4%90%E1%BB%93ng+Xu%C3%A2n+Market,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0381434,105.8500387,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb8e6c24487:0xd9def483e7f217e6!8m2!3d21.0381434!4d105.8500387!16s%2Fm%2F09v1r31",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "506",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85004, 21.03814]
+      },
+      "properties": {
+        "name_vn": "Tác phẩm sắp đặt \"Cột Điện Mainstream\"",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-28",
+        "start_time": "10:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/tac-pham-sap-dat-cot-dien-mainstream-642561.html",
+        "address": "Chợ Đồng Xuân, số 1 Cầu Đông, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/%C4%90%E1%BB%93ng+Xu%C3%A2n+Market,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0381434,105.8500387,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb8e6c24487:0xd9def483e7f217e6!8m2!3d21.0381434!4d105.8500387!16s%2Fm%2F09v1r31",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "507",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.84397, 21.01427]
+      },
+      "properties": {
+        "name_vn": "Triển lãm \"Cổng Đoài Làng Đường Lâm\"",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-28",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-cong-doai-lang-duong-lam-260346.html",
+        "address": "Công viên Thống Nhất",
+        "address_url": "https://www.google.com/maps/place/Thong+Nhat+Park/@21.0142709,105.8439724,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab8ee6df247f:0xe6183d662696d2e9!8m2!3d21.0142709!4d105.8439724!16s%2Fg%2F1212gxkt",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "508",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.84871, 21.03543]
+      },
+      "properties": {
+        "name_vn": "Triển lãm \"Chuyện phố nghề Đông Nam Dược Lãn Ông\"",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-28",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-chuyen-pho-nghe-dong-nam-duoc-lan-ong-967845.html",
+        "address": "Hội quán Phúc Kiến, 40 Lãn Ông, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/H%E1%BB%99i+Qu%C3%A1n+Ph%C3%BAc+Ki%E1%BA%BFn+%E7%A6%8F%E5%BB%BA%E6%9C%83%E9%A4%A8/@21.0354327,105.8487131,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab19088cdd5b:0xf42c0c2fe60a3e0a!8m2!3d21.0354327!4d105.8487131!16s%2Fg%2F11hj77y8y_",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "509",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.84567, 21.03443]
+      },
+      "properties": {
+        "name_vn": "\"Tác phẩm \"Tri Âm\" thuộc Dự án \"Ngỡ ngàng Hà Nội\"",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-28",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/tac-pham-tri-am-thuoc-du-an-ngo-ngang-ha-noi-836055.html",
+        "address": "Phố Phùng Hưng, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/P.+Ph%C3%B9ng+H%C6%B0ng,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.0344273,105.845674,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbc3b202e5b:0x95e5efc591c7023c!8m2!3d21.0344273!4d105.845674!16s%2Fg%2F1tfbqbyh",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "510",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85122, 21.03266]
+      },
+      "properties": {
+        "name_vn": "Triển lãm \"Chuyện Đình Hoa Lộc Thị\"",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-28",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-chuyen-dinh-hoa-loc-thi-427115.html",
+        "address": "Đình Hoa Lộc Thị, 90 Hàng Đào, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/90+P.+H%C3%A0ng+%C4%90%C3%A0o,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.0326561,105.8512182,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbf970d5cb3:0xa07d0829c4ad82bd!8m2!3d21.0326561!4d105.8512182!16s%2Fg%2F11c5jjxvqf",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "511",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.84819, 21.03607]
+      },
+      "properties": {
+        "name_vn": "Triển lãm \"Chuyện Đình Hành Tích\"",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-28",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-chuyen-dinh-hanh-tich-632058.html",
+        "address": "Đình Hành Tích, 1 Lò Rèn, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/1+P.+L%C3%B2+R%C3%A8n,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.0360723,105.8481947,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbec8365279:0x6029a71cc2f7f43b!8m2!3d21.0360723!4d105.8481947!16s%2Fg%2F11pyvy40p6",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "512",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.84995, 21.03126]
+      },
+      "properties": {
+        "name_vn": "Triển lãm \"Chuyện Đình Phả Trúc Lâm\"",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-28",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-chuyen-dinh-pha-truc-lam-757517.html",
+        "address": "Đình Phả Trúc Lâm, 40 Hàng Hành, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+Ph%E1%BA%A3+Tr%C3%BAc+L%C3%A2m/@21.0312599,105.8499483,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbfd734b385:0xd57aee4e10447963!8m2!3d21.0312599!4d105.8499483!16s%2Fg%2F1hc3nsfp6",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "513",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85082, 21.02896]
+      },
+      "properties": {
+        "name_vn": "Tour di sản \"Chuyện Đình Trong Phố\"",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-28",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/tour-di-san-chuyen-dinh-trong-pho-772190.html",
+        "address": "Đình Nam Hương, 75 Hàng Trống, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+Nam+H%C6%B0%C6%A1ng/@21.0289588,105.8508192,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab9515be581f:0x736701d2b9c26ee0!8m2!3d21.0289588!4d105.8508192!16s%2Fg%2F1pzy4_1vm",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "514",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.8517, 21.0253]
+      },
+      "properties": {
+        "name_vn": "Triển lãm \"Chuyện Đình Vũ Thạch\"",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-28",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-chuyen-dinh-vu-thach-998190.html",
+        "address": "Đình Vũ Thạch, 13 Bà Triệu, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+%C4%90%E1%BB%81n+V%C5%A9+Th%E1%BA%A1ch/@21.0253025,105.8516968,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab9c61766c03:0xf15f3c1b33f19c50!8m2!3d21.0253025!4d105.8516968!16s%2Fg%2F11txfkgcb6",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "515",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.84397, 21.01427]
+      },
+      "properties": {
+        "name_vn": "Pavilion \"Kén\"",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-28",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/pavilion-ken-477634.html",
+        "address": "Công viên Thống Nhất, 354A Lê Duẩn, Hai Bà Trưng, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/Thong+Nhat+Park/@21.0142709,105.8439724,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab8ee6df247f:0xe6183d662696d2e9!8m2!3d21.0142709!4d105.8439724!16s%2Fg%2F1212gxkt",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "516",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.84397, 21.01427]
+      },
+      "properties": {
+        "name_vn": "Trung tâm Thiên nhiên Lưu động",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-22",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trung-tam-thien-nhien-luu-dong-806724.html",
+        "address": "Công viên Thống Nhất, 354A Lê Duẩn, Hai Bà Trưng, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/Thong+Nhat+Park/@21.0142709,105.8439724,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab8ee6df247f:0xe6183d662696d2e9!8m2!3d21.0142709!4d105.8439724!16s%2Fg%2F1212gxkt",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "517",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.84875, 21.03205]
+      },
+      "properties": {
+        "name_vn": "Triển lãm \"Chuyện Đình Hà Vĩ\"",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-28",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-chuyen-dinh-ha-vi-814937.html",
+        "address": "Đình Hà Vĩ, 11 Hàng Hòm, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+H%C3%A0+V%C4%A9/@21.0320512,105.848752,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbe38502a03:0x5906e4c3f910c3cd!8m2!3d21.0320512!4d105.848752!16s%2Fg%2F11hzxk05k4",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "518",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.84875, 21.03205]
+      },
+      "properties": {
+        "name_vn": "Workshop Trải nghiệm sơn mài",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-28",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/workshop-trai-nghiem-son-mai-814497.html",
+        "address": "Đình Hà Vĩ, 11 Hàng Hòm, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+H%C3%A0+V%C4%A9/@21.0320512,105.848752,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbe38502a03:0x5906e4c3f910c3cd!8m2!3d21.0320512!4d105.848752!16s%2Fg%2F11hzxk05k4",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "519",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.84397, 21.01427]
+      },
+      "properties": {
+        "name_vn": "Triển lãm \"Chất Xưa, Chuyện Mới\"",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-28",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-chat-xua-chuyen-moi-346447.html",
+        "address": "Công viên Thống Nhất, 354A Lê Duẩn, Hai Bà Trưng, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/Thong+Nhat+Park/@21.0142709,105.8439724,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab8ee6df247f:0xe6183d662696d2e9!8m2!3d21.0142709!4d105.8439724!16s%2Fg%2F1212gxkt",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "520",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.84982, 21.03164]
+      },
+      "properties": {
+        "name_vn": "Workshop Tranh khắc gỗ",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-28",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/workshop-tranh-khac-go-434195.html",
+        "address": "Đình Cổ Vũ, 85 Hàng Gai, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+C%E1%BB%95+V%C5%A9/@21.0316386,105.8498204,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbfcc4fa105:0xbbe032bf9c910ee5!8m2!3d21.0316386!4d105.8498204!16s%2Fg%2F11h0d0pyc",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "521",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85014, 21.03307]
+      },
+      "properties": {
+        "name_vn": "Workshop \"Sắc Quạt Chàng Sơn\"",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-21",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/workshop-sac-quat-chang-son-478665.html",
+        "address": "Đình Xuân Phiến Thị, 4 Hàng Quạt, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/4+P.+H%C3%A0ng+Qu%E1%BA%A1t,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.0330701,105.8501437,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbfaf1cd051:0x148706c9e15c25a1!8m2!3d21.0330701!4d105.8501437!16s%2Fg%2F11qg98c1xz",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "522",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85014, 21.03307]
+      },
+      "properties": {
+        "name_vn": "Triển lãm \"Chuyện Đình Xuân Phiến Thị\"",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-28",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-chuyen-dinh-xuan-phien-thi-415785.html",
+        "address": "Đình Xuân Phiến Thị, 4 Hàng Quạt, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/4+P.+H%C3%A0ng+Qu%E1%BA%A1t,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.0330701,105.8501437,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbfaf1cd051:0x148706c9e15c25a1!8m2!3d21.0330701!4d105.8501437!16s%2Fg%2F11qg98c1xz",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "523",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.8478, 21.03144]
+      },
+      "properties": {
+        "name_vn": "Triển lãm \"Chuyện Đình Yên Thái\"",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-28",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-chuyen-dinh-yen-thai-758631.html",
+        "address": "Đình Yên Thái, 8 Tạm Thương, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+Y%C3%AAn+Th%C3%A1i/@21.0314391,105.8477951,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbe141b886f:0x9b15e550eb996c3!8m2!3d21.0314391!4d105.8477951!16s%2Fg%2F11btrrmhyt",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "524",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.84776, 21.03199]
+      },
+      "properties": {
+        "name_vn": "Triển lãm \"Chuyện Đình Tú Thị\"",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-28",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-chuyen-dinh-tu-thi-914335.html",
+        "address": "Đình Tú Thị, 2A Yên Thái, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+T%C3%BA+Th%E1%BB%8B/@21.0319891,105.8477625,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbe15ccbcdd:0x772f319b7b686592!8m2!3d21.0319891!4d105.8477625!16s%2Fg%2F11r_pbz_s",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "525",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85269, 21.03396]
+      },
+      "properties": {
+        "name_vn": "Triển lãm \"Chuyện Đình Kim Ngân\"",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-28",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-chuyen-dinh-kim-ngan-394328.html",
+        "address": "Đình Kim Ngân, 44 Hàng Bạc, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+Kim+Ng%C3%A2n/@21.033963,105.8526932,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abc082e39e59:0xdd8ff516b54cee7f!8m2!3d21.033963!4d105.8526932!16s%2Fg%2F11cmgk_8dy",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "526",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85082, 21.02896]
+      },
+      "properties": {
+        "name_vn": "Triển lãm \"Đối thoại với tranh Hàng Trống\"",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-28",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-doi-thoai-voi-tranh-hang-trong-187450.html",
+        "address": "Đình Nam Hương, 75 Hàng Trống, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+Nam+H%C6%B0%C6%A1ng/@21.0289588,105.8508192,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab9515be581f:0x736701d2b9c26ee0!8m2!3d21.0289588!4d105.8508192!16s%2Fg%2F1pzy4_1vm",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "527",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85368, 21.02549]
+      },
+      "properties": {
+        "name_vn": "Chuỗi hoạt động \"Mũi Thêu Kẻ Nghệ\"",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-28",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/chuoi-hoat-dong-mui-theu-ke-nghe-857352.html",
+        "address": "Nhà trưng bày 61 Tràng Tiền, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/61+Tr%C3%A0ng+Ti%E1%BB%81n,+French+Quarter,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.0254918,105.8536803,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abeb4390bc49:0x9999660f53d6f08f!8m2!3d21.0254918!4d105.8536803!16s%2Fg%2F11q2xcnk7r",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "528",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85433, 21.02961]
+      },
+      "properties": {
+        "name_vn": "Tác phẩm \"Cà Phê Trứng\" thuộc Dự án \"Ngỡ ngàng Hà Nội\"",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-28",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/tac-pham-ca-phe-trung-thuoc-du-an-ngo-ngang-ha-noi-798726.html",
+        "address": "Quảng trường Sáng tạo phía Đông hồ Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/Qu%E1%BA%A3ng+tr%C6%B0%E1%BB%9Dng+Ph%C3%ADa+%C4%91%C3%B4ng+H%E1%BB%93+Ho%C3%A0n+Ki%E1%BA%BFm/@21.0296143,105.8543303,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab0070b260af:0x22a013b213569781!8m2!3d21.0296143!4d105.8543303!16s%2Fg%2F11p2tnmz76",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "529",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.83643, 21.02999]
+      },
+      "properties": {
+        "name_vn": "Triển lãm \"Tổ nghề và Danh Nho nước Việt\"",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-28",
+        "start_time": "08:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-to-nghe-va-danh-nho-nuoc-viet-895294.html",
+        "address": "Nhà Thái Học, Văn Miếu - Quốc Tử Giám, 58 Quốc Tử Giám, Đống Đa, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/Khu+Th%C3%A1i+H%E1%BB%8Dc+-+Thai+Hoc+Building/@21.0299908,105.8364262,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab00475819af:0x6148054ddfc7ee93!8m2!3d21.0299908!4d105.8364262!16s%2Fg%2F11x0pl75sh",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "530",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.84776, 21.03199]
+      },
+      "properties": {
+        "name_vn": "Trưng bày nghệ thuật giới thiệu sản phẩm thêu của nghệ nhân Nguyễn Thị Hằng, kết hợp các hoạt động trải nghiệm",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-28",
+        "start_time": "08:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trung-bay-nghe-thuat-gioi-thieu-san-pham-theu-cua-nghe-nhan-nguyen-thi-hang-ket-hop-cac-hoat-dong-trai-nghiem-962514.html",
+        "address": "Đình Tú Thị, 2A Yên Thái, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+T%C3%BA+Th%E1%BB%8B/@21.0319891,105.8477625,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbe15ccbcdd:0x772f319b7b686592!8m2!3d21.0319891!4d105.8477625!16s%2Fg%2F11r_pbz_s",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "531",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85279, 21.03559]
+      },
+      "properties": {
+        "name_vn": "Chuỗi sự kiện di sản \"Chuyện Tuồng xưa, Chuyện Tuồng nay\"",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-28",
+        "start_time": "08:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/chuoi-su-kien-di-san-chuyen-tuong-xua-chuyen-tuong-nay-394441.html",
+        "address": "Trung tâm Giao lưu Văn hóa Phố cổ Hà Nội, 50 Đào Duy Từ",
+        "address_url": "https://www.google.com/maps/place/Cultural+Exchange+Center/@21.035588,105.85279,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abc754952f7f:0x79a5229a38d0387f!8m2!3d21.035588!4d105.85279!16s%2Fg%2F11bx1zg8j5",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "532",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.8536, 21.04095]
+      },
+      "properties": {
+        "name_vn": "Chương trình trải nghiệm \"Tuyến đường sinh thái bờ vở sông Hồng\"",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-27",
+        "start_time": "08:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/chuong-trinh-trai-nghiem-tuyen-duong-sinh-thai-bo-vo-song-hong-653612.html",
+        "address": "Tuyến đường sinh thái bờ vở sông Hồng, phường Hồng Hà (nối Công viên rừng Phúc Tân và Công viên rừng Chương Dương)",
+        "address_url": "https://www.google.com/maps/place/C%C3%B4ng+vi%C3%AAn+r%E1%BB%ABng+Ph%C3%BAc+T%C3%A2n/data=!4m7!3m6!1s0x3135ab007e928069:0x86a65a9ae536a1d8!8m2!3d21.04095!4d105.8536014!16s%2Fg%2F11vq_whqjw!19sChIJaYCSfgCrNTER2KE25ZpapoY",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "533",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.84875, 21.03205]
+      },
+      "properties": {
+        "name_vn": "Trưng bày \"Chạm di sản - Sáng tạo cùng sơn mài\"",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-28",
+        "start_time": "08:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trung-bay-cham-di-san-sang-tao-cung-son-mai-227155.html",
+        "address": "Đình Hà Vĩ, 11 Hàng Hòm",
+        "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+H%C3%A0+V%C4%A9/@21.0320512,105.848752,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbe38502a03:0x5906e4c3f910c3cd!8m2!3d21.0320512!4d105.848752!16s%2Fg%2F11hzxk05k4",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "534",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85238, 21.03613]
+      },
+      "properties": {
+        "name_vn": "Trưng bày làng nghề Sơn Đồng",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-28",
+        "start_time": "08:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trung-bay-lang-nghe-son-dong-van-hoa-tra-viet-va-viet-phuc-169008.html",
+        "address": "Trung tâm Văn hóa nghệ thuật, 22 Hàng Buồm",
+        "address_url": "https://www.google.com/maps/place/22+Hang+Buom+Culture+and+Arts+Center/@21.0361276,105.8523753,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abc1fa899227:0xd09ca63132b759d4!8m2!3d21.0361276!4d105.8523753!16s%2Fg%2F11sgz08tv7",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "535",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.84982, 21.03164]
+      },
+      "properties": {
+        "name_vn": "Triển lãm \"Chuyện Đình Cổ Vũ\"",
+        "from_date": "2026-11-14",
+        "to_date": "2026-11-28",
+        "start_time": "00:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-chuyen-dinh-co-vu-857886.html",
+        "address": "Đình Cổ Vũ, 85 Hàng Gai, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+C%E1%BB%95+V%C5%A9/@21.0316386,105.8498204,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbfcc4fa105:0xbbe032bf9c910ee5!8m2!3d21.0316386!4d105.8498204!16s%2Fg%2F11h0d0pyc",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "536",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85433, 21.02961]
+      },
+      "properties": {
+        "name_vn": "Pavilion Hồ Gương | UNESCO & SOVICO vì sự phát triển bền vững",
+        "from_date": "2026-11-13",
+        "to_date": "2026-11-28",
+        "start_time": "15:29",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/pavilion-ho-guong-unesco-sovico-vi-su-phat-trien-ben-vung-576021.html",
+        "address": "Quảng trường Sáng tạo phía Đông hồ Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/Qu%E1%BA%A3ng+tr%C6%B0%E1%BB%9Dng+Ph%C3%ADa+%C4%91%C3%B4ng+H%E1%BB%93+Ho%C3%A0n+Ki%E1%BA%BFm/@21.0296143,105.8543303,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab0070b260af:0x22a013b213569781!8m2!3d21.0296143!4d105.8543303!16s%2Fg%2F11p2tnmz76",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "537",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.84397, 21.01427]
+      },
+      "properties": {
+        "name_vn": "Pavilion \"Mây\"",
+        "from_date": "2026-11-13",
+        "to_date": "2026-11-28",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/pavilion-may-342933.html",
+        "address": "Công viên Thống Nhất, 354A Lê Duẩn, Hai Bà Trưng, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/Thong+Nhat+Park/@21.0142709,105.8439724,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab8ee6df247f:0xe6183d662696d2e9!8m2!3d21.0142709!4d105.8439724!16s%2Fg%2F1212gxkt",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "538",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.84871, 21.03543]
+      },
+      "properties": {
+        "name_vn": "Mở xưởng nghệ sĩ \"Muôn màu kẻ chợ\"",
+        "from_date": "2026-11-13",
+        "to_date": "2026-11-28",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/mo-xuong-nghe-si-muon-mau-ke-cho-922031.html",
+        "address": "Hội quán Phúc Kiến, 40 Lãn Ông",
+        "address_url": "https://www.google.com/maps/place/H%E1%BB%99i+Qu%C3%A1n+Ph%C3%BAc+Ki%E1%BA%BFn+%E7%A6%8F%E5%BB%BA%E6%9C%83%E9%A4%A8/@21.0354327,105.8487131,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab19088cdd5b:0xf42c0c2fe60a3e0a!8m2!3d21.0354327!4d105.8487131!16s%2Fg%2F11hj77y8y_",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "539",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.85411, 21.02513]
+      },
+      "properties": {
+        "name_vn": "Giúp nhau làm nghề - Craft ToolKit Hà Nội 2026",
+        "from_date": "2026-11-08",
+        "to_date": "2026-11-28",
+        "start_time": "09:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://lehoithietkesangtao.vn/su-kien/giup-nhau-lam-nghe-craft-toolkit-ha-noi-2026-206199.html",
+        "address": "47 Tràng Tiền, Hoàn Kiếm, Hà Nội",
+        "address_url": "https://www.google.com/maps/place/47+Tr%C3%A0ng+Ti%E1%BB%81n,+C%E1%BB%ADa+Nam,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.0251321,105.8541054,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abeb678a43e5:0x1fab9ba87ea5b89a!8m2!3d21.0251321!4d105.8541054!16s%2Fg%2F11mydfrds7",
+        "image_url": "",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://lehoithietkesangtao.vn"
       }
     }
   ]
