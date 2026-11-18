@@ -6,7 +6,10 @@
       "id": "43",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.841384, 21.042057]
+        "coordinates": [
+          105.841384,
+          21.042057
+        ]
       },
       "properties": {
         "name_vn": "Đêm đọc Người Nằm Mộng",
@@ -28,7 +31,10 @@
       "id": "87",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.82628, 21.02276]
+        "coordinates": [
+          105.82628,
+          21.02276
+        ]
       },
       "properties": {
         "name_vn": "Hòa nhạc đặt vé trước số 188",
@@ -50,7 +56,10 @@
       "id": "88",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.82628, 21.02276]
+        "coordinates": [
+          105.82628,
+          21.02276
+        ]
       },
       "properties": {
         "name_vn": "Hòa nhạc đặt vé trước số 189",
@@ -72,7 +81,10 @@
       "id": "89",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.82628, 21.02276]
+        "coordinates": [
+          105.82628,
+          21.02276
+        ]
       },
       "properties": {
         "name_vn": "VYMI Family Concert",
@@ -94,7 +106,10 @@
       "id": "90",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.82628, 21.02276]
+        "coordinates": [
+          105.82628,
+          21.02276
+        ]
       },
       "properties": {
         "name_vn": "Chùm tác phẩm Haydn",
@@ -116,7 +131,10 @@
       "id": "91",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.82628, 21.02276]
+        "coordinates": [
+          105.82628,
+          21.02276
+        ]
       },
       "properties": {
         "name_vn": "Chùm tác phẩm Tchaikovsky",
@@ -138,7 +156,10 @@
       "id": "94",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.856375, 21.025413]
+        "coordinates": [
+          105.856375,
+          21.025413
+        ]
       },
       "properties": {
         "name_vn": "Hòa nhạc kỷ niệm 125 năm khách sạn Metropole: Những tác phẩm Mozart vượt thời gian cùng VNSO",
@@ -160,7 +181,10 @@
       "id": "95",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.848861, 21.028596]
+        "coordinates": [
+          105.848861,
+          21.028596
+        ]
       },
       "properties": {
         "name_vn": "Hòa nhạc từ thiện giáng sinh",
@@ -182,7 +206,10 @@
       "id": "96",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.852173, 21.022074]
+        "coordinates": [
+          105.852173,
+          21.022074
+        ]
       },
       "properties": {
         "name_vn": "Chuỗi hòa nhạc \"Âm nhạc từ thành viên\" I",
@@ -204,7 +231,10 @@
       "id": "141",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.865696, 21.063609]
+        "coordinates": [
+          105.865696,
+          21.063609
+        ]
       },
       "properties": {
         "name_vn": "Mở xưởng \"Vũ Dân Tân. Gỡ mặt nạ nhà văn: Một trò chơi ký ức văn chương\"",
@@ -226,7 +256,10 @@
       "id": "168",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.826219, 21.022791]
+        "coordinates": [
+          105.826219,
+          21.022791
+        ]
       },
       "properties": {
         "name_vn": "Chopin Dreams",
@@ -248,7 +281,10 @@
       "id": "169",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.837084, 21.030784]
+        "coordinates": [
+          105.837084,
+          21.030784
+        ]
       },
       "properties": {
         "name_vn": "Chuyên đề đặc biệt: Hoạ sĩ, liệt sĩ Tô Ngọc Vân (1906 – 1954)",
@@ -270,7 +306,10 @@
       "id": "249",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.806065, 21.038257]
+        "coordinates": [
+          105.806065,
+          21.038257
+        ]
       },
       "properties": {
         "name_vn": "Jobless Dads / The Most Romantic Man in Hanoi / Orchidolls",
@@ -292,7 +331,10 @@
       "id": "251",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.815196, 21.002136]
+        "coordinates": [
+          105.815196,
+          21.002136
+        ]
       },
       "properties": {
         "name_vn": "TRIỂN LÃM \"THIÊN HÀ LAM\" | \"AZURE GALAXY\" — 🔵 Triển lãm mở cửa tự do",
@@ -314,7 +356,10 @@
       "id": "253",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.850726, 21.028123]
+        "coordinates": [
+          105.850726,
+          21.028123
+        ]
       },
       "properties": {
         "name_vn": "NƠI BÓNG TỐI THỞ | Where Shadows Breathe",
@@ -336,7 +381,10 @@
       "id": "284",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.840223, 21.046965]
+        "coordinates": [
+          105.840223,
+          21.046965
+        ]
       },
       "properties": {
         "name_vn": "Strictly Vinyl Vol. #255 feat. Scott Towers a.k.a. Chopper Reeds [Fat Freddy's Drop]",
@@ -358,7 +406,10 @@
       "id": "307",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.802504, 21.153869]
+        "coordinates": [
+          105.802504,
+          21.153869
+        ]
       },
       "properties": {
         "name_vn": "Twenty One More Songs",
@@ -380,7 +431,10 @@
       "id": "316",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.82628, 21.02276]
+        "coordinates": [
+          105.82628,
+          21.02276
+        ]
       },
       "properties": {
         "name_vn": "VYMI Family Concert",
@@ -402,7 +456,10 @@
       "id": "320",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.829866, 21.070899]
+        "coordinates": [
+          105.829866,
+          21.070899
+        ]
       },
       "properties": {
         "name_vn": "Puddles and Atomic Không",
@@ -424,7 +481,10 @@
       "id": "322",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.851957, 21.020781]
+        "coordinates": [
+          105.851957,
+          21.020781
+        ]
       },
       "properties": {
         "name_vn": "Cây Hà Nội – Những bức ảnh về một di sản sống",
@@ -446,7 +506,10 @@
       "id": "323",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.856375, 21.025413]
+        "coordinates": [
+          105.856375,
+          21.025413
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm \"Hanoi: Traces of Time\"",
@@ -468,7 +531,10 @@
       "id": "325",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.831525, 21.034763]
+        "coordinates": [
+          105.831525,
+          21.034763
+        ]
       },
       "properties": {
         "name_vn": "Cùng đọc nhé #16: Nhiếp ảnh, những mối liên hệ",
@@ -490,7 +556,10 @@
       "id": "334",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.787608, 21.005626]
+        "coordinates": [
+          105.787608,
+          21.005626
+        ]
       },
       "properties": {
         "name_vn": "BÁN VÉ XUÂN PHÁT TÀI 17 – VÉ ĐẸP TỪ BAN TỔ CHỨC – GALA GẶP NHAU CUỐI NĂM NGÀY 26/12/2026 TẠI HÀ NỘI",
@@ -512,7 +581,10 @@
       "id": "357",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.802504, 21.153869]
+        "coordinates": [
+          105.802504,
+          21.153869
+        ]
       },
       "properties": {
         "name_vn": "LIVE ORIGINAL #1: TURN YOU ON",
@@ -534,7 +606,10 @@
       "id": "358",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.787608, 21.005626]
+        "coordinates": [
+          105.787608,
+          21.005626
+        ]
       },
       "properties": {
         "name_vn": "8 the Theatre: Carrying You",
@@ -556,7 +631,10 @@
       "id": "364",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.86316, 21.01251]
+        "coordinates": [
+          105.86316,
+          21.01251
+        ]
       },
       "properties": {
         "name_vn": "TẦM TÃ - KHOÁ THỰC HÀNH NGHỆ THUẬT 2026",
@@ -578,7 +656,10 @@
       "id": "365",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.82374, 21.06548]
+        "coordinates": [
+          105.82374,
+          21.06548
+        ]
       },
       "properties": {
         "name_vn": "EXHIBITION - Tourismism | Quách Bắc | TRIỂN LÃM - Chủ nghĩa du lịch",
@@ -600,7 +681,10 @@
       "id": "366",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84553, 21.04139]
+        "coordinates": [
+          105.84553,
+          21.04139
+        ]
       },
       "properties": {
         "name_vn": "23 - một tập hợp tác phẩm của | selected works by NGUYỄN NGỌC LINH",
@@ -622,7 +706,10 @@
       "id": "368",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.82647, 21.01029]
+        "coordinates": [
+          105.82647,
+          21.01029
+        ]
       },
       "properties": {
         "name_vn": "FRENCH CINEMA RENDEZ-VOUS – THÁNG 11.2026 — ➤ Lieu",
@@ -644,7 +731,10 @@
       "id": "369",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85306, 21.01772]
+        "coordinates": [
+          105.85306,
+          21.01772
+        ]
       },
       "properties": {
         "name_vn": "Múa đương đại | Danse contemporaine : NÄSS",
@@ -666,7 +756,10 @@
       "id": "370",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.82672, 21.01056]
+        "coordinates": [
+          105.82672,
+          21.01056
+        ]
       },
       "properties": {
         "name_vn": "HANOI SWING OUT in NOVEMBER",
@@ -688,7 +781,10 @@
       "id": "371",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84565, 21.03251]
+        "coordinates": [
+          105.84565,
+          21.03251
+        ]
       },
       "properties": {
         "name_vn": "Tribute #121 - Frank Morgan and McCoy Tyner Trio with the album Major Changes 1987",
@@ -710,7 +806,10 @@
       "id": "373",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84138, 21.04206]
+        "coordinates": [
+          105.84138,
+          21.04206
+        ]
       },
       "properties": {
         "name_vn": "PHIÊN CHỢ \"BỘI THU\" | 07-08.11.2026 | TỔ CHIM XANH",
@@ -732,7 +831,10 @@
       "id": "374",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84143, 21.04194]
+        "coordinates": [
+          105.84143,
+          21.04194
+        ]
       },
       "properties": {
         "name_vn": "TẬP - THỂ - ĐỌC: \"NHỮNG NAM TÍNH\" VÀ \"BÌNH ĐẲNG GIỚI TẠI NƠI LÀM VIỆC\"",
@@ -754,7 +856,10 @@
       "id": "375",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.8488, 21.02179]
+        "coordinates": [
+          105.8488,
+          21.02179
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm Huyễn Sắc Xoay Vần | Spinning Ghost Colors của Kito",
@@ -776,7 +881,10 @@
       "id": "377",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84806, 21.02558]
+        "coordinates": [
+          105.84806,
+          21.02558
+        ]
       },
       "properties": {
         "name_vn": "Read On Phone Off - Đọc mở mang, tạm dừng mở mạng | 14/11",
@@ -798,7 +906,10 @@
       "id": "378",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.82672, 21.01056]
+        "coordinates": [
+          105.82672,
+          21.01056
+        ]
       },
       "properties": {
         "name_vn": "FRENCH CINEMA RENDEZ-VOUS (ĐIỂM HẸN ĐIỆN ẢNH PHÁP) 11/2026 - Hà Nội",
@@ -820,7 +931,10 @@
       "id": "380",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.82672, 21.01056]
+        "coordinates": [
+          105.82672,
+          21.01056
+        ]
       },
       "properties": {
         "name_vn": "BACK TO THE GOOD OLD DAY (14/11/2026)",
@@ -842,7 +956,10 @@
       "id": "381",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85166, 21.02478]
+        "coordinates": [
+          105.85166,
+          21.02478
+        ]
       },
       "properties": {
         "name_vn": "VYO Grand Concert 2025 — 🎈Nhà hát Hồ Gươm",
@@ -864,7 +981,10 @@
       "id": "382",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.81137, 21.09026]
+        "coordinates": [
+          105.81137,
+          21.09026
+        ]
       },
       "properties": {
         "name_vn": "Sunday Sunset Jams at JamBox, Hanoi",
@@ -886,7 +1006,10 @@
       "id": "383",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.81137, 21.09026]
+        "coordinates": [
+          105.81137,
+          21.09026
+        ]
       },
       "properties": {
         "name_vn": "Alex's Birthday and JamBox Farewell",
@@ -908,7 +1031,10 @@
       "id": "384",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.81337, 21.0899]
+        "coordinates": [
+          105.81337,
+          21.0899
+        ]
       },
       "properties": {
         "name_vn": "Hanoi Bluegrass Jam Session #5 at JamBox",
@@ -930,7 +1056,10 @@
       "id": "385",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84022, 21.04697]
+        "coordinates": [
+          105.84022,
+          21.04697
+        ]
       },
       "properties": {
         "name_vn": "Strictly Vinyl Vol. #256 feat. Sipz",
@@ -952,7 +1081,10 @@
       "id": "390",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84565, 21.03251]
+        "coordinates": [
+          105.84565,
+          21.03251
+        ]
       },
       "properties": {
         "name_vn": "LIVE CONCERT TRIBUTE: Frank Morgan & McCoy Coyner Trio",
@@ -974,7 +1106,10 @@
       "id": "395",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.81604, 21.07616]
+        "coordinates": [
+          105.81604,
+          21.07616
+        ]
       },
       "properties": {
         "name_vn": "502 OCEAN: MỘT LÁ THƯ TAY",
@@ -996,7 +1131,10 @@
       "id": "396",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85428, 21.03308]
+        "coordinates": [
+          105.85428,
+          21.03308
+        ]
       },
       "properties": {
         "name_vn": "A Little Jazz, A Little Magic",
@@ -1018,7 +1156,10 @@
       "id": "397",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.83058, 21.07069]
+        "coordinates": [
+          105.83058,
+          21.07069
+        ]
       },
       "properties": {
         "name_vn": "Red River Revival",
@@ -1040,7 +1181,10 @@
       "id": "398",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.76392, 21.02048]
+        "coordinates": [
+          105.76392,
+          21.02048
+        ]
       },
       "properties": {
         "name_vn": "LIÊN QUÂN festival concert",
@@ -1062,7 +1206,10 @@
       "id": "399",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.81006, 21.0902]
+        "coordinates": [
+          105.81006,
+          21.0902
+        ]
       },
       "properties": {
         "name_vn": "Sunday Jam",
@@ -1084,7 +1231,10 @@
       "id": "400",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85428, 21.03308]
+        "coordinates": [
+          105.85428,
+          21.03308
+        ]
       },
       "properties": {
         "name_vn": "Vietnamese Jazz Four Seasons Series",
@@ -1106,7 +1256,10 @@
       "id": "401",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.846, 21.02904]
+        "coordinates": [
+          105.846,
+          21.02904
+        ]
       },
       "properties": {
         "name_vn": "Xóm Nhạc: Hải Hà",
@@ -1128,7 +1281,10 @@
       "id": "402",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.846, 21.02904]
+        "coordinates": [
+          105.846,
+          21.02904
+        ]
       },
       "properties": {
         "name_vn": "Tiny Music Club: Julius Parker",
@@ -1150,7 +1306,10 @@
       "id": "403",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.82987, 21.0709]
+        "coordinates": [
+          105.82987,
+          21.0709
+        ]
       },
       "properties": {
         "name_vn": "Phantom Boss",
@@ -1172,7 +1331,10 @@
       "id": "404",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.8025, 21.15387]
+        "coordinates": [
+          105.8025,
+          21.15387
+        ]
       },
       "properties": {
         "name_vn": "Somewhere I Belong",
@@ -1194,7 +1356,10 @@
       "id": "405",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.82381, 21.06549]
+        "coordinates": [
+          105.82381,
+          21.06549
+        ]
       },
       "properties": {
         "name_vn": "EXHIBITION - Tourismism | Quách Bắc | TRIỂN LÃM - Chủ nghĩa du lịch",
@@ -1216,7 +1381,10 @@
       "id": "406",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84553, 21.04139]
+        "coordinates": [
+          105.84553,
+          21.04139
+        ]
       },
       "properties": {
         "name_vn": "23 - một tập hợp tác phẩm của | selected works by NGUYỄN NGỌC LINH",
@@ -1238,7 +1406,10 @@
       "id": "407",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.83768, 21.03014]
+        "coordinates": [
+          105.83768,
+          21.03014
+        ]
       },
       "properties": {
         "name_vn": "TRIỂN VỌNG DU HỌC NGHỀ ĐỨC – NGÀNH XÂY DỰNG",
@@ -1260,7 +1431,10 @@
       "id": "408",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84565, 21.03251]
+        "coordinates": [
+          105.84565,
+          21.03251
+        ]
       },
       "properties": {
         "name_vn": "LIVE CONCERT CROSSOVER JAZZ 28: FROM STANDARDS TO CONTEMPORARY JAZZ",
@@ -1282,7 +1456,10 @@
       "id": "409",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84143, 21.04194]
+        "coordinates": [
+          105.84143,
+          21.04194
+        ]
       },
       "properties": {
         "name_vn": "TẬP - THỂ - ĐỌC: NGUYỄN XUÂN KHÁNH với bộ 3 tiểu thuyết văn hóa - lịch sử",
@@ -1304,7 +1481,10 @@
       "id": "410",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85403, 21.03046]
+        "coordinates": [
+          105.85403,
+          21.03046
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm \"Kết duyên sáng tạo\" | Exhibition \"Creative Matching\"",
@@ -1326,7 +1506,10 @@
       "id": "411",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.83647, 21.02856]
+        "coordinates": [
+          105.83647,
+          21.02856
+        ]
       },
       "properties": {
         "name_vn": "TRIỂN LÃM \"VỆT THỜI GIAN\"",
@@ -1348,7 +1531,10 @@
       "id": "412",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.8488, 21.02179]
+        "coordinates": [
+          105.8488,
+          21.02179
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm Huyễn Sắc Xoay Vần | Spinning Ghost Colors của Kito",
@@ -1370,7 +1556,10 @@
       "id": "413",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.89921, 21.02605]
+        "coordinates": [
+          105.89921,
+          21.02605
+        ]
       },
       "properties": {
         "name_vn": "KOREAN FESTIVAL - HÒA HỘI SẮC HÀN",
@@ -1392,7 +1581,10 @@
       "id": "414",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.89252, 21.06071]
+        "coordinates": [
+          105.89252,
+          21.06071
+        ]
       },
       "properties": {
         "name_vn": "Tự sự Tối thứ Tư",
@@ -1414,7 +1606,10 @@
       "id": "415",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84902, 21.038]
+        "coordinates": [
+          105.84902,
+          21.038
+        ]
       },
       "properties": {
         "name_vn": "SOUL PARTY #01",
@@ -1436,7 +1631,10 @@
       "id": "416",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.8352, 21.01026]
+        "coordinates": [
+          105.8352,
+          21.01026
+        ]
       },
       "properties": {
         "name_vn": "Ai ai cũng có quyền được HÁT - KoFi Open Mic (since 2019)",
@@ -1458,7 +1656,10 @@
       "id": "417",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.88253, 21.02462]
+        "coordinates": [
+          105.88253,
+          21.02462
+        ]
       },
       "properties": {
         "name_vn": "MUCH ADO ABOUT NOTHING - Shakesperience",
@@ -1480,7 +1681,10 @@
       "id": "418",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.88253, 21.02462]
+        "coordinates": [
+          105.88253,
+          21.02462
+        ]
       },
       "properties": {
         "name_vn": "NỮ CHÚA KHÁT VỌNG",
@@ -1502,7 +1706,10 @@
       "id": "419",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85004, 21.03814]
+        "coordinates": [
+          105.85004,
+          21.03814
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm thực tế tăng cường: Thế giới động vật kỳ thú | Faune",
@@ -1524,7 +1731,10 @@
       "id": "420",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85004, 21.03814]
+        "coordinates": [
+          105.85004,
+          21.03814
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm CHẠM ĐỒNG XUÂN | TOUCHING ĐỒNG XUÂN exhibition",
@@ -1546,7 +1756,10 @@
       "id": "421",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85428, 21.03308]
+        "coordinates": [
+          105.85428,
+          21.03308
+        ]
       },
       "properties": {
         "name_vn": "A Little Jazz, A Little Magic",
@@ -1568,7 +1781,10 @@
       "id": "422",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85474, 21.03449]
+        "coordinates": [
+          105.85474,
+          21.03449
+        ]
       },
       "properties": {
         "name_vn": "Live rock n' roll in the OQ",
@@ -1590,7 +1806,10 @@
       "id": "423",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85428, 21.03308]
+        "coordinates": [
+          105.85428,
+          21.03308
+        ]
       },
       "properties": {
         "name_vn": "Jazz Trio: An Intimate Jazz Evening",
@@ -1612,7 +1831,10 @@
       "id": "424",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85581, 21.02435]
+        "coordinates": [
+          105.85581,
+          21.02435
+        ]
       },
       "properties": {
         "name_vn": "Skunkworks",
@@ -1634,7 +1856,10 @@
       "id": "425",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.846, 21.02904]
+        "coordinates": [
+          105.846,
+          21.02904
+        ]
       },
       "properties": {
         "name_vn": "Xóm Nhạc: Leo.1",
@@ -1656,7 +1881,10 @@
       "id": "426",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85428, 21.03308]
+        "coordinates": [
+          105.85428,
+          21.03308
+        ]
       },
       "properties": {
         "name_vn": "Take Your Time Reloaded",
@@ -1678,7 +1906,10 @@
       "id": "427",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.82987, 21.0709]
+        "coordinates": [
+          105.82987,
+          21.0709
+        ]
       },
       "properties": {
         "name_vn": "Limebócx",
@@ -1700,7 +1931,10 @@
       "id": "428",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.81545, 21.00317]
+        "coordinates": [
+          105.81545,
+          21.00317
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm \"Thiên hà lam\"",
@@ -1722,7 +1956,10 @@
       "id": "429",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.8488, 21.02179]
+        "coordinates": [
+          105.8488,
+          21.02179
+        ]
       },
       "properties": {
         "name_vn": "Huyễn sắc xoay vần – Khi sắc màu, ánh sáng và chuyển động lan khắp không gian",
@@ -1744,7 +1981,10 @@
       "id": "430",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.83467, 21.0369]
+        "coordinates": [
+          105.83467,
+          21.0369
+        ]
       },
       "properties": {
         "name_vn": "\"33.23.45\"",
@@ -1766,7 +2006,10 @@
       "id": "431",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85491, 21.03011]
+        "coordinates": [
+          105.85491,
+          21.03011
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm \"Mạch sống vô hình\"",
@@ -1788,7 +2031,10 @@
       "id": "432",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.78218, 21.018]
+        "coordinates": [
+          105.78218,
+          21.018
+        ]
       },
       "properties": {
         "name_vn": "Trao đổi chuyên môn \"Lao động sáng tạo trong bối cảnh phát triển Công nghiệp văn hóa\"",
@@ -1810,7 +2056,10 @@
       "id": "433",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85278, 21.03494]
+        "coordinates": [
+          105.85278,
+          21.03494
+        ]
       },
       "properties": {
         "name_vn": "Múa rối đương đại \"Phá Rối\" (Puppet Slam Hanoi)",
@@ -1832,7 +2081,10 @@
       "id": "434",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.78218, 21.018]
+        "coordinates": [
+          105.78218,
+          21.018
+        ]
       },
       "properties": {
         "name_vn": "Trình diễn \"Trôi\"",
@@ -1854,7 +2106,10 @@
       "id": "435",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.78218, 21.018]
+        "coordinates": [
+          105.78218,
+          21.018
+        ]
       },
       "properties": {
         "name_vn": "Trao đổi chuyên môn \"Cổ vật chuyển động\"",
@@ -1876,7 +2131,10 @@
       "id": "436",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.78218, 21.018]
+        "coordinates": [
+          105.78218,
+          21.018
+        ]
       },
       "properties": {
         "name_vn": "Trao đổi chuyên môn \"Di sản tự sinh\"",
@@ -1898,7 +2156,10 @@
       "id": "437",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85305, 21.01773]
+        "coordinates": [
+          105.85305,
+          21.01773
+        ]
       },
       "properties": {
         "name_vn": "Múa đương đại \"Näss\"",
@@ -1920,7 +2181,10 @@
       "id": "438",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.80261, 20.98012]
+        "coordinates": [
+          105.80261,
+          20.98012
+        ]
       },
       "properties": {
         "name_vn": "Điền dã \"Gió Gió Mây Mây\"",
@@ -1942,7 +2206,10 @@
       "id": "439",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85278, 21.03494]
+        "coordinates": [
+          105.85278,
+          21.03494
+        ]
       },
       "properties": {
         "name_vn": "Trình diễn âm nhạc x Toạ đàm \"Ong Bay\" (Flight of the Bumblebee II)",
@@ -1954,7 +2221,7 @@
         "event_url": "https://lehoithietkesangtao.vn/su-kien/trinh-dien-am-nhac-x-toa-dam-ong-bay-flight-of-the-bumblebee-ii-857306.html",
         "address": "18 Lương Ngọc Quyến, Hoàn Kiếm, Hà Nội",
         "address_url": "https://www.google.com/maps/place/18+P.+L%C6%B0%C6%A1ng+Ng%E1%BB%8Dc+Quy%E1%BA%BFn,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0349433,105.8527801,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abc0a1a07c3b:0x97ff1d2edeb8e55a!8m2!3d21.0349433!4d105.8527801!16s%2Fg%2F11rp3dl1ft",
-        "image_url": "",
+        "image_url": "thumbs/439.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -1964,7 +2231,10 @@
       "id": "440",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.8542, 21.0285]
+        "coordinates": [
+          105.8542,
+          21.0285
+        ]
       },
       "properties": {
         "name_vn": "Hội chợ \"Nghề Nghệ\"",
@@ -1986,7 +2256,10 @@
       "id": "441",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.8542, 21.0285]
+        "coordinates": [
+          105.8542,
+          21.0285
+        ]
       },
       "properties": {
         "name_vn": "Pavilion Kiến trúc và Nghệ Thuật Art Hanoi 2026",
@@ -1998,7 +2271,7 @@
         "event_url": "https://lehoithietkesangtao.vn/su-kien/pavilion-kien-truc-va-nghe-thuat-art-hanoi-2026-946973.html",
         "address": "Hoàn Kiếm, Hà Nội",
         "address_url": "https://www.google.com/maps/place/Kh%C3%B4ng%20gian%20%C4%91i%20b%E1%BB%99%20Ho%C3%A0n%20Ki%E1%BA%BFm%2C%20H%C3%A0%20N%E1%BB%99i/@21.0285,105.8542,17z",
-        "image_url": "",
+        "image_url": "thumbs/441.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -2008,7 +2281,10 @@
       "id": "442",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.8474541, 21.0401167]
+        "coordinates": [
+          105.8474541,
+          21.0401167
+        ]
       },
       "properties": {
         "name_vn": "Sắp đặt âm thanh \"Tháp Ẩn Ca\" (The Tower of Hidden Songs)",
@@ -2030,7 +2306,10 @@
       "id": "443",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.8542, 21.0285]
+        "coordinates": [
+          105.8542,
+          21.0285
+        ]
       },
       "properties": {
         "name_vn": "Sắp đặt \"Xe và đam mê\"",
@@ -2052,7 +2331,10 @@
       "id": "444",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.8542, 21.0285]
+        "coordinates": [
+          105.8542,
+          21.0285
+        ]
       },
       "properties": {
         "name_vn": "Hội chợ hàng thủ công-thiết kế-minh họa: Chăm hoa đua nở",
@@ -2074,7 +2356,10 @@
       "id": "445",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84871, 21.03543]
+        "coordinates": [
+          105.84871,
+          21.03543
+        ]
       },
       "properties": {
         "name_vn": "KHÔNG GIAN SẮP ĐẶT VÀ TƯƠNG TÁC \"VÉN LỚP HỌA ĐIỆP\"",
@@ -2096,7 +2381,10 @@
       "id": "446",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85125, 21.00066]
+        "coordinates": [
+          105.85125,
+          21.00066
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm Mỹ thuật | BST Tranh Tượng Chân dung Hoạ sĩ & Nhà sưu tập",
@@ -2118,7 +2406,10 @@
       "id": "448",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84944, 21.02671]
+        "coordinates": [
+          105.84944,
+          21.02671
+        ]
       },
       "properties": {
         "name_vn": "TRƯNG BÀY \"TRONG MỘT THẾ GIỚI CHUNG\" | \"IN A SHARED WORLD\" EXHIBITION",
@@ -2140,7 +2431,10 @@
       "id": "449",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85279, 21.035588]
+        "coordinates": [
+          105.85279,
+          21.035588
+        ]
       },
       "properties": {
         "name_vn": "Chuỗi hoạt động giải mã \"Tự tin Chạm Tuồng\"",
@@ -2162,7 +2456,10 @@
       "id": "450",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85004, 21.03814]
+        "coordinates": [
+          105.85004,
+          21.03814
+        ]
       },
       "properties": {
         "name_vn": "Gala bế mạc \"Hà Nội Những Vang Động\"",
@@ -2184,7 +2481,10 @@
       "id": "451",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84871, 21.03543]
+        "coordinates": [
+          105.84871,
+          21.03543
+        ]
       },
       "properties": {
         "name_vn": "Workshop \"Chợ phiên\" thuộc dự án \"Tò mò chuyện Trò\"",
@@ -2206,7 +2506,10 @@
       "id": "452",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84397, 21.01427]
+        "coordinates": [
+          105.84397,
+          21.01427
+        ]
       },
       "properties": {
         "name_vn": "No-phone Reading Party #05 \"KÉN MỚI\"",
@@ -2228,7 +2531,10 @@
       "id": "453",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85403, 21.03046]
+        "coordinates": [
+          105.85403,
+          21.03046
+        ]
       },
       "properties": {
         "name_vn": "Trao đổi chuyên môn \"Nghề thiết kế trong kinh tế sáng tạo\"",
@@ -2250,7 +2556,10 @@
       "id": "454",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.8522, 21.03404]
+        "coordinates": [
+          105.8522,
+          21.03404
+        ]
       },
       "properties": {
         "name_vn": "Cải lương đương đại \"Vẫn vậy, mà khác\" (New Ideas Don't Exist, Only New Ways to Feel Them)",
@@ -2272,7 +2581,10 @@
       "id": "455",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85004, 21.03814]
+        "coordinates": [
+          105.85004,
+          21.03814
+        ]
       },
       "properties": {
         "name_vn": "Lớp thực hành \"Nghe sâu\"",
@@ -2294,7 +2606,10 @@
       "id": "456",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.82672, 21.01056]
+        "coordinates": [
+          105.82672,
+          21.01056
+        ]
       },
       "properties": {
         "name_vn": "Ngày Di sản SIS 2026",
@@ -2316,7 +2631,10 @@
       "id": "457",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.8522, 21.03404]
+        "coordinates": [
+          105.8522,
+          21.03404
+        ]
       },
       "properties": {
         "name_vn": "Trình diễn âm thanh \"Truyện ở chân trời mờ, mơ sự kiện\"",
@@ -2338,7 +2656,10 @@
       "id": "458",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.81241, 21.032]
+        "coordinates": [
+          105.81241,
+          21.032
+        ]
       },
       "properties": {
         "name_vn": "Street Jazz",
@@ -2360,7 +2681,10 @@
       "id": "459",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85004, 21.03814]
+        "coordinates": [
+          105.85004,
+          21.03814
+        ]
       },
       "properties": {
         "name_vn": "Trình diễn \"Dòng sông quá vãng\"",
@@ -2372,7 +2696,7 @@
         "event_url": "https://lehoithietkesangtao.vn/su-kien/trinh-dien-dong-song-qua-vang-329923.html",
         "address": "Chợ Đồng Xuân, số 1 Cầu Đông, Hoàn Kiếm, Hà Nội",
         "address_url": "https://www.google.com/maps/place/%C4%90%E1%BB%93ng+Xu%C3%A2n+Market,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0381434,105.8500387,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb8e6c24487:0xd9def483e7f217e6!8m2!3d21.0381434!4d105.8500387!16s%2Fm%2F09v1r31",
-        "image_url": "",
+        "image_url": "thumbs/459.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -2382,7 +2706,10 @@
       "id": "460",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85403, 21.03046]
+        "coordinates": [
+          105.85403,
+          21.03046
+        ]
       },
       "properties": {
         "name_vn": "Trao đổi chuyên môn \"Trình diễn thơ - Vượt qua đường biên chữ\"",
@@ -2404,7 +2731,10 @@
       "id": "461",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.82672, 21.01056]
+        "coordinates": [
+          105.82672,
+          21.01056
+        ]
       },
       "properties": {
         "name_vn": "Đêm nhạc Reggae cùng Best Friend Band",
@@ -2426,7 +2756,10 @@
       "id": "462",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85004, 21.03814]
+        "coordinates": [
+          105.85004,
+          21.03814
+        ]
       },
       "properties": {
         "name_vn": "Trình tương tác \"mười thương\"",
@@ -2448,7 +2781,10 @@
       "id": "463",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.82672, 21.01056]
+        "coordinates": [
+          105.82672,
+          21.01056
+        ]
       },
       "properties": {
         "name_vn": "Chiếu phim và Giao lưu về Nghệ thuật biểu diễn truyền thống",
@@ -2470,7 +2806,10 @@
       "id": "464",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85851, 21.01616]
+        "coordinates": [
+          105.85851,
+          21.01616
+        ]
       },
       "properties": {
         "name_vn": "Talkshow kết hợp workshop \"Làm màu có lý\"",
@@ -2492,7 +2831,10 @@
       "id": "465",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.82672, 21.01056]
+        "coordinates": [
+          105.82672,
+          21.01056
+        ]
       },
       "properties": {
         "name_vn": "The HOP Spot: Bia thủ công và ẩm thực địa phương",
@@ -2514,7 +2856,10 @@
       "id": "466",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.82672, 21.01056]
+        "coordinates": [
+          105.82672,
+          21.01056
+        ]
       },
       "properties": {
         "name_vn": "Nhiếp ảnh bảng ướt Pop-up Studio",
@@ -2536,7 +2881,10 @@
       "id": "467",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.82672, 21.01056]
+        "coordinates": [
+          105.82672,
+          21.01056
+        ]
       },
       "properties": {
         "name_vn": "Nghề Nghệ Art Salon \"Màu xưa, Sắc nay\"",
@@ -2558,7 +2906,10 @@
       "id": "468",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.82672, 21.01056]
+        "coordinates": [
+          105.82672,
+          21.01056
+        ]
       },
       "properties": {
         "name_vn": "Workshop in ảnh Cyanotype",
@@ -2580,7 +2931,10 @@
       "id": "469",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85082, 21.02896]
+        "coordinates": [
+          105.85082,
+          21.02896
+        ]
       },
       "properties": {
         "name_vn": "Workshop in tranh Mộc Bản 12 con giáp",
@@ -2602,7 +2956,10 @@
       "id": "470",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.8478, 21.03144]
+        "coordinates": [
+          105.8478,
+          21.03144
+        ]
       },
       "properties": {
         "name_vn": "Workshop \"Vẽ tranh lụa truyền thống\"",
@@ -2624,7 +2981,10 @@
       "id": "471",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.82672, 21.01056]
+        "coordinates": [
+          105.82672,
+          21.01056
+        ]
       },
       "properties": {
         "name_vn": "Hà Nội Mở 2 \"Thành phố không lề\"",
@@ -2646,7 +3006,10 @@
       "id": "472",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.47068, 21.0373]
+        "coordinates": [
+          105.47068,
+          21.0373
+        ]
       },
       "properties": {
         "name_vn": "Lễ hội xe và đam mê 2026",
@@ -2668,7 +3031,10 @@
       "id": "473",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85082, 21.02896]
+        "coordinates": [
+          105.85082,
+          21.02896
+        ]
       },
       "properties": {
         "name_vn": "Workshop 2 buổi \"Màu của lá\", Dự án giáo dục nghệ thuật PAI: The Living City",
@@ -2690,7 +3056,10 @@
       "id": "474",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84707, 21.03143]
+        "coordinates": [
+          105.84707,
+          21.03143
+        ]
       },
       "properties": {
         "name_vn": "Kịch múa đương đại \"Đối diện với vô cùng\"",
@@ -2712,7 +3081,10 @@
       "id": "475",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.81241, 21.032]
+        "coordinates": [
+          105.81241,
+          21.032
+        ]
       },
       "properties": {
         "name_vn": "Lotte Art Week Gala và trình diễn: 'Thap:sang - Hoà Thanh | Violinist Nguyễn Thiện Minh và Fustic. Studio",
@@ -2734,7 +3106,10 @@
       "id": "476",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85004, 21.03814]
+        "coordinates": [
+          105.85004,
+          21.03814
+        ]
       },
       "properties": {
         "name_vn": "Trình diễn đương đại \"Trơn tru trong chiều chập choạng\"",
@@ -2756,7 +3131,10 @@
       "id": "477",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85082, 21.02896]
+        "coordinates": [
+          105.85082,
+          21.02896
+        ]
       },
       "properties": {
         "name_vn": "Workshop \"Tranh Hàng Trống: Cắt & Ghép\"",
@@ -2778,7 +3156,10 @@
       "id": "478",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85196, 21.02078]
+        "coordinates": [
+          105.85196,
+          21.02078
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm \"Hà Nội qua nét vẽ: Những góc nhìn sáng tạo giao thoa\"",
@@ -2800,7 +3181,10 @@
       "id": "479",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84628, 21.01988]
+        "coordinates": [
+          105.84628,
+          21.01988
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm thơ \"Con chim từ núi lạ\"",
@@ -2822,7 +3206,10 @@
       "id": "480",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85004, 21.03814]
+        "coordinates": [
+          105.85004,
+          21.03814
+        ]
       },
       "properties": {
         "name_vn": "Trình diễn \"Hoa giấy đung đưa\"",
@@ -2844,7 +3231,10 @@
       "id": "481",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85491, 21.03011]
+        "coordinates": [
+          105.85491,
+          21.03011
+        ]
       },
       "properties": {
         "name_vn": "Lớp thực hành \"Trình diễn đọc và nghe sâu\"",
@@ -2866,7 +3256,10 @@
       "id": "482",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85004, 21.03814]
+        "coordinates": [
+          105.85004,
+          21.03814
+        ]
       },
       "properties": {
         "name_vn": "Múa đương đại \"Thu Hương\"",
@@ -2888,7 +3281,10 @@
       "id": "483",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84397, 21.01427]
+        "coordinates": [
+          105.84397,
+          21.01427
+        ]
       },
       "properties": {
         "name_vn": "Vẽ kí họa đa chất liệu cùng HWA",
@@ -2910,7 +3306,10 @@
       "id": "484",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85004, 21.03814]
+        "coordinates": [
+          105.85004,
+          21.03814
+        ]
       },
       "properties": {
         "name_vn": "Lớp thực hành \"Nimamea'a Tuikakala: Nghệ thuật thiết kế hoa\"",
@@ -2932,7 +3331,10 @@
       "id": "485",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85279, 21.03559]
+        "coordinates": [
+          105.85279,
+          21.03559
+        ]
       },
       "properties": {
         "name_vn": "Trao đổi chuyên môn \"Khao Khát Nguyên Bản\"",
@@ -2954,7 +3356,10 @@
       "id": "486",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85004, 21.03814]
+        "coordinates": [
+          105.85004,
+          21.03814
+        ]
       },
       "properties": {
         "name_vn": "Trao đổi chuyên môn \"Chợ Đồng Xuân: Từ di sản Kẻ Chợ đến mô hình Tổ hợp kinh doanh sáng tạo\"",
@@ -2976,7 +3381,10 @@
       "id": "487",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85004, 21.03814]
+        "coordinates": [
+          105.85004,
+          21.03814
+        ]
       },
       "properties": {
         "name_vn": "Lớp thực hành \"Lắng nghe sâu\"",
@@ -2998,7 +3406,10 @@
       "id": "488",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85196, 21.02078]
+        "coordinates": [
+          105.85196,
+          21.02078
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm \"Sống cùng dòng sông: Tuyến đường sinh thái sông Hồng\"",
@@ -3020,7 +3431,10 @@
       "id": "489",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85431, 21.02505]
+        "coordinates": [
+          105.85431,
+          21.02505
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm \"Nối miền Sáng tạo\"",
@@ -3042,7 +3456,10 @@
       "id": "490",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85235, 21.03585]
+        "coordinates": [
+          105.85235,
+          21.03585
+        ]
       },
       "properties": {
         "name_vn": "Tọa đàm: Nghệ thuật liên ngành – Kết nối thực hành sáng tạo với chiến lược đào tạo đương đại",
@@ -3064,7 +3481,10 @@
       "id": "491",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85851, 21.01616]
+        "coordinates": [
+          105.85851,
+          21.01616
+        ]
       },
       "properties": {
         "name_vn": "Lễ trao giải Cuộc thi Thiết kế Không gian Sáng tạo 2026, chủ đề \"Hà Nội: Đánh thức không gian đô thị\"",
@@ -3076,7 +3496,7 @@
         "event_url": "https://lehoithietkesangtao.vn/su-kien/le-trao-giai-cuoc-thi-thiet-ke-khong-gian-sang-tao-2026-chu-de-ha-noi-danh-thuc-khong-gian-do-thi-265738.html",
         "address": "Trụ sở Hội Kiến trúc sư Việt Nam, 40 Tăng Bạt Hổ",
         "address_url": "https://www.google.com/maps/place/Viet+Nam+Association+of+Architects+(VAA)/@21.0161625,105.8585053,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab9c02a0cbdf:0x657590cdc7fceaa8!8m2!3d21.0161625!4d105.8585053!16s%2Fg%2F11sb13gngt",
-        "image_url": "",
+        "image_url": "thumbs/491.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -3086,7 +3506,10 @@
       "id": "492",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84871, 21.03543]
+        "coordinates": [
+          105.84871,
+          21.03543
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm \"Theo bước di sản cộng đồng 2026\"",
@@ -3108,7 +3531,10 @@
       "id": "493",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.81241, 21.032]
+        "coordinates": [
+          105.81241,
+          21.032
+        ]
       },
       "properties": {
         "name_vn": "Chuỗi Culture Show: Xẩm, Ca trù",
@@ -3130,7 +3556,10 @@
       "id": "494",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85004, 21.03814]
+        "coordinates": [
+          105.85004,
+          21.03814
+        ]
       },
       "properties": {
         "name_vn": "Tác phẩm \"Chơi Chợ\"",
@@ -3142,7 +3571,7 @@
         "event_url": "https://lehoithietkesangtao.vn/su-kien/tac-pham-choi-cho-217529.html",
         "address": "Chợ Đồng Xuân, số 1 Cầu Đông, Hoàn Kiếm, Hà Nội",
         "address_url": "https://www.google.com/maps/place/%C4%90%E1%BB%93ng+Xu%C3%A2n+Market,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0381434,105.8500387,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb8e6c24487:0xd9def483e7f217e6!8m2!3d21.0381434!4d105.8500387!16s%2Fm%2F09v1r31",
-        "image_url": "",
+        "image_url": "thumbs/494.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -3152,7 +3581,10 @@
       "id": "495",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85491, 21.03011]
+        "coordinates": [
+          105.85491,
+          21.03011
+        ]
       },
       "properties": {
         "name_vn": "Chuỗi \"Gặp nghệ sĩ\" triển lãm \"Mạch sống vô hình\"",
@@ -3164,7 +3596,7 @@
         "event_url": "https://lehoithietkesangtao.vn/su-kien/chuoi-gap-nghe-si-trien-lam-mach-song-vo-hinh-775528.html",
         "address": "Tòa nhà Di sản, 24 Lý Thái Tổ",
         "address_url": "https://www.google.com/maps/place/To%C3%A0+Nh%C3%A0+Di+S%E1%BA%A3n/@21.0301117,105.8549124,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab0028a3e8d7:0x83702e2774d3c048!8m2!3d21.0301117!4d105.8549124!16s%2Fg%2F11p2tn4tsw",
-        "image_url": "",
+        "image_url": "thumbs/495.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -3174,7 +3606,10 @@
       "id": "496",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85004, 21.03814]
+        "coordinates": [
+          105.85004,
+          21.03814
+        ]
       },
       "properties": {
         "name_vn": "Lớp thực hành cắt giấy \"Thế giới Động thực vật Tương lai\"",
@@ -3196,7 +3631,10 @@
       "id": "497",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85433, 21.02961]
+        "coordinates": [
+          105.85433,
+          21.02961
+        ]
       },
       "properties": {
         "name_vn": "Trình diễn Âm nhạc Thiếu nhi \"Vũ Khúc Gieo Nhịp\"",
@@ -3218,7 +3656,10 @@
       "id": "498",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85004, 21.03814]
+        "coordinates": [
+          105.85004,
+          21.03814
+        ]
       },
       "properties": {
         "name_vn": "Tour Nghệ thuật \"Chạm Đồng Xuân\"",
@@ -3240,7 +3681,10 @@
       "id": "499",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.8478, 21.03144]
+        "coordinates": [
+          105.8478,
+          21.03144
+        ]
       },
       "properties": {
         "name_vn": "Workshop nhuộm khăn lụa tơ tằm \"Màu của nắng\"",
@@ -3252,7 +3696,7 @@
         "event_url": "https://lehoithietkesangtao.vn/su-kien/workshop-nhuom-khan-lua-to-tam-mau-cua-nang-804296.html",
         "address": "Đình Yên Thái, 8 Tạm Thương",
         "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+Y%C3%AAn+Th%C3%A1i/@21.0314391,105.8477951,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbe141b886f:0x9b15e550eb996c3!8m2!3d21.0314391!4d105.8477951!16s%2Fg%2F11btrrmhyt",
-        "image_url": "",
+        "image_url": "thumbs/499.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -3262,7 +3706,10 @@
       "id": "500",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84397, 21.01427]
+        "coordinates": [
+          105.84397,
+          21.01427
+        ]
       },
       "properties": {
         "name_vn": "Chuỗi workshop \"Vẫn Ở Đây\"",
@@ -3284,7 +3731,10 @@
       "id": "501",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85433, 21.02961]
+        "coordinates": [
+          105.85433,
+          21.02961
+        ]
       },
       "properties": {
         "name_vn": "Lễ trao giải Giải thưởng Loa Thành 2026",
@@ -3296,7 +3746,7 @@
         "event_url": "https://lehoithietkesangtao.vn/su-kien/le-trao-giai-giai-thuong-loa-thanh-2026-336087.html",
         "address": "Sân khấu e-Show, Quảng trường Sáng tạo phía Đông hồ Hoàn Kiếm",
         "address_url": "https://www.google.com/maps/place/Qu%E1%BA%A3ng+tr%C6%B0%E1%BB%9Dng+Ph%C3%ADa+%C4%91%C3%B4ng+H%E1%BB%93+Ho%C3%A0n+Ki%E1%BA%BFm/@21.0296143,105.8543303,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab0070b260af:0x22a013b213569781!8m2!3d21.0296143!4d105.8543303!16s%2Fg%2F11p2tnmz76",
-        "image_url": "",
+        "image_url": "thumbs/501.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -3306,7 +3756,10 @@
       "id": "502",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.8478, 21.03144]
+        "coordinates": [
+          105.8478,
+          21.03144
+        ]
       },
       "properties": {
         "name_vn": "Trưng bày nghề dệt và sản phẩm lụa truyền thống",
@@ -3318,7 +3771,7 @@
         "event_url": "https://lehoithietkesangtao.vn/su-kien/trung-bay-nghe-det-va-san-pham-lua-truyen-thong-611085.html",
         "address": "Đình Yên Thái, 8 Tạm Thương",
         "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+Y%C3%AAn+Th%C3%A1i/@21.0314391,105.8477951,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbe141b886f:0x9b15e550eb996c3!8m2!3d21.0314391!4d105.8477951!16s%2Fg%2F11btrrmhyt",
-        "image_url": "",
+        "image_url": "thumbs/502.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -3328,7 +3781,10 @@
       "id": "503",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84871, 21.03543]
+        "coordinates": [
+          105.84871,
+          21.03543
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm \"Vén Lớp Hoạ Điệp\"",
@@ -3350,7 +3806,10 @@
       "id": "504",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85082, 21.02896]
+        "coordinates": [
+          105.85082,
+          21.02896
+        ]
       },
       "properties": {
         "name_vn": "Workshop \"Trong vườn hoa Hàng Trống\"",
@@ -3362,7 +3821,7 @@
         "event_url": "https://lehoithietkesangtao.vn/su-kien/workshop-trong-vuon-hoa-hang-trong-496873.html",
         "address": "Đình Nam Hương, 75 Hàng Trống, Hoàn Kiếm, Hà Nội",
         "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+Nam+H%C6%B0%C6%A1ng/@21.0289588,105.8508192,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab9515be581f:0x736701d2b9c26ee0!8m2!3d21.0289588!4d105.8508192!16s%2Fg%2F1pzy4_1vm",
-        "image_url": "",
+        "image_url": "thumbs/504.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -3372,7 +3831,10 @@
       "id": "505",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85004, 21.03814]
+        "coordinates": [
+          105.85004,
+          21.03814
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm nghệ thuật \"Chạm Đồng Xuân\"",
@@ -3394,7 +3856,10 @@
       "id": "506",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85004, 21.03814]
+        "coordinates": [
+          105.85004,
+          21.03814
+        ]
       },
       "properties": {
         "name_vn": "Tác phẩm sắp đặt \"Cột Điện Mainstream\"",
@@ -3406,7 +3871,7 @@
         "event_url": "https://lehoithietkesangtao.vn/su-kien/tac-pham-sap-dat-cot-dien-mainstream-642561.html",
         "address": "Chợ Đồng Xuân, số 1 Cầu Đông, Hoàn Kiếm, Hà Nội",
         "address_url": "https://www.google.com/maps/place/%C4%90%E1%BB%93ng+Xu%C3%A2n+Market,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0381434,105.8500387,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb8e6c24487:0xd9def483e7f217e6!8m2!3d21.0381434!4d105.8500387!16s%2Fm%2F09v1r31",
-        "image_url": "",
+        "image_url": "thumbs/506.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -3416,7 +3881,10 @@
       "id": "507",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84397, 21.01427]
+        "coordinates": [
+          105.84397,
+          21.01427
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm \"Cổng Đoài Làng Đường Lâm\"",
@@ -3438,7 +3906,10 @@
       "id": "508",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84871, 21.03543]
+        "coordinates": [
+          105.84871,
+          21.03543
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm \"Chuyện phố nghề Đông Nam Dược Lãn Ông\"",
@@ -3460,7 +3931,10 @@
       "id": "509",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84567, 21.03443]
+        "coordinates": [
+          105.84567,
+          21.03443
+        ]
       },
       "properties": {
         "name_vn": "\"Tác phẩm \"Tri Âm\" thuộc Dự án \"Ngỡ ngàng Hà Nội\"",
@@ -3482,7 +3956,10 @@
       "id": "510",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85122, 21.03266]
+        "coordinates": [
+          105.85122,
+          21.03266
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm \"Chuyện Đình Hoa Lộc Thị\"",
@@ -3494,7 +3971,7 @@
         "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-chuyen-dinh-hoa-loc-thi-427115.html",
         "address": "Đình Hoa Lộc Thị, 90 Hàng Đào, Hoàn Kiếm, Hà Nội",
         "address_url": "https://www.google.com/maps/place/90+P.+H%C3%A0ng+%C4%90%C3%A0o,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.0326561,105.8512182,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbf970d5cb3:0xa07d0829c4ad82bd!8m2!3d21.0326561!4d105.8512182!16s%2Fg%2F11c5jjxvqf",
-        "image_url": "",
+        "image_url": "thumbs/510.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -3504,7 +3981,10 @@
       "id": "511",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84819, 21.03607]
+        "coordinates": [
+          105.84819,
+          21.03607
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm \"Chuyện Đình Hành Tích\"",
@@ -3516,7 +3996,7 @@
         "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-chuyen-dinh-hanh-tich-632058.html",
         "address": "Đình Hành Tích, 1 Lò Rèn, Hoàn Kiếm, Hà Nội",
         "address_url": "https://www.google.com/maps/place/1+P.+L%C3%B2+R%C3%A8n,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.0360723,105.8481947,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbec8365279:0x6029a71cc2f7f43b!8m2!3d21.0360723!4d105.8481947!16s%2Fg%2F11pyvy40p6",
-        "image_url": "",
+        "image_url": "thumbs/511.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -3526,7 +4006,10 @@
       "id": "512",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84995, 21.03126]
+        "coordinates": [
+          105.84995,
+          21.03126
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm \"Chuyện Đình Phả Trúc Lâm\"",
@@ -3538,7 +4021,7 @@
         "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-chuyen-dinh-pha-truc-lam-757517.html",
         "address": "Đình Phả Trúc Lâm, 40 Hàng Hành, Hoàn Kiếm, Hà Nội",
         "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+Ph%E1%BA%A3+Tr%C3%BAc+L%C3%A2m/@21.0312599,105.8499483,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbfd734b385:0xd57aee4e10447963!8m2!3d21.0312599!4d105.8499483!16s%2Fg%2F1hc3nsfp6",
-        "image_url": "",
+        "image_url": "thumbs/512.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -3548,7 +4031,10 @@
       "id": "513",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85082, 21.02896]
+        "coordinates": [
+          105.85082,
+          21.02896
+        ]
       },
       "properties": {
         "name_vn": "Tour di sản \"Chuyện Đình Trong Phố\"",
@@ -3560,7 +4046,7 @@
         "event_url": "https://lehoithietkesangtao.vn/su-kien/tour-di-san-chuyen-dinh-trong-pho-772190.html",
         "address": "Đình Nam Hương, 75 Hàng Trống, Hoàn Kiếm, Hà Nội",
         "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+Nam+H%C6%B0%C6%A1ng/@21.0289588,105.8508192,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab9515be581f:0x736701d2b9c26ee0!8m2!3d21.0289588!4d105.8508192!16s%2Fg%2F1pzy4_1vm",
-        "image_url": "",
+        "image_url": "thumbs/513.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -3570,7 +4056,10 @@
       "id": "514",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.8517, 21.0253]
+        "coordinates": [
+          105.8517,
+          21.0253
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm \"Chuyện Đình Vũ Thạch\"",
@@ -3582,7 +4071,7 @@
         "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-chuyen-dinh-vu-thach-998190.html",
         "address": "Đình Vũ Thạch, 13 Bà Triệu, Hoàn Kiếm, Hà Nội",
         "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+%C4%90%E1%BB%81n+V%C5%A9+Th%E1%BA%A1ch/@21.0253025,105.8516968,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab9c61766c03:0xf15f3c1b33f19c50!8m2!3d21.0253025!4d105.8516968!16s%2Fg%2F11txfkgcb6",
-        "image_url": "",
+        "image_url": "thumbs/514.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -3592,7 +4081,10 @@
       "id": "515",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84397, 21.01427]
+        "coordinates": [
+          105.84397,
+          21.01427
+        ]
       },
       "properties": {
         "name_vn": "Pavilion \"Kén\"",
@@ -3604,7 +4096,7 @@
         "event_url": "https://lehoithietkesangtao.vn/su-kien/pavilion-ken-477634.html",
         "address": "Công viên Thống Nhất, 354A Lê Duẩn, Hai Bà Trưng, Hà Nội",
         "address_url": "https://www.google.com/maps/place/Thong+Nhat+Park/@21.0142709,105.8439724,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab8ee6df247f:0xe6183d662696d2e9!8m2!3d21.0142709!4d105.8439724!16s%2Fg%2F1212gxkt",
-        "image_url": "",
+        "image_url": "thumbs/515.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -3614,7 +4106,10 @@
       "id": "516",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84397, 21.01427]
+        "coordinates": [
+          105.84397,
+          21.01427
+        ]
       },
       "properties": {
         "name_vn": "Trung tâm Thiên nhiên Lưu động",
@@ -3636,7 +4131,10 @@
       "id": "517",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84875, 21.03205]
+        "coordinates": [
+          105.84875,
+          21.03205
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm \"Chuyện Đình Hà Vĩ\"",
@@ -3648,7 +4146,7 @@
         "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-chuyen-dinh-ha-vi-814937.html",
         "address": "Đình Hà Vĩ, 11 Hàng Hòm, Hoàn Kiếm, Hà Nội",
         "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+H%C3%A0+V%C4%A9/@21.0320512,105.848752,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbe38502a03:0x5906e4c3f910c3cd!8m2!3d21.0320512!4d105.848752!16s%2Fg%2F11hzxk05k4",
-        "image_url": "",
+        "image_url": "thumbs/517.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -3658,7 +4156,10 @@
       "id": "518",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84875, 21.03205]
+        "coordinates": [
+          105.84875,
+          21.03205
+        ]
       },
       "properties": {
         "name_vn": "Workshop Trải nghiệm sơn mài",
@@ -3670,7 +4171,7 @@
         "event_url": "https://lehoithietkesangtao.vn/su-kien/workshop-trai-nghiem-son-mai-814497.html",
         "address": "Đình Hà Vĩ, 11 Hàng Hòm, Hoàn Kiếm, Hà Nội",
         "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+H%C3%A0+V%C4%A9/@21.0320512,105.848752,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbe38502a03:0x5906e4c3f910c3cd!8m2!3d21.0320512!4d105.848752!16s%2Fg%2F11hzxk05k4",
-        "image_url": "",
+        "image_url": "thumbs/518.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -3680,7 +4181,10 @@
       "id": "519",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84397, 21.01427]
+        "coordinates": [
+          105.84397,
+          21.01427
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm \"Chất Xưa, Chuyện Mới\"",
@@ -3702,7 +4206,10 @@
       "id": "520",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84982, 21.03164]
+        "coordinates": [
+          105.84982,
+          21.03164
+        ]
       },
       "properties": {
         "name_vn": "Workshop Tranh khắc gỗ",
@@ -3714,7 +4221,7 @@
         "event_url": "https://lehoithietkesangtao.vn/su-kien/workshop-tranh-khac-go-434195.html",
         "address": "Đình Cổ Vũ, 85 Hàng Gai, Hoàn Kiếm, Hà Nội",
         "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+C%E1%BB%95+V%C5%A9/@21.0316386,105.8498204,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbfcc4fa105:0xbbe032bf9c910ee5!8m2!3d21.0316386!4d105.8498204!16s%2Fg%2F11h0d0pyc",
-        "image_url": "",
+        "image_url": "thumbs/520.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -3724,7 +4231,10 @@
       "id": "521",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85014, 21.03307]
+        "coordinates": [
+          105.85014,
+          21.03307
+        ]
       },
       "properties": {
         "name_vn": "Workshop \"Sắc Quạt Chàng Sơn\"",
@@ -3736,7 +4246,7 @@
         "event_url": "https://lehoithietkesangtao.vn/su-kien/workshop-sac-quat-chang-son-478665.html",
         "address": "Đình Xuân Phiến Thị, 4 Hàng Quạt, Hoàn Kiếm, Hà Nội",
         "address_url": "https://www.google.com/maps/place/4+P.+H%C3%A0ng+Qu%E1%BA%A1t,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.0330701,105.8501437,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbfaf1cd051:0x148706c9e15c25a1!8m2!3d21.0330701!4d105.8501437!16s%2Fg%2F11qg98c1xz",
-        "image_url": "",
+        "image_url": "thumbs/521.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -3746,7 +4256,10 @@
       "id": "522",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85014, 21.03307]
+        "coordinates": [
+          105.85014,
+          21.03307
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm \"Chuyện Đình Xuân Phiến Thị\"",
@@ -3758,7 +4271,7 @@
         "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-chuyen-dinh-xuan-phien-thi-415785.html",
         "address": "Đình Xuân Phiến Thị, 4 Hàng Quạt, Hoàn Kiếm, Hà Nội",
         "address_url": "https://www.google.com/maps/place/4+P.+H%C3%A0ng+Qu%E1%BA%A1t,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.0330701,105.8501437,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbfaf1cd051:0x148706c9e15c25a1!8m2!3d21.0330701!4d105.8501437!16s%2Fg%2F11qg98c1xz",
-        "image_url": "",
+        "image_url": "thumbs/522.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -3768,7 +4281,10 @@
       "id": "523",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.8478, 21.03144]
+        "coordinates": [
+          105.8478,
+          21.03144
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm \"Chuyện Đình Yên Thái\"",
@@ -3780,7 +4296,7 @@
         "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-chuyen-dinh-yen-thai-758631.html",
         "address": "Đình Yên Thái, 8 Tạm Thương, Hoàn Kiếm, Hà Nội",
         "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+Y%C3%AAn+Th%C3%A1i/@21.0314391,105.8477951,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbe141b886f:0x9b15e550eb996c3!8m2!3d21.0314391!4d105.8477951!16s%2Fg%2F11btrrmhyt",
-        "image_url": "",
+        "image_url": "thumbs/523.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -3790,7 +4306,10 @@
       "id": "524",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84776, 21.03199]
+        "coordinates": [
+          105.84776,
+          21.03199
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm \"Chuyện Đình Tú Thị\"",
@@ -3812,7 +4331,10 @@
       "id": "525",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85269, 21.03396]
+        "coordinates": [
+          105.85269,
+          21.03396
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm \"Chuyện Đình Kim Ngân\"",
@@ -3824,7 +4346,7 @@
         "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-chuyen-dinh-kim-ngan-394328.html",
         "address": "Đình Kim Ngân, 44 Hàng Bạc, Hoàn Kiếm, Hà Nội",
         "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+Kim+Ng%C3%A2n/@21.033963,105.8526932,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abc082e39e59:0xdd8ff516b54cee7f!8m2!3d21.033963!4d105.8526932!16s%2Fg%2F11cmgk_8dy",
-        "image_url": "",
+        "image_url": "thumbs/525.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -3834,7 +4356,10 @@
       "id": "526",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85082, 21.02896]
+        "coordinates": [
+          105.85082,
+          21.02896
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm \"Đối thoại với tranh Hàng Trống\"",
@@ -3856,7 +4381,10 @@
       "id": "527",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85368, 21.02549]
+        "coordinates": [
+          105.85368,
+          21.02549
+        ]
       },
       "properties": {
         "name_vn": "Chuỗi hoạt động \"Mũi Thêu Kẻ Nghệ\"",
@@ -3878,7 +4406,10 @@
       "id": "528",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85433, 21.02961]
+        "coordinates": [
+          105.85433,
+          21.02961
+        ]
       },
       "properties": {
         "name_vn": "Tác phẩm \"Cà Phê Trứng\" thuộc Dự án \"Ngỡ ngàng Hà Nội\"",
@@ -3900,7 +4431,10 @@
       "id": "529",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.83643, 21.02999]
+        "coordinates": [
+          105.83643,
+          21.02999
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm \"Tổ nghề và Danh Nho nước Việt\"",
@@ -3922,7 +4456,10 @@
       "id": "530",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84776, 21.03199]
+        "coordinates": [
+          105.84776,
+          21.03199
+        ]
       },
       "properties": {
         "name_vn": "Trưng bày nghệ thuật giới thiệu sản phẩm thêu của nghệ nhân Nguyễn Thị Hằng, kết hợp các hoạt động trải nghiệm",
@@ -3944,7 +4481,10 @@
       "id": "531",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85279, 21.03559]
+        "coordinates": [
+          105.85279,
+          21.03559
+        ]
       },
       "properties": {
         "name_vn": "Chuỗi sự kiện di sản \"Chuyện Tuồng xưa, Chuyện Tuồng nay\"",
@@ -3956,7 +4496,7 @@
         "event_url": "https://lehoithietkesangtao.vn/su-kien/chuoi-su-kien-di-san-chuyen-tuong-xua-chuyen-tuong-nay-394441.html",
         "address": "Trung tâm Giao lưu Văn hóa Phố cổ Hà Nội, 50 Đào Duy Từ",
         "address_url": "https://www.google.com/maps/place/Cultural+Exchange+Center/@21.035588,105.85279,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abc754952f7f:0x79a5229a38d0387f!8m2!3d21.035588!4d105.85279!16s%2Fg%2F11bx1zg8j5",
-        "image_url": "",
+        "image_url": "thumbs/531.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -3966,7 +4506,10 @@
       "id": "532",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.8536, 21.04095]
+        "coordinates": [
+          105.8536,
+          21.04095
+        ]
       },
       "properties": {
         "name_vn": "Chương trình trải nghiệm \"Tuyến đường sinh thái bờ vở sông Hồng\"",
@@ -3988,7 +4531,10 @@
       "id": "533",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84875, 21.03205]
+        "coordinates": [
+          105.84875,
+          21.03205
+        ]
       },
       "properties": {
         "name_vn": "Trưng bày \"Chạm di sản - Sáng tạo cùng sơn mài\"",
@@ -4010,7 +4556,10 @@
       "id": "534",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85238, 21.03613]
+        "coordinates": [
+          105.85238,
+          21.03613
+        ]
       },
       "properties": {
         "name_vn": "Trưng bày làng nghề Sơn Đồng",
@@ -4022,7 +4571,7 @@
         "event_url": "https://lehoithietkesangtao.vn/su-kien/trung-bay-lang-nghe-son-dong-van-hoa-tra-viet-va-viet-phuc-169008.html",
         "address": "Trung tâm Văn hóa nghệ thuật, 22 Hàng Buồm",
         "address_url": "https://www.google.com/maps/place/22+Hang+Buom+Culture+and+Arts+Center/@21.0361276,105.8523753,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abc1fa899227:0xd09ca63132b759d4!8m2!3d21.0361276!4d105.8523753!16s%2Fg%2F11sgz08tv7",
-        "image_url": "",
+        "image_url": "thumbs/534.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -4032,7 +4581,10 @@
       "id": "535",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84982, 21.03164]
+        "coordinates": [
+          105.84982,
+          21.03164
+        ]
       },
       "properties": {
         "name_vn": "Triển lãm \"Chuyện Đình Cổ Vũ\"",
@@ -4054,7 +4606,10 @@
       "id": "536",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85433, 21.02961]
+        "coordinates": [
+          105.85433,
+          21.02961
+        ]
       },
       "properties": {
         "name_vn": "Pavilion Hồ Gương | UNESCO & SOVICO vì sự phát triển bền vững",
@@ -4066,7 +4621,7 @@
         "event_url": "https://lehoithietkesangtao.vn/su-kien/pavilion-ho-guong-unesco-sovico-vi-su-phat-trien-ben-vung-576021.html",
         "address": "Quảng trường Sáng tạo phía Đông hồ Hoàn Kiếm, Hà Nội",
         "address_url": "https://www.google.com/maps/place/Qu%E1%BA%A3ng+tr%C6%B0%E1%BB%9Dng+Ph%C3%ADa+%C4%91%C3%B4ng+H%E1%BB%93+Ho%C3%A0n+Ki%E1%BA%BFm/@21.0296143,105.8543303,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab0070b260af:0x22a013b213569781!8m2!3d21.0296143!4d105.8543303!16s%2Fg%2F11p2tnmz76",
-        "image_url": "",
+        "image_url": "thumbs/536.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -4076,7 +4631,10 @@
       "id": "537",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84397, 21.01427]
+        "coordinates": [
+          105.84397,
+          21.01427
+        ]
       },
       "properties": {
         "name_vn": "Pavilion \"Mây\"",
@@ -4098,7 +4656,10 @@
       "id": "538",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84871, 21.03543]
+        "coordinates": [
+          105.84871,
+          21.03543
+        ]
       },
       "properties": {
         "name_vn": "Mở xưởng nghệ sĩ \"Muôn màu kẻ chợ\"",
@@ -4110,7 +4671,7 @@
         "event_url": "https://lehoithietkesangtao.vn/su-kien/mo-xuong-nghe-si-muon-mau-ke-cho-922031.html",
         "address": "Hội quán Phúc Kiến, 40 Lãn Ông",
         "address_url": "https://www.google.com/maps/place/H%E1%BB%99i+Qu%C3%A1n+Ph%C3%BAc+Ki%E1%BA%BFn+%E7%A6%8F%E5%BB%BA%E6%9C%83%E9%A4%A8/@21.0354327,105.8487131,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab19088cdd5b:0xf42c0c2fe60a3e0a!8m2!3d21.0354327!4d105.8487131!16s%2Fg%2F11hj77y8y_",
-        "image_url": "",
+        "image_url": "thumbs/538.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -4120,7 +4681,10 @@
       "id": "539",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.85411, 21.02513]
+        "coordinates": [
+          105.85411,
+          21.02513
+        ]
       },
       "properties": {
         "name_vn": "Giúp nhau làm nghề - Craft ToolKit Hà Nội 2026",
@@ -4142,7 +4706,10 @@
       "id": "540",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84211, 21.01702]
+        "coordinates": [
+          105.84211,
+          21.01702
+        ]
       },
       "properties": {
         "name_vn": "Chương trình \"Lời Của Tre\"",
@@ -4164,7 +4731,10 @@
       "id": "541",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84648, 21.04006]
+        "coordinates": [
+          105.84648,
+          21.04006
+        ]
       },
       "properties": {
         "name_vn": "Chương Trình Bộ Hành Thưởng Mùa Thu: Phố Cổ Thong Dong",
@@ -4186,7 +4756,10 @@
       "id": "542",
       "geometry": {
         "type": "Point",
-        "coordinates": [105.84303, 21.04286]
+        "coordinates": [
+          105.84303,
+          21.04286
+        ]
       },
       "properties": {
         "name_vn": "Bao giờ cho đến tháng 10",
@@ -4195,7 +4768,7 @@
         "start_time": "19:00",
         "time": "150",
         "isRegister": "No",
-        "event_url": "https://www.facebook.com/61594827857854/events",
+        "event_url": "https://docs.google.com/forms/d/e/1FAIpQLSeN2eYKRB7CMAoOBYDtGj8UtCFEpDvUd15O3Sm1bLOwKhr2Sw/viewform",
         "address": "2 Ng. Yên Thành",
         "address_url": "https://www.google.com/maps/place/2+Ng.+Y%C3%AAn+Th%C3%A0nh,+Ba+%C4%90%C3%ACnh,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.0428621,105.8404538,17z/data=!3m1!4b1!4m5!3m4!1s0x3135abba9d81f1ed:0xc203f50b8e7afc58!8m2!3d21.0428621!4d105.8430341?entry=ttu&g_ep=EgoyMDI2MTExNS4wIKXMDSoASAFQAw%3D%3D",
         "host_name": "Mơ Chưa workshop",
