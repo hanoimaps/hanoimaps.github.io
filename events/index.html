@@ -6,7 +6,10 @@
 
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
     <meta name="apple-mobile-web-app-title" content="HN Events" />
     <link rel="apple-touch-icon" href="/events/icon-192.png" />
 
@@ -16,7 +19,15 @@
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no,
     viewport-fit=cover"
     />
-    <title>Hanoi Maps — HN Events</title>
+    <script>
+      if (
+        navigator.standalone ||
+        matchMedia("(display-mode: standalone)").matches
+      ) {
+        document.documentElement.classList.add("is-standalone");
+      }
+    </script>
+    <title>Hanoi Maps | Events</title>
     <meta
       name="description"
       content="Khám phá lịch trình, sự kiện văn hóa nghệ thuật, workshop và âm nhạc tại Hà Nội trên bản đồ tương tác."
@@ -31,7 +42,10 @@
       content="Khám phá lịch trình, sự kiện văn hóa nghệ thuật, workshop và âm nhạc tại Hà Nội trên bản đồ tương tác."
     />
     <meta property="og:url" content="https://hanoimaps.github.io/events/" />
-    <meta property="og:image" content="https://hanoimaps.github.io/events/og-image.png" />
+    <meta
+      property="og:image"
+      content="https://hanoimaps.github.io/events/og-image.png"
+    />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta
@@ -532,6 +546,55 @@
         position: relative;
         display: block;
       }
+
+      .is-standalone {
+        --safe-top: env(safe-area-inset-top, 0px);
+        --safe-bottom: env(safe-area-inset-bottom, 0px);
+        --controls-top: calc(12px + var(--safe-top));
+      }
+      .is-standalone,
+      .is-standalone body {
+        /* WebKit can report a shorter fixed viewport in Home Screen mode. */
+        height: 100vh;
+        overscroll-behavior: none;
+      }
+      .is-standalone #map {
+        position: relative;
+        min-height: 0;
+      }
+      .is-standalone #view-toggle {
+        top: var(--controls-top);
+      }
+      .is-standalone #month-toggle {
+        top: calc(64px + var(--safe-top));
+      }
+      .is-standalone #map :is(.mapboxgl-ctrl-top-left, .mapboxgl-ctrl-top-right) {
+        position: fixed;
+        top: var(--controls-top);
+      }
+      .is-standalone #map :is(.mapboxgl-ctrl-top-left, .mapboxgl-ctrl-top-right)
+        > .mapboxgl-ctrl:first-child {
+        margin-top: 0;
+      }
+      .is-standalone .mapboxgl-ctrl-top-left {
+        left: env(safe-area-inset-left, 0px);
+      }
+      .is-standalone .mapboxgl-ctrl-top-right {
+        right: env(safe-area-inset-right, 0px);
+      }
+      .is-standalone #controls {
+        bottom: calc(1.5rem + var(--safe-bottom));
+      }
+      .is-standalone #list-view::before {
+        height: calc(116px + var(--safe-top));
+      }
+      .is-standalone #list-view::after {
+        height: calc(92px + var(--safe-bottom));
+      }
+      .is-standalone #list-container {
+        padding-top: calc(148px + var(--safe-top));
+        padding-bottom: calc(180px + var(--safe-bottom));
+      }
     </style>
   </head>
   <body>
@@ -685,11 +748,14 @@
       if (!["10", "11", "12"].includes(selectedMonth)) selectedMonth = "10";
       const DATA_SOURCE_ID = "event-points-source";
       const EVENT_LAYER_ID = "event-circles";
+      const isStandalone =
+        document.documentElement.classList.contains("is-standalone");
       const popup = new mapboxgl.Popup({
         closeButton: false,
         closeOnClick: true,
+        closeOnMove: isStandalone,
         offset: 15,
-        anchor: "bottom",
+        anchor: isStandalone ? undefined : "bottom",
       });
       // ponytail: styles/switcher/labels come from ../shared.js (also used by tomey, villas)
       function initializeMap() {
@@ -704,6 +770,7 @@
           ],
           language: "vi",
           attributionControl: false,
+          doubleClickZoom: !isStandalone,
         });
         // Menu icon intentionally disabled on the events page.
         // map.addControl(siteMenuControl, "top-left");
@@ -734,6 +801,7 @@
         map.on("load", () => {
           // modifyBaseStyle(map);
           addDataLayer(map, geojsonData);
+          addInteractivityForLayer(map);
           // ponytail: styledata fires mid-load too; style.load only when a style is ready
           map.on("style.load", () => {
             // modifyBaseStyle(map);
@@ -785,25 +853,19 @@
             "circle-opacity": 0.8,
           },
         });
-        addInteractivityForLayer(map);
       }
 
       function addInteractivityForLayer(map) {
-        map.on("click", EVENT_LAYER_ID, (e) => {
-          const features = map
-            .queryRenderedFeatures(e.point, { layers: [EVENT_LAYER_ID] })
-            // ponytail: map order isn't guaranteed; YYYY-MM-DD sorts lexicographically
-            .sort((a, b) =>
-              (a.properties.from_date || "").localeCompare(
-                b.properties.from_date || ""
-              )
-            );
-
-          if (!features.length) return;
-
-          const coords = e.features[0].geometry.coordinates.slice();
-          while (Math.abs(e.lngLat.lng - coords[0]) > 180) {
-            coords[0] += e.lngLat.lng > coords[0] ? 360 : -360;
+        function openEventPopup(features, lngLat) {
+          const coords = features[0].geometry.coordinates.slice();
+          // ponytail: map order isn't guaranteed; YYYY-MM-DD sorts lexicographically
+          features = features.slice().sort((a, b) =>
+            (a.properties.from_date || "").localeCompare(
+              b.properties.from_date || ""
+            )
+          );
+          while (Math.abs(lngLat.lng - coords[0]) > 180) {
+            coords[0] += lngLat.lng > coords[0] ? 360 : -360;
           }
 
           let currentEventIndex = 0;
@@ -880,6 +942,20 @@
           //   });
           //   const popupHTML = `<div class="popup">${itemsHtml}</div>`;
 
+          function showPopup() {
+            const initialHtml = generatePaginatedPopupContent(
+              features,
+              currentEventIndex
+            );
+            popup.setLngLat(coords).setHTML(initialHtml).addTo(map);
+
+            attachPopupListeners();
+          }
+          if (isStandalone) {
+            showPopup();
+            return;
+          }
+
           map.flyTo({
             center: coords,
             zoom: map.getZoom(),
@@ -888,17 +964,63 @@
             essential: true,
             offset: [0, 160],
           });
+          setTimeout(showPopup, 600);
+        }
 
-          setTimeout(() => {
-            const initialHtml = generatePaginatedPopupContent(
-              features,
-              currentEventIndex
-            );
-            popup.setLngLat(coords).setHTML(initialHtml).addTo(map);
-
-            attachPopupListeners();
-          }, 600);
+        map.on("click", EVENT_LAYER_ID, (e) => {
+          openEventPopup(e.features, e.lngLat);
         });
+
+        if (isStandalone) {
+          let tapStart = null;
+          map.on("touchstart", (e) => {
+            tapStart = e.points.length === 1 ? e.point : null;
+          });
+          map.on("movestart", () => {
+            tapStart = null;
+          });
+          map.on("touchcancel", () => {
+            tapStart = null;
+          });
+          map.on("touchend", (e) => {
+            const start = tapStart;
+            tapStart = null;
+            const touch = e.originalEvent;
+            if (
+              !start ||
+              touch.touches.length ||
+              !touch.cancelable ||
+              start.dist(e.point) > 10
+            ) return;
+
+            // Handle the finger release once, even if Safari synthesizes a click.
+            touch.preventDefault();
+            popup.remove();
+            if (!map.getLayer(EVENT_LAYER_ID)) return;
+            const options = { layers: [EVENT_LAYER_ID] };
+            const { x, y } = e.point;
+            let features = map.queryRenderedFeatures(e.point, options);
+            if (!features.length) {
+              const nearby = map.queryRenderedFeatures(
+                [[x - 10, y - 10], [x + 10, y + 10]],
+                options
+              );
+              const closest = nearby.sort((a, b) =>
+                map.project(a.geometry.coordinates).dist(e.point) -
+                map.project(b.geometry.coordinates).dist(e.point)
+              )[0];
+              if (closest) {
+                const [lng, lat] = closest.geometry.coordinates;
+                features = nearby.filter(
+                  ({ geometry }) =>
+                    geometry.coordinates[0] === lng &&
+                    geometry.coordinates[1] === lat
+                );
+              }
+            }
+            if (features.length) openEventPopup(features, e.lngLat);
+          });
+        }
 
         map.on("mouseenter", EVENT_LAYER_ID, () => {
           map.getCanvas().style.cursor = "pointer";
