@@ -775,7 +775,7 @@ map.on("styledata", () => {
   }, 50);
 });
 
-layerSelect.addEventListener("change", changeHistoricLayer);
+layerSelect.addEventListener("change", applyLayerVisibility);
 opacitySlider.addEventListener("input", changeOpacity);
 
 // Utils
@@ -1071,26 +1071,6 @@ function applyLayerVisibility() {
       map.setLayoutProperty(layerId, "visibility", visibility);
     }
   });
-}
-
-function changeHistoricLayer() {
-  const selectedYear = layerSelect.value;
-  loadHistoricLayer(selectedYear);
-
-  mapData.forEach((data) => {
-    const layerId = `historic-${data.year}`;
-    const visibility = data.year === selectedYear ? "visible" : "none";
-    if (map.getLayer(layerId)) {
-      map.setLayoutProperty(layerId, "visibility", visibility);
-    }
-  });
-
-  const selectedMap = mapData.find((data) => data.year === selectedYear);
-  if (selectedMap) {
-    map.fitBounds(transformExtent(selectedMap.extent), {
-      padding: 50,
-    });
-  }
 }
 
 function changeOpacity() {
