@@ -791,6 +791,26 @@
         );
         addCompassControl(map, "top-left");
         map.addControl(
+          {
+            onAdd() {
+              const el = document.createElement("div");
+              el.className = "mapboxgl-ctrl mapboxgl-ctrl-group map-control-group";
+              const btn = document.createElement("button");
+              btn.type = "button";
+              btn.textContent = "SG";
+              btn.title = "Saigon Maps Events";
+              btn.style.cssText =
+                "width:29px;height:29px;font-size:11px;font-weight:700;color:#222;display:flex;align-items:center;justify-content:center;";
+              btn.onclick = () =>
+                window.open("https://saigonmaps.github.io/events/", "_blank", "noopener");
+              el.appendChild(btn);
+              return el;
+            },
+            onRemove() {},
+          },
+          "top-left"
+        );
+        map.addControl(
           new mapboxgl.AttributionControl({
             customAttribution:
               '<a href="https://hanoimaps.github.io/events/sources" target="_blank" style="text-decoration: underline">Sources</a>',
