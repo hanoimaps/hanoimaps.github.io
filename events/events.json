@@ -78,31 +78,6 @@
     },
     {
       "type": "Feature",
-      "id": "89",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.82628,
-          21.02276
-        ]
-      },
-      "properties": {
-        "name_vn": "VYMI Family Concert",
-        "from_date": "2026-11-14",
-        "to_date": "2026-11-14",
-        "start_time": "20:00",
-        "time": "N/A",
-        "isRegister": "Yes",
-        "event_url": "https://www.vnso.org.vn/vi/dat-ve/h%C3%B2a-nh%E1%BA%A1c-gia-%C4%91%C3%ACnh-Vymi-33",
-        "address": "Phòng hòa nhạc Lớn VNAM, 77 Hào Nam, Ô Chợ Dừa, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/Chamber+music+concert+national+academy+Vietnam/@21.0227604,105.82628,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab77754b596f:0xf0fb0cfa691c552e!8m2!3d21.0227604!4d105.82628!16s%2Fg%2F11c1s25wp1",
-        "host_name": "VNSO - Dàn nhạc Giao hưởng Việt Nam",
-        "host_url": "https://www.vnso.org.vn",
-        "image_url": "thumbs/89.jpg"
-      }
-    },
-    {
-      "type": "Feature",
       "id": "90",
       "geometry": {
         "type": "Point",
@@ -303,131 +278,6 @@
     },
     {
       "type": "Feature",
-      "id": "249",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.806065,
-          21.038257
-        ]
-      },
-      "properties": {
-        "name_vn": "Jobless Dads / The Most Romantic Man in Hanoi / Orchidolls",
-        "from_date": "2026-11-10",
-        "to_date": "2026-11-10",
-        "start_time": "21:00",
-        "time": "N/A",
-        "isRegister": "Yes",
-        "event_url": "https://www.facebook.com/hubartclub",
-        "address": "HUB Venue, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/HUB+Venue+Quan+Hoa/@21.0382567,105.8060653,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab78382b7279:0xb36411e6e055bf18!8m2!3d21.0382567!4d105.8060653!16s%2Fg%2F11ckxwwdw9",
-        "host_name": "HUB Venue",
-        "host_url": "https://www.facebook.com/hubartclub",
-        "image_url": "thumbs/249.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "251",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.815196,
-          21.002136
-        ]
-      },
-      "properties": {
-        "name_vn": "TRIỂN LÃM \"THIÊN HÀ LAM\" | \"AZURE GALAXY\" — 🔵 Triển lãm mở cửa tự do",
-        "from_date": "2026-10-03",
-        "to_date": "2026-11-15",
-        "start_time": "10:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/1635130714811843/",
-        "address": "B1–R3, Vincom Mega Mall Royal City, 72A Nguyễn Trãi, phường Thanh Xuân, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/Vincom+Mega+Mall+Royal+City/@21.0021365,105.8151956,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ad490c3331c5:0x38cce1b37de2c3f6!8m2!3d21.0021365!4d105.8151956!16s%2Fg%2F11ld5jj2hx",
-        "host_name": "VCCA Vincom Center for Contemporary Art",
-        "host_url": "https://www.facebook.com/VCCAVIETNAM",
-        "image_url": "thumbs/251.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "253",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.850726,
-          21.028123
-        ]
-      },
-      "properties": {
-        "name_vn": "NƠI BÓNG TỐI THỞ | Where Shadows Breathe",
-        "from_date": "2026-10-04",
-        "to_date": "2026-11-15",
-        "start_time": "09:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/1422292860007465/",
-        "address": "Mơ Art Space, tầng B3, 136 Hàng Trống, Hoàn Kiếm, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/M%C6%A1+Art+Space/@21.028123,105.8507264,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abf9fd962c83:0x707435eb8f0b494!8m2!3d21.028123!4d105.8507264!16s%2Fg%2F11lky0xhmz",
-        "host_name": "Mo Art Space",
-        "host_url": "https://www.facebook.com/moartspacehn",
-        "image_url": "thumbs/253.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "284",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.840223,
-          21.046965
-        ]
-      },
-      "properties": {
-        "name_vn": "Strictly Vinyl Vol. #255 feat. Scott Towers a.k.a. Chopper Reeds [Fat Freddy's Drop]",
-        "from_date": "2026-11-13",
-        "to_date": "2026-11-13",
-        "start_time": "20:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/2292864791508548/",
-        "address": "170 Trấn Vũ, Trúc Bạch, Hanoi, Vietnam 1000",
-        "address_url": "https://www.google.com/maps/place/Standing+Bar:+Craft+Beer,+Tapas+%26+Grill/@21.046965,105.8402228,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abae2d89724d:0x7d0b02eeeb1e7400!8m2!3d21.046965!4d105.8402228!16s%2Fg%2F11csb0nh0k",
-        "host_name": "Standing Bar: Craft Beer, Tapas & Grill",
-        "host_url": "https://www.facebook.com/standingbarhanoi",
-        "image_url": "thumbs/284.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "307",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.802504,
-          21.153869
-        ]
-      },
-      "properties": {
-        "name_vn": "Twenty One More Songs",
-        "from_date": "2026-11-08",
-        "to_date": "2026-11-08",
-        "start_time": "20:00",
-        "time": "N/A",
-        "isRegister": "Yes",
-        "event_url": "https://www.facebook.com/clbxdrc",
-        "address": "Polygon, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/Polygon+Cafe/@21.1538689,105.8025036,17z/data=!3m1!4b1!4m6!3m5!1s0x313501003932b0a3:0xc744d165fe092748!8m2!3d21.1538689!4d105.8025036!16s%2Fg%2F11w3c_zm4h",
-        "host_name": "Polygon",
-        "host_url": "https://www.facebook.com/polygon.cafe",
-        "image_url": "thumbs/307.jpg"
-      }
-    },
-    {
-      "type": "Feature",
       "id": "316",
       "geometry": {
         "type": "Point",
@@ -449,31 +299,6 @@
         "host_name": "VNSO - Dàn nhạc Giao hưởng Việt Nam",
         "host_url": "https://www.vnso.org.vn",
         "image_url": "thumbs/316.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "320",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.829866,
-          21.070899
-        ]
-      },
-      "properties": {
-        "name_vn": "Puddles and Atomic Không",
-        "from_date": "2026-11-07",
-        "to_date": "2026-11-07",
-        "start_time": "21:00",
-        "time": "N/A",
-        "isRegister": "Yes",
-        "event_url": "https://www.facebook.com/TheHideoutCafeGastroBar",
-        "address": "Hideout, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/The+Hideout+Cafe+Gastro+Bar/@21.0708987,105.8298662,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab277d9deba7:0xa8a01d37ffaa5a74!8m2!3d21.0708987!4d105.8298662!16s%2Fg%2F11fj3n8w4m",
-        "host_name": "Hideout",
-        "host_url": "https://www.facebook.com/TheHideoutCafeGastroBar",
-        "image_url": "thumbs/320.jpg"
       }
     },
     {
@@ -578,31 +403,6 @@
     },
     {
       "type": "Feature",
-      "id": "357",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.802504,
-          21.153869
-        ]
-      },
-      "properties": {
-        "name_vn": "LIVE ORIGINAL #1: TURN YOU ON",
-        "from_date": "2026-11-07",
-        "to_date": "2026-11-07",
-        "start_time": "20:00",
-        "time": "N/A",
-        "isRegister": "Yes",
-        "event_url": "https://www.facebook.com/polygon.cafe/",
-        "address": "Polygon, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/Polygon+Cafe/@21.1538689,105.8025036,17z/data=!3m1!4b1!4m6!3m5!1s0x313501003932b0a3:0xc744d165fe092748!8m2!3d21.1538689!4d105.8025036!16s%2Fg%2F11w3c_zm4h",
-        "host_name": "Polygon",
-        "host_url": "https://www.facebook.com/polygon.cafe",
-        "image_url": "thumbs/357.jpg"
-      }
-    },
-    {
-      "type": "Feature",
       "id": "358",
       "geometry": {
         "type": "Point",
@@ -638,7 +438,7 @@
       },
       "properties": {
         "name_vn": "TẦM TÃ - KHOÁ THỰC HÀNH NGHỆ THUẬT 2026",
-        "from_date": "2026-11-26",
+        "from_date": "2026-12-03",
         "to_date": "2026-12-31",
         "start_time": "18:00",
         "time": "N/A",
@@ -649,56 +449,6 @@
         "host_name": "APD Center for Art Patronage and Development",
         "host_url": "https://www.facebook.com/apdcenter.vn",
         "image_url": "thumbs/364.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "365",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.82374,
-          21.06548
-        ]
-      },
-      "properties": {
-        "name_vn": "EXHIBITION - Tourismism | Quách Bắc | TRIỂN LÃM - Chủ nghĩa du lịch",
-        "from_date": "2026-11-06",
-        "to_date": "2026-11-12",
-        "start_time": "09:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/2654423148305196/",
-        "address": "31 Ngõ 67 Tô Ngọc Vân,, Hanoi, Vietnam 10000",
-        "address_url": "https://www.google.com/maps/place/WORK+ROOM+FOUR/@21.0654765,105.823744,17z/data=!3m1!4b1!4m6!3m5!1s0x3135aabd82d83f87:0xed6c2cd1930d30a6!8m2!3d21.0654765!4d105.823744!16s%2Fg%2F11b8d4p5n7",
-        "host_name": "Work Room Four",
-        "host_url": "https://www.facebook.com/workroomfour",
-        "image_url": "thumbs/365.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "366",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.84553,
-          21.04139
-        ]
-      },
-      "properties": {
-        "name_vn": "23 - một tập hợp tác phẩm của | selected works by NGUYỄN NGỌC LINH",
-        "from_date": "2026-11-07",
-        "to_date": "2026-11-11",
-        "start_time": "08:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/2158725411518072/",
-        "address": "14 Phan Huy Ích , Hanoi, Vietnam 100000",
-        "address_url": "https://www.google.com/maps/place/14+P.+Phan+Huy+%C3%8Dch,+Ba+%C4%90%C3%ACnh,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.0413867,105.8455278,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abba15d76507:0x229fcbe038f1f71f!8m2!3d21.0413867!4d105.8455278!16s%2Fg%2F11svqg4cw4",
-        "host_name": "Manzi Art Space",
-        "host_url": "https://www.facebook.com/manzihanoi",
-        "image_url": "thumbs/366.jpg"
       }
     },
     {
@@ -778,131 +528,6 @@
     },
     {
       "type": "Feature",
-      "id": "371",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.84565,
-          21.03251
-        ]
-      },
-      "properties": {
-        "name_vn": "Tribute #121 - Frank Morgan and McCoy Tyner Trio with the album Major Changes 1987",
-        "from_date": "2026-11-06",
-        "to_date": "2026-11-07",
-        "start_time": "21:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/1507773624573858/",
-        "address": "Long Waits a modest jazz club",
-        "address_url": "https://www.google.com/maps/place/Long+Waits+Jazz/@21.0325127,105.845655,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab91b177a19b:0xba95e28c7996e582!8m2!3d21.0325127!4d105.845655!16s%2Fg%2F11stkl46t1",
-        "host_name": "Long Waits a modest jazz club",
-        "host_url": "https://www.facebook.com/Longwaitsjazz",
-        "image_url": "thumbs/371.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "373",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.84138,
-          21.04206
-        ]
-      },
-      "properties": {
-        "name_vn": "PHIÊN CHỢ \"BỘI THU\" | 07-08.11.2026 | TỔ CHIM XANH",
-        "from_date": "2026-11-07",
-        "to_date": "2026-11-08",
-        "start_time": "09:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/1595803448416665/",
-        "address": "Sân tập thể ngõ 27 Đặng Dung (cạnh trường mầm non Kidsland), Hanoi, Vietnam",
-        "address_url": "https://www.google.com/maps/place/Kidsland+Kindergarten/@21.0420568,105.8413841,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbab688eaad:0x5926255bb3cbf307!8m2!3d21.0420568!4d105.8413841!16s%2Fg%2F12mjyh97y",
-        "host_name": "Tổ Chim Xanh - Bluebirds' Nest",
-        "host_url": "https://www.facebook.com/tochimxanh.bluebirdsnest",
-        "image_url": "thumbs/373.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "374",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.84143,
-          21.04194
-        ]
-      },
-      "properties": {
-        "name_vn": "TẬP - THỂ - ĐỌC: \"NHỮNG NAM TÍNH\" VÀ \"BÌNH ĐẲNG GIỚI TẠI NƠI LÀM VIỆC\"",
-        "from_date": "2026-11-19",
-        "to_date": "2026-11-19",
-        "start_time": "18:30",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/2250737812435638/",
-        "address": "Tổ Chim Xanh - Bluebirds' Nest",
-        "address_url": "https://www.google.com/maps/place/Bluebirds'+Nest/@21.0419391,105.8414268,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbab0d6c891:0xe7cd99fe7b59ab75!8m2!3d21.0419391!4d105.8414268!16s%2Fg%2F11bwh5rpc1",
-        "host_name": "Nhà xuất bản Phụ nữ Việt Nam",
-        "host_url": "https://www.facebook.com/tochimxanh.bluebirdsnest",
-        "image_url": "thumbs/374.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "375",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.8488,
-          21.02179
-        ]
-      },
-      "properties": {
-        "name_vn": "Triển lãm Huyễn Sắc Xoay Vần | Spinning Ghost Colors của Kito",
-        "from_date": "2026-11-06",
-        "to_date": "2026-11-12",
-        "start_time": "09:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/2499486973795017/",
-        "address": "27 P. Quang Trung, Cửa Nam, Hà Nội, Hanoi, Vietnam",
-        "address_url": "https://www.google.com/maps/place/27+P.+Quang+Trung,+C%E1%BB%ADa+Nam,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.021802,105.848772,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab93a5056113:0x3a581698e96ec427!8m2!3d21.0217869!4d105.8487997!16s%2Fg%2F11c2dks0nc",
-        "host_name": "The Japan Foundation Center for Cultural Exchange in Vietnam",
-        "host_url": "https://www.facebook.com/japanfoundation.vietnam",
-        "image_url": "thumbs/375.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "377",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.84806,
-          21.02558
-        ]
-      },
-      "properties": {
-        "name_vn": "Read On Phone Off - Đọc mở mang, tạm dừng mở mạng | 14/11",
-        "from_date": "2026-11-14",
-        "to_date": "2026-11-14",
-        "start_time": "09:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/1888149262621824/",
-        "address": "Phố Sách Hà Nội",
-        "address_url": "https://www.google.com/maps/place/Ph%E1%BB%91+S%C3%A1ch+H%C3%A0+N%E1%BB%99i/@21.025582,105.8480633,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab4050f5cd53:0xe28d6d44843857a2!8m2!3d21.025582!4d105.8480633!16s%2Fg%2F11tmqq8tl8",
-        "host_name": "Sách Thái Hà",
-        "host_url": "https://www.facebook.com/nxbphunu",
-        "image_url": "thumbs/377.jpg"
-      }
-    },
-    {
-      "type": "Feature",
       "id": "378",
       "geometry": {
         "type": "Point",
@@ -924,31 +549,6 @@
         "host_name": "White Light Cinéhub",
         "host_url": "https://www.facebook.com/whitelightcinehub",
         "image_url": "thumbs/378.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "380",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.82672,
-          21.01056
-        ]
-      },
-      "properties": {
-        "name_vn": "BACK TO THE GOOD OLD DAY (14/11/2026)",
-        "from_date": "2026-11-14",
-        "to_date": "2026-11-14",
-        "start_time": "20:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/1119218907520247/",
-        "address": "29, Ngách 31, Ngõ 167 Tây Sơn , Hanoi, Vietnam 100000",
-        "address_url": "https://www.google.com/maps/place/Complex+01/@21.0105641,105.8267223,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab68dd1984e5:0x3d307d4682570ec7!8m2!3d21.0105641!4d105.8267223!16s%2Fg%2F11fvc4fcl3",
-        "host_name": "Polygon Musik",
-        "host_url": "https://www.facebook.com/polygon.cafe",
-        "image_url": "thumbs/380.jpg"
       }
     },
     {
@@ -1003,456 +603,6 @@
     },
     {
       "type": "Feature",
-      "id": "383",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.81137,
-          21.09026
-        ]
-      },
-      "properties": {
-        "name_vn": "Alex's Birthday and JamBox Farewell",
-        "from_date": "2026-11-14",
-        "to_date": "2026-11-14",
-        "start_time": "20:30",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/2621207058360755/",
-        "address": "142 An Duong Vuong, Tay Ho, Vietnam 1000",
-        "address_url": "https://www.google.com/maps/place/Nh%C3%A0+H%C3%A0ng+Tre+Place/@21.0902617,105.8113694,17z/data=!3m1!4b1!4m6!3m5!1s0x3135aa90dd9d8ebb:0xdc16dd386f390263!8m2!3d21.0902617!4d105.8113694!16s%2Fg%2F1tfsqbnp",
-        "host_name": "JamBox",
-        "host_url": "https://www.facebook.com/61557430405207",
-        "image_url": "thumbs/383.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "384",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.81337,
-          21.0899
-        ]
-      },
-      "properties": {
-        "name_vn": "Hanoi Bluegrass Jam Session #5 at JamBox",
-        "from_date": "2026-11-15",
-        "to_date": "2026-11-15",
-        "start_time": "05:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/1432016472446041/",
-        "address": "142 An Duong Vuong, Tay Ho, Hanoi, Vietnam",
-        "address_url": "https://www.google.com/maps/place/142+An+D%C6%B0%C6%A1ng+V%C6%B0%C6%A1ng,+Ph%C3%BA+X%C3%A1,+Ph%C3%BA+Th%C6%B0%E1%BB%A3ng,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.0899001,105.8133697,17z/data=!3m1!4b1!4m6!3m5!1s0x3135aa90e591e575:0x7ea8170ac375db5d!8m2!3d21.0899001!4d105.8133697!16s%2Fg%2F11vstrzdf_",
-        "host_name": "JamBox",
-        "host_url": "https://www.facebook.com/61557430405207",
-        "image_url": "thumbs/384.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "385",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.84022,
-          21.04697
-        ]
-      },
-      "properties": {
-        "name_vn": "Strictly Vinyl Vol. #256 feat. Sipz",
-        "from_date": "2026-11-20",
-        "to_date": "2026-11-20",
-        "start_time": "20:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/1596791314956188/",
-        "address": "170 Trấn Vũ, Trúc Bạch, Hanoi, Vietnam 1000",
-        "address_url": "https://www.google.com/maps/place/Standing+Bar:+Craft+Beer,+Tapas+%26+Grill/@21.046965,105.8402228,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abae2d89724d:0x7d0b02eeeb1e7400!8m2!3d21.046965!4d105.8402228!16s%2Fg%2F11csb0nh0k",
-        "host_name": "Standing Bar: Craft Beer, Tapas & Grill",
-        "host_url": "https://www.facebook.com/standingbarhanoi",
-        "image_url": "thumbs/385.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "390",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.84565,
-          21.03251
-        ]
-      },
-      "properties": {
-        "name_vn": "LIVE CONCERT TRIBUTE: Frank Morgan & McCoy Coyner Trio",
-        "from_date": "2026-11-06",
-        "to_date": "2026-11-07",
-        "start_time": "20:45",
-        "time": "N/A",
-        "isRegister": "Yes",
-        "event_url": "https://www.facebook.com/Longwaitsjazz",
-        "address": "Long Waits a modest jazz club, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/Long+Waits+Jazz/@21.0325127,105.845655,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab91b177a19b:0xba95e28c7996e582!8m2!3d21.0325127!4d105.845655!16s%2Fg%2F11stkl46t1",
-        "host_name": "Long Waits a modest jazz club",
-        "host_url": "https://www.facebook.com/Longwaitsjazz",
-        "image_url": "thumbs/390.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "395",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.81604,
-          21.07616
-        ]
-      },
-      "properties": {
-        "name_vn": "502 OCEAN: MỘT LÁ THƯ TAY",
-        "from_date": "2026-11-07",
-        "to_date": "2026-11-07",
-        "start_time": "20:00",
-        "time": "N/A",
-        "isRegister": "Yes",
-        "event_url": "https://www.facebook.com/502Ocean.music",
-        "address": "HUB Port Trinh Con Son",
-        "address_url": "https://www.google.com/maps/place/HUB+C%E1%BB%95ng+N%E1%BB%91i/@21.0761554,105.8160404,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab002baf1d5b:0xa153fc98294da95e!8m2!3d21.0761554!4d105.8160404!16s%2Fg%2F11npqll_0q",
-        "host_name": "HUB Port Trinh Con Son",
-        "host_url": "https://www.facebook.com/502Ocean.music",
-        "image_url": "thumbs/395.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "396",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.85428,
-          21.03308
-        ]
-      },
-      "properties": {
-        "name_vn": "A Little Jazz, A Little Magic",
-        "from_date": "2026-11-07",
-        "to_date": "2026-11-07",
-        "start_time": "21:00",
-        "time": "N/A",
-        "isRegister": "Yes",
-        "event_url": "https://www.facebook.com/blakehanoi",
-        "address": "Blake's House of Jazz, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/Blake's+House+of+Jazz/@21.0330769,105.8542756,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab685634dee5:0x145d132eaf3d1ed4!8m2!3d21.0330769!4d105.8542756!16s%2Fg%2F11sc0f2c5j",
-        "host_name": "Blake's House of Jazz",
-        "host_url": "https://www.facebook.com/blakehanoi",
-        "image_url": "thumbs/396.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "397",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.83058,
-          21.07069
-        ]
-      },
-      "properties": {
-        "name_vn": "Red River Revival",
-        "from_date": "2026-11-07",
-        "to_date": "2026-11-07",
-        "start_time": "21:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://web.facebook.com/46MikeysRestobar",
-        "address": "Mikey's Rock City, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/MIKEY'S+ROCK+CITY+-+Philippine+Bar+%26+Restaurant+Hanoi,+Vietnam/@21.0706876,105.830577,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab1a39aab981:0xc70139391d7d1797!8m2!3d21.0706876!4d105.830577!16s%2Fg%2F11gvz7_8xl",
-        "host_name": "Mikey's Rock City",
-        "host_url": "https://web.facebook.com/46MikeysRestobar",
-        "image_url": "thumbs/397.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "398",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.76392,
-          21.02048
-        ]
-      },
-      "properties": {
-        "name_vn": "LIÊN QUÂN festival concert",
-        "from_date": "2026-11-08",
-        "to_date": "2026-11-08",
-        "start_time": "18:00",
-        "time": "N/A",
-        "isRegister": "Yes",
-        "event_url": "https://www.facebook.com/groups/1063205718422032",
-        "address": "My Dinh Stadium, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/S%C3%A2n+v%E1%BA%ADn+%C4%91%E1%BB%99ng+Qu%E1%BB%91c+gia+M%E1%BB%B9+%C4%90%C3%ACnh/@21.0204835,105.7639194,17z/data=!3m1!4b1!4m6!3m5!1s0x31345574d20b8f67:0xb34019170665308c!8m2!3d21.0204835!4d105.7639194!16zL20vMDRwX2ty",
-        "host_name": "My Dinh Stadium",
-        "host_url": "https://www.facebook.com/vpshow.official",
-        "image_url": "thumbs/398.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "399",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.81006,
-          21.0902
-        ]
-      },
-      "properties": {
-        "name_vn": "Sunday Jam",
-        "from_date": "2026-11-08",
-        "to_date": "2026-11-08",
-        "start_time": "19:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/663696502900214/",
-        "address": "Jambox Riverside, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/JamBox/@21.0901982,105.8100594,17z/data=!4m7!3m6!1s0x3135ab8715294e3f:0x1b83d9380e6a9a6a!8m2!3d21.0901982!4d105.8100594!16s%2Fg%2F11vdfgr2_1",
-        "host_name": "Jambox Riverside",
-        "host_url": "https://www.facebook.com/profile.phpid61557430405207",
-        "image_url": "thumbs/399.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "400",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.85428,
-          21.03308
-        ]
-      },
-      "properties": {
-        "name_vn": "Vietnamese Jazz Four Seasons Series",
-        "from_date": "2026-11-08",
-        "to_date": "2026-11-08",
-        "start_time": "21:00",
-        "time": "N/A",
-        "isRegister": "Yes",
-        "event_url": "https://www.facebook.com/blakehanoi",
-        "address": "Blake's House of Jazz, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/Blake's+House+of+Jazz/@21.0330769,105.8542756,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab685634dee5:0x145d132eaf3d1ed4!8m2!3d21.0330769!4d105.8542756!16s%2Fg%2F11sc0f2c5j",
-        "host_name": "Blake's House of Jazz",
-        "host_url": "https://www.facebook.com/blakehanoi",
-        "image_url": "thumbs/400.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "401",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.846,
-          21.02904
-        ]
-      },
-      "properties": {
-        "name_vn": "Xóm Nhạc: Hải Hà",
-        "from_date": "2026-11-10",
-        "to_date": "2026-11-10",
-        "start_time": "20:30",
-        "time": "N/A",
-        "isRegister": "Yes",
-        "event_url": "https://www.facebook.com/events/1747072336385023/",
-        "address": "Hanoi Social Club, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/The+Hanoi+Social+Club/@21.0290414,105.8460013,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab96719d8a8d:0x6143636a1422c469!8m2!3d21.0290414!4d105.8460013!16s%2Fg%2F1v3hxfw0",
-        "host_name": "Hanoi Social Club",
-        "host_url": "https://www.facebook.com/TheHanoiSocialClub/",
-        "image_url": "thumbs/401.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "402",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.846,
-          21.02904
-        ]
-      },
-      "properties": {
-        "name_vn": "Tiny Music Club: Julius Parker",
-        "from_date": "2026-11-12",
-        "to_date": "2026-11-12",
-        "start_time": "20:30",
-        "time": "N/A",
-        "isRegister": "Yes",
-        "event_url": "https://www.facebook.com/events/30058628120391814/",
-        "address": "Hanoi Social Club, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/The+Hanoi+Social+Club/@21.0290414,105.8460013,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab96719d8a8d:0x6143636a1422c469!8m2!3d21.0290414!4d105.8460013!16s%2Fg%2F1v3hxfw0",
-        "host_name": "Hanoi Social Club",
-        "host_url": "https://www.facebook.com/TheHanoiSocialClub/",
-        "image_url": "thumbs/402.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "403",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.82987,
-          21.0709
-        ]
-      },
-      "properties": {
-        "name_vn": "Phantom Boss",
-        "from_date": "2026-11-13",
-        "to_date": "2026-11-13",
-        "start_time": "21:00",
-        "time": "N/A",
-        "isRegister": "Yes",
-        "event_url": "https://www.facebook.com/events/1913570856674059/",
-        "address": "Hideout, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/The+Hideout+Cafe+Gastro+Bar/@21.0708987,105.8298662,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab277d9deba7:0xa8a01d37ffaa5a74!8m2!3d21.0708987!4d105.8298662!16s%2Fg%2F11fj3n8w4m",
-        "host_name": "Hideout",
-        "host_url": "https://www.facebook.com/TheHideoutCafeGastroBar",
-        "image_url": "thumbs/403.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "404",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.8025,
-          21.15387
-        ]
-      },
-      "properties": {
-        "name_vn": "Somewhere I Belong",
-        "from_date": "2026-11-15",
-        "to_date": "2026-11-15",
-        "start_time": "20:00",
-        "time": "N/A",
-        "isRegister": "Yes",
-        "event_url": "https://www.facebook.com/polygon.cafe/",
-        "address": "Polygon, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/Polygon+Cafe/@21.1538689,105.8025036,17z/data=!3m1!4b1!4m6!3m5!1s0x313501003932b0a3:0xc744d165fe092748!8m2!3d21.1538689!4d105.8025036!16s%2Fg%2F11w3c_zm4h",
-        "host_name": "Polygon",
-        "host_url": "https://www.facebook.com/polygon.cafe",
-        "image_url": "thumbs/404.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "405",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.82381,
-          21.06549
-        ]
-      },
-      "properties": {
-        "name_vn": "EXHIBITION - Tourismism | Quách Bắc | TRIỂN LÃM - Chủ nghĩa du lịch",
-        "from_date": "2026-11-15",
-        "to_date": "2026-11-15",
-        "start_time": "09:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/2654423148305196/",
-        "address": "31 Ngõ 67 Tô Ngọc Vân,, Hanoi, Vietnam 10000",
-        "address_url": "https://www.google.com/maps/place/31+Ng.+67+%C4%90.+T%C3%B4+Ng%E1%BB%8Dc+V%C3%A2n,+T%C3%A2y+H%E1%BB%93,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.0654874,105.8238097,17z/data=!3m1!4b1!4m6!3m5!1s0x3135aafa0791ae9f:0x8886993a97b4edf5!8m2!3d21.0654874!4d105.8238097!16s%2Fg%2F11spgz8kyy",
-        "host_name": "Work Room Four",
-        "host_url": "https://www.facebook.com/workroomfour",
-        "image_url": "thumbs/405.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "406",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.84553,
-          21.04139
-        ]
-      },
-      "properties": {
-        "name_vn": "23 - một tập hợp tác phẩm của | selected works by NGUYỄN NGỌC LINH",
-        "from_date": "2026-11-15",
-        "to_date": "2026-11-15",
-        "start_time": "08:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/2158725411518072/",
-        "address": "14 Phan Huy Ích , Hanoi, Vietnam 100000",
-        "address_url": "https://www.google.com/maps/place/14+P.+Phan+Huy+%C3%8Dch,+Ba+%C4%90%C3%ACnh,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.0413867,105.8455278,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abba15d76507:0x229fcbe038f1f71f!8m2!3d21.0413867!4d105.8455278!16s%2Fg%2F11svqg4cw4",
-        "host_name": "Manzi Art Space",
-        "host_url": "https://www.facebook.com/manzihanoi",
-        "image_url": "thumbs/406.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "407",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.83768,
-          21.03014
-        ]
-      },
-      "properties": {
-        "name_vn": "TRIỂN VỌNG DU HỌC NGHỀ ĐỨC – NGÀNH XÂY DỰNG",
-        "from_date": "2026-11-19",
-        "to_date": "2026-11-19",
-        "start_time": "18:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/1117588654322122/",
-        "address": "Viện Goethe 56-58 Nguyễn Thái Học",
-        "address_url": "https://www.google.com/maps/place/Vi%E1%BB%87n+Goethe+H%C3%A0+N%E1%BB%99i/@21.0301388,105.8376811,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb1135589cb:0x4459b378ddf89500!8m2!3d21.0301388!4d105.8376811!16s%2Fg%2F11nntzgvns",
-        "host_name": "Goethe-Institut Hanoi",
-        "host_url": "https://www.facebook.com/Goethe.Institut.Hanoi",
-        "image_url": "thumbs/407.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "408",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.84565,
-          21.03251
-        ]
-      },
-      "properties": {
-        "name_vn": "LIVE CONCERT CROSSOVER JAZZ 28: FROM STANDARDS TO CONTEMPORARY JAZZ",
-        "from_date": "2026-11-14",
-        "to_date": "2026-11-14",
-        "start_time": "N/A",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/1942566667183338/",
-        "address": "Long Waits a modest jazz club",
-        "address_url": "https://www.google.com/maps/place/Long+Waits+Jazz/@21.0325127,105.845655,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab91b177a19b:0xba95e28c7996e582!8m2!3d21.0325127!4d105.845655!16s%2Fg%2F11stkl46t1",
-        "host_name": "Long Waits a modest jazz club",
-        "host_url": "https://www.facebook.com/Longwaitsjazz",
-        "image_url": "thumbs/408.jpg"
-      }
-    },
-    {
-      "type": "Feature",
       "id": "409",
       "geometry": {
         "type": "Point",
@@ -1474,56 +624,6 @@
         "host_name": "Nhà xuất bản Phụ nữ Việt Nam",
         "host_url": "https://www.facebook.com/tochimxanh.bluebirdsnest",
         "image_url": "thumbs/409.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "410",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.85403,
-          21.03046
-        ]
-      },
-      "properties": {
-        "name_vn": "Triển lãm \"Kết duyên sáng tạo\" | Exhibition \"Creative Matching\"",
-        "from_date": "2026-11-18",
-        "to_date": "2026-11-18",
-        "start_time": "10:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/1695936638913164/",
-        "address": "47 Hàng Dầu, Hoàn Kiếm, Hà Nội (phòng bên phải từ cổng vào)",
-        "address_url": "https://www.google.com/maps/place/S%E1%BB%9F+V%C4%83n+h%C3%B3a+v%C3%A0+Th%E1%BB%83+thao+H%C3%A0+N%E1%BB%99i/@21.0304566,105.8540318,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abc01ffcb023:0x78b042c9327341a3!8m2!3d21.0304566!4d105.8540318!16s%2Fg%2F11c2jf89pq",
-        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
-        "host_url": "https://www.facebook.com/lehoithietkesangtaohn",
-        "image_url": "thumbs/410.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "411",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.83647,
-          21.02856
-        ]
-      },
-      "properties": {
-        "name_vn": "TRIỂN LÃM \"VỆT THỜI GIAN\"",
-        "from_date": "2026-11-14",
-        "to_date": "2026-11-14",
-        "start_time": "N/A",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/1839885183824219/",
-        "address": "31A Phố Văn Miếu, Phường Văn Miếu, Quận Đống Đa, Hà Nội, Việt Nam",
-        "address_url": "https://www.google.com/maps/place/Nguyen+Art+Gallery/@21.0285587,105.8364668,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab991827f177:0xdd9a1b5b98eaed39!8m2!3d21.0285587!4d105.8364668!16s%2Fg%2F1hf00173r",
-        "host_name": "Nguyen Art Gallery",
-        "host_url": "https://www.facebook.com/NguyenArtGalleryVietnam",
-        "image_url": "thumbs/411.jpg"
       }
     },
     {
@@ -1553,31 +653,6 @@
     },
     {
       "type": "Feature",
-      "id": "413",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.89921,
-          21.02605
-        ]
-      },
-      "properties": {
-        "name_vn": "KOREAN FESTIVAL - HÒA HỘI SẮC HÀN",
-        "from_date": "2026-11-15",
-        "to_date": "2026-11-15",
-        "start_time": "09:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/2360658431430397/",
-        "address": "AEON MALL Long Bien, 27 Cổ Linh, Long Biên, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/Aeon+Mall+Long+Bien/@21.0260475,105.8992148,17z/data=!3m1!4b1!4m6!3m5!1s0x3135a96a85453f37:0x39ce34aaf20a939!8m2!3d21.0260475!4d105.8992148!16s%2Fg%2F11f53_rjh1",
-        "host_name": "AEON MALL Long Bien",
-        "host_url": "https://www.facebook.com/aeonmall.longbien.hn",
-        "image_url": "thumbs/413.jpg"
-      }
-    },
-    {
-      "type": "Feature",
       "id": "414",
       "geometry": {
         "type": "Point",
@@ -1599,56 +674,6 @@
         "host_name": "Á Space",
         "host_url": "https://www.facebook.com/a.experimental.art",
         "image_url": "thumbs/414.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "415",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.84902,
-          21.038
-        ]
-      },
-      "properties": {
-        "name_vn": "SOUL PARTY #01",
-        "from_date": "2026-11-15",
-        "to_date": "2026-11-15",
-        "start_time": "06:30",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/1297869125834371/",
-        "address": "Sân mái phía trước Chợ Đồng Xuân, Hoàn Kiếm, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/Ch%E1%BB%A3+%C4%91%C3%AAm+%C4%90%E1%BB%93ng+Xu%C3%A2n+-+ng%C3%A0nh+h%C3%A0ng+%E1%BA%A9m+th%E1%BB%B1c/@21.0380017,105.8490168,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb919925b0b:0x303359f1cba28bbc!8m2!3d21.0380017!4d105.8490168!16s%2Fg%2F11c56rv49p",
-        "host_name": "CA' Library • Thư viện Kiến trúc - Nghệ thuật",
-        "host_url": "https://www.facebook.com/ca.library.vietnam",
-        "image_url": "thumbs/415.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "416",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.8352,
-          21.01026
-        ]
-      },
-      "properties": {
-        "name_vn": "Ai ai cũng có quyền được HÁT - KoFi Open Mic (since 2019)",
-        "from_date": "2026-11-14",
-        "to_date": "2026-11-14",
-        "start_time": "N/A",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/1972877639927657/",
-        "address": "Đối diện số 22A Ngách 2 ngõ 46A Phạm Ngọc Thạch, Hà Nội, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/KoFi/@21.0102647,105.8352015,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab874911796f:0xdb7f758eb6b2ca88!8m2!3d21.0102647!4d105.8352015!16s%2Fg%2F11h54z6yxz",
-        "host_name": "KoFi",
-        "host_url": "https://www.facebook.com/KoFi.vn",
-        "image_url": "thumbs/416.jpg"
       }
     },
     {
@@ -1703,181 +728,6 @@
     },
     {
       "type": "Feature",
-      "id": "419",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.85004,
-          21.03814
-        ]
-      },
-      "properties": {
-        "name_vn": "Triển lãm thực tế tăng cường: Thế giới động vật kỳ thú | Faune",
-        "from_date": "2026-11-14",
-        "to_date": "2026-11-14",
-        "start_time": "N/A",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/2111273992843222/",
-        "address": "Chợ Đồng Xuân",
-        "address_url": "https://www.google.com/maps/place/%C4%90%E1%BB%93ng+Xu%C3%A2n+Market,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0381434,105.8500387,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb8e6c24487:0xd9def483e7f217e6!8m2!3d21.0381434!4d105.8500387!16s%2Fm%2F09v1r31",
-        "host_name": "Viện Pháp tại Việt Nam - Hà Nội",
-        "host_url": "https://www.facebook.com/HeritageArtSpace",
-        "image_url": "thumbs/419.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "420",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.85004,
-          21.03814
-        ]
-      },
-      "properties": {
-        "name_vn": "Triển lãm CHẠM ĐỒNG XUÂN | TOUCHING ĐỒNG XUÂN exhibition",
-        "from_date": "2026-11-15",
-        "to_date": "2026-11-20",
-        "start_time": "10:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/2039470770071810/",
-        "address": "Chợ Đồng Xuân",
-        "address_url": "https://www.google.com/maps/place/%C4%90%E1%BB%93ng+Xu%C3%A2n+Market,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0381434,105.8500387,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb8e6c24487:0xd9def483e7f217e6!8m2!3d21.0381434!4d105.8500387!16s%2Fm%2F09v1r31",
-        "host_name": "Heritage Art Space",
-        "host_url": "https://www.facebook.com/HeritageArtSpace",
-        "image_url": "thumbs/420.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "421",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.85428,
-          21.03308
-        ]
-      },
-      "properties": {
-        "name_vn": "A Little Jazz, A Little Magic",
-        "from_date": "2026-11-14",
-        "to_date": "2026-11-14",
-        "start_time": "21:00",
-        "time": "N/A",
-        "isRegister": "Yes",
-        "event_url": "https://www.facebook.com/blakehanoi",
-        "address": "Blake's House of Jazz, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/Blake's+House+of+Jazz/@21.0330769,105.8542756,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab685634dee5:0x145d132eaf3d1ed4!8m2!3d21.0330769!4d105.8542756!16s%2Fg%2F11sc0f2c5j",
-        "host_name": "Blake's House of Jazz",
-        "host_url": "https://www.facebook.com/blakehanoi",
-        "image_url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "422",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.85474,
-          21.03449
-        ]
-      },
-      "properties": {
-        "name_vn": "Live rock n' roll in the OQ",
-        "from_date": "2026-11-14",
-        "to_date": "2026-11-14",
-        "start_time": "21:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/PurpleBluesBar",
-        "address": "Purple Blues, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/Purple+Blues+Bar+-+07+H%C3%A0ng+Mu%E1%BB%91i/@21.0344925,105.8547428,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abd5676dfc41:0x7f7090a824144849!8m2!3d21.0344925!4d105.8547428!16s%2Fg%2F11s_w310bv",
-        "host_name": "Purple Blues",
-        "host_url": "https://www.facebook.com/PurpleBluesBar",
-        "image_url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "423",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.85428,
-          21.03308
-        ]
-      },
-      "properties": {
-        "name_vn": "Jazz Trio: An Intimate Jazz Evening",
-        "from_date": "2026-11-15",
-        "to_date": "2026-11-15",
-        "start_time": "21:00",
-        "time": "N/A",
-        "isRegister": "Yes",
-        "event_url": "https://www.facebook.com/blakehanoi",
-        "address": "Blake's House of Jazz, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/Blake's+House+of+Jazz/@21.0330769,105.8542756,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab685634dee5:0x145d132eaf3d1ed4!8m2!3d21.0330769!4d105.8542756!16s%2Fg%2F11sc0f2c5j",
-        "host_name": "Blake's House of Jazz",
-        "host_url": "https://www.facebook.com/blakehanoi",
-        "image_url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "424",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.85581,
-          21.02435
-        ]
-      },
-      "properties": {
-        "name_vn": "Skunkworks",
-        "from_date": "2026-11-15",
-        "to_date": "2026-11-15",
-        "start_time": "21:00",
-        "time": "N/A",
-        "isRegister": "Yes",
-        "event_url": "https://www.facebook.com/events/1935777861129161/",
-        "address": "The Boombox, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/The+Boombox+Lounge+Cafe+%26+Restaurant/@21.024354,105.8558137,17z/data=!4m7!3m6!1s0x3135abeb873d94c1:0x9d5cf85062eb2a3b!8m2!3d21.024354!4d105.8558137!16s%2Fg%2F12mj_l80y",
-        "host_name": "The Boombox",
-        "host_url": "https://www.facebook.com/profile.phpid61576156922737",
-        "image_url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "425",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.846,
-          21.02904
-        ]
-      },
-      "properties": {
-        "name_vn": "Xóm Nhạc: Leo.1",
-        "from_date": "2026-11-17",
-        "to_date": "2026-11-17",
-        "start_time": "20:30",
-        "time": "N/A",
-        "isRegister": "Yes",
-        "event_url": "https://www.facebook.com/events/1455541269244207/",
-        "address": "Hanoi Social Club, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/The+Hanoi+Social+Club/@21.0290414,105.8460013,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab96719d8a8d:0x6143636a1422c469!8m2!3d21.0290414!4d105.8460013!16s%2Fg%2F1v3hxfw0",
-        "host_name": "Hanoi Social Club",
-        "host_url": "https://www.facebook.com/TheHanoiSocialClub/",
-        "image_url": "thumbs/425.jpg"
-      }
-    },
-    {
-      "type": "Feature",
       "id": "426",
       "geometry": {
         "type": "Point",
@@ -1924,31 +774,6 @@
         "host_name": "Hideout",
         "host_url": "https://www.facebook.com/TheHideoutCafeGastroBar",
         "image_url": "thumbs/427.jpg"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "428",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.81545,
-          21.00317
-        ]
-      },
-      "properties": {
-        "name_vn": "Triển lãm \"Thiên hà lam\"",
-        "from_date": "2026-10-03",
-        "to_date": "2026-11-15",
-        "start_time": "10:00",
-        "time": "N/A",
-        "isRegister": "Yes",
-        "event_url": "https://www.facebook.com/events/1635130714811843",
-        "address": "72A Nguyễn Trãi, phường Thanh Xuân, Hà Nội, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/72A+Nguy%E1%BB%85n+Tr%C3%A3i,+Thanh+Xu%C3%A2n,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0024214,105.8152007,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ac9adffaf17b:0xcc83b6172abb8c47!8m2!3d21.0031749!4d105.8154535!16s%2Fg%2F11bw49psw9",
-        "host_name": "Hanoi Grapevine",
-        "host_url": "https://hanoigrapevine.com/",
-        "image_url": "thumbs/428.jpg"
       }
     },
     {
@@ -2178,81 +1003,6 @@
     },
     {
       "type": "Feature",
-      "id": "438",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.80261,
-          20.98012
-        ]
-      },
-      "properties": {
-        "name_vn": "Điền dã \"Gió Gió Mây Mây\"",
-        "from_date": "2026-11-19",
-        "to_date": "2026-11-19",
-        "start_time": "07:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/1508609227776769/",
-        "address": "Làng Triều Khúc, Phường Thanh Liệt, Hà Nội.",
-        "address_url": "https://www.google.com/maps/place/Tri%E1%BB%81u+Kh%C3%BAc,+T%C3%A2n+Tri%E1%BB%81u,+Thanh+Tr%C3%AC,+Ha+Noi,+Vietnam/@20.9817663,105.8007752,16z/data=!3m1!4b1!4m6!3m5!1s0x3135acc3ae37fc47:0x607ded9d4d1d1182!8m2!3d20.9801219!4d105.802612!16s%2Fg%2F1vm77y9r",
-        "image_url": "thumbs/438.jpg",
-        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
-        "host_url": "https://lehoithietkesangtao.vn"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "439",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.85278,
-          21.03494
-        ]
-      },
-      "properties": {
-        "name_vn": "Trình diễn âm nhạc x Toạ đàm \"Ong Bay\" (Flight of the Bumblebee II)",
-        "from_date": "2026-11-17",
-        "to_date": "2026-11-17",
-        "start_time": "19:30",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://lehoithietkesangtao.vn/su-kien/trinh-dien-am-nhac-x-toa-dam-ong-bay-flight-of-the-bumblebee-ii-857306.html",
-        "address": "18 Lương Ngọc Quyến, Hoàn Kiếm, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/18+P.+L%C6%B0%C6%A1ng+Ng%E1%BB%8Dc+Quy%E1%BA%BFn,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0349433,105.8527801,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abc0a1a07c3b:0x97ff1d2edeb8e55a!8m2!3d21.0349433!4d105.8527801!16s%2Fg%2F11rp3dl1ft",
-        "image_url": "thumbs/439.jpg",
-        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
-        "host_url": "https://lehoithietkesangtao.vn"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "440",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.8542,
-          21.0285
-        ]
-      },
-      "properties": {
-        "name_vn": "Hội chợ \"Nghề Nghệ\"",
-        "from_date": "2026-11-14",
-        "to_date": "2026-11-15",
-        "start_time": "09:30",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://lehoithietkesangtao.vn/su-kien/hoi-cho-nghe-nghe-392140.html",
-        "address": "Hoàn Kiếm, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/Kh%C3%B4ng%20gian%20%C4%91i%20b%E1%BB%99%20Ho%C3%A0n%20Ki%E1%BA%BFm%2C%20H%C3%A0%20N%E1%BB%99i/@21.0285,105.8542,17z",
-        "image_url": "thumbs/440.jpg",
-        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
-        "host_url": "https://lehoithietkesangtao.vn"
-      }
-    },
-    {
-      "type": "Feature",
       "id": "441",
       "geometry": {
         "type": "Point",
@@ -2299,81 +1049,6 @@
         "image_url": "thumbs/442.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "443",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.8542,
-          21.0285
-        ]
-      },
-      "properties": {
-        "name_vn": "Sắp đặt \"Xe và đam mê\"",
-        "from_date": "2026-11-14",
-        "to_date": "2026-11-15",
-        "start_time": "08:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://lehoithietkesangtao.vn/su-kien/sap-dat-xe-va-dam-me-572071.html",
-        "address": "Hoàn Kiếm, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/Kh%C3%B4ng%20gian%20%C4%91i%20b%E1%BB%99%20Ho%C3%A0n%20Ki%E1%BA%BFm%2C%20H%C3%A0%20N%E1%BB%99i/@21.0285,105.8542,17z",
-        "image_url": "",
-        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
-        "host_url": "https://lehoithietkesangtao.vn"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "444",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.8542,
-          21.0285
-        ]
-      },
-      "properties": {
-        "name_vn": "Hội chợ hàng thủ công-thiết kế-minh họa: Chăm hoa đua nở",
-        "from_date": "2026-11-13",
-        "to_date": "2026-11-15",
-        "start_time": "15:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/1414848654193609/",
-        "address": "Hoàn Kiếm, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/Kh%C3%B4ng%20gian%20%C4%91i%20b%E1%BB%99%20Ho%C3%A0n%20Ki%E1%BA%BFm%2C%20H%C3%A0%20N%E1%BB%99i/@21.0285,105.8542,17z",
-        "image_url": "thumbs/444.jpg",
-        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
-        "host_url": "https://lehoithietkesangtao.vn"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "445",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.84871,
-          21.03543
-        ]
-      },
-      "properties": {
-        "name_vn": "KHÔNG GIAN SẮP ĐẶT VÀ TƯƠNG TÁC \"VÉN LỚP HỌA ĐIỆP\"",
-        "from_date": "2026-11-15",
-        "to_date": "2026-11-20",
-        "start_time": "17:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/2292194241604035/",
-        "address": "Hội quán Phúc Kiến, 40 Lãn Ông, Hoàn Kiếm, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/H%E1%BB%99i+Qu%C3%A1n+Ph%C3%BAc+Ki%E1%BA%BFn+%E7%A6%8F%E5%BB%BA%E6%9C%83%E9%A4%A8/@21.0354327,105.8487131,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab19088cdd5b:0xf42c0c2fe60a3e0a!8m2!3d21.0354327!4d105.8487131!16s%2Fg%2F11hj77y8y_",
-        "host_name": "Nhà Nhiều Cột",
-        "host_url": "https://www.facebook.com/NhaNhieuCot",
-        "image_url": "thumbs/445.jpg"
       }
     },
     {
@@ -3053,81 +1728,6 @@
     },
     {
       "type": "Feature",
-      "id": "474",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.84707,
-          21.03143
-        ]
-      },
-      "properties": {
-        "name_vn": "Kịch múa đương đại \"Đối diện với vô cùng\"",
-        "from_date": "2026-11-20",
-        "to_date": "2026-11-20",
-        "start_time": "20:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/1301226282145263/",
-        "address": "Rạp Hồng Hà, 51 Đường Thành, Hoàn Kiếm, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/Hong+Ha+Central+Traditional+Opera+Theatre/data=!4m7!3m6!1s0x3135abbddd4bb99d:0x9c4d4aa68beeba8c!8m2!3d21.0314255!4d105.8470738!16s%2Fg%2F1tfyb14x!19sChIJnblL3b2rNTERjLrui6ZKTZw",
-        "image_url": "thumbs/474.jpg",
-        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
-        "host_url": "https://lehoithietkesangtao.vn"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "475",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.81241,
-          21.032
-        ]
-      },
-      "properties": {
-        "name_vn": "Lotte Art Week Gala và trình diễn: 'Thap:sang - Hoà Thanh | Violinist Nguyễn Thiện Minh và Fustic. Studio",
-        "from_date": "2026-11-20",
-        "to_date": "2026-11-20",
-        "start_time": "18:30",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://lehoithietkesangtao.vn/su-kien/dem-re-imagine-x-fustic-782122.html",
-        "address": "Quảng trường Lotte Center Hanoi, 54 Liễu Giai, Ba Đình, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/Lotte+Center+Hanoi/@21.0319956,105.8124062,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab00280efb51:0xfbee1c80398d8394!8m2!3d21.0319956!4d105.8124062!16s%2Fg%2F11z804klpk",
-        "image_url": "",
-        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
-        "host_url": "https://lehoithietkesangtao.vn"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "476",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.85004,
-          21.03814
-        ]
-      },
-      "properties": {
-        "name_vn": "Trình diễn đương đại \"Trơn tru trong chiều chập choạng\"",
-        "from_date": "2026-11-20",
-        "to_date": "2026-11-20",
-        "start_time": "17:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/4486961181521801/",
-        "address": "Chợ Đồng Xuân, số 1 Cầu Đông, Hoàn Kiếm, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/%C4%90%E1%BB%93ng+Xu%C3%A2n+Market,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0381434,105.8500387,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb8e6c24487:0xd9def483e7f217e6!8m2!3d21.0381434!4d105.8500387!16s%2Fm%2F09v1r31",
-        "image_url": "thumbs/476.jpg",
-        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
-        "host_url": "https://lehoithietkesangtao.vn"
-      }
-    },
-    {
-      "type": "Feature",
       "id": "477",
       "geometry": {
         "type": "Point",
@@ -3153,31 +1753,6 @@
     },
     {
       "type": "Feature",
-      "id": "478",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.85196,
-          21.02078
-        ]
-      },
-      "properties": {
-        "name_vn": "Triển lãm \"Hà Nội qua nét vẽ: Những góc nhìn sáng tạo giao thoa\"",
-        "from_date": "2026-11-20",
-        "to_date": "2026-11-20",
-        "start_time": "09:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-ha-noi-qua-net-ve-nhung-goc-nhin-sang-tao-giao-thoa-488823.html",
-        "address": "Biệt thự Di sản, 49 Trần Hưng Đạo, phường Cửa Nam",
-        "address_url": "https://www.google.com/maps/place/Bi%E1%BB%87t+th%E1%BB%B1+Di+s%E1%BA%A3n/@21.0207808,105.8519565,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab006034be29:0xc27202af9ae02e3c!8m2!3d21.0207808!4d105.8519565!16s%2Fg%2F11y3f2tkc7",
-        "image_url": "",
-        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
-        "host_url": "https://lehoithietkesangtao.vn"
-      }
-    },
-    {
-      "type": "Feature",
       "id": "479",
       "geometry": {
         "type": "Point",
@@ -3196,206 +1771,6 @@
         "event_url": "https://lehoithietkesangtao.vn/su-kien/trien-lam-tho-con-chim-tu-nui-la-935124.html",
         "address": "Nương Náu Art Hub, 13B Nguyễn Gia Thiều, phường Cửa Nam",
         "address_url": "https://www.google.com/maps/place/N%C6%B0%C6%A1ng+N%C3%A1u+Coffee/@21.0198824,105.8462795,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab002cc78281:0x46ef1238cf3eb6c1!8m2!3d21.0198824!4d105.8462795!16s%2Fg%2F11vqs8v36n",
-        "image_url": "",
-        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
-        "host_url": "https://lehoithietkesangtao.vn"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "480",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.85004,
-          21.03814
-        ]
-      },
-      "properties": {
-        "name_vn": "Trình diễn \"Hoa giấy đung đưa\"",
-        "from_date": "2026-11-20",
-        "to_date": "2026-11-20",
-        "start_time": "08:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://lehoithietkesangtao.vn/su-kien/trinh-dien-hoa-giay-dung-dua-513265.html",
-        "address": "Chợ Đồng Xuân, số 1 Cầu Đông, Hoàn Kiếm, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/%C4%90%E1%BB%93ng+Xu%C3%A2n+Market,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0381434,105.8500387,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb8e6c24487:0xd9def483e7f217e6!8m2!3d21.0381434!4d105.8500387!16s%2Fm%2F09v1r31",
-        "image_url": "",
-        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
-        "host_url": "https://lehoithietkesangtao.vn"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "481",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.85491,
-          21.03011
-        ]
-      },
-      "properties": {
-        "name_vn": "Lớp thực hành \"Trình diễn đọc và nghe sâu\"",
-        "from_date": "2026-11-19",
-        "to_date": "2026-11-19",
-        "start_time": "14:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://lehoithietkesangtao.vn/su-kien/lop-thuc-hanh-trinh-dien-doc-va-nghe-sau-977620.html",
-        "address": "Tòa nhà Di sản, 24 Lý Thái Tổ",
-        "address_url": "https://www.google.com/maps/place/To%C3%A0+Nh%C3%A0+Di+S%E1%BA%A3n/@21.0301117,105.8549124,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab0028a3e8d7:0x83702e2774d3c048!8m2!3d21.0301117!4d105.8549124!16s%2Fg%2F11p2tn4tsw",
-        "image_url": "",
-        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
-        "host_url": "https://lehoithietkesangtao.vn"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "482",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.85004,
-          21.03814
-        ]
-      },
-      "properties": {
-        "name_vn": "Múa đương đại \"Thu Hương\"",
-        "from_date": "2026-11-18",
-        "to_date": "2026-11-18",
-        "start_time": "20:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/1134112752923775/",
-        "address": "Chợ Đồng Xuân, số 1 Cầu Đông, Hoàn Kiếm, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/%C4%90%E1%BB%93ng+Xu%C3%A2n+Market,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0381434,105.8500387,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb8e6c24487:0xd9def483e7f217e6!8m2!3d21.0381434!4d105.8500387!16s%2Fm%2F09v1r31",
-        "image_url": "thumbs/482.jpg",
-        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
-        "host_url": "https://lehoithietkesangtao.vn"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "483",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.84397,
-          21.01427
-        ]
-      },
-      "properties": {
-        "name_vn": "Vẽ kí họa đa chất liệu cùng HWA",
-        "from_date": "2026-11-18",
-        "to_date": "2026-11-18",
-        "start_time": "14:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://lehoithietkesangtao.vn/su-kien/ve-ki-hoa-da-chat-lieu-cung-hwa-501800.html",
-        "address": "Công viên Thống Nhất",
-        "address_url": "https://www.google.com/maps/place/Thong+Nhat+Park/@21.0142709,105.8439724,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab8ee6df247f:0xe6183d662696d2e9!8m2!3d21.0142709!4d105.8439724!16s%2Fg%2F1212gxkt",
-        "image_url": "",
-        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
-        "host_url": "https://lehoithietkesangtao.vn"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "484",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.85004,
-          21.03814
-        ]
-      },
-      "properties": {
-        "name_vn": "Lớp thực hành \"Nimamea'a Tuikakala: Nghệ thuật thiết kế hoa\"",
-        "from_date": "2026-11-18",
-        "to_date": "2026-11-18",
-        "start_time": "14:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://lehoithietkesangtao.vn/su-kien/lop-thuc-hanh-nimamea-a-tuikakala-nghe-thuat-thiet-ke-hoa-433755.html",
-        "address": "Chợ Đồng Xuân, số 1 Cầu Đông, Hoàn Kiếm, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/%C4%90%E1%BB%93ng+Xu%C3%A2n+Market,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0381434,105.8500387,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb8e6c24487:0xd9def483e7f217e6!8m2!3d21.0381434!4d105.8500387!16s%2Fm%2F09v1r31",
-        "image_url": "",
-        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
-        "host_url": "https://lehoithietkesangtao.vn"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "485",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.85279,
-          21.03559
-        ]
-      },
-      "properties": {
-        "name_vn": "Trao đổi chuyên môn \"Khao Khát Nguyên Bản\"",
-        "from_date": "2026-11-18",
-        "to_date": "2026-11-18",
-        "start_time": "14:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/1674253410756662/",
-        "address": "Trung tâm Giao lưu Văn hóa Phố cổ Hà Nội, 50 Đào Duy Từ, Hoàn Kiếm, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/Cultural+Exchange+Center/@21.035588,105.85279,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abc754952f7f:0x79a5229a38d0387f!8m2!3d21.035588!4d105.85279!16s%2Fg%2F11bx1zg8j5",
-        "image_url": "thumbs/485.jpg",
-        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
-        "host_url": "https://lehoithietkesangtao.vn"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "486",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.85004,
-          21.03814
-        ]
-      },
-      "properties": {
-        "name_vn": "Trao đổi chuyên môn \"Chợ Đồng Xuân: Từ di sản Kẻ Chợ đến mô hình Tổ hợp kinh doanh sáng tạo\"",
-        "from_date": "2026-11-18",
-        "to_date": "2026-11-18",
-        "start_time": "09:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://www.facebook.com/events/1520587053228586/",
-        "address": "Hội trường tầng 3, chợ Đồng Xuân, số 1 Cầu Đông, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/%C4%90%E1%BB%93ng+Xu%C3%A2n+Market,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0381434,105.8500387,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb8e6c24487:0xd9def483e7f217e6!8m2!3d21.0381434!4d105.8500387!16s%2Fm%2F09v1r31",
-        "image_url": "thumbs/486.jpg",
-        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
-        "host_url": "https://lehoithietkesangtao.vn"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "487",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.85004,
-          21.03814
-        ]
-      },
-      "properties": {
-        "name_vn": "Lớp thực hành \"Lắng nghe sâu\"",
-        "from_date": "2026-11-17",
-        "to_date": "2026-11-17",
-        "start_time": "14:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://lehoithietkesangtao.vn/su-kien/lop-thuc-hanh-thu-nghiem-am-thanh-390747.html",
-        "address": "Chợ Đồng Xuân, số 1 Cầu Đông, Hoàn Kiếm, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/%C4%90%E1%BB%93ng+Xu%C3%A2n+Market,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0381434,105.8500387,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb8e6c24487:0xd9def483e7f217e6!8m2!3d21.0381434!4d105.8500387!16s%2Fm%2F09v1r31",
         "image_url": "",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
@@ -3453,56 +1828,6 @@
     },
     {
       "type": "Feature",
-      "id": "490",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.85235,
-          21.03585
-        ]
-      },
-      "properties": {
-        "name_vn": "Tọa đàm: Nghệ thuật liên ngành – Kết nối thực hành sáng tạo với chiến lược đào tạo đương đại",
-        "from_date": "2026-11-16",
-        "to_date": "2026-11-16",
-        "start_time": "14:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://lehoithietkesangtao.vn/su-kien/trao-doi-chuyen-mon-ban-tron-nghe-thuat-lien-nganh-ket-noi-thuc-hanh-sang-tao-voi-chien-luoc-dao-tao-duong-dai-547986.html",
-        "address": "19 Hàng Buồm, Hoàn Kiếm, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/H%E1%BB%99i+v%C4%83n+h%C3%B3a+ngh%E1%BB%87+thu%E1%BA%ADt+Hanoi+Vietnam,+19+P.+H%C3%A0ng+Bu%E1%BB%93m,+19,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,+Vietnam/@21.035847,105.8523466,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbf5662d90d:0xa7733a559551848c!8m2!3d21.035847!4d105.8523466!16s%2Fg%2F11vstrhc_6",
-        "image_url": "thumbs/490.jpg",
-        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
-        "host_url": "https://lehoithietkesangtao.vn"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "491",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.85851,
-          21.01616
-        ]
-      },
-      "properties": {
-        "name_vn": "Lễ trao giải Cuộc thi Thiết kế Không gian Sáng tạo 2026, chủ đề \"Hà Nội: Đánh thức không gian đô thị\"",
-        "from_date": "2026-11-16",
-        "to_date": "2026-11-16",
-        "start_time": "14:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://lehoithietkesangtao.vn/su-kien/le-trao-giai-cuoc-thi-thiet-ke-khong-gian-sang-tao-2026-chu-de-ha-noi-danh-thuc-khong-gian-do-thi-265738.html",
-        "address": "Trụ sở Hội Kiến trúc sư Việt Nam, 40 Tăng Bạt Hổ",
-        "address_url": "https://www.google.com/maps/place/Viet+Nam+Association+of+Architects+(VAA)/@21.0161625,105.8585053,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab9c02a0cbdf:0x657590cdc7fceaa8!8m2!3d21.0161625!4d105.8585053!16s%2Fg%2F11sb13gngt",
-        "image_url": "thumbs/491.jpg",
-        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
-        "host_url": "https://lehoithietkesangtao.vn"
-      }
-    },
-    {
-      "type": "Feature",
       "id": "492",
       "geometry": {
         "type": "Point",
@@ -3553,31 +1878,6 @@
     },
     {
       "type": "Feature",
-      "id": "494",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.85004,
-          21.03814
-        ]
-      },
-      "properties": {
-        "name_vn": "Tác phẩm \"Chơi Chợ\"",
-        "from_date": "2026-11-15",
-        "to_date": "2026-11-15",
-        "start_time": "20:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://lehoithietkesangtao.vn/su-kien/tac-pham-choi-cho-217529.html",
-        "address": "Chợ Đồng Xuân, số 1 Cầu Đông, Hoàn Kiếm, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/%C4%90%E1%BB%93ng+Xu%C3%A2n+Market,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0381434,105.8500387,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb8e6c24487:0xd9def483e7f217e6!8m2!3d21.0381434!4d105.8500387!16s%2Fm%2F09v1r31",
-        "image_url": "thumbs/494.jpg",
-        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
-        "host_url": "https://lehoithietkesangtao.vn"
-      }
-    },
-    {
-      "type": "Feature",
       "id": "495",
       "geometry": {
         "type": "Point",
@@ -3597,56 +1897,6 @@
         "address": "Tòa nhà Di sản, 24 Lý Thái Tổ",
         "address_url": "https://www.google.com/maps/place/To%C3%A0+Nh%C3%A0+Di+S%E1%BA%A3n/@21.0301117,105.8549124,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab0028a3e8d7:0x83702e2774d3c048!8m2!3d21.0301117!4d105.8549124!16s%2Fg%2F11p2tn4tsw",
         "image_url": "thumbs/495.jpg",
-        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
-        "host_url": "https://lehoithietkesangtao.vn"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "496",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.85004,
-          21.03814
-        ]
-      },
-      "properties": {
-        "name_vn": "Lớp thực hành cắt giấy \"Thế giới Động thực vật Tương lai\"",
-        "from_date": "2026-11-15",
-        "to_date": "2026-11-15",
-        "start_time": "14:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://lehoithietkesangtao.vn/su-kien/lop-thuc-hanh-cat-giay-the-gioi-dong-thuc-vat-tuong-lai-215839.html",
-        "address": "Chợ Đồng Xuân, số 1 Cầu Đông, Hoàn Kiếm, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/%C4%90%E1%BB%93ng+Xu%C3%A2n+Market,+Ph%E1%BB%91+c%E1%BB%95+H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0381434,105.8500387,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb8e6c24487:0xd9def483e7f217e6!8m2!3d21.0381434!4d105.8500387!16s%2Fm%2F09v1r31",
-        "image_url": "thumbs/496.jpg",
-        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
-        "host_url": "https://lehoithietkesangtao.vn"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "497",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.85433,
-          21.02961
-        ]
-      },
-      "properties": {
-        "name_vn": "Trình diễn Âm nhạc Thiếu nhi \"Vũ Khúc Gieo Nhịp\"",
-        "from_date": "2026-11-15",
-        "to_date": "2026-11-15",
-        "start_time": "11:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://lehoithietkesangtao.vn/su-kien/trinh-dien-am-nhac-thieu-nhi-vu-khuc-gieo-nhip-580842.html",
-        "address": "Quảng trường Sáng tạo phía Đông hồ Hoàn Kiếm, Hà Nội",
-        "address_url": "https://www.google.com/maps/place/Qu%E1%BA%A3ng+tr%C6%B0%E1%BB%9Dng+Ph%C3%ADa+%C4%91%C3%B4ng+H%E1%BB%93+Ho%C3%A0n+Ki%E1%BA%BFm/@21.0296143,105.8543303,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab0070b260af:0x22a013b213569781!8m2!3d21.0296143!4d105.8543303!16s%2Fg%2F11p2tnmz76",
-        "image_url": "",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -3678,31 +1928,6 @@
     },
     {
       "type": "Feature",
-      "id": "499",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.8478,
-          21.03144
-        ]
-      },
-      "properties": {
-        "name_vn": "Workshop nhuộm khăn lụa tơ tằm \"Màu của nắng\"",
-        "from_date": "2026-11-15",
-        "to_date": "2026-11-15",
-        "start_time": "09:00",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://lehoithietkesangtao.vn/su-kien/workshop-nhuom-khan-lua-to-tam-mau-cua-nang-804296.html",
-        "address": "Đình Yên Thái, 8 Tạm Thương",
-        "address_url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+Y%C3%AAn+Th%C3%A1i/@21.0314391,105.8477951,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abbe141b886f:0x9b15e550eb996c3!8m2!3d21.0314391!4d105.8477951!16s%2Fg%2F11btrrmhyt",
-        "image_url": "thumbs/499.jpg",
-        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
-        "host_url": "https://lehoithietkesangtao.vn"
-      }
-    },
-    {
-      "type": "Feature",
       "id": "500",
       "geometry": {
         "type": "Point",
@@ -3722,31 +1947,6 @@
         "address": "Công viên Thống Nhất, 354A Lê Duẩn, Hai Bà Trưng, Hà Nội",
         "address_url": "https://www.google.com/maps/place/Thong+Nhat+Park/@21.0142709,105.8439724,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab8ee6df247f:0xe6183d662696d2e9!8m2!3d21.0142709!4d105.8439724!16s%2Fg%2F1212gxkt",
         "image_url": "",
-        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
-        "host_url": "https://lehoithietkesangtao.vn"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "501",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.85433,
-          21.02961
-        ]
-      },
-      "properties": {
-        "name_vn": "Lễ trao giải Giải thưởng Loa Thành 2026",
-        "from_date": "2026-11-15",
-        "to_date": "2026-11-15",
-        "start_time": "08:30",
-        "time": "N/A",
-        "isRegister": "No",
-        "event_url": "https://lehoithietkesangtao.vn/su-kien/le-trao-giai-giai-thuong-loa-thanh-2026-336087.html",
-        "address": "Sân khấu e-Show, Quảng trường Sáng tạo phía Đông hồ Hoàn Kiếm",
-        "address_url": "https://www.google.com/maps/place/Qu%E1%BA%A3ng+tr%C6%B0%E1%BB%9Dng+Ph%C3%ADa+%C4%91%C3%B4ng+H%E1%BB%93+Ho%C3%A0n+Ki%E1%BA%BFm/@21.0296143,105.8543303,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab0070b260af:0x22a013b213569781!8m2!3d21.0296143!4d105.8543303!16s%2Fg%2F11p2tnmz76",
-        "image_url": "thumbs/501.jpg",
         "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
         "host_url": "https://lehoithietkesangtao.vn"
       }
@@ -4788,8 +2988,8 @@
       },
       "properties": {
         "name_vn": "Nguyễn Trần Nam - Những ghi chép vô nghĩa về hai con nước | Nonsense notes for the two flows",
-        "from_date": "2026-11-26",
-        "to_date": "2026-12-02",
+        "from_date": "2026-11-28",
+        "to_date": "2026-12-04",
         "start_time": "11:00",
         "time": "N/A",
         "isRegister": "No",
@@ -5112,8 +3312,8 @@
       },
       "properties": {
         "name_vn": "Triển lãm Huyễn Sắc Xoay Vần | Spinning Ghost Colors của Kito",
-        "from_date": "2026-11-26",
-        "to_date": "2026-12-01",
+        "from_date": "2026-11-28",
+        "to_date": "2026-12-03",
         "start_time": "09:00",
         "time": "N/A",
         "isRegister": "No",
@@ -5148,6 +3348,306 @@
         "host_name": "AEON MALL Ha Dong",
         "host_url": "https://www.facebook.com/aeonmallhadong.hn",
         "image_url": "thumbs/557.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "558",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.81482,
+          21.00311
+        ]
+      },
+      "properties": {
+        "name_vn": "TRIỂN LÃM \"TỎA VI – TỪ THỬ NGHIỆM ĐẾN HIỆN THỰC\" | \"THE FOLIAGE VI – FROM LAB TO LIFE\"",
+        "from_date": "2026-12-02",
+        "to_date": "2026-12-08",
+        "start_time": "10:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1290335809955574/",
+        "address": "VCCA Vincom Center for Contemporary Art",
+        "address_url": "https://www.google.com/maps/place/Vincom+Center+for+Contemporary+Art+(VCCA)/@21.0031121,105.8148156,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ad597553836d:0xba07438658777045!8m2!3d21.0031121!4d105.8148156!16s%2Fg%2F11h585qs6b",
+        "host_name": "VCCA Vincom Center for Contemporary Art",
+        "host_url": "https://www.facebook.com/VCCAVIETNAM",
+        "image_url": "thumbs/558.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "559",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.83768,
+          21.03014
+        ]
+      },
+      "properties": {
+        "name_vn": "Dạ Cổ Hoài Nương - Những người phụ nữ nơi cung cấm trong cải lương",
+        "from_date": "2026-11-28",
+        "to_date": "2026-11-28",
+        "start_time": "N/A",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1490277446315062/",
+        "address": "58 Phố Nguyễn Thái Học, Quận Ba Đình, Hanoi, Vietnam 100000",
+        "address_url": "https://www.google.com/maps/place/Vi%E1%BB%87n+Goethe+H%C3%A0+N%E1%BB%99i/@21.0301388,105.8376811,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abb1135589cb:0x4459b378ddf89500!8m2!3d21.0301388!4d105.8376811!16s%2Fg%2F11nntzgvns",
+        "host_name": "Goethe-Institut Hanoi",
+        "host_url": "https://www.facebook.com/Goethe.Institut.Hanoi",
+        "image_url": "thumbs/559.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "560",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.81243,
+          21.02111
+        ]
+      },
+      "properties": {
+        "name_vn": "HOAT ĐỘNG TẠI THƯ VIỆN VIỆN PHÁP TẠI VIỆT NAM - HÀ NỘI | THÁNG 11.2026",
+        "from_date": "2026-11-28",
+        "to_date": "2026-11-28",
+        "start_time": "14:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1428333822842430/",
+        "address": "Viện Pháp tại Hà Nội / Institut français de Hanoi",
+        "address_url": "https://www.google.com/maps/search/Vi%E1%BB%87n+Ph%C3%A1p+t%E1%BA%A1i+H%C3%A0+N%E1%BB%99i+%2F+Institut+fran%C3%A7ais+de+Hanoi/@21.0211131,105.8124289,14z/data=!3m1!4b1",
+        "host_name": "Viện Pháp tại Việt Nam - Hà Nội",
+        "host_url": "https://www.facebook.com/IFVHanoi",
+        "image_url": "thumbs/560.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "561",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.81925,
+          21.00415
+        ]
+      },
+      "properties": {
+        "name_vn": "Triển lãm \"Con đường sơn mài Việt - Nhật\" | Exhibition \"The Vietnam - Japan Lacquer Road\"",
+        "from_date": "2026-11-28",
+        "to_date": "2026-11-28",
+        "start_time": "10:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1793056211755548/",
+        "address": "Sở Văn Hoá, Thể Thao Và Du Lịch Hà Nội",
+        "address_url": "https://www.google.com/maps/search/S%E1%BB%9F+V%C4%83n+Ho%C3%A1,+Th%E1%BB%83+Thao+V%C3%A0+Du+L%E1%BB%8Bch+H%C3%A0+N%E1%BB%99i/@21.0041476,105.8192548,14z/data=!3m1!4b1",
+        "host_name": "Hanoi Grapevine",
+        "host_url": "https://www.facebook.com/lehoithietkesangtaohn",
+        "image_url": "thumbs/561.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "562",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.81925,
+          21.00415
+        ]
+      },
+      "properties": {
+        "name_vn": "Triển lãm \"Lưu dấu thủ mộc\" | Exhibition \"Honoring the Heritage of Craftsmanship\"",
+        "from_date": "2026-11-28",
+        "to_date": "2026-11-28",
+        "start_time": "10:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1877514923602574/",
+        "address": "Sở Văn Hoá, Thể Thao Và Du Lịch Hà Nội",
+        "address_url": "https://www.google.com/maps/search/S%E1%BB%9F+V%C4%83n+Ho%C3%A1,+Th%E1%BB%83+Thao+V%C3%A0+Du+L%E1%BB%8Bch+H%C3%A0+N%E1%BB%99i/@21.0041476,105.8192548,14z/data=!3m1!4b1",
+        "host_name": "Hanoi Grapevine",
+        "host_url": "https://www.facebook.com/lehoithietkesangtaohn",
+        "image_url": "thumbs/562.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "563",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.81589,
+          20.96439
+        ]
+      },
+      "properties": {
+        "name_vn": "MỞ XƯỞNG Giúp Nhau Làm Nghề Craft Toolkit Hà Nội 2026",
+        "from_date": "2026-11-28",
+        "to_date": "2026-11-28",
+        "start_time": "N/A",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1097954996442731/",
+        "address": "47 Tràng Tiền (gửi xe ở Nguyễn Xí)",
+        "address_url": "https://www.google.com/maps/place/47%20Tr%C3%A0ng%20Ti%E1%BB%81n%20%28g%E1%BB%ADi%20xe%20%E1%BB%9F%20Nguy%E1%BB%85n%20X%C3%AD%29/@20.964389500344872,105.81589289009571,17z",
+        "host_name": "Meo Meo Atelier",
+        "host_url": "https://www.facebook.com/lehoithietkesangtaohn",
+        "image_url": "thumbs/563.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "564",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8269,
+          21.01102
+        ]
+      },
+      "properties": {
+        "name_vn": "COMPLEX FEST 2026: ĐỒNG ĐIỆU ĐA TẦN (ALL VIBES, ONE PLACE) • 21-28/11",
+        "from_date": "2026-11-28",
+        "to_date": "2026-11-28",
+        "start_time": "N/A",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/2074170219904900/",
+        "address": "29 ngách 31 ngõ 167 Tây Sơn, Hanoi, Vietnam 100000",
+        "address_url": "https://www.google.com/maps/place/29%20ng%C3%A1ch%2031%20ng%C3%B5%20167%20T%C3%A2y%20S%C6%A1n%2C%20Hanoi%2C%20Vietnam%20100000/@21.011021,105.82689900000003,17z",
+        "host_name": "COMPLEX 01",
+        "host_url": "https://www.facebook.com/lehoithietkesangtaohn",
+        "image_url": "thumbs/564.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "565",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.82672,
+          21.01056
+        ]
+      },
+      "properties": {
+        "name_vn": "Trưng bày \"Hà Nội Mở: Thành Phố Không Lề\"",
+        "from_date": "2026-11-28",
+        "to_date": "2026-11-28",
+        "start_time": "N/A",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/2567477623749498/",
+        "address": "COMPLEX 01",
+        "address_url": "https://www.google.com/maps/place/Complex+01/@21.0105641,105.8267223,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab68dd1984e5:0x3d307d4682570ec7!8m2!3d21.0105641!4d105.8267223!16s%2Fg%2F11fvc4fcl3",
+        "host_name": "Hà Nội Mở",
+        "host_url": "https://www.facebook.com/lehoithietkesangtaohn",
+        "image_url": "thumbs/565.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "566",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8269,
+          21.01102
+        ]
+      },
+      "properties": {
+        "name_vn": "NGHỀ NGHỆ ART SALON: MÀU XƯA, SẮC NAY (HUES OF OLD-NEW) ⭑ 21-28/11/2026",
+        "from_date": "2026-11-28",
+        "to_date": "2026-11-28",
+        "start_time": "N/A",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1056544390777274/",
+        "address": "COMPLEX 01, 29 ngách 31 ngõ 167 Tây Sơn, Đống Đa, Hanoi, Vietnam 100000",
+        "address_url": "https://www.google.com/maps/place/COMPLEX%2001%2C%2029%20ng%C3%A1ch%2031%20ng%C3%B5%20167%20T%C3%A2y%20S%C6%A1n%2C%20%C4%90%E1%BB%91ng%20%C4%90a%2C%20Hanoi%2C%20Vietnam%20100000/@21.011021,105.82689900000003,17z",
+        "host_name": "Nghề Nghệ",
+        "host_url": "https://www.facebook.com/lehoithietkesangtaohn",
+        "image_url": "thumbs/566.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "567",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.909,
+          20.77605
+        ]
+      },
+      "properties": {
+        "name_vn": "Hội thảo khoa học “Lao động sáng tạo trong bối cảnh phát triển công nghiệp văn hóa”",
+        "from_date": "2026-11-28",
+        "to_date": "2026-11-28",
+        "start_time": "08:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1152257940545773/",
+        "address": "Bảo Tàng Hà Nội",
+        "address_url": "https://www.google.com/maps/place/B%E1%BA%A3o%20T%C3%A0ng%20H%C3%A0%20N%E1%BB%99i/@20.776045583565047,105.90899839997292,17z",
+        "host_name": "Lễ hội Thiết kế Sáng tạo Hà Nội",
+        "host_url": "https://www.facebook.com/lehoithietkesangtaohn",
+        "image_url": "thumbs/567.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "568",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.85404,
+          21.02833
+        ]
+      },
+      "properties": {
+        "name_vn": "WATCH PARTY F1 2026 - ABU DHABI GRAND PRIX",
+        "from_date": "2026-12-06",
+        "to_date": "2026-12-06",
+        "start_time": "18:00",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1485581003516398/",
+        "address": "ONION Gaming Club",
+        "address_url": "https://www.google.com/maps/place/ONION%20Gaming%20Club/@21.02833342352134,105.85404094308615,17z",
+        "host_name": "ONION Gaming Club",
+        "host_url": "https://www.facebook.com/complex01.vn",
+        "image_url": "thumbs/568.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "569",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.82672,
+          21.01056
+        ]
+      },
+      "properties": {
+        "name_vn": "Ra mắt sách “Các nguyên tắc sống và làm việc” của tác giả Ray Dalio",
+        "from_date": "2026-12-06",
+        "to_date": "2026-12-06",
+        "start_time": "09:30",
+        "time": "N/A",
+        "isRegister": "No",
+        "event_url": "https://www.facebook.com/events/1486729723523928/",
+        "address": "COMPLEX 01",
+        "address_url": "https://www.google.com/maps/place/Complex+01/@21.0105641,105.8267223,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab68dd1984e5:0x3d307d4682570ec7!8m2!3d21.0105641!4d105.8267223!16s%2Fg%2F11fvc4fcl3",
+        "host_name": "Nhã Nam",
+        "host_url": "https://www.facebook.com/nhanampublishing",
+        "image_url": "thumbs/569.jpg"
       }
     }
   ]
